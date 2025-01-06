@@ -173,7 +173,7 @@ static void set_vulkan_ptr(void* ptr) {
 
 void load_vulkan() {
     if(getenv("POJAV_ZINK_PREFER_SYSTEM_DRIVER") == NULL &&
-        android_get_device_api_level() >= 28) { // the loader does not support below that
+        android_get_device_api_level() >= 29) { // the loader does not support below API 28, turnip requires 29
 #ifdef ADRENO_POSSIBLE
         void* result = load_turnip_vulkan();
         if(result != NULL) {

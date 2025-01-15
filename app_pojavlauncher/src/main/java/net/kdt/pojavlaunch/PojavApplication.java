@@ -19,6 +19,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import net.kdt.pojavlaunch.lifecycle.ContextExecutor;
+import net.kdt.pojavlaunch.prefs.LauncherPreferences;
 import net.kdt.pojavlaunch.tasks.AsyncAssetManager;
 import net.kdt.pojavlaunch.utils.*;
 import net.kdt.pojavlaunch.utils.FileUtils;
@@ -57,7 +58,15 @@ public class PojavApplication extends Application {
 		
 		try {
 			super.onCreate();
-			Tools.initEarlyConstants(this);
+			if(Tools.checkStorageRoot(this)){
+				// Implicitly initializes early constants and storage constants.
+				// Required to run the main activity properly.
+				LauncherPreferences.loadPreferences(this);
+			} else {
+				// In other cases, only initialize enough for the basicmost basics to work
+				// and not explode.
+				Tools.initEarlyConstants(this);
+			}
 			Tools.DEVICE_ARCHITECTURE = Architecture.getDeviceArchitecture();
 			//Force x86 lib directory for Asus x86 based zenfones
 			if(Architecture.isx86Device() && Architecture.is32BitsDevice()){

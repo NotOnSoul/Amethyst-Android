@@ -70,8 +70,8 @@ public class LauncherPreferences {
 
 
     public static void loadPreferences(Context ctx) {
-        //Required for the data folder.
-        Tools.initContextConstants(ctx);
+        //Required for CTRLDEF_FILE and MultiRT
+        Tools.initStorageConstants(ctx);
         boolean isDevicePowerful = isDevicePowerful(ctx);
 
         PREF_RENDERER = DEFAULT_PREF.getString("renderer", "opengles2");

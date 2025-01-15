@@ -32,7 +32,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Process;
 import android.provider.DocumentsContract;
 import android.provider.OpenableColumns;
 import android.util.ArrayMap;
@@ -164,14 +163,42 @@ public final class Tools {
     }
 
     /**
-     * Since some constant requires the use of the Context object
-     * You can call this function to initialize them.
-     * Any value (in)directly dependant on DIR_DATA should be set only here.
+     * Checks if the Pojav's storage root is accessible and read-writable. If it's not, starts
+     * the MissingStorageActivity and finishes the supplied activity.
+     * @param context the Activity that checks for storage availability
+     * @return whether the storage is available or not.
      */
-    public static void initContextConstants(Context ctx){
+    public static boolean checkStorageInteractive(Activity context) {
+        if(!Tools.checkStorageRoot(context)) {
+            context.startActivity(new Intent(context, MissingStorageActivity.class));
+            context.finish();
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Initialize context constants most necessary for launcher's early startup phase
+     * that are not dependent on user storage.
+     * All values that depend on DIR_DATA and are not dependent on DIR_GAME_HOME must
+     * be initialized here.
+     * @param ctx the context for initialization.
+     */
+    public static void initEarlyConstants(Context ctx) {
         DIR_CACHE = ctx.getCacheDir();
         DIR_DATA = ctx.getFilesDir().getParent();
-        MULTIRT_HOME = DIR_DATA+"/runtimes";
+        MULTIRT_HOME = DIR_DATA + "/runtimes";
+        DIR_ACCOUNT_NEW = DIR_DATA + "/accounts";
+        NATIVE_LIB_DIR = ctx.getApplicationInfo().nativeLibraryDir;
+    }
+
+    /**
+     * Initialize context constants that depend on user storage.
+     * Any value (in)directly dependent on DIR_GAME_HOME should be set only here.
+     * You ABSOLUTELY MUST check for storage presence using checkStorageRoot() before calling this.
+     */
+    public static void initStorageConstants(Context ctx){
+        initEarlyConstants(ctx);
         DIR_GAME_HOME = getPojavStorageRoot(ctx).getAbsolutePath();
         DIR_GAME_NEW = DIR_GAME_HOME + "/.minecraft";
         DIR_HOME_VERSION = DIR_GAME_NEW + "/versions";
@@ -181,7 +208,6 @@ public final class Tools {
         OBSOLETE_RESOURCES_PATH = DIR_GAME_NEW + "/resources";
         CTRLMAP_PATH = DIR_GAME_HOME + "/controlmap";
         CTRLDEF_FILE = DIR_GAME_HOME + "/controlmap/default.json";
-        NATIVE_LIB_DIR = ctx.getApplicationInfo().nativeLibraryDir;
     }
 
     /**

@@ -60,7 +60,8 @@ public class TestStorageActivity extends Activity {
             startActivity(new Intent(this, MissingStorageActivity.class));
             return;
         }
-        //Only run them once we get a definitive green light to use storage
+        //Initialize constants after we confirm that we have storage.
+        Tools.initStorageConstants(getApplicationContext());
         AsyncAssetManager.unpackComponents(this);
         AsyncAssetManager.unpackSingleFiles(this);
 

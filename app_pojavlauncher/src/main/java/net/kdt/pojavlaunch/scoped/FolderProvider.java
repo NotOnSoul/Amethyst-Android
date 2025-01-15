@@ -47,7 +47,7 @@ public class FolderProvider extends DocumentsProvider {
 
     private static final String ALL_MIME_TYPES = "*/*";
 
-    private static final File BASE_DIR = new File(Tools.DIR_GAME_HOME);
+    private File BASE_DIR;
 
     private ContentResolver mContentResolver;
 
@@ -138,6 +138,12 @@ public class FolderProvider extends DocumentsProvider {
 
     @Override
     public boolean onCreate() {
+        if(Tools.checkStorageRoot(getContext())) {
+            Tools.initStorageConstants(getContext());
+        }else {
+            return false;
+        }
+        BASE_DIR = new File(Tools.DIR_GAME_HOME);
         mContentResolver = getContext().getContentResolver();
         mStorageProviderAuthortiy = getContext().getString(R.string.storageProviderAuthorities);
         return true;

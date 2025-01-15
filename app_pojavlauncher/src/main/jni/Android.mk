@@ -16,7 +16,6 @@ include $(CLEAR_VARS)
 LOCAL_LDLIBS := -ldl -llog -landroid
 # -lGLESv2
 LOCAL_MODULE := pojavexec
-LOCAL_SHARED_LIBRARIES := bytehook
 # LOCAL_CFLAGS += -DDEBUG
 # -DGLES_TEST
 LOCAL_SRC_FILES := \
@@ -41,6 +40,13 @@ ifeq ($(TARGET_ARCH_ABI),arm64-v8a)
 LOCAL_CFLAGS += -DADRENO_POSSIBLE
 LOCAL_LDLIBS += -lEGL -lGLESv2
 endif
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := exithook
+LOCAL_LDLIBS := -ldl -llog
+LOCAL_SHARED_LIBRARIES := bytehook pojavexec
+LOCAL_SRC_FILES := exit_hook.c
 include $(BUILD_SHARED_LIBRARY)
 
 #ifeq ($(TARGET_ARCH_ABI),arm64-v8a)

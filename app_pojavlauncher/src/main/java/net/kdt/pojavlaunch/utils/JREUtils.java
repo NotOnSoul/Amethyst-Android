@@ -315,7 +315,8 @@ public class JREUtils {
         System.out.println(JVMArgs);
 
         initJavaRuntime(runtimeHome);
-        setupExitTrap(activity.getApplication());
+        JREUtils.setupExitMethod(activity.getApplication());
+        JREUtils.initializeGameExitHook();
         chdir(gameDirectory == null ? Tools.DIR_GAME_NEW : gameDirectory.getAbsolutePath());
         userArgs.add(0,"java"); //argv[0] is the program name according to C standard.
 
@@ -572,10 +573,12 @@ public class JREUtils {
     public static native void setLdLibraryPath(String ldLibraryPath);
     public static native void setupBridgeWindow(Object surface);
     public static native void releaseBridgeWindow();
-    public static native void setupExitTrap(Context context);
+    public static native void initializeGameExitHook();
+    public static native void setupExitMethod(Context context);
     // Obtain AWT screen pixels to render on Android SurfaceView
     public static native int[] renderAWTScreenFrame(/* Object canvas, int width, int height */);
     static {
+        System.loadLibrary("exithook");
         System.loadLibrary("pojavexec");
         System.loadLibrary("pojavexec_awt");
     }

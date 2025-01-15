@@ -3,9 +3,9 @@ package net.kdt.pojavlaunch.customcontrols.keyboard;
 
 import static android.content.Context.INPUT_METHOD_SERVICE;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.Editable;
+import android.text.Selection;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.inputmethod.InputMethodManager;
@@ -78,13 +78,15 @@ public class TouchCharInput extends androidx.appcompat.widget.AppCompatEditText 
      * Clear the EditText from any leftover inputs
      * It does not affect the in-game input
      */
-    @SuppressLint("SetTextI18n")
     public void clear(){
         mIsDoingInternalChanges = true;
+        // Edit the Editable directly as it doesn't affect the state
+        // of the TextView.
+        Editable editable = getEditableText();
+        editable.clear();
         //Braille space, doesn't trigger keyboard auto-complete
-        //replacing directly the text without though setText avoids notifying changes
-        setText(TEXT_FILLER);
-        setSelection(TEXT_FILLER.length());
+        editable.append(TEXT_FILLER);
+        Selection.setSelection(editable, TEXT_FILLER.length());
         mIsDoingInternalChanges = false;
     }
 

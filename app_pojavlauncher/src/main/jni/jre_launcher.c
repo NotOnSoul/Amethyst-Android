@@ -82,8 +82,21 @@ _Noreturn static void* abort_waiter_thread(void* extraArg) {
     // Die
     nominal_exit(signal, true);
 }
+static bool signal_vm_first = true;
+
+// Writes a string constant into stdout in a signal-safe fashion
+#define PRINT_SIGSAFE(x) do { \
+const char msg[] = x;         \
+write(STDOUT_FILENO, msg, sizeof(msg));\
+} while(0)
 
 _Noreturn static void abort_waiter_handler(int signal) {
+    if(signal_vm_first) {
+        signal_vm_first = false;
+        // This is nasty and evil, but does work
+        PRINT_SIGSAFE("SIGABRT occured! Raising SIGSEGV to generate backtrace\n");
+        raise(SIGSEGV);
+    }
     // Write the final signal into the pipe and block forever.
     write(abort_waiter_data.pipe[1], &signal, sizeof(int));
     while(1) {}

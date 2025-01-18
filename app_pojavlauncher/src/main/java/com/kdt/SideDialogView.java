@@ -132,6 +132,9 @@ public abstract class SideDialogView {
             return;
         }
 
+        mSideDialogAnimator.removeAllUpdateListeners();
+        mSideDialogAnimator.removeAllListeners();
+
         mParent.removeView(mDialogLayout);
         mIsInstantiated = false;
 
@@ -212,7 +215,6 @@ public abstract class SideDialogView {
             mSideDialogAnimator.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
-                    mSideDialogAnimator.removeListener(this);
                     deflateLayout();
                 }
             });

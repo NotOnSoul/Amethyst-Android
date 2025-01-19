@@ -214,16 +214,12 @@ int pojavInitOpenGL() {
 
 extern void updateMonitorSize(int width, int height);
 
-static void attachEnvs() {
+EXTERNAL_API int pojavInit() {
     pojav_environ->glfwThreadVmEnv = get_attached_env(pojav_environ->runtimeJavaVMPtr);
     if(pojav_environ->glfwThreadVmEnv == NULL) {
         printf("Failed to attach Java-side JNIEnv to GLFW thread\n");
         return 0;
     }
-}
-
-EXTERNAL_API int pojavInit() {
-
     ANativeWindow_acquire(pojav_environ->pojavWindow);
     pojav_environ->savedWidth = ANativeWindow_getWidth(pojav_environ->pojavWindow);
     pojav_environ->savedHeight = ANativeWindow_getHeight(pojav_environ->pojavWindow);

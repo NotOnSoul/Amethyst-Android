@@ -72,18 +72,18 @@ static jint hooked_ProcessImpl_forkAndExec(JNIEnv *env, jobject process, jint mo
 }
 
 // Hook the forkAndExec method in the Java runtime for custom executable overriding.
-void hookExec() {
-    jclass cls;
+void hookExec(JNIEnv *env) {
+    jclass hookClass;
     orig_ProcessImpl_forkAndExec = dlsym(RTLD_DEFAULT, "Java_java_lang_UNIXProcess_forkAndExec");
     if (!orig_ProcessImpl_forkAndExec) {
         orig_ProcessImpl_forkAndExec = dlsym(RTLD_DEFAULT, "Java_java_lang_ProcessImpl_forkAndExec");
-        cls = (*pojav_environ->runtimeJNIEnvPtr_JRE)->FindClass(pojav_environ->runtimeJNIEnvPtr_JRE, "java/lang/ProcessImpl");
+        hookClass = (*env)->FindClass(env, "java/lang/ProcessImpl");
     } else {
-        cls = (*pojav_environ->runtimeJNIEnvPtr_JRE)->FindClass(pojav_environ->runtimeJNIEnvPtr_JRE, "java/lang/UNIXProcess");
+        hookClass = (*env)->FindClass(env, "java/lang/UNIXProcess");
     }
     JNINativeMethod methods[] = {
             {"forkAndExec", "(I[B[B[BI[BI[B[IZ)I", (void *)&hooked_ProcessImpl_forkAndExec}
     };
-    (*pojav_environ->runtimeJNIEnvPtr_JRE)->RegisterNatives(pojav_environ->runtimeJNIEnvPtr_JRE, cls, methods, 1);
+    (*env)->RegisterNatives(env, hookClass, methods, 1);
     printf("Registered forkAndExec\n");
 }

@@ -45,9 +45,8 @@ static jlong ndlopen_bugfix(__attribute__((unused)) JNIEnv *env,
 /**
  * Install the LWJGL dlopen hook. This allows us to mitigate linker bugs and add custom library overrides.
  */
-void installLwjglDlopenHook() {
+void installLwjglDlopenHook(JNIEnv *env) {
     __android_log_print(ANDROID_LOG_INFO, "LwjglLinkerHook", "Installing LWJGL dlopen() hook");
-    JNIEnv* env = pojav_environ->runtimeJNIEnvPtr_JRE;
     jclass dynamicLinkLoader = (*env)->FindClass(env, "org/lwjgl/system/linux/DynamicLinkLoader");
     if(dynamicLinkLoader == NULL) {
         __android_log_print(ANDROID_LOG_ERROR, "LwjglLinkerHook", "Failed to find the target class");

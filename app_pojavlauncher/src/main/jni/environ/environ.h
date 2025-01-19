@@ -51,9 +51,8 @@ struct pojav_environ_s {
     jbyte* keyDownBuffer;
     jbyte* mouseDownBuffer;
     JavaVM* runtimeJavaVMPtr;
-    JNIEnv* runtimeJNIEnvPtr_JRE;
+    JNIEnv* glfwThreadVmEnv;
     JavaVM* dalvikJavaVMPtr;
-    JNIEnv* dalvikJNIEnvPtr_ANDROID;
     long showingWindow;
     bool isInputReady, isCursorEntered, isUseStackQueueCall, shouldUpdateMouse;
     bool shouldUpdateMonitorSize, monitorSizeConsumed;

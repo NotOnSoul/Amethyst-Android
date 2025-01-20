@@ -192,8 +192,6 @@ public class JREUtils {
 
         if(PREF_DUMP_SHADERS)
             envMap.put("LIBGL_VGPU_DUMP", "1");
-        if(PREF_ZINK_PREFER_SYSTEM_DRIVER)
-            envMap.put("POJAV_ZINK_PREFER_SYSTEM_DRIVER", "1");
         if(PREF_VSYNC_IN_ZINK)
             envMap.put("POJAV_VSYNC_IN_ZINK", "1");
         if(Tools.deviceHasHangingLinker())
@@ -258,7 +256,7 @@ public class JREUtils {
             }
         }
 
-        if(info.vendor.equals("Qualcomm") && info.renderer.contains("Adreno")) {
+        if(info.vendor.equals("Qualcomm") && info.renderer.contains("Adreno") && !PREF_ZINK_PREFER_SYSTEM_DRIVER) {
             envMap.put("POJAV_LOAD_TURNIP", "1");
         }
 

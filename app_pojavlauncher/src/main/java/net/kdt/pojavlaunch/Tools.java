@@ -70,6 +70,7 @@ import net.kdt.pojavlaunch.prefs.LauncherPreferences;
 import net.kdt.pojavlaunch.utils.DateUtils;
 import net.kdt.pojavlaunch.utils.DownloadUtils;
 import net.kdt.pojavlaunch.utils.FileUtils;
+import net.kdt.pojavlaunch.utils.GLInfoUtils;
 import net.kdt.pojavlaunch.utils.JREUtils;
 import net.kdt.pojavlaunch.utils.JSONUtils;
 import net.kdt.pojavlaunch.utils.MCOptionUtils;
@@ -233,8 +234,7 @@ public final class Tools {
      * Initialize OpenGL and do checks to see if the GPU of the device is affected by the render
      * distance issue.
 
-     * Currently only checks whether the user has an Adreno GPU capable of OpenGL ES 3
-     * and surfaceless rendering installed.
+     * Currently only checks whether the user has an Adreno GPU capable of OpenGL ES 3.
 
      * This issue is caused by a very severe limit on the amount of GL buffer names that could be allocated
      * by the Adreno properietary GLES driver.
@@ -242,44 +242,8 @@ public final class Tools {
      * @return whether the GPU is affected by the Large Thin Wrapper render distance issue on vanilla
      */
     private static boolean affectedByRenderDistanceIssue() {
-        EGLDisplay eglDisplay = EGL14.eglGetDisplay(EGL14.EGL_DEFAULT_DISPLAY);
-        if(eglDisplay == EGL14.EGL_NO_DISPLAY || !EGL14.eglInitialize(eglDisplay, null, 0, null, 0)) return false;
-        int[] egl_attributes = new int[]  {
-                EGL14.EGL_BLUE_SIZE, 8,
-                EGL14.EGL_GREEN_SIZE, 8,
-                EGL14.EGL_RED_SIZE, 8,
-                EGL14.EGL_ALPHA_SIZE, 8,
-                EGL14.EGL_DEPTH_SIZE, 24,
-                EGL14.EGL_SURFACE_TYPE, EGL14.EGL_PBUFFER_BIT,
-                EGL14.EGL_RENDERABLE_TYPE, EGL14.EGL_OPENGL_ES2_BIT,
-                EGL14.EGL_NONE
-        };
-        EGLConfig[] config = new EGLConfig[1];
-        int[] num_configs = new int[]{0};
-        if(!EGL14.eglChooseConfig(eglDisplay, egl_attributes, 0, config, 0, 1, num_configs, 0) || num_configs[0] == 0) {
-            EGL14.eglTerminate(eglDisplay);
-            Log.e("CheckVendor", "Failed to choose an EGL config");
-            return false;
-        }
-        int[] egl_context_attributes = new int[] { EGL14.EGL_CONTEXT_CLIENT_VERSION, 3, EGL14.EGL_NONE };
-        EGLContext context = EGL14.eglCreateContext(eglDisplay, config[0], EGL14.EGL_NO_CONTEXT, egl_context_attributes, 0);
-        if(context == EGL14.EGL_NO_CONTEXT) {
-            Log.e("CheckVendor", "Failed to create a context");
-            EGL14.eglTerminate(eglDisplay);
-            return false;
-        }
-        if(!EGL14.eglMakeCurrent(eglDisplay, EGL14.EGL_NO_SURFACE, EGL14.EGL_NO_SURFACE, context)) {
-            Log.e("CheckVendor", "Failed to make context current");
-            EGL14.eglDestroyContext(eglDisplay, context);
-            EGL14.eglTerminate(eglDisplay);
-        }
-        boolean is_adreno = GLES30.glGetString(GLES30.GL_VENDOR).equals("Qualcomm") &&
-                            GLES30.glGetString(GLES30.GL_RENDERER).contains("Adreno");
-        Log.e("CheckVendor", "Running Adreno graphics: "+is_adreno);
-        EGL14.eglMakeCurrent(eglDisplay, EGL14.EGL_NO_SURFACE, EGL14.EGL_NO_SURFACE, EGL14.EGL_NO_CONTEXT);
-        EGL14.eglDestroyContext(eglDisplay, context);
-        EGL14.eglTerminate(eglDisplay);
-        return is_adreno;
+        GLInfoUtils.GLInfo info = GLInfoUtils.getInfo();
+        return info.renderer.contains("Adreno") && info.vendor.equals("Qualcomm") && info.glesMajorVersion >= 3;
     }
 
     private static boolean checkRenderDistance(File gamedir) {
@@ -1071,6 +1035,8 @@ public final class Tools {
         Logger.appendToLog("Info: API version: " + SDK_INT);
         Logger.appendToLog("Info: Selected Minecraft version: " + gameVersion);
         Logger.appendToLog("Info: Custom Java arguments: \"" + javaArguments + "\"");
+        GLInfoUtils.GLInfo info = GLInfoUtils.getInfo();
+        Logger.appendToLog("Info: Graphics device: "+info.vendor+ " "+info.renderer+" (OpenGL ES "+info.glesMajorVersion+")");
     }
 
     public interface DownloaderFeedback {

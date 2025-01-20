@@ -9,6 +9,8 @@
 #include <dlfcn.h>
 #include <android/log.h>
 #include <stdlib.h>
+#include <errno.h>
+#include <pthread.h>
 #include "stdio_is.h"
 
 static _Atomic bool exit_tripped = false;
@@ -28,6 +30,23 @@ static void custom_exit(int code) {
     BYTEHOOK_POP_STACK();
 }
 
+// Hooks for chmod and fchmod that always return success.
+// This allows older Android versions to work with Java NIO zipfs inside of the Pojav folder.
+typedef int (*chmod_func)(const char*, mode_t);
+typedef int (*fchmod_func)(int, mode_t);
+
+#define TEMPLATE_HOOK(X, Y, Z, W) static int X(Y, mode_t mode) { \
+    int result = BYTEHOOK_CALL_PREV(X, Z, W, mode); \
+    if(result != 0) errno = 0; \
+    BYTEHOOK_POP_STACK(); \
+    return 0; \
+} \
+
+TEMPLATE_HOOK(custom_chmod, const char* filename, chmod_func, filename)
+TEMPLATE_HOOK(custom_fchmod, int fd, fchmod_func, fd)
+
+#undef TEMPLATE_HOOK
+
 static void custom_atexit() {
     // Same as custom_exit, but without the code or the exit passthrough.
     if(exit_tripped) {
@@ -37,14 +56,29 @@ static void custom_atexit() {
     nominal_exit(0, false);
 }
 
-static bool init_exit_hook() {
+typedef bytehook_stub_t (*bytehook_hook_all_t)(const char *callee_path_name, const char *sym_name, void *new_func,
+                                               bytehook_hooked_t hooked, void *hooked_arg);
+
+static void create_chmod_hooks(bytehook_hook_all_t bytehook_hook_all_p) {
+    bytehook_stub_t stub_chmod = bytehook_hook_all_p(NULL, "chmod", &custom_chmod, NULL, NULL);
+    bytehook_stub_t stub_fchmod = bytehook_hook_all_p(NULL, "fchmod", &custom_fchmod, NULL, NULL);
+    __android_log_print(ANDROID_LOG_INFO, "chmod_hook", "Successfully initialized chmod hooks, stubs: %p %p", stub_chmod, stub_fchmod);
+}
+
+static void create_hooks(bytehook_hook_all_t bytehook_hook_all_p) {
+    bytehook_stub_t stub_exit = bytehook_hook_all_p(NULL, "exit", &custom_exit, NULL, NULL);
+    __android_log_print(ANDROID_LOG_INFO, "exit_hook", "Successfully initialized exit hook, stub: %p", stub_exit);
+    // TODO: figure out proper android version where these should apply
+    create_chmod_hooks(bytehook_hook_all_p);
+}
+
+static bool init_hooks() {
     void* bytehook_handle = dlopen("libbytehook.so", RTLD_NOW);
     if(bytehook_handle == NULL) {
         goto dlerror;
     }
 
-    bytehook_stub_t (*bytehook_hook_all_p)(const char *callee_path_name, const char *sym_name, void *new_func,
-    bytehook_hooked_t hooked, void *hooked_arg);
+    bytehook_hook_all_t bytehook_hook_all_p;
     int (*bytehook_init_p)(int mode, bool debug);
 
     bytehook_hook_all_p = dlsym(bytehook_handle, "bytehook_hook_all");
@@ -55,8 +89,7 @@ static bool init_exit_hook() {
     }
     int bhook_status = bytehook_init_p(BYTEHOOK_MODE_AUTOMATIC, false);
     if(bhook_status == BYTEHOOK_STATUS_CODE_OK) {
-        bytehook_stub_t stub = bytehook_hook_all_p(NULL, "exit", &custom_exit, NULL, NULL);
-        __android_log_print(ANDROID_LOG_INFO, "exit_hook", "Successfully initialized exit hook, stub=%p", stub);
+        create_hooks(bytehook_hook_all_p);
         return true;
     } else {
         __android_log_print(ANDROID_LOG_INFO, "exit_hook", "bytehook_init failed (%i)", bhook_status);
@@ -71,9 +104,9 @@ static bool init_exit_hook() {
 }
 
 JNIEXPORT void JNICALL
-Java_net_kdt_pojavlaunch_utils_JREUtils_initializeGameExitHook(JNIEnv *env, jclass clazz) {
-    bool hookReady = init_exit_hook();
-    if(!hookReady){
+Java_net_kdt_pojavlaunch_utils_JREUtils_initializeHooks(JNIEnv *env, jclass clazz) {
+    bool hooks_ready = init_hooks();
+    if(!hooks_ready){
         // If we can't hook, register atexit(). This won't report a proper error code,
         // but it will prevent a SIGSEGV or a SIGABRT from the depths of Dalvik that happens
         // on exit().

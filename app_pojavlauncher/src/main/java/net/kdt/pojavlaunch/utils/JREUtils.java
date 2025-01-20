@@ -32,11 +32,6 @@ import net.kdt.pojavlaunch.plugins.FFmpegPlugin;
 import net.kdt.pojavlaunch.prefs.*;
 import org.lwjgl.glfw.*;
 
-import javax.microedition.khronos.egl.EGL10;
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.egl.EGLContext;
-import javax.microedition.khronos.egl.EGLDisplay;
-
 public class JREUtils {
     private JREUtils() {}
 
@@ -239,7 +234,7 @@ public class JREUtils {
             reader.close();
         }
 
-        GLInfoUtils.GLInfo info = GLInfoUtils.getInfo();
+        GLInfoUtils.GLInfo info = GLInfoUtils.getGlInfo();
         if(!envMap.containsKey("LIBGL_ES") && LOCAL_RENDERER != null) {
             int glesMajor = info.glesMajorVersion;
             Log.i("glesDetect","GLES version detected: "+glesMajor);
@@ -256,7 +251,7 @@ public class JREUtils {
             }
         }
 
-        if(info.vendor.equals("Qualcomm") && info.renderer.contains("Adreno") && !PREF_ZINK_PREFER_SYSTEM_DRIVER) {
+        if(info.isAdreno() && !PREF_ZINK_PREFER_SYSTEM_DRIVER) {
             envMap.put("POJAV_LOAD_TURNIP", "1");
         }
 
@@ -517,7 +512,7 @@ public class JREUtils {
     }
 
     public static int getDetectedVersion() {
-        return GLInfoUtils.getInfo().glesMajorVersion;
+        return GLInfoUtils.getGlInfo().glesMajorVersion;
     }
     public static native int chdir(String path);
     public static native boolean dlopen(String libPath);

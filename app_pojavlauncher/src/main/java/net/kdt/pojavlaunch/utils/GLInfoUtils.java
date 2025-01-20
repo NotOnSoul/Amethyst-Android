@@ -99,7 +99,12 @@ public class GLInfoUtils {
         return true;
     }
 
-    public static GLInfo getInfo() {
+    /**
+     * Get the information about the current OpenGL ES device, which consists of the vendor,
+     * the renderer and the major GLES version
+     * @return the info
+     */
+    public static GLInfo getGlInfo() {
         if(info != null) return info;
         Log.i("GLInfoUtils", "Querying graphics device info...");
         boolean infoQueryResult = false;
@@ -120,6 +125,14 @@ public class GLInfoUtils {
             this.vendor = vendor;
             this.renderer = renderer;
             this.glesMajorVersion = glesMajorVersion;
+        }
+
+        /**
+         * Check if this GLInfo belongs to a Qualcomm Adreno graphics adapter
+         * @return
+         */
+        public boolean isAdreno() {
+            return renderer.contains("Adreno") && vendor.equals("Qualcomm");
         }
     }
 }

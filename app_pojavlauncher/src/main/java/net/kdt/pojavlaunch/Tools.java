@@ -22,11 +22,6 @@ import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.net.Uri;
-import android.opengl.EGL14;
-import android.opengl.EGLConfig;
-import android.opengl.EGLContext;
-import android.opengl.EGLDisplay;
-import android.opengl.GLES30;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -48,10 +43,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationManagerCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -242,8 +233,8 @@ public final class Tools {
      * @return whether the GPU is affected by the Large Thin Wrapper render distance issue on vanilla
      */
     private static boolean affectedByRenderDistanceIssue() {
-        GLInfoUtils.GLInfo info = GLInfoUtils.getInfo();
-        return info.renderer.contains("Adreno") && info.vendor.equals("Qualcomm") && info.glesMajorVersion >= 3;
+        GLInfoUtils.GLInfo info = GLInfoUtils.getGlInfo();
+        return info.isAdreno() && info.glesMajorVersion >= 3;
     }
 
     private static boolean checkRenderDistance(File gamedir) {
@@ -1035,7 +1026,7 @@ public final class Tools {
         Logger.appendToLog("Info: API version: " + SDK_INT);
         Logger.appendToLog("Info: Selected Minecraft version: " + gameVersion);
         Logger.appendToLog("Info: Custom Java arguments: \"" + javaArguments + "\"");
-        GLInfoUtils.GLInfo info = GLInfoUtils.getInfo();
+        GLInfoUtils.GLInfo info = GLInfoUtils.getGlInfo();
         Logger.appendToLog("Info: Graphics device: "+info.vendor+ " "+info.renderer+" (OpenGL ES "+info.glesMajorVersion+")");
     }
 

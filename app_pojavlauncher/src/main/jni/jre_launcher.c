@@ -84,18 +84,16 @@ _Noreturn static void* abort_waiter_thread(void* extraArg) {
 }
 static bool signal_vm_first = true;
 
-// Writes a string constant into stdout in a signal-safe fashion
-#define PRINT_SIGSAFE(x) do { \
-const char msg[] = x;         \
-write(STDOUT_FILENO, msg, sizeof(msg));\
-} while(0)
+int (*JVM_HANDLE_XXX_SIGNAL)(int sig, siginfo_t* info,
+                          void* ucVoid, int abort_if_unrecognized);
 
-_Noreturn static void abort_waiter_handler(int signal) {
+_Noreturn static void abort_waiter_siginfo(int signal, siginfo_t* siginfo, void* ucVoid) {
     if(signal_vm_first) {
         signal_vm_first = false;
         // This is nasty and evil, but does work
-        PRINT_SIGSAFE("SIGABRT occured! Raising SIGSEGV to generate backtrace\n");
-        raise(SIGSEGV);
+        JVM_HANDLE_XXX_SIGNAL(signal, siginfo, ucVoid, 1);
+        // We are supposed to die after this but yeah
+        while(1) {}
     }
     // Write the final signal into the pipe and block forever.
     write(abort_waiter_data.pipe[1], &signal, sizeof(int));
@@ -112,7 +110,8 @@ static void abort_waiter_setup() {
     sigemptyset(&abort_waiter_data.tracked_sigset);
     for(size_t i = 0; i < ntracked; i++) {
         sigaddset(&abort_waiter_data.tracked_sigset, tracked_signals[i]);
-        sigactions[i].sa_handler = abort_waiter_handler;
+        sigactions[i].sa_sigaction = abort_waiter_siginfo;
+        sigactions[i].sa_flags = SA_SIGINFO | SA_ONSTACK;
     }
     if(pipe(abort_waiter_data.pipe) != 0) {
         printf("Failed to set up aborter pipe: %s\n", strerror(errno));
@@ -136,6 +135,8 @@ static void abort_waiter_setup() {
 
 static jint launchJVM(int margc, char** margv) {
    void* libjli = dlopen("libjli.so", RTLD_LAZY | RTLD_GLOBAL);
+   void* libjvm = dlopen("libjvm.so", RTLD_NOLOAD);
+   JVM_HANDLE_XXX_SIGNAL = dlsym(libjvm, "JVM_handle_linux_signal");
 
    // Unset all signal handlers to create a good slate for JVM signal detection.
    struct sigaction clean_sa;

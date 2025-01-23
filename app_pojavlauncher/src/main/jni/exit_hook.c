@@ -37,6 +37,22 @@ static void custom_atexit() {
     nominal_exit(0, false);
 }
 
+typedef void (*android_set_abort_message_t)(const char* msg);
+
+// Writes a string constant into stdout in a signal-safe fashion
+#define PRINT_SIGSAFE(x) do { \
+const char *msg = x;         \
+write(STDOUT_FILENO, msg, sizeof(msg));\
+} while(0)
+
+static void custom_set_abort_message(const char* amsg) {
+    PRINT_SIGSAFE("Abort message: ");
+    PRINT_SIGSAFE(amsg);
+    PRINT_SIGSAFE("\n");
+    BYTEHOOK_CALL_PREV(custom_set_abort_message, android_set_abort_message_t, amsg);
+    BYTEHOOK_POP_STACK();
+}
+
 static bool init_exit_hook() {
     void* bytehook_handle = dlopen("libbytehook.so", RTLD_NOW);
     if(bytehook_handle == NULL) {
@@ -56,7 +72,8 @@ static bool init_exit_hook() {
     int bhook_status = bytehook_init_p(BYTEHOOK_MODE_AUTOMATIC, false);
     if(bhook_status == BYTEHOOK_STATUS_CODE_OK) {
         bytehook_stub_t stub = bytehook_hook_all_p(NULL, "exit", &custom_exit, NULL, NULL);
-        __android_log_print(ANDROID_LOG_INFO, "exit_hook", "Successfully initialized exit hook, stub=%p", stub);
+        bytehook_stub_t stub2 = bytehook_hook_all_p(NULL, "android_set_abort_message", &custom_set_abort_message, NULL, NULL);
+        __android_log_print(ANDROID_LOG_INFO, "exit_hook", "Successfully initialized exit hook, stub=%p %p", stub, stub2);
         return true;
     } else {
         __android_log_print(ANDROID_LOG_INFO, "exit_hook", "bytehook_init failed (%i)", bhook_status);

@@ -82,7 +82,6 @@ bool linker_ns_load(const char* lib_search_path) {
     // load the two functions we need
     android_create_namespace = dlsym(ld_android_handle, "__loader_android_create_namespace");
     ld_android_link_namespaces_t android_link_namespaces = dlsym(ld_android_handle, "__loader_android_link_namespaces");
-    __android_log_print(ANDROID_LOG_INFO, "nsbypass", "found functions at %p %p", android_create_namespace, android_link_namespaces);
     if(android_create_namespace == NULL || android_link_namespaces == NULL) {
         dlclose(ld_android_handle);
         return false;

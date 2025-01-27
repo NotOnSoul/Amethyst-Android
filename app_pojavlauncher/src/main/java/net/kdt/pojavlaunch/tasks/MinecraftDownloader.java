@@ -368,8 +368,6 @@ public class MinecraftDownloader {
         mSourceJarFile = clientJar;
     }
 
-
-
     private static byte[] getLocalBuffer() {
         byte[] tlb = sThreadLocalDownloadBuffer.get();
         if(tlb != null) return tlb;

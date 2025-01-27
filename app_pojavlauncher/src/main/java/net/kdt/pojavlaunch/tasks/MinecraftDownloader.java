@@ -420,6 +420,8 @@ public class MinecraftDownloader {
             String resultHash = null;
             try {
                 resultHash = downloadSha1();
+                // The hash is a 40-byte download.
+                mInternetUsageCounter.getAndAdd(40);
             }catch (IOException e) {
                 Log.i("MinecraftDownloader", "Failed to download hash", e);
             }
@@ -427,8 +429,6 @@ public class MinecraftDownloader {
                 Log.i("MinecraftDownloader", "Got hash: "+resultHash+ " for "+FileUtils.getFileName(mTargetUrl));
                 mTargetSha1 = resultHash;
             }
-            // The hash is a 40-byte download.
-            mInternetUsageCounter.getAndAdd(40);
         }
 
         @Override

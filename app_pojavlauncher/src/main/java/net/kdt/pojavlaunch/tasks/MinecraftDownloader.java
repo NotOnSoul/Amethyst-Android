@@ -409,7 +409,7 @@ public class MinecraftDownloader {
             return downloadedHash;
         }
 
-        /**
+        /*
          * Maven repositories usually have the hash of a library near it, like:
          * .../libraryName-1.0.jar
          * .../libraryName.1.0.jar.sha1

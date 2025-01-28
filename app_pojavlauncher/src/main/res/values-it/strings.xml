@@ -340,7 +340,9 @@ se vuoi scaricare dalla sorgente ufficiale premi \"Passa al sito ufficiale"\ e r
     <string name="execute_jar_failed_to_read_file">Impossibile leggere il file .jar</string>
     <string name="execute_jar_incompatible_runtime">La funzione Esegui .jar non è compatibile con Java %d</string>
     <string name="controller_button_select">Seleziona</string>
+    <string name="preference_remap_controller_title">Cambiare i binding dei tasti del controller</string>
     <string name="preference_remap_controller_description">Consente di modificare i tasti della tastiera legati a ciascun pulsante del controller</string>
+    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">La GPU non è in grado di eseguire il rendering a una distanza superiore a 7 senza Sodium o altre modifiche simili. La distanza di rendering verrà automaticamente ridotta quando si fa clic su \"OK\".</string>
     <string name="mcl_button_open_directory">Aprire la directory del gioco</string>
     <string name="local_login_bad_username_title">Nome utente non adatto</string>

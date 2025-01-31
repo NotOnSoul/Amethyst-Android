@@ -42,6 +42,8 @@
     <string name="mcl_setting_subtitle_javaargs">Berhati-hati, ini mungkin menyebabkan permainan menjadi ranap jika diubah tanpa pengetahuan.</string>
     <string name="mcl_setting_category_renderer">Renderer</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (semua versi, pantas)</string>
+    <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (semua versi, sederhana)</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17+ sahaja</string>
     <string name="mcl_setting_veroption_release">Rilis</string>
     <string name="mcl_setting_veroption_snapshot">Petikan</string>
     <string name="mcl_setting_veroption_oldalpha">Alfa-lama</string>

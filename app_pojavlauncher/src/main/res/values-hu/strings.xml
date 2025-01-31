@@ -44,6 +44,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_subtitle_resolution_scaler">Lehetővé teszi a felbontás csökkentését. A 100% teljes felbontás.</string>
     <string name="mcl_setting_title_longpresstrigger">Hosszú megnyomási késleltetés elindítása</string>
     <string name="mcl_setting_title_buttonscale">A gombok méretezését szabályozza</string>
+    <string name="mcl_setting_subtitle_buttonscale">Felskálázza őket, hogyha a gombok túl kicsik.</string>
     <string name="mcl_setting_title_mousescale">Egér méretezése</string>
     <string name="mcl_setting_subtitle_mousescale">Megváltoztatja a virtuális egér méretét.</string>
     <string name="mcl_setting_title_javaargs">JVM Indítási argumentumok</string>
@@ -51,6 +52,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_category_renderer">Renderlő</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (összes verzió, gyors)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (összes verzió, közepes)</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - Csak 1.17+</string>
     <string name="mcl_setting_veroption_release">Kiadás</string>
     <string name="mcl_setting_veroption_snapshot">Pillanatkép</string>
     <string name="mcl_setting_veroption_oldalpha">Régi-alpha</string>
@@ -115,8 +117,10 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="customctrl_background_color">Háttér színe</string>
     <string name="customctrl_corner_radius">Sarkok átmérője</string>
     <string name="customctrl_stroke_width">Körvonal szélessége</string>
+    <string name="customctrl_stroke_color">Körvonal színe</string>
     <string name="customctrl_button_opacity">Gomb átlátszósága</string>
     <string name="customctrl_addbutton">Gomb hozzáadása</string>
+    <string name="customctrl_addbutton_drawer">Gombok hozzáadása</string>
     <string name="customctrl_addbutton_joystick">Joystick hozzáadása</string>
     <string name="customctrl_addsubbutton">Al-gomb hozzáadása</string>
     <string name="customctrl_selectdefault">Alap irányítási térkép kiválasztása</string>
@@ -128,6 +132,12 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_check_libraries">Könyvtárak ellenőrzése letöltés után</string>
     <string name="mcl_setting_check_libraries_subtitle">Ez az opció arra kényszeríti az indítót, hogy ellenőrizze a könyvtár hash-t, ha elérhető. Meggátolja a hibás letöltéseket.</string>
     <string name="dl_library_sha_fail">Könyvtár %s sérült és újra le lesz töltve</string>
+    <string name="dl_library_sha_unknown">A(z) %s könyvtár nem ellenőrizhető, bizonyosodj meg róla, hogy működik</string>
+    <string name="dl_library_sha_pass">A(z) %s könyvtár jó és használható</string>
+    <string name="mcl_disable_gestures">Gesztus letiltása</string>
+    <string name="mcl_disable_gestures_subtitle">Gesztusok letiltása, mint pl. tartsd hosszan, hogy blokkokat törj össze, vagy érintsd meg a kijelzőt a blokkok lehelyezésekor.</string>
+    <string name="mcl_disable_swap_hand">\"Kézcsere dupla koppintással\" letiltása</string>
+    <string name="mcl_disable_swap_hand_subtitle">Letiltja a hotbar tárgyal való cserét a második kezedbe dupla koppintással.</string>
     <string name="memory_warning_msg">A jelenlegi szabad memória (%d) kevesebb a kiosztottnál (%d), ami kifagyásokhoz vezethet. Változtass a kiosztáson ha ez történik.</string>
     <string name="mcl_memory_allocation">Memória kiosztás</string>
     <string name="mcl_memory_allocation_subtitle">Szabályozza mennyi memória legyen kiosztva a Minecraft nak.</string>

@@ -9,7 +9,7 @@
     <string name="login_online_username_hint">Kullanıcı Adı</string>
     <string name="login_online_login_label">Giriş yap</string>
     <!-- Hint -->
-    <string name="hint_control_mapping">"En üst merkezde bulunan Çarka dokunarak içerik menüsünü açın. \n Butona dokunarak kişselleştirebilirsiniz: düzenleyebilirsiniz, Boyutlandırabilirsiniz veya tuş atamalarını değiştirebilirsiniz."</string>
+    <string name="hint_control_mapping">"En üst merkezde bulunan Çarka dokunarak içerik menüsünü⚙ açın. \n Herhangi bir butona dokunarak kişiselleştirebilirsiniz, düzenleyebilirsiniz, boyutlandırabilirsiniz veya tuş atamalarını değiştirebilirsiniz."</string>
     <!-- Warnings -->
     <string name="warning_remove_account">Bu hesap kaldırılacak!</string>
     <!-- AlertDialog title -->
@@ -52,7 +52,7 @@
     <string name="mcl_setting_category_renderer">Görüntü İşleyici</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (bütün sürümler, hızlı)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (tüm sürümler için, orta)</string>
-    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - Sadece 1.17.x ve Üstü Sürümler için</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - Sadece 1.17.x Ve Sürümler için</string>
     <string name="mcl_setting_veroption_release">Sürümler</string>
     <string name="mcl_setting_veroption_snapshot">Test sürümleri</string>
     <string name="mcl_setting_veroption_oldalpha">Eski-alfa</string>
@@ -76,7 +76,7 @@
     <string name="global_retry">Tekrar deneyin</string>
     <string name="global_default">Varsayılan</string>
     <!-- MainActivity: strings -->
-    <string name="mcn_exit_title">Uygulama/Oyundan %d koduyla çıkıldı, daha fazla bilgi için latestlog.txt\'ye bakın.</string>
+    <string name="mcn_exit_title">Uygulama/Oyun %d koduyla kapandı, daha fazla bilgi için latestlog.txt\'ye bakın.</string>
     <string name="mcn_signal_title">Uygulama/Oyun %d hata kodu ile çöktü. Daha fazla bilgi için lastestlog.txt dosyasını kontrol edin.</string>
     <string name="mcn_exit_confirm">Zorla kapatmak istediğinize emin misiniz?</string>
     <string name="mcn_check_fail_vulkan_support">Zink (Vulkan) işleyicisi bu cihazda desteklenmiyor!</string>

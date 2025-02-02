@@ -178,9 +178,9 @@
     <string name="preference_misc_description">Semak senarai versi dan perpustakaan</string>
     <string name="preference_experimental_title">Benda Eksperimen</string>
     <string name="preference_experimental_description">Gunakan perkara di sana dengan pertimbangan, tiada sokongan</string>
-    <string name="preference_sustained_performance_title">Membolehkan mod prestasi berterusan</string>
+    <string name="preference_sustained_performance_title">Dayakan mod prestasi berterusan</string>
     <string name="preference_sustained_performance_description">Hadkan pendikit haba dengan mengehadkan prestasi puncak.</string>
-    <string name="preference_force_vsync_title">Membolehkan VSync secara paksa</string>
+    <string name="preference_force_vsync_title">Dayakan VSync secara paksa</string>
     <string name="preference_force_vsync_description">Hadkan pendikit haba dengan mengehadkan prestasi puncak.</string>
     <string name="preference_force_english_title">Paksa bahasa kepada Bahasa Inggeris</string>
     <string name="preference_force_english_description">Membolehkan anda melihat rentetan asal, seperti yang dimaksudkan oleh pembangun. Memerlukan mulakan semula.</string>
@@ -192,7 +192,7 @@
     <string name="preference_gyro_invert_y_axis">Terbalikkan paksi Y</string>
     <string name="preference_gyro_invert_x_axis_description">Terbalikkan paksi mendatar.</string>
     <string name="preference_gyro_invert_y_axis_description">Terbalikkan paksi menegak.</string>
-    <string name="preference_gyro_smoothing_title">Membolehkan melicinkan giroskop</string>
+    <string name="preference_gyro_smoothing_title">Dayakan melicinkan giroskop</string>
     <string name="preference_gyro_smoothing_description">Kurangkan kegelisahan sebagai pertukaran latensi.</string>
     <string name="preference_back_title">Kembali ke skrin terakhir</string>
     <string name="unnamed">Tidak dinamakan</string>
@@ -228,11 +228,11 @@
     <string name="xerr_child">Akaun anda ialah akaun kanak-kanak, dan perlu ditambahkan ke dalam Keluarga untuk log masuk.</string>
     <string name="minecraft_not_owned">Nampaknya akaun ini tidak mempunyai profil Minecraft. Jika anda mempunyai Xbox Game Pass, sila log masuk ke https://minecraft.net/ dan sediakannya.</string>
     <string name="xerr_not_available">Xbox Live tidak tersedia di negara anda</string>
-    <string name="preference_enable_gyro_title">Membolehkan kawalan giroskop</string>
-    <string name="preference_enable_gyro_description">Membolehkan ini akan membolehkan anda menghidupkan dalam permainan dengan memusingkan telefon anda.</string>
+    <string name="preference_enable_gyro_title">Dayakan kawalan giroskop</string>
+    <string name="preference_enable_gyro_description">Dayakan ini akan membolehkan anda menghidupkan dalam permainan dengan memusingkan telefon anda.</string>
     <string name="preference_gyro_sensitivity_title">Giroskop mengawal sensitiviti</string>
     <string name="preference_gyro_sensitivity_description">Laraskan sensitiviti kawalan giroskop.</string>
-    <string name="toast_turn_on_gyro">Membolehkan kawalan giroskop dahulu untuk menggunakan ini!</string>
+    <string name="toast_turn_on_gyro">Dayakan kawalan giroskop dahulu untuk menggunakan ini!</string>
     <string name="preference_gyro_sample_rate_title">Kadar pensampelan giroskop</string>
     <string name="preference_gyro_sample_rate_description">Jika anda mempunyai masalah prestasi dengan kawalan giroskop, tingkatkan ini.</string>
     <string name="microsoft_login_retry_later">Terlalu banyak permintaan, sila cuba sebentar lagi.</string>
@@ -240,7 +240,7 @@
     <string name="mcl_setting_title_buttonallcaps">Hanya gunakan huruf besar dalam label butang</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Melumpuhkan ini jika anda ingin menggunakan huruf kecil dalam kawalan anda.</string>
     <string name="create_profile">Buat profil baharu</string>
-    <string name="preference_shader_dump_title">Membolehkan shader dumping</string>
+    <string name="preference_shader_dump_title">Dayakan shader dumping</string>
     <string name="preference_shader_dump_description">Log menukar shader ke dalam fail log.</string>
     <string name="percent_format">%d%%</string>
     <string name="millisecond_format">%d ms</string>
@@ -253,7 +253,7 @@
     <string name="preference_controller_map_wiped">Konfigurasi pengawal telah dipadamkan.</string>
     <string name="preference_category_controller_settings">Tetapan pengawal</string>
     <string name="preference_wipe_controller_title">Tetapkan semula pemetaan pengawal</string>
-    <string name="preference_wipe_controller_description">Membolehkan anda memetakan semula butang pengawal.</string>
+    <string name="preference_wipe_controller_description">Membenarkan anda untuk meremap semula butang controller.</string>
     <string name="preference_deadzone_scale_title">Skala deadzone joystick</string>
     <string name="preference_deadzone_scale_description">Tingkatkan ia jika joystick drift.</string>
     <string name="preference_force_big_core_title">Paksa renderer untuk berjalan pada teras besar</string>
@@ -369,6 +369,7 @@
     <string name="controller_remapper_exit_part1">Tahan</string>
     <string name="controller_remapper_exit_part2">untuk keluar</string>
     <string name="controller_remapper_operating_mode">Mod semasa</string>
+    <string name="customctrl_visibility_title">Keterlihatan</string>
     <string name="customctrl_visibility_ingame">Dalam permainan</string>
     <string name="customctrl_visibility_in_menus">Dalam menu</string>
     <string name="controller_remapper_expand_entry">Kembangkan untuk menukar kod kunci</string>

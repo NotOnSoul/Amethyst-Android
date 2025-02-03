@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
     <string name="app_name">PojavLauncher (Android için Minecraft: Java Edition)</string>
-    <string name="app_short_name">PojavLauncher</string>
+    <string name="app_short_name">Pojav.Launcher</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->

@@ -428,4 +428,5 @@
     <string name="select_bta_version">Select \"Better than Adventure!\" version</string>
     <string name="bta_installer_available_versions">Supported BTA versions</string>
     <string name="bta_installer_untested_versions">Untested BTA versions</string>
+    <string name="bta_installer_nightly_versions">Nightly BTA versions</string>
 </resources>

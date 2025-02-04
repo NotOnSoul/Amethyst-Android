@@ -31,6 +31,10 @@ public class BTAVersionListAdapter extends BaseExpandableListAdapter implements 
             mGroupNames.add(context.getString(R.string.bta_installer_untested_versions));
             mGroups.add(versionList.untestedVersions);
         }
+        if(!versionList.nightlyVersions.isEmpty()) {
+            mGroupNames.add(context.getString(R.string.bta_installer_nightly_versions));
+            mGroups.add(versionList.nightlyVersions);
+        }
         mGroupNames.trimToSize();
         mGroups.trimToSize();
     }

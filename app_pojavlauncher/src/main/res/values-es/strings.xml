@@ -31,9 +31,9 @@
     <string name="mcl_launch_cleancache">Limpiando archivos caché</string>
     <string name="mcl_launch_downloading">Descargando %s</string>
     <string name="mcl_launch_downloading_progress">"Descargando %s (%.2f MB / %.2f MB)"</string>
-    <string name="mcl_launch_download_assets">Preparando para descargar los recursos</string>
+    <string name="mcl_launch_download_assets">Empezando a descargar los recursos</string>
     <string name="mcl_options">Opciones</string>
-    <string name="mcl_option_customcontrol">Controles personalizados</string>
+    <string name="mcl_option_customcontrol">Personalización de Controles</string>
     <string name="mcl_setting_title_use_surface_view">Usar representación de superficie alternativa</string>
     <string name="mcl_setting_subtitle_use_surface_view">Podría mejorar el rendimiento en escenarios relacionados con la GPU.</string>
     <string name="mcl_setting_title_ignore_notch">Ignorar notch (Para teléfonos con pantalla irregular)</string>

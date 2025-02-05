@@ -16,8 +16,12 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class BTAUtils {
-    private static final String BTA_CLIENT_URL = "https://downloads.betterthanadventure.net/bta-client/%s/%s/client.jar";
-    private static final String BTA_ICON_URL = "https://downloads.betterthanadventure.net/bta-client/%s/%s/auto/%s.png";
+    private static final String BASE_DOWNLOADS_URL = "https://downloads.betterthanadventure.net/bta-client/";
+    private static final String CLIENT_JAR_URL = BASE_DOWNLOADS_URL + "%s/%s/client.jar";
+    private static final String ICON_URL = BASE_DOWNLOADS_URL + "%s/%s/auto/%s.png";
+    private static final String MANIFEST_URL = BASE_DOWNLOADS_URL + "%s/versions.json";
+    private static final String BUILD_TYPE_RELEASE = "release";
+    private static final String BUILD_TYPE_NIGHTLY = "nightly";
     private static final List<String> BTA_TESTED_VERSIONS = new ArrayList<>();
     static {
         BTA_TESTED_VERSIONS.add("v7.3");
@@ -30,7 +34,21 @@ public class BTAUtils {
     private static String getIconUrl(String version, String buildType) {
         String iconName = version.replace('.','_');
         if(buildType.equals("nightly")) iconName = "v"+iconName;
-        return String.format(BTA_ICON_URL, buildType, version, iconName);
+        return String.format(ICON_URL, buildType, version, iconName);
+    }
+
+    private static String getClientJarUrl(String version, String buildType) {
+        return String.format(CLIENT_JAR_URL, buildType, version);
+    }
+
+    private static String getManifestUrl(String buildType) {
+        return String.format(MANIFEST_URL, buildType);
+    }
+
+    private static <T> T getManifest(String buildType, DownloadUtils.ParseCallback<T> parser)
+            throws DownloadUtils.ParseException, IOException {
+        String manifestUrl = getManifestUrl(buildType);
+        return DownloadUtils.downloadStringCached(manifestUrl,"bta_"+manifestUrl, parser);
     }
 
     private static List<BTAVersion> createVersionList(List<String> versionStrings, String buildType) {
@@ -41,7 +59,7 @@ public class BTAUtils {
             if(version == null) continue;
             btaVersions.add(new BTAVersion(
                     version,
-                    String.format(BTA_CLIENT_URL, buildType, version),
+                    getClientJarUrl(version, buildType),
                     getIconUrl(version, buildType)
             ));
         }
@@ -51,7 +69,7 @@ public class BTAUtils {
 
     private static List<BTAVersion> processNightliesJson(String nightliesInfo) throws JsonParseException {
         BTAVersionsManifest manifest = Tools.GLOBAL_GSON.fromJson(nightliesInfo, BTAVersionsManifest.class);
-        return createVersionList(manifest.versions, "nightly");
+        return createVersionList(manifest.versions, BUILD_TYPE_NIGHTLY);
     }
 
     private static BTAVersionList processReleasesJson(String releasesInfo) throws JsonParseException {
@@ -69,20 +87,16 @@ public class BTAUtils {
         }
 
         return new BTAVersionList(
-                createVersionList(testedVersions, "release"),
-                createVersionList(untestedVersions, "release"),
+                createVersionList(testedVersions, BUILD_TYPE_RELEASE),
+                createVersionList(untestedVersions, BUILD_TYPE_RELEASE),
                 null
         );
     }
 
     public static BTAVersionList downloadVersionList() throws IOException {
         try {
-            BTAVersionList releases = DownloadUtils.downloadStringCached(
-                    "https://downloads.betterthanadventure.net/bta-client/release/versions.json",
-                    "bta_releases", BTAUtils::processReleasesJson);
-            List<BTAVersion> nightlies = DownloadUtils.downloadStringCached(
-                    "https://downloads.betterthanadventure.net/bta-client/nightly/versions.json",
-                    "bta_nightlies", BTAUtils::processNightliesJson);
+            BTAVersionList releases = getManifest(BUILD_TYPE_RELEASE, BTAUtils::processReleasesJson);
+            List<BTAVersion> nightlies = getManifest(BUILD_TYPE_NIGHTLY, BTAUtils::processNightliesJson);
             return new BTAVersionList(releases.testedVersions, releases.untestedVersions, nightlies);
         }catch (DownloadUtils.ParseException e) {
             Log.e("BTAUtils", "Failed to process json", e);

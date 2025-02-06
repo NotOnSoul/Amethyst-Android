@@ -23,6 +23,8 @@ public class CustomSeekBarPreference extends SeekBarPreference {
     private int mMin;
     /** The textview associated by default to the preference */
     private TextView mTextView;
+    /** Seekbar increment in case the max gets set */
+    private final int mIncrement;
 
 
     @SuppressLint("PrivateResource")
@@ -31,6 +33,7 @@ public class CustomSeekBarPreference extends SeekBarPreference {
         try (TypedArray a = context.obtainStyledAttributes(
                 attrs, R.styleable.SeekBarPreference, defStyleAttr, defStyleRes)) {
             mMin = a.getInt(R.styleable.SeekBarPreference_min, 0);
+            mIncrement = a.getInt(R.styleable.SeekBarPreference_seekBarIncrement, 0);
         }
     }
 
@@ -111,7 +114,12 @@ public class CustomSeekBarPreference extends SeekBarPreference {
      */
     public void setRange(int min, int max){
         setMin(min);
-        setMax(max);
+        setMaxKeepIncrement(max);
+    }
+
+    public void setMaxKeepIncrement(int max) {
+        super.setMax(max);
+        setSeekBarIncrement(mIncrement);
     }
 
 

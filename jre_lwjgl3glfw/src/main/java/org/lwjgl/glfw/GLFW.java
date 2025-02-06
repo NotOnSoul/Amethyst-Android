@@ -1240,8 +1240,8 @@ public class GLFW
         else return false;
     }
     public static String glfwGetJoystickGUID(int jid) {
-        // 16 8-bit characters to be compatible with SDL_GUID
-        if(jid == GLFW_JOYSTICK_1) return "AAAAAAAAAAAAAAAA";
+        // Return Xbox 360 controller GUID
+        if(jid == GLFW_JOYSTICK_1) return "030000005e0400008e02000056210000";
         else return null;
     }
 
@@ -1319,17 +1319,26 @@ public class GLFW
 */
 
     /** Array version of: {@link #glfwGetMonitorContentScale GetMonitorContentScale} */
-/*
+
     public static void glfwGetMonitorContentScale(@NativeType("GLFWmonitor *") long monitor, @Nullable @NativeType("float *") float[] xscale, @Nullable @NativeType("float *") float[] yscale) {
-        long __functionAddress = Functions.GetMonitorContentScale;
         if (CHECKS) {
             // check(monitor);
             checkSafe(xscale, 1);
             checkSafe(yscale, 1);
         }
-        invokePPPV(monitor, xscale, yscale, __functionAddress);
+        xscale[0] = 1;
+        yscale[0] = 1;
     }
-*/
+
+    public static void glfwGetMonitorContentScale(@NativeType("GLFWmonitor *") long monitor, @NativeType("float *") @Nullable FloatBuffer xscale, @NativeType("float *") @Nullable FloatBuffer yscale) {
+        if (CHECKS) {
+            // check(monitor);
+            checkSafe(xscale, 1);
+            checkSafe(yscale, 1);
+        }
+        xscale.put(0, 1);
+        yscale.put(0, 1);
+    }
 
     /** Array version of: {@link #glfwGetWindowPos GetWindowPos} */
     public static void glfwGetWindowPos(@NativeType("GLFWwindow *") long window, @Nullable @NativeType("int *") int[] xpos, @Nullable @NativeType("int *") int[] ypos) {
@@ -1389,7 +1398,7 @@ public class GLFW
         }
         invokePPPV(window, xscale, yscale, __functionAddress);
     }
-*/
+
 
     /** Array version of: {@link #glfwGetCursorPos GetCursorPos} */
     public static void glfwGetCursorPos(@NativeType("GLFWwindow *") long window, @Nullable @NativeType("double *") double[] xpos, @Nullable @NativeType("double *") double[] ypos) {

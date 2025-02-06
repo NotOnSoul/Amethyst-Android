@@ -32,11 +32,6 @@ import net.kdt.pojavlaunch.plugins.FFmpegPlugin;
 import net.kdt.pojavlaunch.prefs.*;
 import org.lwjgl.glfw.*;
 
-import javax.microedition.khronos.egl.EGL10;
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.egl.EGLContext;
-import javax.microedition.khronos.egl.EGLDisplay;
-
 public class JREUtils {
     private JREUtils() {}
 
@@ -109,7 +104,8 @@ public class JREUtils {
             public void run() {
                 try {
                     if (logcatPb == null) {
-                        logcatPb = new ProcessBuilder().command("logcat", /* "-G", "1mb", */ "-v", "brief", "-s", "jrelog:I", "LIBGL:I", "NativeInput").redirectErrorStream(true);
+                        // No filtering by tag anymore as that relied on incorrect log levels set in log.h
+                        logcatPb = new ProcessBuilder().command("logcat", /* "-G", "1mb", */ "-v", "brief", "-s", "jrelog", "LIBGL", "NativeInput").redirectErrorStream(true);
                     }
 
                     Log.i("jrelog-logcat","Clearing logcat");
@@ -192,8 +188,6 @@ public class JREUtils {
 
         if(PREF_DUMP_SHADERS)
             envMap.put("LIBGL_VGPU_DUMP", "1");
-        if(PREF_ZINK_PREFER_SYSTEM_DRIVER)
-            envMap.put("POJAV_ZINK_PREFER_SYSTEM_DRIVER", "1");
         if(PREF_VSYNC_IN_ZINK)
             envMap.put("POJAV_VSYNC_IN_ZINK", "1");
         if(Tools.deviceHasHangingLinker())
@@ -215,14 +209,14 @@ public class JREUtils {
         envMap.put("LD_LIBRARY_PATH", LD_LIBRARY_PATH);
         envMap.put("PATH", jreHome + "/bin:" + Os.getenv("PATH"));
         if(FFmpegPlugin.isAvailable) {
-            envMap.put("PATH", FFmpegPlugin.libraryPath+":"+envMap.get("PATH"));
+            envMap.put("POJAV_FFMPEG_PATH", FFmpegPlugin.executablePath);
         }
 
         if(LOCAL_RENDERER != null) {
             envMap.put("POJAV_RENDERER", LOCAL_RENDERER);
-            if(LOCAL_RENDERER.equals("opengles3_desktopgl_angle_vulkan")) {
+            if(LOCAL_RENDERER.equals("opengles3_ltw")) {
                 envMap.put("LIBGL_ES", "3");
-                envMap.put("POJAVEXEC_EGL","libEGL_angle.so"); // Use ANGLE EGL
+                envMap.put("POJAVEXEC_EGL","libltw.so"); // Use ANGLE EGL
             }
         }
         if(LauncherPreferences.PREF_BIG_CORE_AFFINITY) envMap.put("POJAV_BIG_CORE_AFFINITY", "1");
@@ -240,8 +234,10 @@ public class JREUtils {
             }
             reader.close();
         }
+
+        GLInfoUtils.GLInfo info = GLInfoUtils.getGlInfo();
         if(!envMap.containsKey("LIBGL_ES") && LOCAL_RENDERER != null) {
-            int glesMajor = getDetectedVersion();
+            int glesMajor = info.glesMajorVersion;
             Log.i("glesDetect","GLES version detected: "+glesMajor);
 
             if (glesMajor < 3) {
@@ -255,6 +251,11 @@ public class JREUtils {
                 envMap.put("LIBGL_ES", "3");
             }
         }
+
+        if(info.isAdreno() && !PREF_ZINK_PREFER_SYSTEM_DRIVER) {
+            envMap.put("POJAV_LOAD_TURNIP", "1");
+        }
+
         for (Map.Entry<String, String> env : envMap.entrySet()) {
             Logger.appendToLog("Added custom env: " + env.getKey() + "=" + env.getValue());
             try {
@@ -315,7 +316,8 @@ public class JREUtils {
         System.out.println(JVMArgs);
 
         initJavaRuntime(runtimeHome);
-        setupExitTrap(activity.getApplication());
+        JREUtils.setupExitMethod(activity.getApplication());
+        JREUtils.initializeHooks();
         chdir(gameDirectory == null ? Tools.DIR_GAME_NEW : gameDirectory.getAbsolutePath());
         userArgs.add(0,"java"); //argv[0] is the program name according to C standard.
 
@@ -368,7 +370,8 @@ public class JREUtils {
 
                 "-Dnet.minecraft.clientmodname=" + Tools.APP_NAME,
                 "-Dfml.earlyprogresswindow=false", //Forge 1.14+ workaround
-                "-Dloader.disable_forked_guis=true"
+                "-Dloader.disable_forked_guis=true",
+                "-Djdk.lang.Process.launchMechanism=FORK" // Default is POSIX_SPAWN which requires starting jspawnhelper, which doesn't work on Android
         ));
         if(LauncherPreferences.PREF_ARC_CAPES) {
             overridableArguments.add("-javaagent:"+new File(Tools.DIR_DATA,"arc_dns_injector/arc_dns_injector.jar").getAbsolutePath()+"=23.95.137.176");
@@ -463,7 +466,7 @@ public class JREUtils {
             case "opengles3":
                 renderLibrary = "libgl4es_114.so"; break;
             case "vulkan_zink": renderLibrary = "libOSMesa.so"; break;
-            case "opengles3_desktopgl_angle_vulkan" : renderLibrary = "libtinywrapper.so"; break;
+            case "opengles3_ltw" : renderLibrary = "libltw.so"; break;
             default:
                 Log.w("RENDER_LIBRARY", "No renderer selected, defaulting to opengles2");
                 renderLibrary = "libgl4es_114.so";
@@ -510,71 +513,19 @@ public class JREUtils {
     }
 
     public static int getDetectedVersion() {
-        /*
-         * Get all the device configurations and check the EGL_RENDERABLE_TYPE attribute
-         * to determine the highest ES version supported by any config. The
-         * EGL_KHR_create_context extension is required to check for ES3 support; if the
-         * extension is not present this test will fail to detect ES3 support. This
-         * effectively makes the extension mandatory for ES3-capable devices.
-         */
-        EGL10 egl = (EGL10) EGLContext.getEGL();
-        EGLDisplay display = egl.eglGetDisplay(EGL10.EGL_DEFAULT_DISPLAY);
-        int[] numConfigs = new int[1];
-        if (egl.eglInitialize(display, null)) {
-            try {
-                boolean checkES3 = hasExtension(egl.eglQueryString(display, EGL10.EGL_EXTENSIONS),
-                        "EGL_KHR_create_context");
-                if (egl.eglGetConfigs(display, null, 0, numConfigs)) {
-                    EGLConfig[] configs = new EGLConfig[numConfigs[0]];
-                    if (egl.eglGetConfigs(display, configs, numConfigs[0], numConfigs)) {
-                        int highestEsVersion = 0;
-                        int[] value = new int[1];
-                        for (int i = 0; i < numConfigs[0]; i++) {
-                            if (egl.eglGetConfigAttrib(display, configs[i],
-                                    EGL10.EGL_RENDERABLE_TYPE, value)) {
-                                if (checkES3 && ((value[0] & EGL_OPENGL_ES3_BIT_KHR) ==
-                                        EGL_OPENGL_ES3_BIT_KHR)) {
-                                    if (highestEsVersion < 3) highestEsVersion = 3;
-                                } else if ((value[0] & EGL_OPENGL_ES2_BIT) == EGL_OPENGL_ES2_BIT) {
-                                    if (highestEsVersion < 2) highestEsVersion = 2;
-                                } else if ((value[0] & EGL_OPENGL_ES_BIT) == EGL_OPENGL_ES_BIT) {
-                                    if (highestEsVersion < 1) highestEsVersion = 1;
-                                }
-                            } else {
-                                Log.w("glesDetect", "Getting config attribute with "
-                                        + "EGL10#eglGetConfigAttrib failed "
-                                        + "(" + i + "/" + numConfigs[0] + "): "
-                                        + egl.eglGetError());
-                            }
-                        }
-                        return highestEsVersion;
-                    } else {
-                        Log.e("glesDetect", "Getting configs with EGL10#eglGetConfigs failed: "
-                                + egl.eglGetError());
-                        return -1;
-                    }
-                } else {
-                    Log.e("glesDetect", "Getting number of configs with EGL10#eglGetConfigs failed: "
-                            + egl.eglGetError());
-                    return -2;
-                }
-            } finally {
-                egl.eglTerminate(display);
-            }
-        } else {
-            Log.e("glesDetect", "Couldn't initialize EGL.");
-            return -3;
-        }
+        return GLInfoUtils.getGlInfo().glesMajorVersion;
     }
     public static native int chdir(String path);
     public static native boolean dlopen(String libPath);
     public static native void setLdLibraryPath(String ldLibraryPath);
     public static native void setupBridgeWindow(Object surface);
     public static native void releaseBridgeWindow();
-    public static native void setupExitTrap(Context context);
+    public static native void initializeHooks();
+    public static native void setupExitMethod(Context context);
     // Obtain AWT screen pixels to render on Android SurfaceView
     public static native int[] renderAWTScreenFrame(/* Object canvas, int width, int height */);
     static {
+        System.loadLibrary("exithook");
         System.loadLibrary("pojavexec");
         System.loadLibrary("pojavexec_awt");
     }

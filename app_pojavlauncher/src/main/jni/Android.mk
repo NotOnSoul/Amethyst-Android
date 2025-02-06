@@ -8,18 +8,6 @@ HERE_PATH := $(LOCAL_PATH)
 
 LOCAL_PATH := $(HERE_PATH)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := angle_gles2
-LOCAL_SRC_FILES := tinywrapper/angle-gles/$(TARGET_ARCH_ABI)/libGLESv2_angle.so
-include $(PREBUILT_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := tinywrapper
-LOCAL_SHARED_LIBRARIES := angle_gles2
-LOCAL_SRC_FILES := tinywrapper/main.c tinywrapper/string_utils.c
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/tinywrapper
-include $(BUILD_SHARED_LIBRARY)
-
 $(call import-module,prefab/bytehook)
 LOCAL_PATH := $(HERE_PATH)
 
@@ -28,7 +16,6 @@ include $(CLEAR_VARS)
 LOCAL_LDLIBS := -ldl -llog -landroid
 # -lGLESv2
 LOCAL_MODULE := pojavexec
-LOCAL_SHARED_LIBRARIES := bytehook
 # LOCAL_CFLAGS += -DDEBUG
 # -DGLES_TEST
 LOCAL_SRC_FILES := \
@@ -41,6 +28,9 @@ LOCAL_SRC_FILES := \
     ctxbridges/osmesa_loader.c \
     ctxbridges/swap_interval_no_egl.c \
     environ/environ.c \
+    jvm_hooks/emui_iterator_fix_hook.c \
+    jvm_hooks/java_exec_hooks.c \
+    jvm_hooks/lwjgl_dlopen_hook.c \
     input_bridge_v3.c \
     jre_launcher.c \
     utils.c \
@@ -49,8 +39,16 @@ LOCAL_SRC_FILES := \
 
 ifeq ($(TARGET_ARCH_ABI),arm64-v8a)
 LOCAL_CFLAGS += -DADRENO_POSSIBLE
-LOCAL_LDLIBS += -lEGL -lGLESv2
 endif
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := exithook
+LOCAL_LDLIBS := -ldl -llog
+LOCAL_SHARED_LIBRARIES := bytehook pojavexec
+LOCAL_SRC_FILES := \
+    native_hooks/exit_hook.c \
+    native_hooks/chmod_hook.c
 include $(BUILD_SHARED_LIBRARY)
 
 #ifeq ($(TARGET_ARCH_ABI),arm64-v8a)

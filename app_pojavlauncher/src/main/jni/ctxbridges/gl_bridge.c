@@ -1,5 +1,4 @@
 #include <EGL/egl.h>
-#include <android/log.h>
 #include <android/native_window.h>
 #include <android/native_window_jni.h>
 #include <string.h>
@@ -11,11 +10,13 @@
 #include "gl_bridge.h"
 #include "egl_loader.h"
 
+#define TAG __FILE_NAME__
+#include <log.h>
+
 //
 // Created by maks on 17.09.2022.
 //
 
-static const char* g_LogTag = "GLBridge";
 static __thread gl_render_window_t* currentBundle;
 static EGLDisplay g_EglDisplay;
 
@@ -23,13 +24,11 @@ bool gl_init() {
     if(!dlsym_EGL()) return false;
     g_EglDisplay = eglGetDisplay_p(EGL_DEFAULT_DISPLAY);
     if (g_EglDisplay == EGL_NO_DISPLAY) {
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "%s",
-                            "eglGetDisplay_p(EGL_DEFAULT_DISPLAY) returned EGL_NO_DISPLAY");
+        LOGE("%s", "eglGetDisplay_p(EGL_DEFAULT_DISPLAY) returned EGL_NO_DISPLAY");
         return false;
     }
     if (eglInitialize_p(g_EglDisplay, 0, 0) != EGL_TRUE) {
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "eglInitialize_p() failed: %04x",
-                            eglGetError_p());
+        LOGE("eglInitialize_p() failed: %04x", eglGetError_p());
         return false;
     }
     return true;
@@ -55,25 +54,6 @@ static void gl4esi_get_display_dimensions(int* width, int* height) {
     *height = 0;
 }
 
-static bool already_initialized = false;
-static void gl_init_gl4es_internals() {
-    if(already_initialized) return;
-    already_initialized = true;
-    void* gl4es = dlopen("libgl4es_114.so", RTLD_NOLOAD);
-    if(gl4es == NULL) return;
-    void (*set_getmainfbsize)(void (*new_getMainFBSize)(int* width, int* height));
-    set_getmainfbsize = dlsym(gl4es, "set_getmainfbsize");
-    if(set_getmainfbsize == NULL) goto warn;
-    set_getmainfbsize(gl4esi_get_display_dimensions);
-    goto cleanup;
-
-    warn:
-    printf("gl4esinternals warning: gl4es was found but internals not initialized. expect rendering issues.\n");
-    cleanup:
-    // dlclose just decreases a ref counter, so this is fine
-    dlclose(gl4es);
-}
-
 gl_render_window_t* gl_init_context(gl_render_window_t *share) {
     gl_render_window_t* bundle = malloc(sizeof(gl_render_window_t));
     memset(bundle, 0, sizeof(gl_render_window_t));
@@ -81,14 +61,12 @@ gl_render_window_t* gl_init_context(gl_render_window_t *share) {
     EGLint num_configs = 0;
 
     if (eglChooseConfig_p(g_EglDisplay, egl_attributes, NULL, 0, &num_configs) != EGL_TRUE) {
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "eglChooseConfig_p() failed: %04x",
-                            eglGetError_p());
+        LOGE("eglChooseConfig_p() failed: %04x", eglGetError_p());
         free(bundle);
         return NULL;
     }
     if (num_configs == 0) {
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "%s",
-                            "eglChooseConfig_p() found no matching config");
+        LOGE("%s", "eglChooseConfig_p() found no matching config");
         free(bundle);
         return NULL;
     }
@@ -115,8 +93,7 @@ gl_render_window_t* gl_init_context(gl_render_window_t *share) {
     bundle->context = eglCreateContext_p(g_EglDisplay, bundle->config, share == NULL ? EGL_NO_CONTEXT : share->context, egl_context_attributes);
 
     if (bundle->context == EGL_NO_CONTEXT) {
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "eglCreateContext_p() finished with error: %04x",
-                            eglGetError_p());
+        LOGE("eglCreateContext_p() finished with error: %04x", eglGetError_p());
         free(bundle);
         return NULL;
     }
@@ -129,14 +106,14 @@ void gl_swap_surface(gl_render_window_t* bundle) {
     }
     if(bundle->surface != NULL) eglDestroySurface_p(g_EglDisplay, bundle->surface);
     if(bundle->newNativeSurface != NULL) {
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "Switching to new native surface");
+        LOGI("Switching to new native surface");
         bundle->nativeSurface = bundle->newNativeSurface;
         bundle->newNativeSurface = NULL;
         ANativeWindow_acquire(bundle->nativeSurface);
         ANativeWindow_setBuffersGeometry(bundle->nativeSurface, 0, 0, bundle->format);
         bundle->surface = eglCreateWindowSurface_p(g_EglDisplay, bundle->config, bundle->nativeSurface, NULL);
     }else{
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "No new native surface, switching to 1x1 pbuffer");
+        LOGI("No new native surface, switching to 1x1 pbuffer");
         bundle->nativeSurface = NULL;
         const EGLint pbuffer_attrs[] = {EGL_WIDTH, 1 , EGL_HEIGHT, 1, EGL_NONE};
         bundle->surface = eglCreatePbufferSurface_p(g_EglDisplay, bundle->config, pbuffer_attrs);
@@ -145,10 +122,6 @@ void gl_swap_surface(gl_render_window_t* bundle) {
 }
 
 void gl_make_current(gl_render_window_t* bundle) {
-    // Perform initialization here as the renderer may not be loaded when gl_init or gl_init_context is called.
-    // Yes, even though it is dlopened on MC startup by Pojav, due to linker namespacing weirdness
-    // on API 29/MIUI it may not be loaded at the point of the gl_init call in the current namespace.
-    gl_init_gl4es_internals();
 
     if(bundle == NULL) {
         if(eglMakeCurrent_p(g_EglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT)) {
@@ -159,11 +132,11 @@ void gl_make_current(gl_render_window_t* bundle) {
     bool hasSetMainWindow = false;
     if(pojav_environ->mainWindowBundle == NULL) {
         pojav_environ->mainWindowBundle = (basic_render_window_t*)bundle;
-        __android_log_print(ANDROID_LOG_INFO, g_LogTag, "Main window bundle is now %p", pojav_environ->mainWindowBundle);
+        LOGI("Main window bundle is now %p", pojav_environ->mainWindowBundle);
         pojav_environ->mainWindowBundle->newNativeSurface = pojav_environ->pojavWindow;
         hasSetMainWindow = true;
     }
-    __android_log_print(ANDROID_LOG_INFO, g_LogTag, "Making current, surface=%p, nativeSurface=%p, newNativeSurface=%p", bundle->surface, bundle->nativeSurface, bundle->newNativeSurface);
+    LOGI("Making current, surface=%p, nativeSurface=%p, newNativeSurface=%p", bundle->surface, bundle->nativeSurface, bundle->newNativeSurface);
     if(bundle->surface == NULL) { //it likely will be on the first run
         gl_swap_surface(bundle);
     }
@@ -175,7 +148,7 @@ void gl_make_current(gl_render_window_t* bundle) {
             gl_swap_surface((gl_render_window_t*)pojav_environ->mainWindowBundle);
             pojav_environ->mainWindowBundle = NULL;
         }
-        __android_log_print(ANDROID_LOG_ERROR, g_LogTag, "eglMakeCurrent returned with error: %04x", eglGetError_p());
+        LOGE("eglMakeCurrent returned with error: %04x", eglGetError_p());
     }
 
 }
@@ -193,14 +166,14 @@ void gl_swap_buffers() {
             currentBundle->newNativeSurface = NULL;
             gl_swap_surface(currentBundle);
             eglMakeCurrent_p(g_EglDisplay, currentBundle->surface, currentBundle->surface, currentBundle->context);
-            __android_log_print(ANDROID_LOG_INFO, g_LogTag, "The window has died, awaiting window change");
+            LOGI("The window has died, awaiting window change");
     }
 
 }
 
 void gl_setup_window() {
     if(pojav_environ->mainWindowBundle != NULL) {
-        __android_log_print(ANDROID_LOG_INFO, g_LogTag, "Main window bundle is not NULL, changing state");
+        LOGI("Main window bundle is not NULL, changing state");
         pojav_environ->mainWindowBundle->state = STATE_RENDERER_NEW_WINDOW;
         pojav_environ->mainWindowBundle->newNativeSurface = pojav_environ->pojavWindow;
     }
@@ -210,4 +183,21 @@ void gl_swap_interval(int swapInterval) {
     if(pojav_environ->force_vsync) swapInterval = 1;
 
     eglSwapInterval_p(g_EglDisplay, swapInterval);
+}
+
+JNIEXPORT void JNICALL
+Java_org_lwjgl_opengl_PojavRendererInit_nativeInitGl4esInternals(JNIEnv *env, jclass clazz,
+                                                            jobject function_provider) {
+    LOGI("GL4ES internals initializing...");
+    jclass funcProviderClass = (*env)->GetObjectClass(env, function_provider);
+    jmethodID method_getFunctionAddress = (*env)->GetMethodID(env, funcProviderClass, "getFunctionAddress", "(Ljava/lang/CharSequence;)J");
+#define GETSYM(N) ((*env)->CallLongMethod(env, function_provider, method_getFunctionAddress, (*env)->NewStringUTF(env, N)));
+
+    void (*set_getmainfbsize)(void (*new_getMainFBSize)(int* width, int* height)) = (void*)GETSYM("set_getmainfbsize");
+    if(set_getmainfbsize != NULL) {
+        LOGI("GL4ES internals initialized dimension callback");
+        set_getmainfbsize(gl4esi_get_display_dimensions);
+    }
+
+#undef GETSYM
 }

@@ -27,7 +27,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.Process;
 import android.provider.DocumentsContract;
 import android.provider.OpenableColumns;
 import android.util.ArrayMap;
@@ -44,10 +43,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationManagerCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -66,8 +61,10 @@ import net.kdt.pojavlaunch.prefs.LauncherPreferences;
 import net.kdt.pojavlaunch.utils.DateUtils;
 import net.kdt.pojavlaunch.utils.DownloadUtils;
 import net.kdt.pojavlaunch.utils.FileUtils;
+import net.kdt.pojavlaunch.utils.GLInfoUtils;
 import net.kdt.pojavlaunch.utils.JREUtils;
 import net.kdt.pojavlaunch.utils.JSONUtils;
+import net.kdt.pojavlaunch.utils.MCOptionUtils;
 import net.kdt.pojavlaunch.utils.OldVersionsUtils;
 import net.kdt.pojavlaunch.value.DependentLibrary;
 import net.kdt.pojavlaunch.value.MinecraftAccount;
@@ -158,14 +155,42 @@ public final class Tools {
     }
 
     /**
-     * Since some constant requires the use of the Context object
-     * You can call this function to initialize them.
-     * Any value (in)directly dependant on DIR_DATA should be set only here.
+     * Checks if the Pojav's storage root is accessible and read-writable. If it's not, starts
+     * the MissingStorageActivity and finishes the supplied activity.
+     * @param context the Activity that checks for storage availability
+     * @return whether the storage is available or not.
      */
-    public static void initContextConstants(Context ctx){
+    public static boolean checkStorageInteractive(Activity context) {
+        if(!Tools.checkStorageRoot(context)) {
+            context.startActivity(new Intent(context, MissingStorageActivity.class));
+            context.finish();
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Initialize context constants most necessary for launcher's early startup phase
+     * that are not dependent on user storage.
+     * All values that depend on DIR_DATA and are not dependent on DIR_GAME_HOME must
+     * be initialized here.
+     * @param ctx the context for initialization.
+     */
+    public static void initEarlyConstants(Context ctx) {
         DIR_CACHE = ctx.getCacheDir();
         DIR_DATA = ctx.getFilesDir().getParent();
-        MULTIRT_HOME = DIR_DATA+"/runtimes";
+        MULTIRT_HOME = DIR_DATA + "/runtimes";
+        DIR_ACCOUNT_NEW = DIR_DATA + "/accounts";
+        NATIVE_LIB_DIR = ctx.getApplicationInfo().nativeLibraryDir;
+    }
+
+    /**
+     * Initialize context constants that depend on user storage.
+     * Any value (in)directly dependent on DIR_GAME_HOME should be set only here.
+     * You ABSOLUTELY MUST check for storage presence using checkStorageRoot() before calling this.
+     */
+    public static void initStorageConstants(Context ctx){
+        initEarlyConstants(ctx);
         DIR_GAME_HOME = getPojavStorageRoot(ctx).getAbsolutePath();
         DIR_GAME_NEW = DIR_GAME_HOME + "/.minecraft";
         DIR_HOME_VERSION = DIR_GAME_NEW + "/versions";
@@ -175,7 +200,60 @@ public final class Tools {
         OBSOLETE_RESOURCES_PATH = DIR_GAME_NEW + "/resources";
         CTRLMAP_PATH = DIR_GAME_HOME + "/controlmap";
         CTRLDEF_FILE = DIR_GAME_HOME + "/controlmap/default.json";
-        NATIVE_LIB_DIR = ctx.getApplicationInfo().nativeLibraryDir;
+    }
+
+    /**
+     * Optimization mods based on Sodium can mitigate the render distance issue. Check if Sodium
+     * or its derivative is currently installed to skip the render distance check.
+     * @param gameDir current game directory
+     * @return whether sodium or a sodium-based mod is installed
+     */
+    private static boolean hasSodium(File gameDir) {
+        File modsDir = new File(gameDir, "mods");
+        File[] mods = modsDir.listFiles(file -> file.isFile() && file.getName().endsWith(".jar"));
+        if(mods == null) return false;
+        for(File file : mods) {
+            String name = file.getName();
+            if(name.contains("sodium") ||
+                    name.contains("embeddium") ||
+                    name.contains("rubidium")) return true;
+        }
+        return false;
+    }
+
+    /**
+     * Initialize OpenGL and do checks to see if the GPU of the device is affected by the render
+     * distance issue.
+
+     * Currently only checks whether the user has an Adreno GPU capable of OpenGL ES 3.
+
+     * This issue is caused by a very severe limit on the amount of GL buffer names that could be allocated
+     * by the Adreno properietary GLES driver.
+
+     * @return whether the GPU is affected by the Large Thin Wrapper render distance issue on vanilla
+     */
+    private static boolean affectedByRenderDistanceIssue() {
+        GLInfoUtils.GLInfo info = GLInfoUtils.getGlInfo();
+        return info.isAdreno() && info.glesMajorVersion >= 3;
+    }
+
+    private static boolean checkRenderDistance(File gamedir) {
+        if(!"opengles3_ltw".equals(Tools.LOCAL_RENDERER)) return false;
+        if(!affectedByRenderDistanceIssue()) return false;
+        if(hasSodium(gamedir)) return false;
+
+        int renderDistance;
+        try {
+            MCOptionUtils.load();
+            String renderDistanceString = MCOptionUtils.get("renderDistance");
+            renderDistance = Integer.parseInt(renderDistanceString);
+        }catch (Exception e) {
+            Log.e("Tools", "Failed to check render distance", e);
+            renderDistance = 12; // Assume Minecraft's default render distance
+        }
+        // 7 is the render distance "magic number" above which MC creates too many buffers
+        // for Adreno's OpenGL ES implementation
+        return renderDistance > 7;
     }
 
     public static void launchMinecraft(final AppCompatActivity activity, MinecraftAccount minecraftAccount,
@@ -203,10 +281,27 @@ public final class Tools {
                 // to start after the activity is shown again
             }
         }
-        Runtime runtime = MultiRTUtils.forceReread(Tools.pickRuntime(minecraftProfile, versionJavaRequirement));
-        JMinecraftVersionList.Version versionInfo = Tools.getVersionInfo(versionId);
         LauncherProfiles.load();
         File gamedir = Tools.getGameDirPath(minecraftProfile);
+        if(checkRenderDistance(gamedir)) {
+            LifecycleAwareAlertDialog.DialogCreator dialogCreator = ((alertDialog, dialogBuilder) ->
+                    dialogBuilder.setMessage(activity.getString(R.string.ltw_render_distance_warning_msg))
+                            .setPositiveButton(android.R.string.ok, (d, w)->{}));
+            if(LifecycleAwareAlertDialog.haltOnDialog(activity.getLifecycle(), activity, dialogCreator)) {
+                return;
+            }
+            // If the code goes here, it means that the user clicked "OK". Fix the render distance.
+            try {
+                MCOptionUtils.set("renderDistance", "7");
+                MCOptionUtils.save();
+            }catch (Exception e) {
+                Log.e("Tools", "Failed to fix render distance setting", e);
+            }
+        }
+
+
+        Runtime runtime = MultiRTUtils.forceReread(Tools.pickRuntime(minecraftProfile, versionJavaRequirement));
+        JMinecraftVersionList.Version versionInfo = Tools.getVersionInfo(versionId);
 
 
         // Pre-process specific files
@@ -514,37 +609,27 @@ public final class Tools {
     }
 
     public static void setFullscreen(Activity activity, boolean fullscreen) {
-        WindowInsetsControllerCompat windowInsetsController =
-                WindowCompat.getInsetsController(activity.getWindow(), activity.getWindow().getDecorView());
-        if (windowInsetsController == null) {
-            Log.w(APP_NAME, "WindowInsetsController is null, cannot set fullscreen");
-            return;
-        }
+        final View decorView = activity.getWindow().getDecorView();
+        View.OnSystemUiVisibilityChangeListener visibilityChangeListener = visibility -> {
+            boolean multiWindowMode = SDK_INT >= 24 && activity.isInMultiWindowMode();
+            // When in multi-window mode, asking for fullscreen makes no sense (cause the launcher runs in a window)
+            // So, ignore the fullscreen setting when activity is in multi window mode
+            if(fullscreen && !multiWindowMode){
+                if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
+                    decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+                }
+            }else{
+                decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+            }
 
-        // Configure the behavior of the hidden system bars.
-        windowInsetsController.setSystemBarsBehavior(
-                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        );
-
-        ViewCompat.setOnApplyWindowInsetsListener(
-                activity.getWindow().getDecorView(),
-                (view, windowInsets) -> {
-                    boolean fullscreenImpl = fullscreen;
-                    if (SDK_INT >= Build.VERSION_CODES.N && activity.isInMultiWindowMode())
-                        fullscreenImpl = false;
-
-                    if (fullscreenImpl) {
-                        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars());
-                    } else {
-                        windowInsetsController.show(WindowInsetsCompat.Type.systemBars());
-                    }
-
-                    if(SDK_INT >= Build.VERSION_CODES.R)
-                        activity.getWindow().setDecorFitsSystemWindows(!fullscreenImpl);
-
-                    return ViewCompat.onApplyWindowInsets(view, windowInsets);
-                });
-
+        };
+        decorView.setOnSystemUiVisibilityChangeListener(visibilityChangeListener);
+        visibilityChangeListener.onSystemUiVisibilityChange(decorView.getSystemUiVisibility()); //call it once since the UI state may not change after the call, so the activity wont become fullscreen
     }
 
     public static DisplayMetrics currentDisplayMetrics;
@@ -941,6 +1026,8 @@ public final class Tools {
         Logger.appendToLog("Info: API version: " + SDK_INT);
         Logger.appendToLog("Info: Selected Minecraft version: " + gameVersion);
         Logger.appendToLog("Info: Custom Java arguments: \"" + javaArguments + "\"");
+        GLInfoUtils.GLInfo info = GLInfoUtils.getGlInfo();
+        Logger.appendToLog("Info: Graphics device: "+info.vendor+ " "+info.renderer+" (OpenGL ES "+info.glesMajorVersion+")");
     }
 
     public interface DownloaderFeedback {
@@ -1271,12 +1358,16 @@ public final class Tools {
         boolean deviceHasVulkan = checkVulkanSupport(context.getPackageManager());
         // Currently, only 32-bit x86 does not have the Zink binary
         boolean deviceHasZinkBinary = !(Architecture.is32BitsDevice() && Architecture.isx86Device());
+        boolean deviceHasOpenGLES3 = JREUtils.getDetectedVersion() >= 3;
+        // LTW is an optional proprietary dependency
+        boolean appHasLtw = new File(Tools.NATIVE_LIB_DIR, "libltw.so").exists();
         List<String> rendererIds = new ArrayList<>(defaultRenderers.length);
         List<String> rendererNames = new ArrayList<>(defaultRendererNames.length);
         for(int i = 0; i < defaultRenderers.length; i++) {
             String rendererId = defaultRenderers[i];
             if(rendererId.contains("vulkan") && !deviceHasVulkan) continue;
             if(rendererId.contains("zink") && !deviceHasZinkBinary) continue;
+            if(rendererId.contains("ltw") && (!deviceHasOpenGLES3 || !appHasLtw)) continue;
             rendererIds.add(rendererId);
             rendererNames.add(defaultRendererNames[i]);
         }

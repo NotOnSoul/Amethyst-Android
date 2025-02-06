@@ -9,7 +9,7 @@
  * 
  * - Implements glfwSetCursorPos() to handle grab camera pos correctly.
  */
-
+ 
 #include <assert.h>
 #include <dlfcn.h>
 #include <jni.h>
@@ -19,9 +19,11 @@
 #include <stdatomic.h>
 #include <math.h>
 
+#define TAG __FILE_NAME__
 #include "log.h"
 #include "utils.h"
 #include "environ/environ.h"
+#include "jvm_hooks/jvm_hooks.h"
 
 #define EVENT_TYPE_CHAR 1000
 #define EVENT_TYPE_CHAR_MODS 1001
@@ -30,62 +32,47 @@
 #define EVENT_TYPE_MOUSE_BUTTON 1006
 #define EVENT_TYPE_SCROLL 1007
 
-static jint attach_env(JNIEnv ** pEnv, JavaVM *jvm) {
-    JNIEnv *jvm_env = NULL;
-    jint env_result = (*jvm)->GetEnv(jvm, (void**)&jvm_env, JNI_VERSION_1_4);
-    if(env_result == JNI_EDETACHED) {
-        env_result = (*jvm)->AttachCurrentThread(jvm, &jvm_env, NULL);
-    }
-    if(env_result != JNI_OK) {
-        return env_result;
-    }
-    *pEnv = jvm_env;
-    return JNI_OK;
-}
-
 #define TRY_ATTACH_ENV(env_name, vm, error_message, then) JNIEnv* env_name;\
-do {                                                                 \
-    jint result = attach_env(&env_name, vm);                                                                  \
-    if(result != JNI_OK) {                                 \
-        printf(error_message, result);                                 \
-        then\
-    } \
+do {                                                                       \
+    env_name = get_attached_env(vm);                                       \
+    if(env_name == NULL) {                                                 \
+        printf(error_message);                                             \
+        then                                                               \
+    }                                                                      \
 } while(0)
-
-
-jint (*orig_ProcessImpl_forkAndExec)(JNIEnv *env, jobject process, jint mode, jbyteArray helperpath, jbyteArray prog, jbyteArray argBlock, jint argc, jbyteArray envBlock, jint envc, jbyteArray dir, jintArray std_fds, jboolean redirectErrorStream);
 
 static void registerFunctions(JNIEnv *env);
 
 jint JNI_OnLoad(JavaVM* vm, __attribute__((unused)) void* reserved) {
     if (pojav_environ->dalvikJavaVMPtr == NULL) {
-        __android_log_print(ANDROID_LOG_INFO, "Native", "Saving DVM environ...");
+        LOGI("Saving DVM environ...");
         //Save dalvik global JavaVM pointer
         pojav_environ->dalvikJavaVMPtr = vm;
-        (*vm)->GetEnv(vm, (void**) &pojav_environ->dalvikJNIEnvPtr_ANDROID, JNI_VERSION_1_4);
-        JNIEnv *env = pojav_environ->dalvikJNIEnvPtr_ANDROID;
-        pojav_environ->bridgeClazz = (*env)->NewGlobalRef(env,(*env) ->FindClass(env,"org/lwjgl/glfw/CallbackBridge"));
-        pojav_environ->method_accessAndroidClipboard = (*env)->GetStaticMethodID(env, pojav_environ->bridgeClazz, "accessAndroidClipboard", "(ILjava/lang/String;)Ljava/lang/String;");
-        pojav_environ->method_onGrabStateChanged = (*env)->GetStaticMethodID(env, pojav_environ->bridgeClazz, "onGrabStateChanged", "(Z)V");
-        pojav_environ->method_onDirectInputEnable = (*env)->GetStaticMethodID(env, pojav_environ->bridgeClazz, "onDirectInputEnable", "()V");
+        JNIEnv *dvEnv;
+        (*vm)->GetEnv(vm, (void**) &dvEnv, JNI_VERSION_1_4);
+        pojav_environ->bridgeClazz = (*dvEnv)->NewGlobalRef(dvEnv,(*dvEnv) ->FindClass(dvEnv,"org/lwjgl/glfw/CallbackBridge"));
+        pojav_environ->method_accessAndroidClipboard = (*dvEnv)->GetStaticMethodID(dvEnv, pojav_environ->bridgeClazz, "accessAndroidClipboard", "(ILjava/lang/String;)Ljava/lang/String;");
+        pojav_environ->method_onGrabStateChanged = (*dvEnv)->GetStaticMethodID(dvEnv, pojav_environ->bridgeClazz, "onGrabStateChanged", "(Z)V");
+        pojav_environ->method_onDirectInputEnable = (*dvEnv)->GetStaticMethodID(dvEnv, pojav_environ->bridgeClazz, "onDirectInputEnable", "()V");
         pojav_environ->isUseStackQueueCall = JNI_FALSE;
     } else if (pojav_environ->dalvikJavaVMPtr != vm) {
-        __android_log_print(ANDROID_LOG_INFO, "Native", "Saving JVM environ...");
+        LOGI("Saving JVM environ...");
         pojav_environ->runtimeJavaVMPtr = vm;
-        (*vm)->GetEnv(vm, (void**) &pojav_environ->runtimeJNIEnvPtr_JRE, JNI_VERSION_1_4);
-        pojav_environ->vmGlfwClass = (*pojav_environ->runtimeJNIEnvPtr_JRE)->NewGlobalRef(pojav_environ->runtimeJNIEnvPtr_JRE, (*pojav_environ->runtimeJNIEnvPtr_JRE)->FindClass(pojav_environ->runtimeJNIEnvPtr_JRE, "org/lwjgl/glfw/GLFW"));
-        pojav_environ->method_glftSetWindowAttrib = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetStaticMethodID(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, "glfwSetWindowAttrib", "(JII)V");
-        pojav_environ->method_internalWindowSizeChanged = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetStaticMethodID(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, "internalWindowSizeChanged", "(J)V");
-        pojav_environ->method_internalChangeMonitorSize = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetStaticMethodID(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, "internalChangeMonitorSize", "(II)V");
-        jfieldID field_keyDownBuffer = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetStaticFieldID(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, "keyDownBuffer", "Ljava/nio/ByteBuffer;");
-        jobject keyDownBufferJ = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetStaticObjectField(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, field_keyDownBuffer);
-        pojav_environ->keyDownBuffer = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetDirectBufferAddress(pojav_environ->runtimeJNIEnvPtr_JRE, keyDownBufferJ);
-        jfieldID field_mouseDownBuffer = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetStaticFieldID(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, "mouseDownBuffer", "Ljava/nio/ByteBuffer;");
-        jobject mouseDownBufferJ = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetStaticObjectField(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, field_mouseDownBuffer);
-        pojav_environ->mouseDownBuffer = (*pojav_environ->runtimeJNIEnvPtr_JRE)->GetDirectBufferAddress(pojav_environ->runtimeJNIEnvPtr_JRE, mouseDownBufferJ);
-        hookExec();
-        installLinkerBugMitigation();
-        installEMUIIteratorMititgation();
+        JNIEnv *vmEnv;
+        (*vm)->GetEnv(vm, (void**) &vmEnv, JNI_VERSION_1_4);
+        pojav_environ->vmGlfwClass = (*vmEnv)->NewGlobalRef(vmEnv, (*vmEnv)->FindClass(vmEnv, "org/lwjgl/glfw/GLFW"));
+        pojav_environ->method_glftSetWindowAttrib = (*vmEnv)->GetStaticMethodID(vmEnv, pojav_environ->vmGlfwClass, "glfwSetWindowAttrib", "(JII)V");
+        pojav_environ->method_internalWindowSizeChanged = (*vmEnv)->GetStaticMethodID(vmEnv, pojav_environ->vmGlfwClass, "internalWindowSizeChanged", "(J)V");
+        pojav_environ->method_internalChangeMonitorSize = (*vmEnv)->GetStaticMethodID(vmEnv, pojav_environ->vmGlfwClass, "internalChangeMonitorSize", "(II)V");
+        jfieldID field_keyDownBuffer = (*vmEnv)->GetStaticFieldID(vmEnv, pojav_environ->vmGlfwClass, "keyDownBuffer", "Ljava/nio/ByteBuffer;");
+        jobject keyDownBufferJ = (*vmEnv)->GetStaticObjectField(vmEnv, pojav_environ->vmGlfwClass, field_keyDownBuffer);
+        pojav_environ->keyDownBuffer = (*vmEnv)->GetDirectBufferAddress(vmEnv, keyDownBufferJ);
+        jfieldID field_mouseDownBuffer = (*vmEnv)->GetStaticFieldID(vmEnv, pojav_environ->vmGlfwClass, "mouseDownBuffer", "Ljava/nio/ByteBuffer;");
+        jobject mouseDownBufferJ = (*vmEnv)->GetStaticObjectField(vmEnv, pojav_environ->vmGlfwClass, field_mouseDownBuffer);
+        pojav_environ->mouseDownBuffer = (*vmEnv)->GetDirectBufferAddress(vmEnv, mouseDownBufferJ);
+        hookExec(vmEnv);
+        installLwjglDlopenHook(vmEnv);
+        installEMUIIteratorMititgation(vmEnv);
     }
 
     if(pojav_environ->dalvikJavaVMPtr == vm) {
@@ -95,7 +82,7 @@ jint JNI_OnLoad(JavaVM* vm, __attribute__((unused)) void* reserved) {
         registerFunctions(env);
     }
     pojav_environ->isGrabbing = JNI_FALSE;
-
+    
     return JNI_VERSION_1_4;
 }
 
@@ -117,10 +104,10 @@ ADD_CALLBACK_WWIN(Scroll)
 #undef ADD_CALLBACK_WWIN
 
 void updateMonitorSize(int width, int height) {
-    (*pojav_environ->runtimeJNIEnvPtr_JRE)->CallStaticVoidMethod(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, pojav_environ->method_internalChangeMonitorSize, width, height);
+    (*pojav_environ->glfwThreadVmEnv)->CallStaticVoidMethod(pojav_environ->glfwThreadVmEnv, pojav_environ->vmGlfwClass, pojav_environ->method_internalChangeMonitorSize, width, height);
 }
 void updateWindowSize(void* window) {
-    (*pojav_environ->runtimeJNIEnvPtr_JRE)->CallStaticVoidMethod(pojav_environ->runtimeJNIEnvPtr_JRE, pojav_environ->vmGlfwClass, pojav_environ->method_internalWindowSizeChanged, (jlong)window);
+    (*pojav_environ->glfwThreadVmEnv)->CallStaticVoidMethod(pojav_environ->glfwThreadVmEnv, pojav_environ->vmGlfwClass, pojav_environ->method_internalWindowSizeChanged, (jlong)window);
 }
 
 void pojavPumpEvents(void* window) {
@@ -255,119 +242,6 @@ void sendData(int type, int i1, int i2, int i3, int i4) {
     atomic_fetch_add_explicit(&pojav_environ->eventCounter, 1, memory_order_acquire);
 }
 
-/**
- * Hooked version of java.lang.UNIXProcess.forkAndExec()
- * which is used to handle the "open" command.
- */
-jint
-hooked_ProcessImpl_forkAndExec(JNIEnv *env, jobject process, jint mode, jbyteArray helperpath, jbyteArray prog, jbyteArray argBlock, jint argc, jbyteArray envBlock, jint envc, jbyteArray dir, jintArray std_fds, jboolean redirectErrorStream) {
-    char *pProg = (char *)((*env)->GetByteArrayElements(env, prog, NULL));
-
-    // Here we only handle the "xdg-open" command
-    if (strcmp(basename(pProg), "xdg-open") != 0) {
-        (*env)->ReleaseByteArrayElements(env, prog, (jbyte *)pProg, 0);
-        return orig_ProcessImpl_forkAndExec(env, process, mode, helperpath, prog, argBlock, argc, envBlock, envc, dir, std_fds, redirectErrorStream);
-    }
-    (*env)->ReleaseByteArrayElements(env, prog, (jbyte *)pProg, 0);
-
-    Java_org_lwjgl_glfw_CallbackBridge_nativeClipboard(env, NULL, /* CLIPBOARD_OPEN */ 2002, argBlock);
-    return 0;
-}
-
-void hookExec() {
-    jclass cls;
-    orig_ProcessImpl_forkAndExec = dlsym(RTLD_DEFAULT, "Java_java_lang_UNIXProcess_forkAndExec");
-    if (!orig_ProcessImpl_forkAndExec) {
-        orig_ProcessImpl_forkAndExec = dlsym(RTLD_DEFAULT, "Java_java_lang_ProcessImpl_forkAndExec");
-        cls = (*pojav_environ->runtimeJNIEnvPtr_JRE)->FindClass(pojav_environ->runtimeJNIEnvPtr_JRE, "java/lang/ProcessImpl");
-    } else {
-        cls = (*pojav_environ->runtimeJNIEnvPtr_JRE)->FindClass(pojav_environ->runtimeJNIEnvPtr_JRE, "java/lang/UNIXProcess");
-    }
-    JNINativeMethod methods[] = {
-        {"forkAndExec", "(I[B[B[BI[BI[B[IZ)I", (void *)&hooked_ProcessImpl_forkAndExec}
-    };
-    (*pojav_environ->runtimeJNIEnvPtr_JRE)->RegisterNatives(pojav_environ->runtimeJNIEnvPtr_JRE, cls, methods, 1);
-    printf("Registered forkAndExec\n");
-}
-
-/**
- * Basically a verbatim implementation of ndlopen(), found at
- * https://github.com/PojavLauncherTeam/lwjgl3/blob/3.3.1/modules/lwjgl/core/src/generated/c/linux/org_lwjgl_system_linux_DynamicLinkLoader.c#L11
- * The idea is that since, on Android 10 and earlier, the linker doesn't really do namespace nesting.
- * It is not a problem as most of the libraries are in the launcher path, but when you try to run
- * VulkanMod which loads shaderc outside of the default jni libs directory through this method,
- * it can't load it because the path is not in the allowed paths for the anonymous namesapce.
- * This method fixes the issue by being in libpojavexec, and thus being in the classloader namespace
- */
-jlong ndlopen_bugfix(__attribute__((unused)) JNIEnv *env,
-                     __attribute__((unused)) jclass class,
-                     jlong filename_ptr,
-                     jint jmode) {
-    const char* filename = (const char*) filename_ptr;
-    int mode = (int)jmode;
-    return (jlong) dlopen(filename, mode);
-}
-
-/**
- * Install the linker bug mitigation for Android 10 and lower. Fixes VulkanMod crashing on these
- * Android versions due to missing namespace nesting.
- */
-void installLinkerBugMitigation() {
-    if(android_get_device_api_level() >= 30) return;
-    __android_log_print(ANDROID_LOG_INFO, "Api29LinkerFix", "API < 30 detected, installing linker bug mitigation");
-    JNIEnv* env = pojav_environ->runtimeJNIEnvPtr_JRE;
-    jclass dynamicLinkLoader = (*env)->FindClass(env, "org/lwjgl/system/linux/DynamicLinkLoader");
-    if(dynamicLinkLoader == NULL) {
-        __android_log_print(ANDROID_LOG_ERROR, "Api29LinkerFix", "Failed to find the target class");
-        (*env)->ExceptionClear(env);
-        return;
-    }
-    JNINativeMethod ndlopenMethod[] = {
-            {"ndlopen", "(JI)J", &ndlopen_bugfix}
-    };
-    if((*env)->RegisterNatives(env, dynamicLinkLoader, ndlopenMethod, 1) != 0) {
-        __android_log_print(ANDROID_LOG_ERROR, "Api29LinkerFix", "Failed to register the bugfix method");
-        (*env)->ExceptionClear(env);
-    }
-}
-
-/**
- * This function is meant as a substitute for SharedLibraryUtil.getLibraryPath() that just returns 0
- * (thus making the parent Java function return null). This is done to avoid using the LWJGL's default function,
- * which will hang the crappy EMUI linker by dlopen()ing inside of dl_iterate_phdr().
- * @return 0, to make the parent Java function return null immediately.
- * For reference: https://github.com/PojavLauncherTeam/lwjgl3/blob/fix_huawei_hang/modules/lwjgl/core/src/main/java/org/lwjgl/system/SharedLibraryUtil.java
- */
-jint getLibraryPath_fix(__attribute__((unused)) JNIEnv *env,
-                        __attribute__((unused)) jclass class,
-                        __attribute__((unused)) jlong pLibAddress,
-                        __attribute__((unused)) jlong sOutAddress,
-                        __attribute__((unused)) jint bufSize){
-    return 0;
-}
-
-/**
- * Install the linker hang mitigation that is meant to prevent linker hangs on old EMUI firmware.
- */
-void installEMUIIteratorMititgation() {
-    if(getenv("POJAV_EMUI_ITERATOR_MITIGATE") == NULL) return;
-    __android_log_print(ANDROID_LOG_INFO, "EMUIIteratorFix", "Installing...");
-    JNIEnv* env = pojav_environ->runtimeJNIEnvPtr_JRE;
-    jclass sharedLibraryUtil = (*env)->FindClass(env, "org/lwjgl/system/SharedLibraryUtil");
-    if(sharedLibraryUtil == NULL) {
-        __android_log_print(ANDROID_LOG_ERROR, "EMUIIteratorFix", "Failed to find the target class");
-        (*env)->ExceptionClear(env);
-        return;
-    }
-    JNINativeMethod getLibraryPathMethod[] = {
-            {"getLibraryPath", "(JJI)I", &getLibraryPath_fix}
-    };
-    if((*env)->RegisterNatives(env, sharedLibraryUtil, getLibraryPathMethod, 1) != 0) {
-        __android_log_print(ANDROID_LOG_ERROR, "EMUIIteratorFix", "Failed to register the mitigation method");
-        (*env)->ExceptionClear(env);
-    }
-}
-
 void critical_set_stackqueue(jboolean use_input_stack_queue) {
     pojav_environ->isUseStackQueueCall = (int) use_input_stack_queue;
 }
@@ -409,7 +283,7 @@ JNIEXPORT jboolean JNICALL JavaCritical_org_lwjgl_glfw_CallbackBridge_nativeSetI
 #ifdef DEBUG
     LOGD("Debug: Changing input state, isReady=%d, pojav_environ->isUseStackQueueCall=%d\n", inputReady, pojav_environ->isUseStackQueueCall);
 #endif
-    __android_log_print(ANDROID_LOG_INFO, "NativeInput", "Input ready: %i", inputReady);
+    LOGI("Input ready: %i", inputReady);
     pojav_environ->isInputReady = inputReady;
     return pojav_environ->isUseStackQueueCall;
 }
@@ -419,14 +293,14 @@ JNIEXPORT jboolean JNICALL Java_org_lwjgl_glfw_CallbackBridge_nativeSetInputRead
 }
 
 JNIEXPORT void JNICALL Java_org_lwjgl_glfw_CallbackBridge_nativeSetGrabbing(__attribute__((unused)) JNIEnv* env, __attribute__((unused)) jclass clazz, jboolean grabbing) {
-    TRY_ATTACH_ENV(dvm_env, pojav_environ->dalvikJavaVMPtr, "nativeSetGrabbing failed: %i", return;);
+    TRY_ATTACH_ENV(dvm_env, pojav_environ->dalvikJavaVMPtr, "nativeSetGrabbing failed!\n", return;);
     (*dvm_env)->CallStaticVoidMethod(dvm_env, pojav_environ->bridgeClazz, pojav_environ->method_onGrabStateChanged, grabbing);
     pojav_environ->isGrabbing = grabbing;
 }
 
 JNIEXPORT jboolean JNICALL
 Java_org_lwjgl_glfw_CallbackBridge_nativeEnableGamepadDirectInput(__attribute__((unused)) JNIEnv *env, __attribute__((unused))  jclass clazz) {
-    TRY_ATTACH_ENV(dvm_env, pojav_environ->dalvikJavaVMPtr, "nativeEnableGamepadDirectInput failed: %i", return JNI_FALSE;);
+    TRY_ATTACH_ENV(dvm_env, pojav_environ->dalvikJavaVMPtr, "nativeEnableGamepadDirectInput failed!\n", return JNI_FALSE;);
     (*dvm_env)->CallStaticVoidMethod(dvm_env, pojav_environ->bridgeClazz, pojav_environ->method_onDirectInputEnable);
     return JNI_TRUE;
 }
@@ -656,9 +530,9 @@ static void registerFunctions(JNIEnv *env) {
     bool use_critical_cc = tryCriticalNative(env);
     jclass bridge_class = (*env)->FindClass(env, "org/lwjgl/glfw/CallbackBridge");
     if(use_critical_cc) {
-        __android_log_print(ANDROID_LOG_INFO, "pojavexec", "CriticalNative is available. Enjoy the 4.6x times faster input!");
+        LOGI("CriticalNative is available. Enjoy the 4.6x times faster input!");
     }else{
-        __android_log_print(ANDROID_LOG_INFO, "pojavexec", "CriticalNative is not available. Upgrade, maybe?");
+        LOGI("CriticalNative is not available. Upgrade, maybe?");
     }
     (*env)->RegisterNatives(env,
                             bridge_class,

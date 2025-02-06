@@ -37,14 +37,18 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class MinecraftDownloader {
+    private static final double ONE_MEGABYTE = (1024d * 1024d);
     public static final String MINECRAFT_RES = "https://resources.download.minecraft.net/";
     private AtomicReference<Exception> mDownloaderThreadException;
     private ArrayList<DownloaderTask> mScheduledDownloadTasks;
-    private AtomicLong mDownloadFileCounter;
-    private AtomicLong mDownloadSizeCounter;
-    private long mDownloadFileCount;
+    private AtomicLong mProcessedFileCounter;
+    private AtomicLong mProcessedSizeCounter; // Total bytes of processed files (passed SHA1 or downloaded)
+    private AtomicLong mInternetUsageCounter; // How many bytes downloaded over Internet
+    private long mTotalFileCount;
+    private long mTotalSize;
     private File mSourceJarFile; // The source client JAR picked during the inheritance process
     private File mTargetJarFile; // The destination client JAR to which the source will be copied to.
+    private boolean mUseFileCounter; // Whether a file counter or a size counter should be used for progress
 
     private static final ThreadLocal<byte[]> sThreadLocalDownloadBuffer = new ThreadLocal<>();
 
@@ -80,12 +84,15 @@ public class MinecraftDownloader {
         // Put up a dummy progress line, for the activity to start the service and do all the other necessary
         // work to keep the launcher alive. We will replace this line when we will start downloading stuff.
         ProgressLayout.setProgress(ProgressLayout.DOWNLOAD_MINECRAFT, 0, R.string.newdl_starting);
+        SpeedCalculator speedCalculator = new SpeedCalculator();
 
         mTargetJarFile = createGameJarPath(versionName);
         mScheduledDownloadTasks = new ArrayList<>();
-        mDownloadFileCounter = new AtomicLong(0);
-        mDownloadSizeCounter = new AtomicLong(0);
+        mProcessedFileCounter = new AtomicLong(0);
+        mProcessedSizeCounter = new AtomicLong(0);
+        mInternetUsageCounter = new AtomicLong(0);
         mDownloaderThreadException = new AtomicReference<>(null);
+        mUseFileCounter = false;
 
         if(!downloadAndProcessMetadata(activity, verInfo, versionName)) {
             throw new RuntimeException(activity.getString(R.string.exception_failed_to_unpack_jre17));
@@ -104,11 +111,9 @@ public class MinecraftDownloader {
         try {
             while (mDownloaderThreadException.get() == null &&
                     !downloaderPool.awaitTermination(33, TimeUnit.MILLISECONDS)) {
-                long dlFileCounter = mDownloadFileCounter.get();
-                int progress = (int)((dlFileCounter * 100L) / mDownloadFileCount);
-                ProgressLayout.setProgress(ProgressLayout.DOWNLOAD_MINECRAFT, progress,
-                        R.string.newdl_downloading_game_files, dlFileCounter,
-                        mDownloadFileCount, (double)mDownloadSizeCounter.get() / (1024d * 1024d));
+                double speed = speedCalculator.feed(mInternetUsageCounter.get()) / ONE_MEGABYTE;
+                if(mUseFileCounter) reportProgressFileCounter(speed);
+                else reportProgressSizeCounter(speed);
             }
             Exception thrownException = mDownloaderThreadException.get();
             if(thrownException != null) {
@@ -121,6 +126,23 @@ public class MinecraftDownloader {
             // Kill all downloading threads immediately, and ignore any exceptions thrown by them
             downloaderPool.shutdownNow();
         }
+    }
+
+    private void reportProgressFileCounter(double speed) {
+        long dlFileCounter = mProcessedFileCounter.get();
+        int progress = (int)((dlFileCounter * 100L) / mTotalFileCount);
+        ProgressLayout.setProgress(ProgressLayout.DOWNLOAD_MINECRAFT, progress,
+                R.string.newdl_downloading_game_files, dlFileCounter,
+                mTotalFileCount, speed);
+    }
+
+    private void reportProgressSizeCounter(double speed) {
+        long dlFileSize = mProcessedSizeCounter.get();
+        double dlSizeMegabytes = (double) dlFileSize / ONE_MEGABYTE;
+        double dlTotalMegabytes = (double) mTotalSize / ONE_MEGABYTE;
+        int progress = (int)((dlFileSize * 100L) / mTotalSize);
+        ProgressLayout.setProgress(ProgressLayout.DOWNLOAD_MINECRAFT, progress,
+                R.string.newdl_downloading_game_files_size, dlSizeMegabytes, dlTotalMegabytes, speed);
     }
 
     private File createGameJsonPath(String versionId) {
@@ -233,7 +255,19 @@ public class MinecraftDownloader {
     private void scheduleDownload(File targetFile, int downloadClass, String url, String sha1,
                                   long size, boolean skipIfFailed) throws IOException {
         FileUtils.ensureParentDirectory(targetFile);
-        mDownloadFileCount++;
+        mTotalFileCount++;
+        if(size < 0) {
+            size = DownloadMirror.getContentLengthMirrored(downloadClass, url);
+        }
+        if(size < 0) {
+            // If we were unable to get the content length ourselves, we automatically fall back
+            // to tracking the progress using the file counter.
+            size = 0;
+            mUseFileCounter = true;
+            Log.i("MinecraftDownloader", "Failed to determine size of "+targetFile.getName()+", switching to file counter");
+        }else {
+            mTotalSize += size;
+        }
         mScheduledDownloadTasks.add(
                 new DownloaderTask(targetFile, downloadClass, url, sha1, size, skipIfFailed)
         );
@@ -361,6 +395,40 @@ public class MinecraftDownloader {
             this.mSkipIfFailed = skipIfFailed;
         }
 
+        private String downloadSha1() throws IOException {
+            String downloadedHash = DownloadMirror.downloadStringMirrored(
+                    mDownloadClass, mTargetUrl + ".sha1"
+            );
+            if(!Tools.isValidString(downloadedHash)) return null;
+            // Ensure that we don't have leading/trailing whitespaces before checking hash length
+            downloadedHash = downloadedHash.trim();
+            // SHA1 is made up of 20 bytes, which means 40 hexadecimal digits, which means 40 chars
+            if(downloadedHash.length() != 40) return null;
+            return downloadedHash;
+        }
+
+        /*
+         * Maven repositories usually have the hash of a library near it, like:
+         * .../libraryName-1.0.jar
+         * .../libraryName.1.0.jar.sha1
+         * Since Minecraft libraries are stored in maven repositories, try to use
+         * this when downloading libraries without hashes in the json.
+         */
+        private void tryGetLibrarySha1() {
+            String resultHash = null;
+            try {
+                resultHash = downloadSha1();
+                // The hash is a 40-byte download.
+                mInternetUsageCounter.getAndAdd(40);
+            }catch (IOException e) {
+                Log.i("MinecraftDownloader", "Failed to download hash", e);
+            }
+            if(resultHash != null) {
+                Log.i("MinecraftDownloader", "Got hash: "+resultHash+ " for "+FileUtils.getFileName(mTargetUrl));
+                mTargetSha1 = resultHash;
+            }
+        }
+
         @Override
         public void run() {
             try {
@@ -371,6 +439,10 @@ public class MinecraftDownloader {
         }
 
         private void runCatching() throws Exception {
+            if(mDownloadClass == DownloadMirror.DOWNLOAD_CLASS_LIBRARIES && !Tools.isValidString(mTargetSha1)) {
+                // If we're downloading a library, try to get sha1 since it might be available as a file
+                tryGetLibrarySha1();
+            }
             if(Tools.isValidString(mTargetSha1)) {
                 verifyFileSha1();
             }else {
@@ -401,18 +473,20 @@ public class MinecraftDownloader {
             }catch (Exception e) {
                 if(!mSkipIfFailed) throw e;
             }
-            mDownloadFileCounter.incrementAndGet();
+            mProcessedFileCounter.incrementAndGet();
         }
 
         private void finishWithoutDownloading() {
-            mDownloadFileCounter.incrementAndGet();
-            mDownloadSizeCounter.addAndGet(mDownloadSize);
+            mProcessedFileCounter.incrementAndGet();
+            mProcessedSizeCounter.addAndGet(mDownloadSize);
         }
 
         @Override
         public void updateProgress(int curr, int max) {
-           mDownloadSizeCounter.addAndGet(curr - mLastCurr);
-           mLastCurr = curr;
+            int delta = curr - mLastCurr;
+            mProcessedSizeCounter.addAndGet(delta);
+            mInternetUsageCounter.addAndGet(delta);
+            mLastCurr = curr;
         }
     }
 }

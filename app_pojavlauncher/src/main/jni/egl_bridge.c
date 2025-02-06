@@ -99,41 +99,8 @@ EXTERNAL_API void* pojavGetCurrentContext() {
 
 //#define ADRENO_POSSIBLE
 #ifdef ADRENO_POSSIBLE
-//Checks if your graphics are Adreno. Returns true if your graphics are Adreno, false otherwise or if there was an error
-bool checkAdrenoGraphics() {
-    EGLDisplay eglDisplay = eglGetDisplay(EGL_DEFAULT_DISPLAY);
-    if(eglDisplay == EGL_NO_DISPLAY || eglInitialize(eglDisplay, NULL, NULL) != EGL_TRUE) return false;
-    EGLint egl_attributes[] = { EGL_BLUE_SIZE, 8, EGL_GREEN_SIZE, 8, EGL_RED_SIZE, 8, EGL_ALPHA_SIZE, 8, EGL_DEPTH_SIZE, 24, EGL_SURFACE_TYPE, EGL_PBUFFER_BIT, EGL_RENDERABLE_TYPE, EGL_OPENGL_ES2_BIT, EGL_NONE };
-    EGLint num_configs = 0;
-    if(eglChooseConfig(eglDisplay, egl_attributes, NULL, 0, &num_configs) != EGL_TRUE || num_configs == 0) {
-        eglTerminate(eglDisplay);
-        return false;
-    }
-    EGLConfig eglConfig;
-    eglChooseConfig(eglDisplay, egl_attributes, &eglConfig, 1, &num_configs);
-    const EGLint egl_context_attributes[] = { EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE };
-    EGLContext context = eglCreateContext(eglDisplay, eglConfig, EGL_NO_CONTEXT, egl_context_attributes);
-    if(context == EGL_NO_CONTEXT) {
-        eglTerminate(eglDisplay);
-        return false;
-    }
-    if(eglMakeCurrent(eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, context) != EGL_TRUE) {
-        eglDestroyContext(eglDisplay, context);
-        eglTerminate(eglDisplay);
-    }
-    const char* vendor = glGetString(GL_VENDOR);
-    const char* renderer = glGetString(GL_RENDERER);
-    bool is_adreno = false;
-    if(strcmp(vendor, "Qualcomm") == 0 && strstr(renderer, "Adreno") != NULL) {
-        is_adreno = true; // TODO: check for Turnip support
-    }
-    eglMakeCurrent(eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);
-    eglDestroyContext(eglDisplay, context);
-    eglTerminate(eglDisplay);
-    return is_adreno;
-}
 void* load_turnip_vulkan() {
-    if(!checkAdrenoGraphics()) return NULL;
+    if(getenv("POJAV_LOAD_TURNIP") == NULL) return NULL;
     const char* native_dir = getenv("POJAV_NATIVEDIR");
     const char* cache_dir = getenv("TMPDIR");
     if(!linker_ns_load(native_dir)) return NULL;
@@ -172,8 +139,7 @@ static void set_vulkan_ptr(void* ptr) {
 }
 
 void load_vulkan() {
-    if(getenv("POJAV_ZINK_PREFER_SYSTEM_DRIVER") == NULL &&
-        android_get_device_api_level() >= 28) { // the loader does not support below that
+    if(android_get_device_api_level() >= 28) { // the loader does not support below that
 #ifdef ADRENO_POSSIBLE
         void* result = load_turnip_vulkan();
         if(result != NULL) {
@@ -215,6 +181,11 @@ int pojavInitOpenGL() {
 extern void updateMonitorSize(int width, int height);
 
 EXTERNAL_API int pojavInit() {
+    pojav_environ->glfwThreadVmEnv = get_attached_env(pojav_environ->runtimeJavaVMPtr);
+    if(pojav_environ->glfwThreadVmEnv == NULL) {
+        printf("Failed to attach Java-side JNIEnv to GLFW thread\n");
+        return 0;
+    }
     ANativeWindow_acquire(pojav_environ->pojavWindow);
     pojav_environ->savedWidth = ANativeWindow_getWidth(pojav_environ->pojavWindow);
     pojav_environ->savedHeight = ANativeWindow_getHeight(pojav_environ->pojavWindow);
@@ -258,14 +229,18 @@ EXTERNAL_API void* pojavCreateContext(void* contextSrc) {
     return br_init_context((basic_render_window_t*)contextSrc);
 }
 
-EXTERNAL_API JNIEXPORT jlong JNICALL
-Java_org_lwjgl_vulkan_VK_getVulkanDriverHandle(ABI_COMPAT JNIEnv *env, ABI_COMPAT jclass thiz) {
-    printf("EGLBridge: LWJGL-side Vulkan loader requested the Vulkan handle\n");
-    // The code below still uses the env var because
+void* maybe_load_vulkan() {
+    // We use the env var because
     // 1. it's easier to do that
     // 2. it won't break if something will try to load vulkan and osmesa simultaneously
     if(getenv("VULKAN_PTR") == NULL) load_vulkan();
-    return strtoul(getenv("VULKAN_PTR"), NULL, 0x10);
+    return (void*) strtoul(getenv("VULKAN_PTR"), NULL, 0x10);
+}
+
+EXTERNAL_API JNIEXPORT jlong JNICALL
+Java_org_lwjgl_vulkan_VK_getVulkanDriverHandle(ABI_COMPAT JNIEnv *env, ABI_COMPAT jclass thiz) {
+    printf("EGLBridge: LWJGL-side Vulkan loader requested the Vulkan handle\n");
+    return (jlong) maybe_load_vulkan();
 }
 
 EXTERNAL_API void pojavSwapInterval(int interval) {

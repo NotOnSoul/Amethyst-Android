@@ -13,7 +13,7 @@
     <string name="login_online_login_label">Login</string>
 
     <!-- Hint -->
-    <string name="hint_control_mapping">"Touch the top center cogwheel to open the context menu ⚙\nTap a button to customize: edit, resize, remove, or change its keybind."</string>
+    <string name="hint_control_mapping">"Touch the top center cogwheel to open the context menu ⚙\nTap a button to customize: edit, resize, remove, or change its keybinds."</string>
 
     <!-- Warnings -->
     <string name="warning_remove_account">This account will be removed!</string>
@@ -66,7 +66,7 @@
     <string name="mcl_setting_category_renderer">Renderer</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (all versions, fast)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (all versions, mid)</string>
-    <string name="mcl_setting_renderer_angle">ANGLE (Vulkan) - (1.17+ only, mid)</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17+ only</string>
     <string name="mcl_setting_veroption_release">Release</string>
     <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Old-alpha</string>
@@ -374,7 +374,8 @@
     <string name="exception_failed_to_unpack_jre17">Failed to install JRE 17</string>
     <string name="newdl_starting">Reading game metadata…</string>
     <string name="newdl_downloading_metadata">Downloading game metadata (%s)</string>
-    <string name="newdl_downloading_game_files">Downloading game files… (%d/%d, %.2f MB)</string>
+    <string name="newdl_downloading_game_files">Downloading game… (%d/%d, %.2f MB/s)</string>
+    <string name="newdl_downloading_game_files_size">Downloading game… (%.2f/%.2f MB, %.2f MB/s)</string>
     <string name="cropper_title">Select image region</string>
     <string name="cropper_lock_vertical">V. lock</string>
     <string name="cropper_lock_horizontal">H. lock</string>
@@ -417,9 +418,10 @@
     <string name="preference_remap_controller_title">Change controller key bindings</string>
     <string name="preference_remap_controller_description">Allows you to modify the keyboard keys bound to each controller button</string>
     <string name="mcl_button_discord">Discord</string>
+    <string name="ltw_render_distance_warning_msg">Your GPU is not capable of rendering above 7 render distance without Sodium or other similar mods. The render distance will be automatically reduced when you click "OK".</string>
     <string name="mcl_button_open_directory">Open game directory</string>
     <string name="discord_invite" translatable="false">https://discord.com/invite/aenk3EUvER</string>
     <string name="local_login_bad_username_title">Unsuitable username</string>
-    <string name="local_login_bad_username_text">The username must be between 3–16 characters long, and must only contain latin letters, arabic numerals and underscores.</string>
+    <string name="local_login_bad_username_text">The username must be between 3–16 characters long, and must only contain latin letters, numbers 0–9 and underscores.</string>
     <string name="quick_setting_title">Quick settings</string>
 </resources>

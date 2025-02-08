@@ -153,7 +153,9 @@
     <string name="preference_misc_title">その他の設定</string>
     <string name="preference_experimental_title">実験的なもの</string>
     <string name="preference_sustained_performance_title">持続的なパフォーマンスモードを有効にする</string>
+    <string name="preference_sustained_performance_description">最大パフォーマンスを制限することでサーマルスロットリングが発生するのを防ぐことができます。</string>
     <string name="preference_force_vsync_title">強制的に垂直同期をオンにする</string>
+    <string name="preference_force_vsync_description">最大パフォーマンスを制限することでサーマルスロットリングが発生するのを防ぐことができます。</string>
     <string name="preference_force_english_title">強制的に言語を英語にする</string>
     <string name="preference_edit_controls_title">コントロールを編集</string>
     <string name="preference_category_gyro_controls">ジャイロコントロール</string>
@@ -213,7 +215,9 @@
     <string name="preference_category_controller_settings">コントローラーの設定</string>
     <string name="preference_wipe_controller_title">コントローラーマッピングをリセット</string>
     <string name="preference_deadzone_scale_title">ジョイスティックの無反応範囲</string>
+    <string name="preference_force_big_core_desc">Minecraftで使用するレンダリング スレッドを、最大周波数が最も高いコアで実行するように強制します。</string>
     <string name="version_select_hint">バージョン選択</string>
+    <string name="forge_dl_searching">Forgeのバージョンナンバーを検索しています</string>
     <string name="forge_dl_select_version">Forge のバージョンを選択</string>
     <string name="fabric_dl_game_version">Minecraft バージョン</string>
     <string name="fabric_dl_install">インストール</string>
@@ -241,5 +245,5 @@
     <string name="controller_button_y">Y</string>
     <string name="controller_button_start">Start</string>
     <string name="controller_button_select">選択...</string>
-    <string name="customctrl_visibility_title">公開範囲</string>
+    <string name="customctrl_visibility_title">透明度</string>
 </resources>

@@ -351,6 +351,12 @@
     <string name="controller_button_select">Seleccionar</string>
     <string name="controller_button_trigger_left">Activador izquierdo</string>
     <string name="controller_button_trigger_right">Activador derecho</string>
+    <string name="controller_stick_press_l">Palanca de mando izquierda (hacer clic)</string>
+    <string name="controller_stick_press_r">Palanca de mando derecha (hacer clic)</string>
+    <string name="controller_dpad_up">Botón direccional arriba</string>
+    <string name="controller_dpad_down">Botón direccional abajo</string>
+    <string name="controller_dpad_left">Botón direccional izquierda</string>
+    <string name="controller_dpad_right">Botón direccional derecha</string>
     <string name="controller_remapper_exit_part1">Mantenga</string>
     <string name="controller_remapper_exit_part2">para salir</string>
     <string name="controller_remapper_operating_mode">Modo actual</string>

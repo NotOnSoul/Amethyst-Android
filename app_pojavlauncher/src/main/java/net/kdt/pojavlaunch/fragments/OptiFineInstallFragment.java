@@ -7,7 +7,6 @@ import android.widget.ExpandableListAdapter;
 
 import net.kdt.pojavlaunch.JavaGUILauncherActivity;
 import net.kdt.pojavlaunch.R;
-import net.kdt.pojavlaunch.Tools;
 import net.kdt.pojavlaunch.modloaders.ModloaderListenerProxy;
 import net.kdt.pojavlaunch.modloaders.OptiFineDownloadTask;
 import net.kdt.pojavlaunch.modloaders.OptiFineUtils;
@@ -18,7 +17,9 @@ import java.io.IOException;
 
 public class OptiFineInstallFragment extends ModVersionListFragment<OptiFineUtils.OptiFineVersions> {
     public static final String TAG = "OptiFineInstallFragment";
-    private static ModloaderListenerProxy sTaskProxy;
+    public OptiFineInstallFragment() {
+        super(TAG);
+    }
     @Override
     public int getTitleText() {
         return R.string.of_dl_select_version;
@@ -28,20 +29,9 @@ public class OptiFineInstallFragment extends ModVersionListFragment<OptiFineUtil
     public int getNoDataMsg() {
         return R.string.of_dl_failed_to_scrape;
     }
-
-    @Override
-    public ModloaderListenerProxy getTaskProxy() {
-        return sTaskProxy;
-    }
-
     @Override
     public OptiFineUtils.OptiFineVersions loadVersionList() throws IOException {
         return OptiFineUtils.downloadOptiFineVersions();
-    }
-
-    @Override
-    public void setTaskProxy(ModloaderListenerProxy proxy) {
-        sTaskProxy = proxy;
     }
 
     @Override

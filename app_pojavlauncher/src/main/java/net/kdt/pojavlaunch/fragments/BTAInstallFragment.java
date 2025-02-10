@@ -14,7 +14,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class BTAInstallFragment extends ModVersionListFragment<BTAUtils.BTAVersionList> {
-    private static ModloaderListenerProxy sTaskProxy;
+    public static final String TAG = "BTAInstallFragment";
+
+    public BTAInstallFragment() {
+        super(TAG);
+    }
+
     @Override
     public int getTitleText() {
         return R.string.select_bta_version;
@@ -26,18 +31,8 @@ public class BTAInstallFragment extends ModVersionListFragment<BTAUtils.BTAVersi
     }
 
     @Override
-    public ModloaderListenerProxy getTaskProxy() {
-        return sTaskProxy;
-    }
-
-    @Override
     public BTAUtils.BTAVersionList loadVersionList() throws IOException {
         return BTAUtils.downloadVersionList();
-    }
-
-    @Override
-    public void setTaskProxy(ModloaderListenerProxy proxy) {
-        sTaskProxy = proxy;
     }
 
     @Override

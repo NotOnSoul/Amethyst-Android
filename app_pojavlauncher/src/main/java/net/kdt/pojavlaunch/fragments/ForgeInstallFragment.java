@@ -21,7 +21,9 @@ import java.util.List;
 
 public class ForgeInstallFragment extends ModVersionListFragment<List<String>> {
     public static final String TAG = "ForgeInstallFragment";
-    private static ModloaderListenerProxy sTaskProxy;
+    public ForgeInstallFragment() {
+        super(TAG);
+    }
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -36,15 +38,6 @@ public class ForgeInstallFragment extends ModVersionListFragment<List<String>> {
     @Override
     public int getNoDataMsg() {
         return R.string.forge_dl_no_installer;
-    }
-
-    @Override
-    public ModloaderListenerProxy getTaskProxy() {
-        return sTaskProxy;
-    }
-    @Override
-    public void setTaskProxy(ModloaderListenerProxy proxy) {
-        sTaskProxy = proxy;
     }
 
     @Override

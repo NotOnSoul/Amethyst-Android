@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import net.kdt.pojavlaunch.R;
 import net.kdt.pojavlaunch.Tools;
+import net.kdt.pojavlaunch.extra.ExtraCore;
 import net.kdt.pojavlaunch.mirrors.DownloadMirror;
 import net.kdt.pojavlaunch.modloaders.ModloaderDownloadListener;
 import net.kdt.pojavlaunch.modloaders.ModloaderListenerProxy;
@@ -25,14 +26,15 @@ import java.io.File;
 import java.io.IOException;
 
 public abstract class ModVersionListFragment<T> extends Fragment implements Runnable, View.OnClickListener, ExpandableListView.OnChildClickListener, ModloaderDownloadListener {
-    public static final String TAG = "ForgeInstallFragment";
+    private final String mExtraTag;
     private ExpandableListView mExpandableListView;
     private ProgressBar mProgressBar;
     private LayoutInflater mInflater;
     private View mRetryView;
 
-    public ModVersionListFragment() {
+    public ModVersionListFragment(String mFragmentTag) {
         super(R.layout.fragment_mod_version_list);
+        this.mExtraTag = mFragmentTag + "_proxy";
     }
 
     @Override
@@ -148,11 +150,19 @@ public abstract class ModVersionListFragment<T> extends Fragment implements Runn
         });
     }
 
+    private void setTaskProxy(ModloaderListenerProxy proxy) {
+        ExtraCore.setValue(mExtraTag, proxy);
+    }
+
+    private ModloaderListenerProxy getTaskProxy() {
+        return (ModloaderListenerProxy) ExtraCore.getValue(mExtraTag);
+    }
+
     public abstract int getTitleText();
     public abstract int getNoDataMsg();
-    public abstract ModloaderListenerProxy getTaskProxy();
+
     public abstract T loadVersionList() throws IOException;
-    public abstract void setTaskProxy(ModloaderListenerProxy proxy);
+
     public abstract ExpandableListAdapter createAdapter(T versionList, LayoutInflater layoutInflater);
     public abstract Runnable createDownloadTask(Object selectedVersion, ModloaderListenerProxy listenerProxy);
     public abstract void onDownloadFinished(Context context, File downloadedFile);

@@ -9,16 +9,6 @@ public class QuiltInstallFragment extends FabriclikeInstallFragment {
     private static ModloaderListenerProxy sTaskProxy;
 
     public QuiltInstallFragment() {
-        super(FabriclikeUtils.QUILT_UTILS);
-    }
-
-    @Override
-    protected ModloaderListenerProxy getListenerProxy() {
-        return sTaskProxy;
-    }
-
-    @Override
-    protected void setListenerProxy(ModloaderListenerProxy listenerProxy) {
-        sTaskProxy = listenerProxy;
+        super(FabriclikeUtils.QUILT_UTILS, TAG);
     }
 }

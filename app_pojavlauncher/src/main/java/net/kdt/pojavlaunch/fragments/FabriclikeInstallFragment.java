@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment;
 import net.kdt.pojavlaunch.PojavApplication;
 import net.kdt.pojavlaunch.R;
 import net.kdt.pojavlaunch.Tools;
+import net.kdt.pojavlaunch.extra.ExtraCore;
 import net.kdt.pojavlaunch.modloaders.FabriclikeDownloadTask;
 import net.kdt.pojavlaunch.modloaders.FabriclikeUtils;
 import net.kdt.pojavlaunch.modloaders.FabricVersion;
@@ -36,6 +37,7 @@ import java.util.concurrent.Future;
 
 public abstract class FabriclikeInstallFragment extends Fragment implements ModloaderDownloadListener, CompoundButton.OnCheckedChangeListener {
     private final FabriclikeUtils mFabriclikeUtils;
+    private final String mExtraTag;
     private Spinner mGameVersionSpinner;
     private FabricVersion[] mGameVersionArray;
     private Future<?> mGameVersionFuture;
@@ -48,9 +50,10 @@ public abstract class FabriclikeInstallFragment extends Fragment implements Modl
     private Button mStartButton;
     private View mRetryView;
     private CheckBox mOnlyStableCheckbox;
-    protected FabriclikeInstallFragment(FabriclikeUtils mFabriclikeUtils) {
+    protected FabriclikeInstallFragment(FabriclikeUtils mFabriclikeUtils, String mFragmentTag) {
         super(R.layout.fragment_fabric_install);
         this.mFabriclikeUtils = mFabriclikeUtils;
+        this.mExtraTag = mFragmentTag + "_proxy";
     }
 
     @Override
@@ -290,6 +293,10 @@ public abstract class FabriclikeInstallFragment extends Fragment implements Modl
         mGameVersionSpinner.setAdapter(createAdapter(mGameVersionArray, mOnlyStableCheckbox.isChecked()));
     }
 
-    protected abstract ModloaderListenerProxy getListenerProxy();
-    protected abstract void setListenerProxy(ModloaderListenerProxy listenerProxy);
+    private ModloaderListenerProxy getListenerProxy() {
+        return (ModloaderListenerProxy) ExtraCore.getValue(mExtraTag);
+    }
+    private void setListenerProxy(ModloaderListenerProxy listenerProxy) {
+        ExtraCore.setValue(mExtraTag, listenerProxy);
+    }
 }

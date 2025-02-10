@@ -130,7 +130,7 @@
     <string name="customctrl_export">Irányítási térkép exportálása</string>
     <string name="main_share_logs">Napló fájl megosztása</string>
     <string name="main_install_jar_file">.Jar végrehajtása</string>
-    <string name="main_play">Játék</string>
+    <string name="main_play">Játék indítása</string>
     <string name="autoram_info_msg">Memória beállítva %d MB-ra</string>
     <string name="mcl_setting_check_libraries">Könyvtárak ellenőrzése letöltés után</string>
     <string name="mcl_setting_check_libraries_subtitle">Ez az opció arra kényszeríti az indítót, hogy ellenőrizze a könyvtár hash-ét, ha elérhető. Megelőzi a hibás letöltéseket.</string>
@@ -311,7 +311,7 @@
     <string name="dl_switch_to_official_site">Átváltás a hivatalos oldalra</string>
     <string name="preference_download_source_title">Játék letöltésének forrása</string>
     <string name="preference_download_source_description">Válassz ki egy letöltő mirror-t ahelyett, hogy a hivatalos letöltő szervert használnád</string>
-    <string name="preference_verify_manifest_title">Játék verzió manifest ellenőrzése</string>
+    <string name="preference_verify_manifest_title">Játék verzió manifest-jének ellenőrzése</string>
     <string name="preference_verify_manifest_description">Mikor engedélyezve van, a Launcher ellenőrizni fogja a játék verziójának manifest-jét a könyvtáraival együtt.</string>
     <string name="notif_download_finished">A játék készen áll az indításra</string>
     <string name="notif_download_finished_desc">Koppints ide az indításhoz!</string>
@@ -381,4 +381,9 @@
     <string name="local_login_bad_username_title">Nem megfelelő felhasználónév</string>
     <string name="local_login_bad_username_text">A felhasználónév legalább 3 vagy legfeljebb 16 karakter hosszú kell hogy legyen, és csakis betűt, számokat 0-tól 9-ig és alsóvonalat (_) tartalmazhat.</string>
     <string name="quick_setting_title">Gyors beállítások</string>
+    <string name="create_bta_profile">\"Better than Adventure\" profil létrehozása</string>
+    <string name="select_bta_version">\"Better than Adventure!\" kiválasztása</string>
+    <string name="bta_installer_available_versions">Támogatott BTA verziók</string>
+    <string name="bta_installer_untested_versions">Le nem tesztelt BTA verziók</string>
+    <string name="bta_installer_nightly_versions">Éjszakai BTA verziók</string>
 </resources>

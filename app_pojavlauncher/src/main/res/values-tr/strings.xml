@@ -381,4 +381,9 @@
     <string name="local_login_bad_username_title">Uygunsuz Kullanıcı adı</string>
     <string name="local_login_bad_username_text">Kullanıcı adı 3- 16 karakter arasında olmalı ve sadece Latin harfleri 0- 9 arasındaki rakamlar ve Alt çizgi içermelidir.</string>
     <string name="quick_setting_title">Hızlı Ayarlar</string>
+    <string name="create_bta_profile">\"Better Than Adventure!\" profili Oluştur</string>
+    <string name="select_bta_version">\"Better Than Adventure!\" sürümünü seçiniz</string>
+    <string name="bta_installer_available_versions">Desteklenen BTA sürümü</string>
+    <string name="bta_installer_untested_versions">Test-Edilmemiş BTA sürümü</string>
+    <string name="bta_installer_nightly_versions">Deneysel (Gecelik) BTA sürümü</string>
 </resources>

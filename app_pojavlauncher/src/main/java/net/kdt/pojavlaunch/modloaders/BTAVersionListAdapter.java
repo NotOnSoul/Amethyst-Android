@@ -55,7 +55,7 @@ public class BTAVersionListAdapter extends BaseExpandableListAdapter implements 
     }
 
     @Override
-    public Object getChild(int i, int i1) {
+    public BTAUtils.BTAVersion getChild(int i, int i1) {
         return mGroups.get(i).get(i1);
     }
 
@@ -88,7 +88,7 @@ public class BTAVersionListAdapter extends BaseExpandableListAdapter implements 
     public View getChildView(int i, int i1, boolean b, View convertView, ViewGroup viewGroup) {
         if(convertView == null)
             convertView = mLayoutInflater.inflate(android.R.layout.simple_expandable_list_item_1, viewGroup, false);
-        ((TextView) convertView).setText(((BTAUtils.BTAVersion)getChild(i,i1)).versionName);
+        ((TextView) convertView).setText(getChild(i,i1).versionName);
         return convertView;
     }
 

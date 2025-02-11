@@ -381,4 +381,9 @@
     <string name="local_login_bad_username_title">用户名不合适</string>
     <string name="local_login_bad_username_text">用户名长度必须在 3–16 个字符之间，并且只能包含拉丁字母、数字 0–9 和下划线。</string>
     <string name="quick_setting_title">快速设置</string>
+    <string name="create_bta_profile">创建“Better than Adventure!”配置文件</string>
+    <string name="select_bta_version">选择“Better than Adventure!”版本</string>
+    <string name="bta_installer_available_versions">支持的 BTA 版本</string>
+    <string name="bta_installer_untested_versions">未经测试的 BTA 版本</string>
+    <string name="bta_installer_nightly_versions">每日构建的 BTA 版本</string>
 </resources>

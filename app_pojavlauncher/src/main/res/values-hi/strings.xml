@@ -190,4 +190,5 @@
     <string name="controller_button_select">चुनो</string>
     <string name="customctrl_visibility_ingame">In-game</string>
     <string name="customctrl_visibility_in_menus">In menus</string>
+    <string name="create_bta_profile">\"Better than Adventure!\" की प्रोफाइल बनाएं</string>
 </resources>

@@ -381,4 +381,9 @@
     <string name="local_login_bad_username_title">Неподходящее имя пользователя</string>
     <string name="local_login_bad_username_text">Имя пользователя должно быть от 3 до 16 символов в длину и содержать только латинские символы, цифры 0–9 или нижние подчёркивания.</string>
     <string name="quick_setting_title">Быстрые настройки</string>
+    <string name="create_bta_profile">Версия с BTA</string>
+    <string name="select_bta_version">Выберите версию «Better than Adventure!»</string>
+    <string name="bta_installer_available_versions">Доступные версии BTA</string>
+    <string name="bta_installer_untested_versions">Непроверенные версии BTA</string>
+    <string name="bta_installer_nightly_versions">Тестовые версии BTA</string>
 </resources>

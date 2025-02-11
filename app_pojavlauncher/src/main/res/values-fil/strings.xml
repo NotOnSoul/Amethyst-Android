@@ -380,4 +380,9 @@
     <string name="local_login_bad_username_title">Hindi sustenableng pangalan</string>
     <string name="local_login_bad_username_text">Ang pangalan ay kailangan dapat 3 - 16 characters lamang, at dapat merong latin na letra, 0 - 9 numero at underscores.</string>
     <string name="quick_setting_title">Madaling mga setting</string>
+    <string name="create_bta_profile">Gumawa ng \"Better than Adventure!\" Propayl</string>
+    <string name="select_bta_version">Pumili ng \"Better than Adventure!\" Bersyon</string>
+    <string name="bta_installer_available_versions">Suportadong Bersyon ng BTA</string>
+    <string name="bta_installer_untested_versions">Hindi Subok na bersyon ng BYA</string>
+    <string name="bta_installer_nightly_versions">Nightly BTA bersyons</string>
 </resources>

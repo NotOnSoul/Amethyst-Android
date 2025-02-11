@@ -36,7 +36,7 @@
     <string name="mcl_options">Opções</string>
     <string name="mcl_option_customcontrol">Controles personalizados</string>
     <string name="mcl_setting_title_use_surface_view">Usar renderização de superfície alternativa</string>
-    <string name="mcl_setting_subtitle_use_surface_view">Pode ajudar no desempenho em caso de limitações de GPU.</string>
+    <string name="mcl_setting_subtitle_use_surface_view">Pode ajudar no desempenho em caso de limitações na GPU.</string>
     <string name="mcl_setting_title_ignore_notch">Ignorar entalhe</string>
     <string name="mcl_setting_subtitle_ignore_notch">Ignora o entalhe e estende a tela embaixo.\nDá a você uma experiência mais imersiva.</string>
     <string name="mcl_setting_title_resolution_scaler">Escala de resolução</string>
@@ -79,7 +79,7 @@
     <string name="mcn_exit_title">Aplicativo/jogo fechou com o código %d, verifique latestlog.txt para mais detalhes.</string>
     <string name="mcn_signal_title">Aplicativo/jogo fechou com o código %d, verifique latestlog.txt para mais detalhes.</string>
     <string name="mcn_exit_confirm">Tem certeza que deseja forçar o encerramento?</string>
-    <string name="mcn_check_fail_vulkan_support">O renderizador Zink (Vulkan) não é compatível com este dispositivo!</string>
+    <string name="mcn_check_fail_vulkan_support">Seu dispositivo não é compatível com o renderizador Zink (Vulkan)!</string>
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Chat</string>
     <string name="control_debug">Depuração</string>
@@ -381,4 +381,9 @@
     <string name="local_login_bad_username_title">Nome de usuário inadequado</string>
     <string name="local_login_bad_username_text">O nome de usuário deve ter entre 3 a 16 caracteres, deve conter somente letras latinas, número de 0 a 9 e sublinhados.</string>
     <string name="quick_setting_title">Configurações rápidas</string>
+    <string name="create_bta_profile">Criar perfil \"Better than Adventure!\"</string>
+    <string name="select_bta_version">Selecione a versão do \"Better than Adventure!\"</string>
+    <string name="bta_installer_available_versions">Versões suportadas</string>
+    <string name="bta_installer_untested_versions">Versões instáveis</string>
+    <string name="bta_installer_nightly_versions">Versões nightly</string>
 </resources>

@@ -381,4 +381,9 @@
     <string name="local_login_bad_username_title">Nama pengguna yang tidak sesuai</string>
     <string name="local_login_bad_username_text">Nama pengguna mestilah antara 3–16 aksara panjang, dan mesti hanya mengandungi huruf latin, nombor 0–9 dan garis bawah.</string>
     <string name="quick_setting_title">Tetapan pantas</string>
+    <string name="create_bta_profile">Cipta \"Better than Adventure!\" profil</string>
+    <string name="select_bta_version">Pilih \"Better than Adventure!\" versi</string>
+    <string name="bta_installer_available_versions">Versi BTA yang disokong</string>
+    <string name="bta_installer_untested_versions">Versi BTA yang belum diuji</string>
+    <string name="bta_installer_nightly_versions">Versi BTA nightly</string>
 </resources>

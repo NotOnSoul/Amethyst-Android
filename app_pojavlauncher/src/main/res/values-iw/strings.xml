@@ -84,7 +84,13 @@
     <string name="control_debug">נפה באגים</string>
     <string name="control_primary">Pri</string>
     <string name="control_secondary">Sec</string>
+    <string name="control_shift">◇</string>
     <string name="control_inventory">Inv</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">3rd</string>
     <string name="control_listplayers">Tab</string>
     <string name="control_mouse">עכבר</string>
@@ -180,6 +186,9 @@
     <string name="preference_edit_controls_title">עריכת בקרים מותאמות אישית</string>
     <string name="preference_edit_controls_summary">כוונן את מערכת הבקרה כך שתתאים לצרכיך.</string>
     <string name="preference_category_gyro_controls">בקריי גירוסקופ</string>
+    <string name="preference_gyro_invert_x_axis">אאא</string>
+    <string name="preference_gyro_invert_x_axis_description">הפוך את הציר האופקי.</string>
+    <string name="preference_gyro_invert_y_axis_description">הפוך את הציר האנכי.</string>
     <string name="preference_gyro_smoothing_title">אפשר החלקת ג\'ירוסקופ</string>
     <string name="preference_gyro_smoothing_description">הפחת רעידות תמורת עיכוב.</string>
     <string name="preference_back_title">חזרה אל המסך האחרון</string>
@@ -229,6 +238,8 @@
     <string name="create_profile">צור פרופיל חדש</string>
     <string name="preference_shader_dump_title">אפשר השלכת הצללה</string>
     <string name="preference_shader_dump_description">רישום הצללות שהומרו לקובץ היומן.</string>
+    <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d מילישניות</string>
     <string name="customctrl_editor_exit_title">עזיבה?</string>
     <string name="customctrl_editor_exit_msg">האם אתה בטוח שברצונך לצאת?</string>
     <string name="customctrl_editor_exit">עזוב את העורך.</string>
@@ -266,8 +277,14 @@
     <string name="of_dl_progress">מוריד %s</string>
     <string name="create_profile_optifine">יצירת פרופיל OptiFine</string>
     <string name="hint_search_modpack">חיפוש Modpacks</string>
+    <string name="preference_vulkan_driver_system_description">אלץ את הלאנצ\'ר להשתמש בדרייבר Vulkan של המערכת במקום Turnip על כרטיסי GPU של Adreno. משפיע רק על Zink ועל מודים שמשתמשים ב-Vulkan.</string>
     <string name="generic_install">התקנה</string>
+    <string name="generic_apply">החל</string>
     <string name="generic_debug">נפה באגים</string>
+    <string name="dl_tampered_manifest"><![CDATA[קובץ המניפסט של גרסת המשחק במראה אינו תואם את המניפסט הרשמי של מוג'אנג, מה שאומר שהוא עשוי להיות שונה או מושפע.<br/>
+<b>זה לא בטיחותי. המידע האישי שלך עשוי להיות בסיכון אם תמשיך.</b><br/>
+אם אתה עדיין רוצה להשתמש במראה, לחץ על \"כבה בדיקות מניפסט\" והפעל את ההורדה מחדש.<br/>
+אם ברצונך להשתמש במקור ההורדה הרשמי, לחץ על \"עבור לאתר רשמי\" והפעל את ההורדה מחדש.<br/>]]></string>
     <string name="preference_category_java_tweaks">התאמות ל- Java</string>
     <string name="preference_category_miscellaneous">הגדרות שונות</string>
     <string name="controller_button_select">בחר</string>

@@ -39,8 +39,10 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MinecraftDownloader {
     private static final double ONE_MEGABYTE = (1024d * 1024d);
     public static final String MINECRAFT_RES = "https://resources.download.minecraft.net/";
+    private static final String MAVEN_CENTRAL_REPO1 = "https://repo1.maven.org/maven2/";
     private AtomicReference<Exception> mDownloaderThreadException;
     private ArrayList<DownloaderTask> mScheduledDownloadTasks;
+    private ArrayList<File> mDeclaredNatives;
     private AtomicLong mProcessedFileCounter;
     private AtomicLong mProcessedSizeCounter; // Total bytes of processed files (passed SHA1 or downloaded)
     private AtomicLong mInternetUsageCounter; // How many bytes downloaded over Internet
@@ -88,6 +90,7 @@ public class MinecraftDownloader {
 
         mTargetJarFile = createGameJarPath(versionName);
         mScheduledDownloadTasks = new ArrayList<>();
+        mDeclaredNatives = new ArrayList<>();
         mProcessedFileCounter = new AtomicLong(0);
         mProcessedSizeCounter = new AtomicLong(0);
         mInternetUsageCounter = new AtomicLong(0);
@@ -120,6 +123,7 @@ public class MinecraftDownloader {
                 throw thrownException;
             } else {
                 ensureJarFileCopy();
+                extractNatives(versionName);
             }
         }catch (InterruptedException e) {
             // Interrupted while waiting, which means that the download was cancelled.
@@ -165,6 +169,25 @@ public class MinecraftDownloader {
         FileUtils.ensureParentDirectory(mTargetJarFile);
         Log.i("NewMCDownloader", "Copying " + mSourceJarFile.getName() + " to "+mTargetJarFile.getAbsolutePath());
         org.apache.commons.io.FileUtils.copyFile(mSourceJarFile, mTargetJarFile, false);
+    }
+
+    private void extractNatives(String versionName) throws IOException {
+        if(mDeclaredNatives.isEmpty()) return;
+        int totalCount = mDeclaredNatives.size();
+
+        ProgressLayout.setProgress(ProgressLayout.DOWNLOAD_MINECRAFT, 0,
+                R.string.newdl_extracting_native_libraries, 0, totalCount);
+
+        File targetDirectory = new File(Tools.DIR_CACHE, "natives/"+versionName);
+        FileUtils.ensureDirectory(targetDirectory);
+        NativesExtractor nativesExtractor = new NativesExtractor(targetDirectory);
+        int extractedCount = 0;
+        for(File source : mDeclaredNatives) {
+            nativesExtractor.extractFromAar(source);
+            extractedCount++;
+            ProgressLayout.setProgress(ProgressLayout.DOWNLOAD_MINECRAFT, extractedCount * 100 / totalCount,
+                    R.string.newdl_extracting_native_libraries, extractedCount, totalCount);
+        }
     }
 
     private File downloadGameJson(JMinecraftVersionList.Version verInfo) throws IOException, MirrorTamperedException {
@@ -274,13 +297,31 @@ public class MinecraftDownloader {
         );
     }
 
+    /**
+     * Schedule the download of an AAR library containing the required natives, for later extraction
+     * and adding to the library path.
+     * @param baseRepository the source Maven repository to download from.
+     * @param dependentLibrary the DependentLibrary to get the path from
+     * @throws IOException in case if download scheduling fails.
+     */
+    private void scheduleNativeLibraryDownload(String baseRepository, DependentLibrary dependentLibrary) throws IOException {
+        String path = FileUtils.removeExtension(Tools.artifactToPath(dependentLibrary)) + ".aar";
+        String downloadUrl = baseRepository + path;
+        File targetPath = new File(Tools.DIR_HOME_LIBRARY, path);
+        mDeclaredNatives.add(targetPath);
+        scheduleDownload(targetPath, DownloadMirror.DOWNLOAD_CLASS_LIBRARIES, downloadUrl, null, 0, true);
+    }
+
     private void scheduleLibraryDownloads(DependentLibrary[] dependentLibraries) throws IOException {
         Tools.preProcessLibraries(dependentLibraries);
         growDownloadList(dependentLibraries.length);
         for(DependentLibrary dependentLibrary : dependentLibraries) {
             // Don't download lwjgl, we have our own bundled in.
             if(dependentLibrary.name.startsWith("org.lwjgl")) continue;
-
+            // Special handling for JNA Android natives
+            if(dependentLibrary.name.startsWith("net.java.dev.jna:jna:")) {
+                scheduleNativeLibraryDownload(MAVEN_CENTRAL_REPO1, dependentLibrary);
+            }
             String libArtifactPath = Tools.artifactToPath(dependentLibrary);
             String sha1 = null, url = null;
             long size = 0;

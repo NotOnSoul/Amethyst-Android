@@ -325,6 +325,14 @@ public final class Tools {
             }
             javaArgList.add("-Dlog4j.configurationFile=" + configFile);
         }
+
+        File versionSpecificNativesDir = new File(Tools.DIR_CACHE, "natives/"+versionId);
+        if(versionSpecificNativesDir.exists()) {
+            String dirPath = versionSpecificNativesDir.getAbsolutePath();
+            javaArgList.add("-Djava.library.path="+dirPath+":"+Tools.NATIVE_LIB_DIR);
+            javaArgList.add("-Djna.boot.library.path="+dirPath);
+        }
+
         javaArgList.addAll(Arrays.asList(getMinecraftJVMArgs(versionId, gamedir)));
         javaArgList.add("-cp");
         javaArgList.add(launchClassPath + ":" + getLWJGL3ClassPath());

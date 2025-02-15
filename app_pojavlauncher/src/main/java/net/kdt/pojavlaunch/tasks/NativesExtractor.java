@@ -42,7 +42,8 @@ public class NativesExtractor {
     }
 
     private static String getAarArchitectureName() {
-        switch (Architecture.getDeviceArchitecture()) {
+        int architecture = Architecture.getDeviceArchitecture();
+        switch (architecture) {
             case Architecture.ARCH_ARM:
                 return "armeabi-v7a";
             case Architecture.ARCH_ARM64:
@@ -52,37 +53,33 @@ public class NativesExtractor {
             case Architecture.ARCH_X86_64:
                 return "x86_64";
         }
-        throw new RuntimeException("Unknown CPU architecture!");
+        throw new RuntimeException("Unknown CPU architecture: "+architecture);
     }
 
     public void extractFromAar(File source) throws IOException {
-        try (FileInputStream fileInputStream = new FileInputStream(source)) {
-            try(ZipInputStream zipInputStream = new ZipInputStream(fileInputStream)) {
-                // Wrap the ZIP input stream into a non-closeable stream to
-                // avoid it being closed by processEntry()
-                NonCloseableInputStream entryCopyStream = new NonCloseableInputStream(zipInputStream);
+        byte[] buffer = new byte[8192];
+        try (FileInputStream fileInputStream = new FileInputStream(source);
+             ZipInputStream zipInputStream = new ZipInputStream(fileInputStream)) {
+            // Wrap the ZIP input stream into a non-closeable stream to
+            // avoid it being closed by processEntry()
+            NonCloseableInputStream entryCopyStream = new NonCloseableInputStream(zipInputStream);
+            ZipEntry entry;
+            while((entry = zipInputStream.getNextEntry()) != null) {
+                String entryName = entry.getName();
+                if(!entryName.startsWith(mLibraryLocation) || entry.isDirectory()) continue;
+                // Entry name is actually the full path, so we need to strip the path before extraction
+                entryName = FileUtils.getFileName(entryName);
+                // getFileName may make the file name null, avoid that case.
+                if(entryName == null || LIBRARY_BLACKLIST.contains(entryName)) continue;
 
-                while(true) {
-                    ZipEntry entry = zipInputStream.getNextEntry();
-                    if(entry == null) break;
-
-                    String entryName = entry.getName();
-                    if(!entryName.startsWith(mLibraryLocation) || entry.isDirectory()) continue;
-                    // Entry name is actually the full path, so we need to strip the path before extraction
-                    entryName = FileUtils.getFileName(entryName);
-                    // getFileName may make the file name null, avoid that case.
-                    if(entryName == null || LIBRARY_BLACKLIST.contains(entryName)) continue;
-
-                    processEntry(entryCopyStream, entry, new File(mDestinationDir, entryName));
-                }
+                processEntry(entryCopyStream, entry, new File(mDestinationDir, entryName), buffer);
             }
         }
     }
 
-    private static long fileCrc32(File target) throws IOException {
+    private static long fileCrc32(File target, byte[] buffer) throws IOException {
         try(FileInputStream fileInputStream = new FileInputStream(target)) {
             CRC32 crc32 = new CRC32();
-            byte[] buffer = new byte[1024];
             int len;
             while((len = fileInputStream.read(buffer)) != -1) {
                 crc32.update(buffer, 0, len);
@@ -91,12 +88,12 @@ public class NativesExtractor {
         }
     }
 
-    private void processEntry(InputStream sourceStream, ZipEntry zipEntry, File entryDestination) throws IOException {
+    private void processEntry(InputStream sourceStream, ZipEntry zipEntry, File entryDestination, byte[] buffer) throws IOException {
         if(entryDestination.exists()) {
             long expectedSize = zipEntry.getSize();
             long expectedCrc32 = zipEntry.getCrc();
             long realSize = entryDestination.length();
-            long realCrc32 = fileCrc32(entryDestination);
+            long realCrc32 = fileCrc32(entryDestination, buffer);
             // File in archive is the same as the local one, don't extract
             if(realSize == expectedSize && realCrc32 == expectedCrc32) return;
         }

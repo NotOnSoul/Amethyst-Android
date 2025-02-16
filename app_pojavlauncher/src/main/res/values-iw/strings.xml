@@ -186,7 +186,7 @@
     <string name="preference_edit_controls_title">עריכת בקרים מותאמות אישית</string>
     <string name="preference_edit_controls_summary">כוונן את מערכת הבקרה כך שתתאים לצרכיך.</string>
     <string name="preference_category_gyro_controls">בקריי גירוסקופ</string>
-    <string name="preference_gyro_invert_x_axis">אאא</string>
+    <string name="preference_gyro_invert_x_axis">[[Not translated]</string>
     <string name="preference_gyro_invert_x_axis_description">הפוך את הציר האופקי.</string>
     <string name="preference_gyro_invert_y_axis_description">הפוך את הציר האנכי.</string>
     <string name="preference_gyro_smoothing_title">אפשר החלקת ג\'ירוסקופ</string>
@@ -277,15 +277,41 @@
     <string name="of_dl_progress">מוריד %s</string>
     <string name="create_profile_optifine">יצירת פרופיל OptiFine</string>
     <string name="hint_search_modpack">חיפוש Modpacks</string>
+    <string name="preference_vulkan_driver_system_title">השתמש ב Vulkan Driver של המערכת</string>
     <string name="preference_vulkan_driver_system_description">אלץ את הלאנצ\'ר להשתמש בדרייבר Vulkan של המערכת במקום Turnip על כרטיסי GPU של Adreno. משפיע רק על Zink ועל מודים שמשתמשים ב-Vulkan.</string>
     <string name="generic_install">התקנה</string>
     <string name="generic_apply">החל</string>
     <string name="generic_debug">נפה באגים</string>
+    <string name="search_modpack_no_result">לא נמצאו מודפאקים</string>
+    <string name="search_modpack_error">נכשל במציאת מודפאקים</string>
+    <string name="search_modpack_download_error">נכשל בהורדת מטאדאטא של מודפאקים</string>
+    <string name="modpack_download_downloading_metadata">מוריד מטאדאטא של מודפאקים (%.2f MB / %.2f MB)</string>
+    <string name="modpack_download_downloading_mods">מוריד מודים (%.2f MB / %.2f MB)</string>
+    <string name="modpack_download_downloading_mods_fc">מוריד מודים (קובץ %d מתוך %d)</string>
+    <string name="modpack_install_notification_title">מתקין מודפאק של Pojav</string>
+    <string name="modpack_install_notification_success">לחץ כאן לסיום התקנת מודפאק</string>
+    <string name="modpack_install_notification_data_not_available">נכשל בהורדת מידע מטעין מוד</string>
+    <string name="modpack_install_modloader_download_failed">נכשל בהורדת קבצי מטעין מוד</string>
+    <string name="modpack_install_download_failed">נכשל בהורדת קבצי מודפאק</string>
+    <string name="modpack_install_button">יצירת פרופיל מודפאק</string>
+    <string name="notif_error_occured">אירעה שגיאה</string>
+    <string name="notif_error_occured_desc">לחץ כדי לראות פרטים נוספים</string>
+    <string name="fabric_dl_only_stable">הצג רק גרסאות יציבות</string>
+    <string name="dl_tampered_manifest_title">אזהרת אימות קובץ</string>
     <string name="dl_tampered_manifest"><![CDATA[קובץ המניפסט של גרסת המשחק במראה אינו תואם את המניפסט הרשמי של מוג'אנג, מה שאומר שהוא עשוי להיות שונה או מושפע.<br/>
 <b>זה לא בטיחותי. המידע האישי שלך עשוי להיות בסיכון אם תמשיך.</b><br/>
 אם אתה עדיין רוצה להשתמש במראה, לחץ על \"כבה בדיקות מניפסט\" והפעל את ההורדה מחדש.<br/>
 אם ברצונך להשתמש במקור ההורדה הרשמי, לחץ על \"עבור לאתר רשמי\" והפעל את ההורדה מחדש.<br/>]]></string>
+    <string name="dl_turn_off_manifest_checks">כבה בדיקות מניפסט</string>
+    <string name="preference_download_source_title">מקור הורדת המשחק</string>
+    <string name="preference_download_source_description">בחר מראה להורדה במקום להשתמש בשרת ההורדות הרשמי</string>
+    <string name="preference_verify_manifest_title">אמת את מניפסט גרסת המשחק</string>
+    <string name="notif_download_finished">המשחק מוכן להפעלה</string>
+    <string name="notif_download_finished_desc">לחץ כאן כדי להתחיל!</string>
+    <string name="preference_category_gestures">מחוות</string>
+    <string name="preference_category_buttons">כפתורים</string>
     <string name="preference_category_java_tweaks">התאמות ל- Java</string>
     <string name="preference_category_miscellaneous">הגדרות שונות</string>
     <string name="controller_button_select">בחר</string>
+    <string name="mcl_button_discord"></string>
 </resources>

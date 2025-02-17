@@ -334,6 +334,8 @@
     <string name="newdl_downloading_game_files">Descargando el juego...(%d/%d,%.2f MB/s)</string>
     <string name="newdl_downloading_game_files_size">Descargando el juego...(%.2f/%.2f MB, %.2f MB/s)</string>
     <string name="cropper_title">Seleccione la región de la imagen</string>
+    <string name="cropper_lock_vertical">Bloqueo v.</string>
+    <string name="cropper_lock_horizontal">Bloqueo h.</string>
     <string name="cropper_reset">Reiniciar</string>
     <string name="cropper_select_cancelled">Selección cancelada</string>
     <string name="log_view_button_scroll_off">Desplazamiento automático\nApagado</string>
@@ -351,6 +353,8 @@
     <string name="controller_button_select">Seleccionar</string>
     <string name="controller_button_trigger_left">Activador izquierdo</string>
     <string name="controller_button_trigger_right">Activador derecho</string>
+    <string name="controller_button_shoulder_left">Hombro izquierdo</string>
+    <string name="controller_button_shoulder_right">Hombro derecho</string>
     <string name="controller_stick_press_l">Palanca de mando izquierda (hacer clic)</string>
     <string name="controller_stick_press_r">Palanca de mando derecha (hacer clic)</string>
     <string name="controller_dpad_up">Botón direccional arriba</string>
@@ -361,6 +365,9 @@
     <string name="controller_remapper_exit_part2">para salir</string>
     <string name="controller_remapper_operating_mode">Modo actual</string>
     <string name="customctrl_visibility_title">Visibilidad</string>
+    <string name="customctrl_visibility_ingame">Dentro del juego</string>
+    <string name="customctrl_visibility_in_menus">En los menús</string>
+    <string name="controller_remapper_expand_entry">Expandir para cambiar códigos de teclas</string>
     <string name="preference_remap_controller_title">Cambiar configuración de teclas del controlador</string>
     <string name="preference_remap_controller_description">Te permite modificar las teclas del teclado asignadas a cada botón del controlador</string>
     <string name="mcl_button_discord">Discord</string>
@@ -369,4 +376,9 @@
     <string name="local_login_bad_username_title">Nombre de usuario inadecuado</string>
     <string name="local_login_bad_username_text">El nombre de usuario debe de ser entre 3 a 16 caracteres, y solo contener letras latinas, números de 0 a 9 y guiones bajos.</string>
     <string name="quick_setting_title">Configuraciones rápidas</string>
+    <string name="create_bta_profile">Crear perfil de \"Better than Adventure!\"</string>
+    <string name="select_bta_version">Seleccionar la versión de \"Better than Adventure!\"</string>
+    <string name="bta_installer_available_versions">Versiones de BTA compatibles</string>
+    <string name="bta_installer_untested_versions">Versiones de BTA no probadas</string>
+    <string name="bta_installer_nightly_versions">Versiones nocturnas de BTA</string>
 </resources>

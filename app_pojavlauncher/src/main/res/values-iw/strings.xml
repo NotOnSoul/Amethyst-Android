@@ -319,4 +319,6 @@
     <string name="notification_permission_dialog_title">בקשת הרשאה</string>
     <string name="controller_button_select">בחר</string>
     <string name="mcl_button_discord"></string>
+    <string name="local_login_bad_username_title">שם משתמש לא מתאים</string>
+    <string name="local_login_bad_username_text">שם המשתמש חייב להיות באורך של 3-16 תווים, ויכול להכיל רק אותיות לטיניות, מספרים 0-9 וקו תחתון.</string>
 </resources>

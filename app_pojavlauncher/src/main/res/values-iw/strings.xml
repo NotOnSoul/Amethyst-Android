@@ -288,6 +288,7 @@
     <string name="modpack_download_downloading_metadata">מוריד מטאדאטא של מודפאקים (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods">מוריד מודים (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods_fc">מוריד מודים (קובץ %d מתוך %d)</string>
+    <string name="modpack_download_applying_overrides">מחיל עקיפות (%d/%d)</string>
     <string name="modpack_install_notification_title">מתקין מודפאק של Pojav</string>
     <string name="modpack_install_notification_success">לחץ כאן לסיום התקנת מודפאק</string>
     <string name="modpack_install_notification_data_not_available">נכשל בהורדת מידע מטעין מוד</string>
@@ -303,6 +304,7 @@
 אם אתה עדיין רוצה להשתמש במראה, לחץ על \"כבה בדיקות מניפסט\" והפעל את ההורדה מחדש.<br/>
 אם ברצונך להשתמש במקור ההורדה הרשמי, לחץ על \"עבור לאתר רשמי\" והפעל את ההורדה מחדש.<br/>]]></string>
     <string name="dl_turn_off_manifest_checks">כבה בדיקות מניפסט</string>
+    <string name="dl_switch_to_official_site">מעבר לאתר הרשמי</string>
     <string name="preference_download_source_title">מקור הורדת המשחק</string>
     <string name="preference_download_source_description">בחר מראה להורדה במקום להשתמש בשרת ההורדות הרשמי</string>
     <string name="preference_verify_manifest_title">אמת את מניפסט גרסת המשחק</string>
@@ -317,8 +319,30 @@
     <string name="preference_category_miscellaneous">הגדרות שונות</string>
     <string name="preference_category_video">הגדרות וידאו</string>
     <string name="notification_permission_dialog_title">בקשת הרשאה</string>
+    <string name="notification_permission_dialog_text">PojavLauncher דורש הרשאה לשלוח התראות כדי למנוע מהורדות משחק/מודפאק להיפסק כאשר אתה עוזב את האפליקציה. ללא ההרשאה הזו, אנדרואיד עשוי להפסיק את ההורדות שלך כאשר PojavLauncher עובר למצב רקע.</string>
+    <string name="notification_permission_toast">תמיד תוכל לשנות את דעתך בהמשך על ידי כניסה להגדרות.</string>
+    <string name="preference_ask_for_notification_title">אפשר התראות</string>
+    <string name="preference_ask_for_notification_description">לחץ כדי לבקש מחדש את הרשאת ההתראות, הנדרשת כדי שהורדות המשחק/מודפאק ברקע יעבדו כראוי.</string>
+    <string name="preference_vsync_in_zink_title">אפשר V-Sync עם Zink</string>
+    <string name="preference_vsync_in_zink_description">מאפשר ל-Launcher להשתמש ב-APIs פנימיים של המערכת כדי להפעיל V-Sync עבור Zink. כבה את זה אם ה-Launcher שלך פתאום קורס עם Zink לאחר עדכון מערכת.</string>
+    <string name="exception_failed_to_unpack_jre17">התקנת JRE 17 נכשלה</string>
+    <string name="newdl_starting">קורא מטאדאטא של המשחק…</string>
+    <string name="newdl_downloading_metadata">מוריד מטאדאטא של המשחק (%s)</string>
+    <string name="newdl_downloading_game_files">מוריד משחק… (%d/%d, %.2f MB/שניה)</string>
+    <string name="newdl_downloading_game_files_size">מוריד משחק… (%.2f/%.2f MB, %.2f MB/שניה)</string>
+    <string name="cropper_reset">איפוס</string>
+    <string name="cropper_select_cancelled">הבחירה בוטלה</string>
+    <string name="log_view_button_scroll_off">גלילה אוטומטית\nכבוי</string>
+    <string name="log_view_button_scroll_on">גלילה אוטומטית\nפועל</string>
+    <string name="log_view_button_output_off">פלט\nכבוי</string>
+    <string name="log_view_button_output_on">פלט\nפועל</string>
+    <string name="log_view_label_log_output">פלט לוג:</string>
+    <string name="execute_jar_failed_to_read_file">נכשלה קריאת קובץ ה-.jar</string>
+    <string name="execute_jar_incompatible_runtime">קובץ .jar לא תואם ל-Java %d</string>
     <string name="controller_button_select">בחר</string>
-    <string name="mcl_button_discord"></string>
+    <string name="mcl_button_discord">דיסקורד</string>
+    <string name="mcl_button_open_directory">פתח את תיקיית המשחק</string>
     <string name="local_login_bad_username_title">שם משתמש לא מתאים</string>
     <string name="local_login_bad_username_text">שם המשתמש חייב להיות באורך של 3-16 תווים, ויכול להכיל רק אותיות לטיניות, מספרים 0-9 וקו תחתון.</string>
+    <string name="quick_setting_title">הגדרות מהירות</string>
 </resources>

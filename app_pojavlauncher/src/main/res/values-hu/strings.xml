@@ -386,4 +386,5 @@
     <string name="bta_installer_available_versions">Támogatott BTA verziók</string>
     <string name="bta_installer_untested_versions">Le nem tesztelt BTA verziók</string>
     <string name="bta_installer_nightly_versions">Éjszakai BTA verziók</string>
+    <string name="newdl_extracting_native_libraries">Natív könyvtárak kicsomagolása (%d/%d)</string>
 </resources>

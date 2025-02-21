@@ -386,4 +386,5 @@ Um die offizielle Download-Quelle zu verwenden, drücke \"Auf offizielle Seite u
     <string name="bta_installer_available_versions">Unterstützte BTA-Versionen</string>
     <string name="bta_installer_untested_versions">Nicht getestete BTA-Versionen</string>
     <string name="bta_installer_nightly_versions">Nightly BTA-Versionen</string>
+    <string name="newdl_extracting_native_libraries">Extrahiere native Bibliotheken (%d/%d)</string>
 </resources>

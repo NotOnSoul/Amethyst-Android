@@ -386,4 +386,5 @@
     <string name="bta_installer_available_versions">支援的 BTA 版本</string>
     <string name="bta_installer_untested_versions">未經測試的 BTA 版本</string>
     <string name="bta_installer_nightly_versions">BTA 每日建構版</string>
+    <string name="newdl_extracting_native_libraries">正在解壓縮原生程式庫 (%d/%d)</string>
 </resources>

@@ -386,4 +386,5 @@
     <string name="bta_installer_available_versions">Доступные версии BTA</string>
     <string name="bta_installer_untested_versions">Непроверенные версии BTA</string>
     <string name="bta_installer_nightly_versions">Тестовые версии BTA</string>
+    <string name="newdl_extracting_native_libraries">Распаковка нативных библиотек (%d/%d)</string>
 </resources>

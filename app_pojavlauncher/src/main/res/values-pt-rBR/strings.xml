@@ -386,4 +386,5 @@
     <string name="bta_installer_available_versions">Versões suportadas</string>
     <string name="bta_installer_untested_versions">Versões instáveis</string>
     <string name="bta_installer_nightly_versions">Versões nightly</string>
+    <string name="newdl_extracting_native_libraries">Extraindo bibliotecas nativas (%d/%d)</string>
 </resources>

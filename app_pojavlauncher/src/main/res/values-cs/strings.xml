@@ -386,4 +386,5 @@
     <string name="bta_installer_available_versions">Podporované BTA verze</string>
     <string name="bta_installer_untested_versions">Netestované BTA verze</string>
     <string name="bta_installer_nightly_versions">Nightly BTA verze</string>
+    <string name="newdl_extracting_native_libraries">Rozbalování nativních knihoven (%d/%d)</string>
 </resources>

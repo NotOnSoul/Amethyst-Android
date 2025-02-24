@@ -386,4 +386,5 @@
     <string name="bta_installer_available_versions">Desteklenen BTA sürümü</string>
     <string name="bta_installer_untested_versions">Test-Edilmemiş BTA sürümü</string>
     <string name="bta_installer_nightly_versions">Deneysel (Gecelik) BTA sürümü</string>
+    <string name="newdl_extracting_native_libraries">Yerel kütüphane dosyaları ayıklanıyor (%d/%d)</string>
 </resources>

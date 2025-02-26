@@ -371,4 +371,5 @@
     <string name="customctrl_visibility_ingame">En jeu</string>
     <string name="customctrl_visibility_in_menus">Dans les menus</string>
     <string name="controller_remapper_expand_entry">Développer pour changer les codes de touches</string>
+    <string name="local_login_bad_username_title">Nom d\'utilisateur inapproprié</string>
 </resources>

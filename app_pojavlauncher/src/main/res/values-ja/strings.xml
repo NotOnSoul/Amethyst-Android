@@ -9,6 +9,7 @@
     <string name="login_online_username_hint">ユーザー名</string>
     <string name="login_online_login_label">ログイン</string>
     <!-- Hint -->
+    <string name="hint_control_mapping">"上部の歯車をタッチすると、コンテキストメニュー:歯車:\nボタンをタップすると、キーバインドを編集、サイズ変更、削除、または変更できます。"</string>
     <!-- Warnings -->
     <string name="warning_remove_account">このアカウントが削除されます！</string>
     <!-- AlertDialog title -->
@@ -37,6 +38,7 @@
     <string name="mcl_setting_title_use_surface_view">別のサーフェスレンダリングを使用する</string>
     <string name="mcl_setting_title_ignore_notch">ノッチを無視する</string>
     <string name="mcl_setting_title_resolution_scaler">解像度のスケール</string>
+    <string name="mcl_setting_subtitle_resolution_scaler">ゲームの解像度を下げることができます。100% がフル解像度です。</string>
     <string name="mcl_setting_title_buttonscale">制御ボタンの拡大縮小</string>
     <string name="mcl_setting_title_mousescale">カーソルのサイズ</string>
     <string name="mcl_setting_title_javaargs">JVM 起動引数</string>

@@ -9,7 +9,7 @@
     <string name="login_online_username_hint">Имя пользователя</string>
     <string name="login_online_login_label">Войти</string>
     <!-- Hint -->
-    <string name="hint_control_mapping">"Нажмите на верхнюю шестерёнку, чтобы открыть меню действий ⚙\nВыберите кнопку, чтобы изменить её свойства, размер,\nпривязанные клавиши, скопировать её или удалить."</string>
+    <string name="hint_control_mapping">"Нажмите на центральную шестерёнку ⚙, чтобы открыть меню действий.\n Выберите кнопку, чтобы удалить её или скопировать;\nизменить её свойства, размер или привязанные клавиши."</string>
     <!-- Warnings -->
     <string name="warning_remove_account">Эта учётная запись будет удалена!</string>
     <!-- AlertDialog title -->
@@ -335,8 +335,8 @@
     <string name="newdl_downloading_game_files">Загрузка файлов игры… (%d/%d, %.2f МБ/с)</string>
     <string name="newdl_downloading_game_files_size">Загрузка файлов игры… (%.2f/%.2f МБ, %.2f МБ/с)</string>
     <string name="cropper_title">Выбрать часть изображения</string>
-    <string name="cropper_lock_vertical">⬄</string>
-    <string name="cropper_lock_horizontal">⇳</string>
+    <string name="cropper_lock_vertical">Верт. блокировка</string>
+    <string name="cropper_lock_horizontal">Гор. блокировка</string>
     <string name="cropper_reset">Сброс</string>
     <string name="cropper_select_cancelled">Выбор отменён</string>
     <string name="log_view_button_scroll_off">Автопрокрутка\nВЫКЛ</string>
@@ -376,12 +376,12 @@
     <string name="preference_remap_controller_title">Изменить назначения клавиш контроллера</string>
     <string name="preference_remap_controller_description">Позволяет настраивать привязку клавиш клавиатуры к кнопкам контроллера</string>
     <string name="mcl_button_discord">Discord</string>
-    <string name="ltw_render_distance_warning_msg">Ваше видеоядро не поддерживает прорисовку более 7 чанков без использования Sodium или его аналогов. Нажмите «ОК», чтобы автоматически снизить прорисовку.</string>
+    <string name="ltw_render_distance_warning_msg">Ваше видеоядро не поддерживает расстояние отрисовки более 7 без оптимизационных модов наподобие Sodium. При нажатии копки \"ОК\" расстояние отрисовки будет автоматически изменено.</string>
     <string name="mcl_button_open_directory">Открыть папку игры</string>
     <string name="local_login_bad_username_title">Неподходящее имя пользователя</string>
     <string name="local_login_bad_username_text">Имя пользователя должно быть от 3 до 16 символов в длину и содержать только латинские символы, цифры 0–9 или нижние подчёркивания.</string>
     <string name="quick_setting_title">Быстрые настройки</string>
-    <string name="create_bta_profile">Версия с BTA</string>
+    <string name="create_bta_profile">Создать профиль «Better than Adventure!»</string>
     <string name="select_bta_version">Выберите версию «Better than Adventure!»</string>
     <string name="bta_installer_available_versions">Доступные версии BTA</string>
     <string name="bta_installer_untested_versions">Непроверенные версии BTA</string>

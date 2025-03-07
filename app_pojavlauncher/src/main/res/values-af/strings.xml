@@ -74,5 +74,4 @@
     <string name="profiles_profile_name">Name</string>
     <string name="pedit_renderer">Renderer</string>
     <string name="of_dl_progress">Lade %s herunter</string>
-    <string name="newdl_extracting_native_libraries">Natív könyvtárak kicsomagolása (%d/%d)</string>
 </resources>

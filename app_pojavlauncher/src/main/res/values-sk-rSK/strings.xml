@@ -344,8 +344,14 @@
     <string name="execute_jar_failed_to_read_file">Nebolo možné prečítať .jar súbor</string>
     <string name="execute_jar_incompatible_runtime">Funkcia spustenia .jar súborov nie je kompatibilná s Javou %d</string>
     <string name="controller_button_select">Vyber</string>
+    <string name="controller_button_trigger_left">Ľavý trigger</string>
+    <string name="controller_button_trigger_right">Pravý trigger</string>
+    <string name="controller_remapper_exit_part1">Podrž</string>
+    <string name="controller_remapper_exit_part2">pre ukončenie</string>
+    <string name="controller_remapper_operating_mode">Režim</string>
     <string name="customctrl_visibility_ingame">V hre</string>
     <string name="customctrl_visibility_in_menus">V menu</string>
+    <string name="controller_remapper_expand_entry">Rozklikni pre zmenu bindov</string>
     <string name="preference_remap_controller_title">Bindy ovládača</string>
     <string name="preference_remap_controller_description">Umožnuje zmenu prednastavených bindov na ovládači</string>
     <string name="mcl_button_discord">Discord</string>
@@ -353,4 +359,11 @@
     <string name="mcl_button_open_directory">Otvoriť priečinok hry</string>
     <string name="local_login_bad_username_title">Neplatné užívateľské meno</string>
     <string name="local_login_bad_username_text">Užívateľské meno musí byť 3 až 16 písmen dlhé, nesmie obsahovať dĺžne ani iné špeciálne znaky s výnimkou čísel a podčiarkovníka.</string>
+    <string name="quick_setting_title">Rýchle nastavenia</string>
+    <string name="create_bta_profile">Vytvoriť BTA profil</string>
+    <string name="select_bta_version">Vyberte verziu BTA</string>
+    <string name="bta_installer_available_versions">Podporované verzie BTA</string>
+    <string name="bta_installer_untested_versions">Netestované verzie BTA</string>
+    <string name="bta_installer_nightly_versions">Nightly verzie BTA</string>
+    <string name="newdl_extracting_native_libraries">Rozbaľovanie natívnych knižníc (%d/%d)</string>
 </resources>

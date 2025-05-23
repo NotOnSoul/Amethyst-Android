@@ -210,7 +210,7 @@
     <string name="preference_sustained_performance_title">Enable Cloud Computing Mode</string>
     <string name="preference_sustained_performance_description">This setting makes the game run on cloud and gives you triple FPS.</string>
     <string name="preference_force_vsync_title">Force Anti-Crash</string>
-    <string name="preference_force_vsync_description">This setting enchants your phone with resistance so that your game doesn't crash.</string>
+    <string name="preference_force_vsync_description">This setting enchants your phone with resistance so that your game does not crash.</string>
     <string name="preference_force_english_title">Force language to English</string>
     <string name="preference_force_english_description">Allows you to see original strings, as intended by developers. Requires a restart.</string>
     <string name="preference_edit_controls_title">Edit custom controls</string>

@@ -24,7 +24,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Đang làm sạch bộ nhớ đệm</string>
@@ -52,7 +51,6 @@
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (tất cả phiên bản, Hiệu suất cho: trung bình)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17 trở lên</string>
     <string name="mcl_setting_veroption_release">Bản phát hành</string>
-    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Bản Alpha cũ</string>
     <string name="mcl_setting_veroption_oldbeta">Bản Beta cũ</string>
     <string name="mcl_setting_java_sandbox">Thực thi tệp .jar trong hộp cát</string>
@@ -81,17 +79,8 @@
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Trò chuyện</string>
     <string name="control_debug">Gỡ lỗi</string>
-    <string name="control_primary">Pri</string>
-    <string name="control_secondary">Sec</string>
-    <string name="control_shift">◇</string>
     <string name="control_inventory">Túi đồ</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">Thứ ba</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Chuột</string>
     <string name="control_mouseoff">Chuột: tắt</string>
     <string name="control_mouseon">Chuột: bật </string>
@@ -122,7 +111,6 @@
     <string name="customctrl_button_opacity">Độ trong suốt của phím</string>
     <string name="customctrl_addbutton">Thêm nút</string>
     <string name="customctrl_addbutton_drawer">Thêm bộ phím</string>
-    <string name="customctrl_addbutton_joystick">Thêm cần điều khiển</string>
     <string name="customctrl_addsubbutton">Thêm phím phụ</string>
     <string name="customctrl_selectdefault">Chọn bố cục điều khiển mặc định</string>
     <string name="customctrl_export">Xuất bố cục điều khiển</string>
@@ -143,7 +131,6 @@
     <string name="mcl_setting_subtitle_mousespeed">Thay đổi tốc độ của chuột ảo.</string>
     <string name="customctrl_passthru">Di chuyển chuột</string>
     <string name="customctrl_swipeable">Có thể vuốt</string>
-    <string name="customctrl_forward_lock">Khoá di chuyển lên</string>
     <string name="customctrl_absolute_tracking">Theo dõi chuyển động tuyệt đối của ngón tay</string>
     <string name="memory_warning_msg">Số lượng RAM trống hiện tại (%d) thấp hơn số lượng RAM được phân bổ (%d), có thể dẫn đến sự cố. Thay đổi số lượng phân bổ nếu trò chơi bị sập.</string>
     <string name="address_memory_warning_msg">Bộ nhớ trống hiện có (%d) thấp hơn bộ nhớ được phân bổ (%d), điều này có thể gây ra sự cố. Thay đổi lượng bộ nhớ được phân bổ nếu trò chơi bị văng.</string>
@@ -183,7 +170,6 @@
     <string name="preference_force_english_title">Buộc ngôn ngữ Tiếng Anh</string>
     <string name="preference_force_english_description">Cho phép hiển thị các dòng chữ ban đầu, như theo ý của nhà phát triển. Yêu cầu khởi động lại.</string>
     <string name="preference_edit_controls_title">Tùy chỉnh điều khiển</string>
-    <string name="preference_edit_controls_summary"></string>
     <string name="preference_category_gyro_controls">Điều khiển con quay hồi chuyển</string>
     <string name="preference_category_virtual_mouse">Chuột ảo</string>
     <string name="preference_gyro_invert_x_axis">Đảo ngược trục X</string>
@@ -191,15 +177,12 @@
     <string name="preference_gyro_invert_x_axis_description">Đảo ngược trục hoành.</string>
     <string name="preference_gyro_invert_y_axis_description">Đảo ngược trục tung.</string>
     <string name="preference_gyro_smoothing_title">Bật làm mịn con quay hồi chuyển</string>
-    <string name="preference_gyro_smoothing_description">Reduce jitter in exchange of latency.</string>
     <string name="preference_back_title">Quay về màn hình trước đó</string>
     <string name="unnamed">Chưa đặt tên</string>
     <string name="profiles_latest_snapshot">Bản thử nghiệm mới nhất</string>
     <string name="profiles_latest_release">Phiên bản mới nhất</string>
     <string name="profiles_profile_name">Tên</string>
-    <string name="profiles_profile_version">Phiên bản</string>
     <string name="global_delete">Xóa</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">Trình kết xuất</string>
     <string name="arc_capes_title">Áo choàng Cosmetica</string>
     <string name="arc_capes_desc">Sử dụng áo choàng từ dịch vụ Cosmetica (trước đây là Arc). Để biết thêm thông tin, truy cập https://cosmetica.cc. Yêu cầu có OptiFine.</string>
@@ -237,11 +220,8 @@
     <string name="storage_required">PojavLauncher cần kho dữ liệu bên ngoài để gắn vào. Vui lòng kết nối lại và khởi động lại ứng dụng.</string>
     <string name="mcl_setting_title_buttonallcaps">Chỉ được dùng những chữ cái in hoa trong các nhãn nút</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Tắt đi nếu bạn muốn sử dụng chữ cái thường trong mục điều khiển.</string>
-    <string name="create_profile">Tạo cấu hình mới</string>
     <string name="preference_shader_dump_title">Kích hoạt đổ bóng</string>
     <string name="preference_shader_dump_description">Ghi các trình đổ bóng đã chuyển đổi vào tệp nhật ký.</string>
-    <string name="percent_format">%d%%</string>
-    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Rời đi?</string>
     <string name="customctrl_editor_exit_msg">Bạn có chắc bạn muốn thoát ra không?</string>
     <string name="customctrl_editor_exit">Rời khỏi trình chỉnh sửa</string>
@@ -347,10 +327,6 @@ Nếu bạn muốn sử dụng nguồn tải xuống chính thức, nhấn vào 
     <string name="log_view_label_log_output">Đầu ra nhật ký:</string>
     <string name="execute_jar_failed_to_read_file">Không thể đọc tệp .jar</string>
     <string name="execute_jar_incompatible_runtime">Chức năng thực thi .jar không tương thích với Java %d</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
     <string name="controller_button_start">Bắt đầu</string>
     <string name="controller_button_select">Chọn</string>
     <string name="controller_button_trigger_left">Nút nhấn trái</string>
@@ -370,13 +346,11 @@ Nếu bạn muốn sử dụng nguồn tải xuống chính thức, nhấn vào 
     <string name="controller_remapper_exit_part1">Giữ</string>
     <string name="controller_remapper_exit_part2">để thoát ra</string>
     <string name="controller_remapper_operating_mode">Chế độ hiện tại</string>
-    <string name="customctrl_visibility_title">Có thể nhìn thấy</string>
     <string name="customctrl_visibility_ingame">Trong trò chơi</string>
     <string name="customctrl_visibility_in_menus">Trong menu</string>
     <string name="controller_remapper_expand_entry">Mở rộng để thay đổi mã phím</string>
     <string name="preference_remap_controller_title">Thay đổi liên kết nút tay cầm</string>
     <string name="preference_remap_controller_description">Cho phép bạn sửa đổi các phím bàn phím được gán cho mỗi nút điều khiển</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">GPU của bạn không thể kết xuất với khoảng cách trên 7 chunks nếu không có Sodium hoặc các mod tương tự khác. Khoảng cách kết xuất sẽ được tự điều chỉnh lại khi nhấn OK.</string>
     <string name="mcl_button_open_directory">Mở thư mục trò chơi</string>
     <string name="local_login_bad_username_title">Tên người dùng không phù hợp</string>

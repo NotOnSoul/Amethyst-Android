@@ -57,13 +57,13 @@
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 仅限 1.17+</string>
     <string name="mcl_setting_veroption_release">正式版</string>
     <string name="mcl_setting_veroption_snapshot">快照</string>
-    <string name="mcl_setting_veroption_oldalpha">远古 alpha 版</string>
-    <string name="mcl_setting_veroption_oldbeta">远古 beta 版</string>
+    <string name="mcl_setting_veroption_oldalpha">早期 Alpha 版</string>
+    <string name="mcl_setting_veroption_oldbeta">早期 Beta 版</string>
     <string name="mcl_setting_java_sandbox">沙盒 .jar 可执行文件</string>
     <string name="mcl_setting_java_sandbox_subtitle">在执行 Jar 文件时，控制沙盒安全管理器的可用性。</string>
     <string name="mcl_version_clone">克隆</string>
     <!-- Global strings -->
-    <string name="global_edit">修改</string>
+    <string name="global_edit">编辑</string>
     <string name="global_error">错误</string>
     <string name="global_load">加载</string>
     <string name="global_name">名称</string>
@@ -123,16 +123,17 @@
     <string name="customctrl_background_color">背景颜色</string>
     <string name="customctrl_corner_radius">圆角半径</string>
     <string name="customctrl_stroke_width">边框宽度</string>
-    <string name="customctrl_stroke_color">边框颜色</string>
+    <string name="customctrl_stroke_color">描边颜色</string>
     <string name="customctrl_button_opacity">按键不透明度</string>
     <string name="customctrl_addbutton">添加按键</string>
     <string name="customctrl_addbutton_drawer">添加组合键</string>
+    <string name="customctrl_addbutton_joystick">添加摇杆</string>
     <string name="customctrl_addsubbutton">添加子按钮</string>
     <string name="customctrl_selectdefault">选择默认控制布局</string>
     <string name="customctrl_export">导出控制布局文件</string>
     <string name="main_share_logs">分享日志文件</string>
     <string name="main_install_jar_file">执行 .jar 文件</string>
-    <string name="main_play">启动游戏</string>
+    <string name="main_play">开始游戏</string>
     <string name="autoram_info_msg">内存已分配 %d MB</string>
     <string name="mcl_setting_check_libraries">在下载完成后检查依赖库</string>
     <string name="mcl_setting_check_libraries_subtitle">此选项强制启动器检查依赖库文件的哈希值是否正常，防止下载错误。</string>
@@ -147,6 +148,7 @@
     <string name="mcl_setting_subtitle_mousespeed">修改虚拟鼠标的移动速度。</string>
     <string name="customctrl_passthru">穿透点击</string>
     <string name="customctrl_swipeable">可滑动</string>
+    <string name="customctrl_forward_lock">前进锁定</string>
     <string name="customctrl_absolute_tracking">绝对手指跟踪</string>
     <string name="memory_warning_msg">当前可用内存（%d）低于所分配的内存（%d），这可能会导致崩溃！如果游戏崩溃请更改内存分配设置。</string>
     <string name="address_memory_warning_msg">当前可用可寻址内存空间量 (%d) 低于已分配内存量 (%d)，这将导致游戏崩溃。如果游戏崩溃，请调整分配。</string>
@@ -200,6 +202,7 @@
     <string name="profiles_latest_snapshot">最新快照版</string>
     <string name="profiles_latest_release">最新正式版</string>
     <string name="profiles_profile_name">名称</string>
+    <string name="profiles_profile_version">版本</string>
     <string name="global_delete">删除</string>
     <string name="pedit_java_runtime">Java 运行时</string>
     <string name="pedit_renderer">渲染器</string>
@@ -239,6 +242,7 @@
     <string name="storage_required">PojavLauncher 需要连接外部存储，请重新连接并重启应用。</string>
     <string name="mcl_setting_title_buttonallcaps">在按钮标签中仅使用大写字母</string>
     <string name="mcl_setting_subtitle_buttonallcaps">如果您想在按键中显示小写字母，请关闭此设置。</string>
+    <string name="create_profile">创建新的个人资料</string>
     <string name="preference_shader_dump_title">启用着色器输出</string>
     <string name="preference_shader_dump_description">记录切换的着色器到日志文件中。</string>
     <string name="percent_format">%d%%</string>
@@ -345,6 +349,10 @@
     <string name="log_view_label_log_output">日志输出：</string>
     <string name="execute_jar_failed_to_read_file">无法读取 .jar 文件</string>
     <string name="execute_jar_incompatible_runtime">执行 .jar 功能与 Java %d 不兼容</string>
+    <string name="controller_button_a">A</string>
+    <string name="controller_button_b">B</string>
+    <string name="controller_button_x">X</string>
+    <string name="controller_button_y">Y</string>
     <string name="controller_button_start">开始</string>
     <string name="controller_button_select">选择</string>
     <string name="controller_button_trigger_left">左扳机</string>
@@ -364,6 +372,7 @@
     <string name="controller_remapper_exit_part1">长按</string>
     <string name="controller_remapper_exit_part2">以退出</string>
     <string name="controller_remapper_operating_mode">当前模式</string>
+    <string name="customctrl_visibility_title">可见性</string>
     <string name="customctrl_visibility_ingame">游戏内</string>
     <string name="customctrl_visibility_in_menus">菜单内</string>
     <string name="controller_remapper_expand_entry">展开以更改键码</string>

@@ -24,7 +24,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Cache-Dateien bereinigen</string>
@@ -45,16 +44,15 @@
     <string name="mcl_setting_subtitle_buttonscale">Tasten vergrößern, wenn sie zu klein sind.</string>
     <string name="mcl_setting_title_mousescale">Größe der Maus</string>
     <string name="mcl_setting_subtitle_mousescale">Größe der virtuellen Maus ändern.</string>
-    <string name="mcl_setting_title_javaargs">JVM-Startargumente</string>
+    <string name="mcl_setting_title_javaargs">JVM-Start-Argumente</string>
     <string name="mcl_setting_subtitle_javaargs">Achtung! Das Verändern dieser Argumente ohne Fachwissen kann zu Abstürzen führen!</string>
-    <string name="mcl_setting_category_renderer">Renderer</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (alle Versionen, schnell)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (alle Versionen, mittel)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - nur 1.17+</string>
     <string name="mcl_setting_veroption_release">Vollversionen</string>
     <string name="mcl_setting_veroption_snapshot">Entwicklungsversionen</string>
-    <string name="mcl_setting_veroption_oldalpha">Alte Alpha</string>
-    <string name="mcl_setting_veroption_oldbeta">Alte Beta</string>
+    <string name="mcl_setting_veroption_oldalpha">Old-Alpha</string>
+    <string name="mcl_setting_veroption_oldbeta">Old-Beta</string>
     <string name="mcl_setting_java_sandbox">.jar in einer Sandbox ausführen</string>
     <string name="mcl_setting_java_sandbox_subtitle">Verfügbarkeit des Sandbox-Security-Managers beim Ausführen einer .jar-Datei einstellen.</string>
     <string name="mcl_version_clone">Duplizieren</string>
@@ -62,7 +60,6 @@
     <string name="global_edit">Bearbeiten</string>
     <string name="global_error">Fehler</string>
     <string name="global_load">Laden</string>
-    <string name="global_name">Name</string>
     <string name="global_remove">Entfernen</string>
     <string name="global_clone">Duplizieren</string>
     <string name="global_restart">Neustart</string>
@@ -79,24 +76,13 @@
     <string name="mcn_exit_confirm">Beenden wirklich erzwingen?</string>
     <string name="mcn_check_fail_vulkan_support">Der Zink-Renderer (Vulkan) wird auf diesem Gerät nicht unterstützt!</string>
     <!-- MainActivity: Control buttons -->
-    <string name="control_chat">Chat</string>
-    <string name="control_debug">Debug</string>
-    <string name="control_primary">Pri</string>
     <string name="control_secondary">Sek</string>
-    <string name="control_shift">◇</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">3. Person</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Maus</string>
     <string name="control_mouseoff">Maus: Aus</string>
     <string name="control_mouseon">Maus: An </string>
     <!-- MainActivity: Menu advanced controls -->
-    <string name="control_forceclose">Beenden erzwingen</string>
+    <string name="control_forceclose">Erzwinge das Beenden</string>
     <string name="control_viewout">Protokoll-Ausgabe</string>
     <string name="control_adebug">Eingabe-Debugging</string>
     <string name="control_customkey">Selbstdefinierten Tastencode senden</string>
@@ -122,7 +108,6 @@
     <string name="customctrl_button_opacity">Deckkraft der Schaltflächen</string>
     <string name="customctrl_addbutton">Taste hinzufügen</string>
     <string name="customctrl_addbutton_drawer">Schaltflächengruppe hinzufügen</string>
-    <string name="customctrl_addbutton_joystick">Joystick hinzufügen</string>
     <string name="customctrl_addsubbutton">Sub-Schaltfläche hinzufügen</string>
     <string name="customctrl_selectdefault">Standard-Steuerung auswählen</string>
     <string name="customctrl_export">Steuerung exportieren</string>
@@ -143,7 +128,6 @@
     <string name="mcl_setting_subtitle_mousespeed">Ändert die Geschwindigkeit der virtuellen Maus.</string>
     <string name="customctrl_passthru">Maus ignoriert Schaltflächen</string>
     <string name="customctrl_swipeable">Wischbar</string>
-    <string name="customctrl_forward_lock">Weiterleitungssperre</string>
     <string name="customctrl_absolute_tracking">Absolutes Finger-Tracking</string>
     <string name="memory_warning_msg">Die aktuelle Menge an freiem RAM (%d) ist niedriger als zugewiesener RAM (%d), was zu Abstürzen führen kann. Ändere die Zuordnung, wenn das Spiel abstürzt.</string>
     <string name="address_memory_warning_msg">Der aktuelle freie adressierbare RAM-Speicherplatz (%d) ist niedriger als der zugewiesene RAM (%d), was zu Abstürzen führen wird. Sollte das Spiel abstürzen, ändere die Zuweisung.</string>
@@ -196,11 +180,7 @@
     <string name="unnamed">Unbenannt</string>
     <string name="profiles_latest_snapshot">Neuste Entwicklungsversion</string>
     <string name="profiles_latest_release">Neuste Vollversion</string>
-    <string name="profiles_profile_name">Name</string>
-    <string name="profiles_profile_version">Version</string>
     <string name="global_delete">Löschen</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
-    <string name="pedit_renderer">Renderer</string>
     <string name="arc_capes_title">Cosmetica-Umhänge</string>
     <string name="arc_capes_desc">Aktiviert Umhänge von Cosmetica (früher Arc). Für weitere Informationen, siehe https://cosmetica.cc. OptiFine wird benötigt.</string>
     <string name="notif_channel_name">Allgemein</string>
@@ -228,7 +208,7 @@
     <string name="xerr_not_available">Xbox-Live ist in deinem Land nicht verfügbar</string>
     <string name="preference_enable_gyro_title">Aktiviere Gyroskop-Steuerung</string>
     <string name="preference_enable_gyro_description">Aktiviert das Umschauen im Spiel durch das Bewegen des Gerätes.</string>
-    <string name="preference_gyro_sensitivity_title">Gyroskopsteuerungsempfindlichkeit</string>
+    <string name="preference_gyro_sensitivity_title">Gyroskop-Steuerungs-Empfindlichkeit</string>
     <string name="preference_gyro_sensitivity_description">Die Empfindlichkeit der Gyroscope-Steuerung anpassen.</string>
     <string name="toast_turn_on_gyro">Gyroscope-Steuerung muss hierfür aktiviert sein!</string>
     <string name="preference_gyro_sample_rate_title">Gyroskop-Abtastrate</string>
@@ -237,11 +217,8 @@
     <string name="storage_required">PojavLauncher benötigt einen verbundenen externen Speicher. Bitte verbinde ihn erneut und starte dann die App neu.</string>
     <string name="mcl_setting_title_buttonallcaps">Nur Großbuchstaben in Tastenbeschriftungen verwenden</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Deaktivieren, um Kleinbuchstaben für die Steuerung zu verwenden.</string>
-    <string name="create_profile">Neues Profil erstellen</string>
     <string name="preference_shader_dump_title">Shader-Dumping aktivieren</string>
     <string name="preference_shader_dump_description">Konvertierte Shader mit in die Protokolldatei schreiben.</string>
-    <string name="percent_format">%d%%</string>
-    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Gehst Du?</string>
     <string name="customctrl_editor_exit_msg">Wollen Sie das Spiel wirklich beenden?</string>
     <string name="customctrl_editor_exit">Editor beenden</string>
@@ -283,7 +260,6 @@
     <string name="preference_vulkan_driver_system_description">Zwinge den Launcher auf Adreno GPUs den Vulkantreiber anstelle von Turnip zu verwendet. Betrifft nur Zink und Mods, die Vulkan verwenden.</string>
     <string name="generic_install">Installieren</string>
     <string name="generic_apply">Anwenden</string>
-    <string name="generic_debug">Debug</string>
     <string name="search_modpack_no_result">Keine Modpacks gefunden</string>
     <string name="search_modpack_error">Es konnten keine Modpacks gefunden werden</string>
     <string name="search_modpack_download_error">Fehler beim Herunterladen der Modpack-Metadaten</string>
@@ -344,11 +320,6 @@ Um die offizielle Download-Quelle zu verwenden, drücke \"Auf offizielle Seite u
     <string name="log_view_label_log_output">Protokoll-Ausgabe:</string>
     <string name="execute_jar_failed_to_read_file">Fehler beim Lesen der .jar-Datei</string>
     <string name="execute_jar_incompatible_runtime">Die Ausführung der .jar-Funktion ist nicht kompatibel mit Java %d</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">Start</string>
     <string name="controller_button_select">Auswählen</string>
     <string name="controller_button_trigger_left">Linker Trigger</string>
     <string name="controller_button_trigger_right">Rechter Trigger</string>
@@ -367,13 +338,11 @@ Um die offizielle Download-Quelle zu verwenden, drücke \"Auf offizielle Seite u
     <string name="controller_remapper_exit_part1">Halte</string>
     <string name="controller_remapper_exit_part2">gedrückt zum Beenden</string>
     <string name="controller_remapper_operating_mode">Aktueller Modus</string>
-    <string name="customctrl_visibility_title">Sichtbarkeit</string>
     <string name="customctrl_visibility_ingame">Ingame</string>
     <string name="customctrl_visibility_in_menus">In den Menüs</string>
     <string name="controller_remapper_expand_entry">Zeige mehr an, um die Keycodes zu ändern</string>
     <string name="preference_remap_controller_title">Controller-Tastenbelegung ändern</string>
     <string name="preference_remap_controller_description">Ermöglicht es dir, die Tastaturtaste zu ändern, die jeder Controller-Taste zugeordnet ist</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">Deine GPU ist ohne Sodium oder ähnliche Mods nicht in der Lage, eine Renderdistanz von über 7 Chunks zu rendern. Solltest du auf OK tippen, wird die Renderdistanz automatisch reduziert.</string>
     <string name="mcl_button_open_directory">Spielverzeichnis öffnen</string>
     <string name="local_login_bad_username_title">Ungeeigneter Benutzername</string>

@@ -4,7 +4,7 @@
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
-    <string name="login_online_username_hint">使用者名稱</string>
+    <string name="login_online_username_hint">用戶名</string>
     <string name="login_online_login_label">登入</string>
     <!-- Hint -->
     <string name="hint_control_mapping">"請輕觸頂部中央的齒輪圖示 ⚙ 開啟選單。\n輕觸按鈕來進行自訂：編輯、調整大小、移除或變更其按鍵綁定。"</string>
@@ -24,7 +24,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">正在清理快取</string>
@@ -45,16 +44,16 @@
     <string name="mcl_setting_subtitle_buttonscale">若按鍵太小，可以將其放大</string>
     <string name="mcl_setting_title_mousescale">滑鼠縮放</string>
     <string name="mcl_setting_subtitle_mousescale">變更虛擬滑鼠的大小。</string>
-    <string name="mcl_setting_title_javaargs">JVM 啟動參數</string>
+    <string name="mcl_setting_title_javaargs">JVM 啟動引數</string>
     <string name="mcl_setting_subtitle_javaargs">注意：若你不具備相關知識，修改這項設定可能會導致遊戲崩潰。</string>
     <string name="mcl_setting_category_renderer">渲染器</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES -（全版本可用，速度快）</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) -（全版本支援，速度中等）</string>
     <string name="mcl_setting_renderer_ltw">LTW（OpenGL ES 3）- 僅限 1.17+</string>
     <string name="mcl_setting_veroption_release">正式版</string>
-    <string name="mcl_setting_veroption_snapshot">快照版</string>
-    <string name="mcl_setting_veroption_oldalpha">舊版 Alpha</string>
-    <string name="mcl_setting_veroption_oldbeta">舊版 Beta</string>
+    <string name="mcl_setting_veroption_snapshot">快照</string>
+    <string name="mcl_setting_veroption_oldalpha">遠古alpha版</string>
+    <string name="mcl_setting_veroption_oldbeta">遠古beta版</string>
     <string name="mcl_setting_java_sandbox">沙盒 .jar 檔案執行</string>
     <string name="mcl_setting_java_sandbox_subtitle">控制執行 .jar 檔案時是否啟用沙盒安全管理器。</string>
     <string name="mcl_version_clone">複製</string>
@@ -83,21 +82,14 @@
     <string name="control_debug">除錯</string>
     <string name="control_primary">主</string>
     <string name="control_secondary">副</string>
-    <string name="control_shift">◇</string>
     <string name="control_inventory">物品欄</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">視角</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">滑鼠</string>
     <string name="control_mouseoff">滑鼠：關閉</string>
     <string name="control_mouseon">滑鼠：開啟</string>
     <!-- MainActivity: Menu advanced controls -->
     <string name="control_forceclose">強制關閉</string>
-    <string name="control_viewout">記錄輸出</string>
+    <string name="control_viewout">日誌輸出</string>
     <string name="control_adebug">輸入除錯</string>
     <string name="control_customkey">傳送自訂鍵碼</string>
     <!-- ImportControlActivity Strings -->
@@ -120,15 +112,14 @@
     <string name="customctrl_stroke_width">邊框粗細</string>
     <string name="customctrl_stroke_color">邊框顏色</string>
     <string name="customctrl_button_opacity">按鍵不透明度</string>
-    <string name="customctrl_addbutton">新增按鈕</string>
+    <string name="customctrl_addbutton">添加按鈕</string>
     <string name="customctrl_addbutton_drawer">新增組合鍵</string>
-    <string name="customctrl_addbutton_joystick">新增搖桿</string>
-    <string name="customctrl_addsubbutton">新增子按鈕</string>
+    <string name="customctrl_addsubbutton">添加子按鈕</string>
     <string name="customctrl_selectdefault">選擇預設控制鍵位</string>
     <string name="customctrl_export">匯出控制鍵</string>
     <string name="main_share_logs">分享記錄檔</string>
     <string name="main_install_jar_file">執行 .jar 檔案</string>
-    <string name="main_play">開始遊戲</string>
+    <string name="main_play">啟動遊戲</string>
     <string name="autoram_info_msg">記憶體已設為 %d MB</string>
     <string name="mcl_setting_check_libraries">在下載後檢查執行庫</string>
     <string name="mcl_setting_check_libraries_subtitle">此選項會強制啟動器檢查程式庫的雜湊值（如果可用）。這有助於防止下載到損壞的檔案。</string>
@@ -143,7 +134,6 @@
     <string name="mcl_setting_subtitle_mousespeed">改變虛擬滑鼠的速度。</string>
     <string name="customctrl_passthru">滑鼠透傳</string>
     <string name="customctrl_swipeable">可滑動</string>
-    <string name="customctrl_forward_lock">疾走鎖定</string>
     <string name="customctrl_absolute_tracking">絕對手指追蹤</string>
     <string name="memory_warning_msg">目前可用記憶體 (%d) 低於已配置記憶體 (%d)，這可能會導致遊戲崩潰。如果遊戲崩潰，請變更記憶體配置設定。</string>
     <string name="address_memory_warning_msg">目前可用的可定址記憶體空間 (%d) 低於已配置的記憶體 (%d) ，這將導致遊戲崩潰。如果遊戲崩潰，請變更記憶體配置設定。</string>
@@ -162,13 +152,13 @@
     <string name="multirt_nocompatiblert">找不到任何相容的 Java 執行環境。這個版本需要 Java %d 或以上版本。</string>
     <string name="multirt_nojava8rt">找不到已安裝的 Java 8。請安裝 Java 8 以使用此功能。</string>
     <string name="multirt_delete_runtime">刪除 Java 執行環境</string>
-    <string name="pvc_gameDirectory">遊戲目錄</string>
+    <string name="pvc_gameDirectory">遊戲資料夾</string>
     <string name="pvc_jvmArgs">JVM 參數</string>
     <string name="preference_mouse_start_title">啟動時開啟虛擬滑鼠</string>
     <string name="preference_mouse_start_description">此選項開啟時，虛擬滑鼠會在啟動時顯示。</string>
     <string name="preference_video_title">顯示設定</string>
     <string name="preference_video_description">解析度、渲染器與效能</string>
-    <string name="preference_control_title">自訂控制鍵</string>
+    <string name="preference_control_title">自定控制鍵</string>
     <string name="preference_control_description">手勢、按鈕與縮放</string>
     <string name="preference_java_title">Java 選項</string>
     <string name="preference_java_description">Java 執行環境、JVM 參數、RAM 容量與沙盒</string>
@@ -197,11 +187,10 @@
     <string name="profiles_latest_snapshot">最新快照</string>
     <string name="profiles_latest_release">最新版本</string>
     <string name="profiles_profile_name">名稱</string>
-    <string name="profiles_profile_version">版本</string>
     <string name="global_delete">刪除</string>
     <string name="pedit_java_runtime">Java 執行環境</string>
     <string name="pedit_renderer">渲染器</string>
-    <string name="arc_capes_title">Cosmetica 披風</string>
+    <string name="arc_capes_title">Cosmetica披風</string>
     <string name="arc_capes_desc">透過 Cosmetica（前身為 Arc）啟用披風。需要 OptiFine。如需更多資訊請至 https://cosmetica.cc。</string>
     <string name="notif_channel_name">一般設定</string>
     <string name="lazy_service_default_title">Amethyst 背景服務</string>
@@ -237,10 +226,8 @@
     <string name="storage_required">PojavLauncher 需要連接外部儲存空間，請重新連接並重新啟動應用程式。</string>
     <string name="mcl_setting_title_buttonallcaps">在按鈕標籤中僅使用大寫字母</string>
     <string name="mcl_setting_subtitle_buttonallcaps">如果你想在控制鍵中使用並顯示小寫字母，請關閉此設定。</string>
-    <string name="create_profile">新增設定檔</string>
     <string name="preference_shader_dump_title">啟用著色器傾印</string>
     <string name="preference_shader_dump_description">將轉換後的著色器記錄到記錄檔中。</string>
-    <string name="percent_format">%d%%</string>
     <string name="millisecond_format">%d 毫秒</string>
     <string name="customctrl_editor_exit_title">是否離開？</string>
     <string name="customctrl_editor_exit_msg">您確定要離開嗎？</string>
@@ -344,11 +331,6 @@
     <string name="log_view_label_log_output">記錄輸出：</string>
     <string name="execute_jar_failed_to_read_file">讀取 .jar 檔案失敗</string>
     <string name="execute_jar_incompatible_runtime">執行 .jar 功能與 Java %d 不相容</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">開始</string>
     <string name="controller_button_select">選擇</string>
     <string name="controller_button_trigger_left">左扳機</string>
     <string name="controller_button_trigger_right">右扳機</string>
@@ -367,13 +349,11 @@
     <string name="controller_remapper_exit_part1">按住</string>
     <string name="controller_remapper_exit_part2">以離開</string>
     <string name="controller_remapper_operating_mode">目前模式</string>
-    <string name="customctrl_visibility_title">可見度</string>
     <string name="customctrl_visibility_ingame">遊戲中</string>
     <string name="customctrl_visibility_in_menus">選單中</string>
     <string name="controller_remapper_expand_entry">展開以變更按鍵碼</string>
     <string name="preference_remap_controller_title">變更控制器按鍵綁定</string>
     <string name="preference_remap_controller_description">允許你修改綁定至每個控制器按鈕的鍵盤按鍵</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">你的 GPU 無法在不使用 Sodium 或其他類似模組的情況下，繪製超過 7 的顯示距離。當你輕觸「確定」時，顯示距離將會自動降低。</string>
     <string name="mcl_button_open_directory">開啟遊戲目錄</string>
     <string name="local_login_bad_username_title">不適當的使用者名稱</string>

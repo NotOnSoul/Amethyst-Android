@@ -32,7 +32,7 @@
     <string name="mcl_launch_downloading_progress">"Загрузка %s (%.2f Мбайт / %.2f Мбайт)"</string>
     <string name="mcl_launch_download_assets">Подготовка к загрузке ресурсов</string>
     <string name="mcl_options">Опции</string>
-    <string name="mcl_option_customcontrol">Раскладка управления</string>
+    <string name="mcl_option_customcontrol">Пользовательское управление</string>
     <string name="mcl_setting_title_use_surface_view">Альтернативный визуализатор</string>
     <string name="mcl_setting_subtitle_use_surface_view">Может помочь в случаях, когда производительность ограничена медленным ГП.</string>
     <string name="mcl_setting_title_ignore_notch">Полноэкранный режим</string>
@@ -61,9 +61,9 @@
     <!-- Global strings -->
     <string name="global_edit">Редактировать</string>
     <string name="global_error">Ошибка</string>
-    <string name="global_load">Загрузить</string>
+    <string name="global_load">Загрузка</string>
     <string name="global_name">Имя</string>
-    <string name="global_remove">  Удалить  </string>
+    <string name="global_remove">Удалить</string>
     <string name="global_clone">Копировать</string>
     <string name="global_restart">Перезапуск</string>
     <string name="global_save">Сохранить</string>
@@ -83,20 +83,13 @@
     <string name="control_debug">Отладка</string>
     <string name="control_primary">ЛКМ</string>
     <string name="control_secondary">ПКМ</string>
-    <string name="control_shift">◇</string>
     <string name="control_inventory">Инв</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">F5</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Мышь</string>
     <string name="control_mouseoff">Мышь: Выкл</string>
     <string name="control_mouseon">Мышь: Вкл </string>
     <!-- MainActivity: Menu advanced controls -->
-    <string name="control_forceclose">Завершить процесс</string>
+    <string name="control_forceclose">Принудительное закрытие</string>
     <string name="control_viewout">Журнал</string>
     <string name="control_adebug">Отладка ввода</string>
     <string name="control_customkey">Нажать клавишу</string>
@@ -111,19 +104,18 @@
     <string name="control_more3"></string>
     <string name="control_more4"></string>
 -->
-    <string name="customctrl_toggle">Переключать касанием</string>
+    <string name="customctrl_toggle">Переключаемый</string>
     <string name="customctrl_size">Размер</string>
-    <string name="customctrl_mapping">Клавиши</string>
+    <string name="customctrl_mapping">Кнопки</string>
     <string name="customctrl_orientation">Сторона разворота</string>
     <string name="customctrl_background_color">Цвет фона</string>
     <string name="customctrl_corner_radius">Радиус скругления</string>
     <string name="customctrl_stroke_width">Ширина контура</string>
-    <string name="customctrl_stroke_color">Цвет контура</string>
+    <string name="customctrl_stroke_color">Цвет обводки</string>
     <string name="customctrl_button_opacity">Видимость кнопки</string>
     <string name="customctrl_addbutton">Добавить кнопку</string>
     <string name="customctrl_addbutton_drawer">Добавить группу кнопок</string>
-    <string name="customctrl_addbutton_joystick">Добавить джойстик</string>
-    <string name="customctrl_addsubbutton">Добавить</string>
+    <string name="customctrl_addsubbutton">Добавить под-кнопку</string>
     <string name="customctrl_selectdefault">Выбрать основную</string>
     <string name="customctrl_export">Поделиться раскладкой</string>
     <string name="main_share_logs">Поделиться журналом</string>
@@ -142,8 +134,7 @@
     <string name="mcl_setting_title_mousespeed">Скорость указателя</string>
     <string name="mcl_setting_subtitle_mousespeed">Изменить скорость указателя виртуальный мыши.</string>
     <string name="customctrl_passthru">Пропускать касание в игру</string>
-    <string name="customctrl_swipeable">Считывать движение пальца</string>
-    <string name="customctrl_forward_lock">Фиксатор движения</string>
+    <string name="customctrl_swipeable">Пролистываемый</string>
     <string name="customctrl_absolute_tracking">Динамический центр</string>
     <string name="memory_warning_msg">Текущий объем свободной оперативной памяти (%d) меньше, чем выделенная (%d), что может привести к сбоям. Измените количество выделенной памяти при сбое игры.</string>
     <string name="address_memory_warning_msg">Текущий объём линейно адресуемой оперативной памяти (%d) меньше, чем выделенная (%d), что может привести к сбою. В случае сбоя игры измените количество выделенной памяти.</string>
@@ -168,7 +159,7 @@
     <string name="preference_mouse_start_description">При запуске игры виртуальная мышь будет включена по умолчанию.</string>
     <string name="preference_video_title">Настройки графики</string>
     <string name="preference_video_description">Разрешение, визуализатор и производительность</string>
-    <string name="preference_control_title">Настройки управления</string>
+    <string name="preference_control_title">Настройка управления</string>
     <string name="preference_control_description">Жесты, кнопки и размер</string>
     <string name="preference_java_title">Настройки Java</string>
     <string name="preference_java_description">Среды выполнения Java, аргументы JVM, выделение памяти и безопасность</string>
@@ -197,15 +188,13 @@
     <string name="profiles_latest_snapshot">Последний снапшот</string>
     <string name="profiles_latest_release">Последний релиз</string>
     <string name="profiles_profile_name">Имя</string>
-    <string name="profiles_profile_version">Версия</string>
     <string name="global_delete">Удалить</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">Визуализатор</string>
     <string name="arc_capes_title">Плащи Cosmetica</string>
     <string name="arc_capes_desc">Включает плащи от Cosmetica (ранее Arc). Для получения дополнительной информации посетите https://cosmetica.cc. Требуется OptiFine.</string>
     <string name="notif_channel_name">Общее</string>
     <string name="lazy_service_default_title">Активная служба Amethyst</string>
-    <string name="mcl_setting_veroption_installed">Установленные</string>
+    <string name="mcl_setting_veroption_installed">Установлено</string>
     <string name="use_global_default">(Как везде)</string>
     <string name="default_control">Раскладка управления</string>
     <string name="progresslayout_tasks_in_progress">Выполняется задач: %d</string>
@@ -237,7 +226,6 @@
     <string name="storage_required">PojavLauncher требует подключения к внешнему хранилищу. Переподключите его и перезапустите приложение.</string>
     <string name="mcl_setting_title_buttonallcaps">Заглавные буквы на кнопках</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Отключите, если хотите использовать строчные буквы в своей раскладке управления.</string>
-    <string name="create_profile">Новый профиль</string>
     <string name="preference_shader_dump_title">Сохранять дамп шейдеров</string>
     <string name="preference_shader_dump_description">Записывать в файл журнала данные о конвертации шейдеров.</string>
     <string name="percent_format">%d %%</string>
@@ -344,11 +332,6 @@
     <string name="log_view_label_log_output">Журнал:</string>
     <string name="execute_jar_failed_to_read_file">Ошибка чтения .jar файла</string>
     <string name="execute_jar_incompatible_runtime">Функция запуска .jar файлов несовместима с Java %d</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">Старт</string>
     <string name="controller_button_select">Выбрать</string>
     <string name="controller_button_trigger_left">Левый курок</string>
     <string name="controller_button_trigger_right">Правый курок</string>
@@ -367,13 +350,11 @@
     <string name="controller_remapper_exit_part1">Удерживайте</string>
     <string name="controller_remapper_exit_part2">, чтобы выйти</string>
     <string name="controller_remapper_operating_mode">Текущий режим</string>
-    <string name="customctrl_visibility_title">Отображение</string>
     <string name="customctrl_visibility_ingame">В игре</string>
     <string name="customctrl_visibility_in_menus">В меню</string>
     <string name="controller_remapper_expand_entry">Нажмите для изменения кодов клавиш</string>
     <string name="preference_remap_controller_title">Изменить назначения клавиш контроллера</string>
     <string name="preference_remap_controller_description">Позволяет настраивать привязку клавиш клавиатуры к кнопкам контроллера</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">Ваше видеоядро не поддерживает прорисовку более 7 чанков без использования Sodium или его аналогов. Нажмите «ОК», чтобы автоматически снизить прорисовку.</string>
     <string name="mcl_button_open_directory">Открыть папку игры</string>
     <string name="local_login_bad_username_title">Неподходящее имя пользователя</string>

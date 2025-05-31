@@ -39,7 +39,7 @@
     <string name="mcl_setting_title_ignore_notch">Ігнорувати виріз під фронтальну камеру</string>
     <string name="mcl_setting_subtitle_ignore_notch">Ігнорує виріз і розширює екран під ним.\nДає вам більше можливостей для занурення у грі.</string>
     <string name="mcl_setting_title_resolution_scaler">Зменшити роздільну здатність</string>
-    <string name="mcl_setting_subtitle_resolution_scaler">Дозволяє змінити масштаб роздільності гри. 100% — повна роздільність.</string>
+    <string name="mcl_setting_subtitle_resolution_scaler">Дозволяє змінити масштаб роздільности гри. 100% — повна роздільність.</string>
     <string name="mcl_setting_title_longpresstrigger">Затримка тригера при тривалому натисканні</string>
     <string name="mcl_setting_subtitle_longpresstrigger">Змінити затримку тривалого натискання для ламання блоків та викидання предметів.</string>
     <string name="mcl_setting_title_buttonscale">Масштабування кнопок</string>
@@ -51,12 +51,12 @@
     <string name="mcl_setting_title_renderer_settings">Додаткові параметри промальовування</string>
     <string name="mcl_setting_title_renderer_subtitle">Спеціальні параметри промальовування</string>
     <string name="mcl_setting_category_renderer">Візуалізатор</string>
-    <string name="mcl_setting_renderer_gles2_4">Божий GL4ES - (всі версії, швидкі)</string>
+    <string name="mcl_setting_renderer_gles2_4">Holy GL4ES — (усі версії, швидкі)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) — (усі версії, посереднє)</string>
     <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) — (лише 1.17+, швидкий)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) — лише 1.17+</string>
-    <string name="mcl_setting_veroption_release">Релізи</string>
-    <string name="mcl_setting_veroption_snapshot">Снапшоти</string>
+    <string name="mcl_setting_veroption_release">Випуски</string>
+    <string name="mcl_setting_veroption_snapshot">Знімки</string>
     <string name="mcl_setting_veroption_oldalpha">Старі альфа</string>
     <string name="mcl_setting_veroption_oldbeta">Старі бета</string>
     <string name="mcl_setting_java_sandbox">Виконання файлу .jar пісочниці</string>
@@ -76,7 +76,7 @@
     <string name="global_waiting">Зачекайте</string>
     <string name="global_select">Обрати</string>
     <string name="global_retry">Повторити</string>
-    <string name="global_default">За замовчуванням</string>
+    <string name="global_default">Усталено</string>
     <string name="global_off">ВИМК.</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Програма/Гра завершилась з кодом %d, глянь в latestlog.txt для більш детальної інформації.</string>
@@ -161,8 +161,8 @@
     <string name="multirt_title">Менеджер Runtime</string>
     <string name="multirt_subtitle">Керування встановленим Java Runtimes.</string>
     <string name="multirt_progress_caching">Кешування...</string>
-    <string name="multirt_config_setdefault">Встановити за замовчуванням</string>
-    <string name="multirt_config_setdefault_already">За замовчуванням</string>
+    <string name="multirt_config_setdefault">Встановити усталено</string>
+    <string name="multirt_config_setdefault_already">Усталено</string>
     <string name="multirt_config_removeerror_last">У вас має бути встановлений принаймні один Java Runtime.</string>
     <string name="multirt_nocompatiblert">Не вдається знайти сумісний Java Runtime. Для цієї версії потрібна Java %d або новіша.</string>
     <string name="multirt_nojava8rt">Не вдалося знайти Java 8. Для того, щоб скористатися цією опцією, вам потрібно встановити Java 8.</string>
@@ -199,9 +199,10 @@
     <string name="preference_gyro_smoothing_description">Зменшити плавність руху камери в обмін на затримку вводу.</string>
     <string name="preference_back_title">Повернутися назад</string>
     <string name="unnamed">Безіменний</string>
-    <string name="profiles_latest_snapshot">Останній снапшот</string>
-    <string name="profiles_latest_release">Останній реліз</string>
+    <string name="profiles_latest_snapshot">Останній знімок</string>
+    <string name="profiles_latest_release">Останній випуск</string>
     <string name="profiles_profile_name">Ім\'я</string>
+    <string name="profiles_profile_version">Версія</string>
     <string name="global_delete">Видалити</string>
     <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">Візуалізатор</string>
@@ -232,7 +233,7 @@
     <string name="xerr_not_available">Xbox Live недоступний у вашій країні</string>
     <string name="preference_enable_gyro_title">Увімкнути керування гіроскопом</string>
     <string name="preference_enable_gyro_description">Увімкнувши цю функцію, ви зможете повертатися в грі, просто повернувши телефон.</string>
-    <string name="preference_gyro_sensitivity_title">Налаштування чутливості гіроскопа</string>
+    <string name="preference_gyro_sensitivity_title">Налаштування чутливости гіроскопа</string>
     <string name="preference_gyro_sensitivity_description">Відрегулювати чутливість керування гіроскопом.</string>
     <string name="toast_turn_on_gyro">Спочатку увімкніть керування гіроскопом, щоб скористатися цією функцією!</string>
     <string name="preference_gyro_sample_rate_title">Частота дискретизації гіроскопа</string>
@@ -241,6 +242,7 @@
     <string name="storage_required">PojavLauncher потребує під’єднання до сховища. Будь ласка, під’єднайте його ще раз і перезапустіть додаток.</string>
     <string name="mcl_setting_title_buttonallcaps">Використовувати лише великі літери в назвах кнопок</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Вимкніть, якщо бажаєте використовувати малі літери в елементах керування.</string>
+    <string name="create_profile">Створити новий профіль</string>
     <string name="preference_shader_dump_title">Увімкнути вивантажування шейдерів</string>
     <string name="preference_shader_dump_description">Записувати дані про перетворені шейдери у файл журналу.</string>
     <string name="percent_format">%d%%</string>
@@ -347,6 +349,11 @@
     <string name="log_view_label_log_output">Вивід журналу:</string>
     <string name="execute_jar_failed_to_read_file">Помилка зчитування файлу .jar</string>
     <string name="execute_jar_incompatible_runtime">Функція виконання .jar не сумісна з Java %d</string>
+    <string name="controller_button_a">A</string>
+    <string name="controller_button_b">B</string>
+    <string name="controller_button_x">X</string>
+    <string name="controller_button_y">Y</string>
+    <string name="controller_button_start">Запустити</string>
     <string name="controller_button_select">Обрати</string>
     <string name="controller_button_trigger_left">Лівий гачок</string>
     <string name="controller_button_trigger_right">Правий гачок</string>

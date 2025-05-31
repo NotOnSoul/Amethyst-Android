@@ -9,7 +9,6 @@
     <!-- Warnings -->
     <string name="warning_remove_account">Ez a fiók törölve lesz!</string>
     <!-- AlertDialog title -->
-    <string name="alerttitle_installmod">Select a mod installer</string>
     <!-- Error messages -->
     <string name="error_fatal">A Amethyst váratlanul kicrashelt</string>
     <string name="error_no_version">Nincs verzió!</string>
@@ -22,7 +21,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">A gyorsítótárazott fájlok törlése</string>
@@ -33,7 +31,6 @@ Azonosító (Kulcs): mcl_indítás_letöltés_folyamatban
 mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_launch_download_assets">Felkészülés az erőforrások letöltésére</string>
     <string name="mcl_options">Opciók</string>
-    <string name="mcl_option_customcontrol">Irányítás testreszabása</string>
     <string name="mcl_setting_title_use_surface_view">Alternatív felületi renderelés használata</string>
     <string name="mcl_setting_subtitle_use_surface_view">Segítheti növelni a teljesítményt GPU-hoz kötött eseteknél.</string>
     <string name="mcl_setting_title_ignore_notch">Bevágás figyelmen kívül hagyása</string>
@@ -44,29 +41,20 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_title_buttonscale">A gombok méretezését szabályozza</string>
     <string name="mcl_setting_title_mousescale">Egér méretezése</string>
     <string name="mcl_setting_subtitle_mousescale">Megváltoztatja a virtuális egér méretét.</string>
-    <string name="mcl_setting_title_javaargs">JVM Indítási argumentumok</string>
     <string name="mcl_setting_subtitle_javaargs">Légy óvatos, kifagyasztja a játékot ha módosítod tudomány nélkül.</string>
-    <string name="mcl_setting_category_renderer">Renderlő</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (összes verzió, gyors)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (összes verzió, közepes)</string>
     <string name="mcl_setting_veroption_release">Kiadás</string>
-    <string name="mcl_setting_veroption_snapshot">Pillanatkép</string>
-    <string name="mcl_setting_veroption_oldalpha">Régi-alpha</string>
-    <string name="mcl_setting_veroption_oldbeta">Régi-béta</string>
     <string name="mcl_setting_java_sandbox">Szabad .Jar végrehajtás</string>
     <string name="mcl_setting_java_sandbox_subtitle">Irányítja az elérhetőségét a szabad biztonság kezelőnek, mikőzben végrehajtasz egy .jar fájlt.</string>
     <string name="mcl_version_clone">Másolás</string>
     <!-- Global strings -->
     <string name="global_error">Hiba</string>
-    <string name="global_load">Betöltés</string>
-    <string name="global_name">Név</string>
     <string name="global_clone">Másolás</string>
     <string name="global_restart">Újraindítás</string>
-    <string name="global_save">Mentés</string>
     <string name="global_unpacking">Kicsomagolás %s</string>
     <string name="global_error_field_empty">Ezt a mezőt kötelező kitölteni</string>
     <string name="global_waiting">Kérem várjon</string>
-    <string name="global_select">Kiválasztás</string>
     <string name="global_retry">Próbáld újra</string>
     <string name="global_default">Alapértelmezett</string>
     <!-- MainActivity: strings -->
@@ -86,13 +74,10 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="control_down">S</string>
     <string name="control_jump">Ugrás</string>
     <string name="control_thirdperson">Külső nézet</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Egér</string>
     <string name="control_mouseoff">Egér: ki</string>
     <string name="control_mouseon">Egér: be </string>
     <!-- MainActivity: Menu advanced controls -->
-    <string name="control_forceclose">Kényszerített bezárás</string>
-    <string name="control_viewout">Napló kimenet</string>
     <string name="control_adebug">Bemenet Hibakeresés</string>
     <string name="control_customkey">Saját kód küldése</string>
     <!-- ImportControlActivity Strings -->
@@ -106,22 +91,13 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="control_more3"></string>
     <string name="control_more4"></string>
 -->
-    <string name="customctrl_toggle">Kapcsolható</string>
-    <string name="customctrl_size">Méret</string>
-    <string name="customctrl_mapping">Hozzárendelés</string>
-    <string name="customctrl_orientation">Tájolás</string>
-    <string name="customctrl_background_color">Háttér színe</string>
     <string name="customctrl_corner_radius">Sarkok átmérője</string>
     <string name="customctrl_stroke_width">Körvonal szélessége</string>
     <string name="customctrl_button_opacity">Gomb átlátszósága</string>
-    <string name="customctrl_addbutton">Gomb hozzáadása</string>
-    <string name="customctrl_addbutton_joystick">Joystick hozzáadása</string>
-    <string name="customctrl_addsubbutton">Al-gomb hozzáadása</string>
     <string name="customctrl_selectdefault">Alap irányítási térkép kiválasztása</string>
     <string name="customctrl_export">Irányítási térkép exportálása</string>
     <string name="main_share_logs">Napló fál megosztása</string>
     <string name="main_install_jar_file">.Jar végrehajtása</string>
-    <string name="main_play">Játék</string>
     <string name="autoram_info_msg">Memória beállítva %d MB-ra</string>
     <string name="mcl_setting_check_libraries">Könyvtárak ellenőrzése letöltés után</string>
     <string name="mcl_setting_check_libraries_subtitle">Ez az opció arra kényszeríti az indítót, hogy ellenőrizze a könyvtár hash-t, ha elérhető. Meggátolja a hibás letöltéseket.</string>
@@ -146,15 +122,9 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_mouse_start_description">A virtuális egér indításkor megjelenik, ha ez az opció be van kapcsolva.</string>
     <string name="preference_video_title">Videó és renderlő</string>
     <string name="preference_video_description">Felbontás, renderlő és teljesítmény</string>
-    <string name="preference_control_title">Irányítás testreszabása</string>
     <string name="preference_control_description">Gesztúrák, gombok és méretezés</string>
-    <string name="preference_java_title">Java Tweak ek</string>
     <string name="preference_misc_title">Egyéb beállítások</string>
-    <string name="profiles_profile_name">Név</string>
-    <string name="pedit_renderer">Renderlő</string>
     <string name="of_dl_progress">Letöltés%s</string>
     <string name="generic_debug">Hibakeresés</string>
-    <string name="preference_category_java_tweaks">Java Tweak ek</string>
     <string name="preference_category_miscellaneous">Egyéb beállítások</string>
-    <string name="controller_button_select">Kiválasztás</string>
 </resources>

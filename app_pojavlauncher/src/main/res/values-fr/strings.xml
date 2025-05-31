@@ -24,14 +24,12 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Nettoyage des fichiers cache</string>
     <string name="mcl_launch_downloading">Téléchargement de %s</string>
     <string name="mcl_launch_downloading_progress">"Téléchargement de %s (%.2f Mo / %.2f Mo)"</string>
     <string name="mcl_launch_download_assets">Préparation du téléchargement des ressources</string>
-    <string name="mcl_options">Options</string>
     <string name="mcl_option_customcontrol">Contrôles personnalisés</string>
     <string name="mcl_setting_title_use_surface_view">Utiliser un rendu sur une surface alternative</string>
     <string name="mcl_setting_subtitle_use_surface_view">Peut améliorer les performances dans les scénarios liés au GPU.</string>
@@ -52,7 +50,6 @@
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (toutes les versions, mid)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17+ uniquement</string>
     <string name="mcl_setting_veroption_release">Version officielle</string>
-    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Alpha</string>
     <string name="mcl_setting_veroption_oldbeta">Bêta</string>
     <string name="mcl_setting_java_sandbox">Exécution de Sandbox .jar</string>
@@ -81,17 +78,7 @@
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Tchat</string>
     <string name="control_debug">Débog.</string>
-    <string name="control_primary">Pri</string>
-    <string name="control_secondary">Sec</string>
-    <string name="control_shift">◇</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">F5</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Souris</string>
     <string name="control_mouseoff">Souris : Non</string>
     <string name="control_mouseon">Souris : Oui </string>
@@ -113,8 +100,6 @@
 -->
     <string name="customctrl_toggle">Basculable</string>
     <string name="customctrl_size">Taille</string>
-    <string name="customctrl_mapping">Mapping</string>
-    <string name="customctrl_orientation">Orientation</string>
     <string name="customctrl_background_color">Couleur d\'arrière-plan</string>
     <string name="customctrl_corner_radius">Rayon des coins</string>
     <string name="customctrl_stroke_width">Épaisseur du contour</string>
@@ -122,7 +107,6 @@
     <string name="customctrl_button_opacity">Opacité du bouton</string>
     <string name="customctrl_addbutton">Ajouter un bouton</string>
     <string name="customctrl_addbutton_drawer">Ajouter un tiroir à boutons</string>
-    <string name="customctrl_addbutton_joystick">Ajouter un joystick</string>
     <string name="customctrl_addsubbutton">Ajouter un sous-bouton</string>
     <string name="customctrl_selectdefault">Sélectionner la controlmap par défaut</string>
     <string name="customctrl_export">Exporter la controlmap</string>
@@ -143,7 +127,6 @@
     <string name="mcl_setting_subtitle_mousespeed">Change la vitesse de la souris virtuelle.</string>
     <string name="customctrl_passthru">Souris pass-thru</string>
     <string name="customctrl_swipeable">Balayable</string>
-    <string name="customctrl_forward_lock">Verrouillage vers l\'avant</string>
     <string name="customctrl_absolute_tracking">Suivi absolu du doigt</string>
     <string name="memory_warning_msg">La quantité actuelle de RAM libre (%d) est inférieure à la RAM allouée (%d), ce qui peut entraîner des plantages. Changez l\'allocation si le jeu plante.</string>
     <string name="address_memory_warning_msg">La quantité actuelle d\'espace RAM allouable libre (%d) est inférieure à la RAM allouée (%d), ce qui entraînera des crashs. Modifiez l\'allocation de la RAM si le jeu crash.</string>
@@ -197,7 +180,6 @@
     <string name="profiles_latest_snapshot">Dernière snapshot</string>
     <string name="profiles_latest_release">Dernière version</string>
     <string name="profiles_profile_name">Nom</string>
-    <string name="profiles_profile_version">Version</string>
     <string name="global_delete">Supprimer</string>
     <string name="pedit_java_runtime">Exécutable Java</string>
     <string name="pedit_renderer">Moteur de rendu</string>
@@ -237,11 +219,8 @@
     <string name="storage_required">PojavLauncher nécessite que le stockage externe soit connecté. Veuillez le reconnecter et redémarrer l\'application.</string>
     <string name="mcl_setting_title_buttonallcaps">N\'utilisez que des lettres majuscules dans les libellés des boutons</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Désactivez cette option si vous souhaitez utiliser des lettres minuscules dans vos contrôles.</string>
-    <string name="create_profile">Créer un nouveau profil</string>
     <string name="preference_shader_dump_title">Activer le dumping du shader</string>
     <string name="preference_shader_dump_description">Enregistre les shaders convertis dans le fichier journal.</string>
-    <string name="percent_format">%d%%</string>
-    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Partir?</string>
     <string name="customctrl_editor_exit_msg">Êtes-vous sûr·e de vouloir quitter?</string>
     <string name="customctrl_editor_exit">Quitter l\'éditeur</string>
@@ -344,11 +323,6 @@
     <string name="log_view_label_log_output">Sortie des logs :</string>
     <string name="execute_jar_failed_to_read_file">Impossible de lire le fichier .jar</string>
     <string name="execute_jar_incompatible_runtime">La fonction \"Exécuter le fichier .jar\" n\'est pas compatible avec Java%d</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">Start</string>
     <string name="controller_button_select">Sélectionner</string>
     <string name="controller_button_trigger_left">Gâchette gauche</string>
     <string name="controller_button_trigger_right">Gâchette droite</string>
@@ -365,7 +339,6 @@
     <string name="controller_remapper_exit_part1">Maintenir</string>
     <string name="controller_remapper_exit_part2">pour quitter</string>
     <string name="controller_remapper_operating_mode">Mode actuel</string>
-    <string name="customctrl_visibility_title">Visibilité</string>
     <string name="customctrl_visibility_ingame">En jeu</string>
     <string name="customctrl_visibility_in_menus">Dans les menus</string>
     <string name="controller_remapper_expand_entry">Développer pour changer les codes de touches</string>

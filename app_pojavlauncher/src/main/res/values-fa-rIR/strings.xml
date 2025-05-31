@@ -80,9 +80,6 @@
     <string name="control_debug">دیباگ</string>
     <string name="control_primary">LMB</string>
     <string name="control_secondary">RMB</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_thirdperson">3rd</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">ماوس</string>
     <string name="control_mouseoff">ماوس: خاموش</string>
     <string name="control_mouseon">ماوس: روشن </string>
@@ -113,7 +110,6 @@
     <string name="customctrl_button_opacity">شفافیت دکمه</string>
     <string name="customctrl_addbutton">اضافه کردن دکمه</string>
     <string name="customctrl_addbutton_drawer">افزودن دکمه کشویی</string>
-    <string name="customctrl_addbutton_joystick">اضافه کردن جویستیک</string>
     <string name="customctrl_addsubbutton">افزودن زیر-دکمه</string>
     <string name="customctrl_selectdefault">کنترلر پیشفرض را انتخاب کنید</string>
     <string name="customctrl_export">کنترلر را استخراج کنید</string>
@@ -134,7 +130,6 @@
     <string name="mcl_setting_subtitle_mousespeed">سرعت جابه‌جایی موس مجازی را تغییر میدهد.</string>
     <string name="customctrl_passthru">ماوس از آن رد شود</string>
     <string name="customctrl_swipeable">قابل سوایپ</string>
-    <string name="customctrl_forward_lock">قفل حرکت به جلو</string>
     <string name="customctrl_absolute_tracking">تشخیص دقیق انگشت</string>
     <string name="memory_warning_msg">میزان رم آزاد فعلی (%d) از میزان رم اختصاص یافته (%d) کمتر است، که ممکن است باعث کرش شود. رم اختصاص یافته را تغییر دهید اگر بازی کرش خورد.</string>
     <string name="mcl_memory_allocation">میزان رم اختصاص یافته</string>
@@ -183,9 +178,7 @@
     <string name="profiles_latest_snapshot">جدیدترین اسنپ شات</string>
     <string name="profiles_latest_release">جدیدترین نسخه</string>
     <string name="profiles_profile_name">نام</string>
-    <string name="profiles_profile_version">نسخه</string>
     <string name="global_delete">حذف</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">رندر کننده</string>
     <string name="arc_capes_title">شنل های Cosmetica</string>
     <string name="arc_capes_desc">شنل های Cosmetica (قبلاً Arc) را فعال می کند. برای اطلاعات بیشتر لطفاً به https://cosmetica.cc مراجعه کنید. به OptiFine نیاز دارد.</string>

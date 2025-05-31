@@ -23,6 +23,7 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
+    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Limpiando archivos caché</string>
@@ -107,6 +108,7 @@
     <string name="customctrl_button_opacity">Opacidad del botón</string>
     <string name="customctrl_addbutton">Añadir botón</string>
     <string name="customctrl_addbutton_drawer">Añadir cajón de botones</string>
+    <string name="customctrl_addbutton_joystick">Añadir joystick</string>
     <string name="customctrl_addsubbutton">Añadir sub-botón</string>
     <string name="customctrl_selectdefault">Seleccionar controles por defecto</string>
     <string name="customctrl_export">Exportar controles</string>
@@ -180,6 +182,7 @@
     <string name="profiles_latest_snapshot">Snapshot más reciente</string>
     <string name="profiles_latest_release">Versión más reciente</string>
     <string name="profiles_profile_name">Nombre</string>
+    <string name="profiles_profile_version">Versión</string>
     <string name="global_delete">Eliminar</string>
     <string name="pedit_renderer">Renderizador</string>
     <string name="arc_capes_title">Capas de Comestica</string>
@@ -196,6 +199,7 @@
     <string name="folder_fragment_create">Crear carpeta</string>
     <string name="folder_fragment_select">Selecciona una carpeta</string>
     <string name="main_login_done">Inicio de sesión completado</string>
+    <string name="main_add_account">Añadir cuenta</string>
     <string name="tasks_ongoing">Tareas en curso, por favor espere</string>
     <string name="no_saved_accounts">No hay cuentas guardadas</string>
     <string name="mc_download_failed">¡Error al descargar Minecraft! Esto podría deberse a una mala conexión de red, archivos mal colocados, etc..</string>
@@ -214,6 +218,7 @@
     <string name="storage_required">PojavLauncher necesita que el almacenamiento externo esté conectado, por favor reconéctalo y reinicia la aplicación.</string>
     <string name="mcl_setting_title_buttonallcaps">Usa únicamente letras mayúsculas en las etiquetas de los botones</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Desactiva esta opción si quieres usar letras minúsculas en tus controles.</string>
+    <string name="create_profile">Crear un nuevo perfil</string>
     <string name="preference_shader_dump_title">Activar dumpeo de shaders</string>
     <string name="preference_shader_dump_description">Registra shaders compilados (sic).</string>
     <string name="customctrl_editor_exit_title">¿Vas a salir?</string>
@@ -319,6 +324,7 @@
     <string name="controller_remapper_exit_part1">Mantenga</string>
     <string name="controller_remapper_exit_part2">para salir</string>
     <string name="controller_remapper_operating_mode">Modo actual</string>
+    <string name="customctrl_visibility_title">Visibilidad</string>
     <string name="preference_remap_controller_title">Cambiar configuración de teclas del controlador</string>
     <string name="preference_remap_controller_description">Te permite modificar las teclas del teclado asignadas a cada botón del controlador</string>
     <string name="ltw_render_distance_warning_msg">Su GPU no es capaz de renderizar más de 7 de distancia sin usar Sodium o mods similares. La distancia de renderizado será reducido automáticamente cuando haga click en \"OK\".</string>

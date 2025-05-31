@@ -24,7 +24,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Čištění mezipaměti</string>
@@ -52,7 +51,6 @@
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (všechny verze, střední)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - jen 1.17+</string>
     <string name="mcl_setting_veroption_release">Vydání</string>
-    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Stará alfa</string>
     <string name="mcl_setting_veroption_oldbeta">Stará beta</string>
     <string name="mcl_setting_java_sandbox">Izolovat spouštění .jar v pískovišti</string>
@@ -65,7 +63,6 @@
     <string name="global_name">Název</string>
     <string name="global_remove">Odstranit</string>
     <string name="global_clone">Klonovat</string>
-    <string name="global_restart">Restart</string>
     <string name="global_save">Uložit</string>
     <string name="global_unpacking">Rozbalování %s</string>
     <string name="global_error_field_empty">Toto pole nemůže být prázdné</string>
@@ -79,19 +76,9 @@
     <string name="mcn_exit_confirm">Opravdu chcete vynutit ukončení?</string>
     <string name="mcn_check_fail_vulkan_support">Vykreslovač Zink (Vulkan) není v tomto zařízení podporován!</string>
     <!-- MainActivity: Control buttons -->
-    <string name="control_chat">Chat</string>
     <string name="control_debug">Ladění</string>
-    <string name="control_primary">Pri</string>
     <string name="control_secondary">Sek</string>
-    <string name="control_shift">◇</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">Třetí</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Myš</string>
     <string name="control_mouseoff">Myš: vypnuta</string>
     <string name="control_mouseon">Myš: zapnuta </string>
@@ -122,7 +109,6 @@
     <string name="customctrl_button_opacity">Průhlednost tlačítek</string>
     <string name="customctrl_addbutton">Přidat tlačítko</string>
     <string name="customctrl_addbutton_drawer">Přidat šuplík tlačítek</string>
-    <string name="customctrl_addbutton_joystick">Přidat joystick</string>
     <string name="customctrl_addsubbutton">Přidat podtlačítko</string>
     <string name="customctrl_selectdefault">Vybrat výchozí schéma ovládání</string>
     <string name="customctrl_export">Exportovat schéma ovládání</string>
@@ -143,7 +129,6 @@
     <string name="mcl_setting_subtitle_mousespeed">Určuje rychlost virtuální myši.</string>
     <string name="customctrl_passthru">Převést pohyb myši</string>
     <string name="customctrl_swipeable">Povolit přejíždění</string>
-    <string name="customctrl_forward_lock">Uzamknout chození vpřed</string>
     <string name="customctrl_absolute_tracking">Absolutní následování prstu</string>
     <string name="memory_warning_msg">Aktuální množství volné paměti RAM (%d) je nižší než přidělená paměť RAM (%d), což může vést k pádu. Spadne-li hra, snižte přidělení paměti.</string>
     <string name="address_memory_warning_msg">Aktuální množství volné přístupné paměti RAM (%d) je nižší než přidělená paměť RAM (%d), což povede k pádu. Spadne-li hra, sniž přidělení paměti.</string>
@@ -197,11 +182,9 @@
     <string name="profiles_latest_snapshot">Poslední snapshot</string>
     <string name="profiles_latest_release">Poslední vydání</string>
     <string name="profiles_profile_name">Název</string>
-    <string name="profiles_profile_version">Verze</string>
     <string name="global_delete">Odstranit</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">Vykreslovač</string>
-    <string name="arc_capes_title">Kápě z Cosmeticy</string>
+    <string name="arc_capes_title">Kápě Cosmetica</string>
     <string name="arc_capes_desc">Zapne kápě z Cosmeticy (dříve Arc) Pro více informací navštivte https://cosmetica.cc. Vyžaduje OptiFine.</string>
     <string name="notif_channel_name">Všeobecné</string>
     <string name="mcl_setting_veroption_installed">Nainstalováno</string>
@@ -236,11 +219,8 @@
     <string name="storage_required">PojavLauncher vyžaduje přípojené externí úložiště. Připojte jej prosím znovu a restartujte tuto aplikaci.</string>
     <string name="mcl_setting_title_buttonallcaps">Zobrazovat pouze velká písmena na popiscích tlačítek</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Vypněte toto, chcete-li užívat malá písmena ve vlastních ovládání.</string>
-    <string name="create_profile">Vytvořit nový profil</string>
     <string name="preference_shader_dump_title">Povolit vyhazování shaderů</string>
     <string name="preference_shader_dump_description">Zaznamenat převedené shadery do souboru záznamu.</string>
-    <string name="percent_format">%d%%</string>
-    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Odcházíte?</string>
     <string name="customctrl_editor_exit_msg">Určitě chcete odejít?</string>
     <string name="customctrl_editor_exit">Opustit editor</string>
@@ -343,11 +323,6 @@
     <string name="log_view_label_log_output">Výstup záznamu:</string>
     <string name="execute_jar_failed_to_read_file">Selhalo čtení souboru .jar</string>
     <string name="execute_jar_incompatible_runtime">Funkce spouštění .jar souboru není kompatibilní s Javou %d</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">Start</string>
     <string name="controller_button_select">Vybrat</string>
     <string name="controller_button_trigger_left">Levá spoušť</string>
     <string name="controller_button_trigger_right">Pravá spoušť</string>
@@ -366,13 +341,11 @@
     <string name="controller_remapper_exit_part1">Drž</string>
     <string name="controller_remapper_exit_part2">pro ukončení</string>
     <string name="controller_remapper_operating_mode">Aktuální mód</string>
-    <string name="customctrl_visibility_title">Viditelnost</string>
     <string name="customctrl_visibility_ingame">Ve hře</string>
     <string name="customctrl_visibility_in_menus">V menech</string>
     <string name="controller_remapper_expand_entry">Rozbal pro změny kódů kláves</string>
     <string name="preference_remap_controller_title">Změnit nastavení kláves ovladače</string>
     <string name="preference_remap_controller_description">Umožňuje změnit jaké klávesy každé tlačítko ovladače produkuje</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">Tvá GPU není schopna vykreslovat víc než 7 chunků dohledu bez Sodium či podobnách módů. Vykreslovací vzdálenost bude snížena kliknete-li \"OK\".</string>
     <string name="mcl_button_open_directory">Otevřít složku hry</string>
     <string name="local_login_bad_username_title">Špatné uživatelské jméno</string>

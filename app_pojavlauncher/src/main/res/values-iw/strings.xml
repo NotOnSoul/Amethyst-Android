@@ -67,7 +67,6 @@
     <string name="global_unpacking">מחלץ את %s</string>
     <string name="global_error_field_empty">שדה זה אינו יכול להיות ריק</string>
     <string name="global_waiting">המתן</string>
-    <string name="global_select">בחר</string>
     <string name="global_retry">ניסיון חוזר</string>
     <string name="global_default">ברירת מחדל</string>
     <!-- MainActivity: strings -->
@@ -77,11 +76,6 @@
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">צ\'אט</string>
     <string name="control_debug">נפה באגים</string>
-    <string name="control_primary">Pri</string>
-    <string name="control_secondary">Sec</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_thirdperson">3rd</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">עכבר</string>
     <string name="control_mouseoff">עכבר: מושבת</string>
     <string name="control_mouseon">עכבר: פעיל </string>
@@ -112,7 +106,6 @@
     <string name="customctrl_button_opacity">שקיפות הכפתור</string>
     <string name="customctrl_addbutton">הוסף כפתור</string>
     <string name="customctrl_addbutton_drawer">הוסף צייר של כפתור</string>
-    <string name="customctrl_addbutton_joystick">הוסף בקר</string>
     <string name="customctrl_addsubbutton">הוסף תת-כפתור</string>
     <string name="customctrl_selectdefault">בחר מפה בקרים ברירת מחדל</string>
     <string name="customctrl_export">יצא מפת בקר</string>
@@ -133,7 +126,6 @@
     <string name="mcl_setting_subtitle_mousespeed">\"משנה את מהירות העכבר המדומה</string>
     <string name="customctrl_passthru">עכבר עובר דרך</string>
     <string name="customctrl_swipeable">ניתן להחלקה</string>
-    <string name="customctrl_forward_lock">נעילת קדימה</string>
     <string name="memory_warning_msg">הכמות הנוכחית של RAM פנוי (%d) נמוכה מכמות ה-RAM שהוקצתה (%d), מה שעלול לגרום למשחק לקרוס. הנך מתבקש לשנות את ההקצאה במידה והמשחק קורס.</string>
     <string name="mcl_memory_allocation">הקצאת זיכרון</string>
     <string name="mcl_memory_allocation_subtitle">שולט בכמה זיכרון ניתן ל מיינקראפט.</string>
@@ -179,11 +171,8 @@
     <string name="profiles_latest_snapshot">הסנאפשוט העדכני</string>
     <string name="profiles_latest_release">מהדורה עדכנית</string>
     <string name="profiles_profile_name">שם</string>
-    <string name="profiles_profile_version">גרסא</string>
     <string name="global_delete">מחיקה</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">רינדור</string>
-    <string name="arc_capes_title">שכמיות אסתטיות</string>
     <string name="arc_capes_desc">מאפשר שכמיות מאת Cosmetica (לשעבר Arc). לקבלת מידע נוסף, בקרו ב- https://cosmetica.cc. דורש OptiFine.</string>
     <string name="notif_channel_name">כללי</string>
     <string name="lazy_service_default_title">שירות הרקע של Amethyst</string>
@@ -197,7 +186,6 @@
     <string name="folder_fragment_create">צור תיקייה</string>
     <string name="folder_fragment_select">בחר תיקייה</string>
     <string name="main_login_done">התחברות הושלמה.</string>
-    <string name="main_add_account">הוסף חשבון</string>
     <string name="tasks_ongoing">משימות בתהליך, אנא המתן.</string>
     <string name="no_saved_accounts">לא נשמר חשבון</string>
     <string name="mc_download_failed">כשל בהורדת Minecraft! זה עלול להיות כתוצאה מקשר רשת לקוי, קבצים שלא הונחו נכון, וכו\'.</string>
@@ -207,9 +195,7 @@
     <string name="xerr_child">חשבון שלך הוא חשבון ילדים וצריך להיכנס למשפחה על מנת להיכנס.</string>
     <string name="minecraft_not_owned">נראה שאין לחשבון הזה פרופיל Minecraft. אם יש לך Xbox Game Pass, אנא התחבר ל- https://minecraft.net/ והגדר אותו.</string>
     <string name="xerr_not_available">Xbox Live אינו זמין במדינה שלך</string>
-    <string name="preference_enable_gyro_title">אפשר את בקרי הג\'יירוסקופ</string>
     <string name="preference_enable_gyro_description">הפעלת זה יאפשר לך להסתובב במשחק על ידי סיבוב הטלפון.</string>
-    <string name="preference_gyro_sensitivity_title">רגישות בקרי חיישן הכיוון</string>
     <string name="preference_gyro_sensitivity_description">כוון את הרגישות של בקרי חיישן כיוון.</string>
     <string name="toast_turn_on_gyro">הפעלו קודם את בקרי חיישן הכיוון בכדי להשתמש בזה!</string>
     <string name="preference_gyro_sample_rate_title">קצב דגימת חיישן הכיוון</string>
@@ -218,7 +204,6 @@
     <string name="storage_required">PojavLauncher דורש אחסון חיצוני מחובר. אנא חבר אותו מחדש והפעל מחדש את האפליקציה.</string>
     <string name="mcl_setting_title_buttonallcaps">השתמש באותיות גדולות בלבד בתוויות הכפתורים.</string>
     <string name="mcl_setting_subtitle_buttonallcaps">השבת אפשרות זו אם ברצונך להשתמש באותיות קטנות בבקרים שלך.</string>
-    <string name="create_profile">צור פרופיל חדש</string>
     <string name="preference_shader_dump_title">אפשר השלכת הצללה</string>
     <string name="preference_shader_dump_description">רישום הצללות שהומרו לקובץ היומן.</string>
     <string name="customctrl_editor_exit_title">עזיבה?</string>
@@ -248,5 +233,4 @@
     <string name="generic_debug">נפה באגים</string>
     <string name="preference_category_java_tweaks">התאמות ל- Java</string>
     <string name="preference_category_miscellaneous">הגדרות שונות</string>
-    <string name="controller_button_select">בחר</string>
 </resources>

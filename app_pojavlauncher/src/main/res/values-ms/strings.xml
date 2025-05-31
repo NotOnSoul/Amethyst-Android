@@ -22,7 +22,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Membersihkan fail cache</string>
@@ -36,9 +35,7 @@
     <string name="mcl_setting_title_resolution_scaler">Pengskala Resolusi</string>
     <string name="mcl_setting_title_buttonscale">Skala butang kawalan</string>
     <string name="mcl_setting_title_mousescale">Skala tetikus</string>
-    <string name="mcl_setting_title_javaargs">JVM Launch arguments</string>
     <string name="mcl_setting_subtitle_javaargs">Berhati-hati, ini mungkin menyebabkan permainan menjadi ranap jika diubah tanpa pengetahuan.</string>
-    <string name="mcl_setting_category_renderer">Renderer</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (semua versi, pantas)</string>
     <string name="mcl_setting_veroption_release">Rilis</string>
     <string name="mcl_setting_veroption_snapshot">Petikan</string>
@@ -64,22 +61,11 @@
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Sembang</string>
     <string name="control_debug">Nyahpepijat</string>
-    <string name="control_primary">Pri</string>
-    <string name="control_secondary">Sec</string>
-    <string name="control_shift">◇</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_thirdperson">3rd</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Tetikus</string>
     <string name="control_mouseoff">Tetikus: tutup</string>
     <string name="control_mouseon">Tetikus: buka </string>
     <!-- MainActivity: Menu advanced controls -->
     <string name="control_forceclose">Paksa tutup</string>
-    <string name="control_viewout">Log output</string>
     <string name="control_adebug">Nyahpepijat Input</string>
     <string name="control_customkey">Hantar kod kunci custom</string>
     <!-- ImportControlActivity Strings -->
@@ -109,7 +95,6 @@
     <string name="mcl_disable_gestures">Nyahdayakan gerak isyarat</string>
     <string name="mcl_disable_gestures_subtitle">Menyahdayakan gerak isyarat, seperti menahan untuk menhancurkan blok, dan tekan untuk meletakkan blok.</string>
     <string name="mcl_setting_title_mousespeed">Kecepatan Tetikus</string>
-    <string name="customctrl_passthru">Mouse pass-thru</string>
     <string name="memory_warning_msg">Bilangan RAM yang ada (%d) lebih rendah daripada RAM yang diperuntuk (%d), yang mungkin akan menyebabkan ranap. Tukar peruntukan jikalau permainan ranap.</string>
     <string name="mcl_memory_allocation">Peruntukan memori</string>
     <string name="multirt_runtime_corrupt">Java Runtime Rosak</string>
@@ -126,10 +111,7 @@
     <string name="profiles_latest_snapshot">Petikan Terkini</string>
     <string name="profiles_latest_release">Terbitan terkini</string>
     <string name="profiles_profile_name">Nama</string>
-    <string name="profiles_profile_version">Versi</string>
     <string name="global_delete">Hapus</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
-    <string name="pedit_renderer">Renderer</string>
     <string name="arc_capes_title">Mantel Cosmetica</string>
     <string name="arc_capes_desc">Mendayakan jubah daripada Cosmetica (sebelum ini Arc). Untuk maklumat lanjut sila layari https://cosmetica.cc. Memerlukan OptiFine.</string>
     <string name="notif_channel_name">Umum</string>

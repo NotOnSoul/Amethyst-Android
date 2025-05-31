@@ -22,7 +22,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">A limpar os ficheiros em cache</string>
@@ -49,7 +48,6 @@
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (todas as versões, rápido)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (todas as versões, médio)</string>
     <string name="mcl_setting_veroption_release">Oficial</string>
-    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Alpha antiga</string>
     <string name="mcl_setting_veroption_oldbeta">Beta antiga</string>
     <string name="mcl_setting_java_sandbox">Execução de .jar em modo Sandbox</string>
@@ -67,7 +65,6 @@
     <string name="global_unpacking">A descompactar %s</string>
     <string name="global_error_field_empty">Este campo não pode estar vazio</string>
     <string name="global_waiting">Aguarda</string>
-    <string name="global_select">Selecionar</string>
     <string name="global_retry">Tentar outra vez</string>
     <string name="global_default">Padrão</string>
     <!-- MainActivity: strings -->
@@ -75,19 +72,9 @@
     <string name="mcn_exit_confirm">Tu tens a certeza que queres forçar o encerramento do jogo?</string>
     <string name="mcn_check_fail_vulkan_support">O renderizador Zink(Vulkan) não é suportado neste dispositivo!</string>
     <!-- MainActivity: Control buttons -->
-    <string name="control_chat">Chat</string>
     <string name="control_debug">Depuração</string>
-    <string name="control_primary">Pri</string>
     <string name="control_secondary">Seg</string>
-    <string name="control_shift">◇</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">terceira</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Rato</string>
     <string name="control_mouseoff">Rato: desligado</string>
     <string name="control_mouseon">Rato: ligado </string>
@@ -118,7 +105,6 @@
     <string name="customctrl_button_opacity">Opacidade do botão</string>
     <string name="customctrl_addbutton">Adicionar botão</string>
     <string name="customctrl_addbutton_drawer">Adicionar desenhador de botão</string>
-    <string name="customctrl_addbutton_joystick">Adicionar joystick</string>
     <string name="customctrl_addsubbutton">Adicionar sub-botão</string>
     <string name="customctrl_selectdefault">Seleciona o controlmap padrão</string>
     <string name="customctrl_export">Exporta controlmap</string>
@@ -139,7 +125,6 @@
     <string name="mcl_setting_subtitle_mousespeed">Muda a velocidade do rato virtual.</string>
     <string name="customctrl_passthru">Rato pode passar através</string>
     <string name="customctrl_swipeable">Deslizável</string>
-    <string name="customctrl_forward_lock">Bloqueio da Frente</string>
     <string name="customctrl_absolute_tracking">Rastreamento absoluto do dedo</string>
     <string name="memory_warning_msg">A quantidade atual de memória RAM livre (%d) é menor do que a memória RAM alocada (%d), o que pode levar a falhas. Altera a alocação se o jogo falhar.</string>
     <string name="mcl_memory_allocation">Alocação de memória</string>
@@ -179,7 +164,6 @@
     <string name="profiles_latest_snapshot">Snapshot mais recente</string>
     <string name="profiles_latest_release">Versão mais recente</string>
     <string name="profiles_profile_name">Nome</string>
-    <string name="profiles_profile_version">Versão</string>
     <string name="global_delete">Eliminar</string>
     <string name="pedit_java_runtime">Runtime do Java</string>
     <string name="pedit_renderer">Renderizador</string>
@@ -189,5 +173,4 @@
     <string name="generic_debug">Depuração</string>
     <string name="preference_category_java_tweaks">Ajustes do Java</string>
     <string name="preference_category_miscellaneous">Definições diversas</string>
-    <string name="controller_button_select">Selecionar</string>
 </resources>

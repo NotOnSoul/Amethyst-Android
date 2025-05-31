@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
+    <string name="app_name">Amethyst</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
     <string name="login_online_username_hint">Ім\'я користувача</string>
     <string name="login_online_login_label">Увійти</string>
     <!-- Hint -->
+    <string name="hint_control_mapping">"Торкніться верхньої центральної шестірні, щоб відкрити контекстне меню ⚙\nТоркніться кнопки, щоб налаштувати: редагувати, змінити розмір, видалити або змінити її сполучення клавіш."</string>
     <!-- Warnings -->
     <string name="warning_remove_account">Цей обліковий запис буде видалено!</string>
     <!-- AlertDialog title -->
@@ -46,9 +48,13 @@
     <string name="mcl_setting_subtitle_mousescale">Змінити розмір віртуальної миші.</string>
     <string name="mcl_setting_title_javaargs">Аргументи запуску JVM</string>
     <string name="mcl_setting_subtitle_javaargs">Будьте обережні, це може призвести до збоїв у грі, якщо це замінити без знань.</string>
+    <string name="mcl_setting_title_renderer_settings">Додаткові параметри промальовування</string>
+    <string name="mcl_setting_title_renderer_subtitle">Спеціальні параметри промальовування</string>
     <string name="mcl_setting_category_renderer">Візуалізатор</string>
     <string name="mcl_setting_renderer_gles2_4">Божий GL4ES - (всі версії, швидкі)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) — (усі версії, посереднє)</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) — (лише 1.17+, швидкий)</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) — лише 1.17+</string>
     <string name="mcl_setting_veroption_release">Релізи</string>
     <string name="mcl_setting_veroption_snapshot">Снапшоти</string>
     <string name="mcl_setting_veroption_oldalpha">Старі альфа</string>
@@ -71,8 +77,10 @@
     <string name="global_select">Обрати</string>
     <string name="global_retry">Повторити</string>
     <string name="global_default">За замовчуванням</string>
+    <string name="global_off">ВИМК.</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Програма/Гра завершилась з кодом %d, глянь в latestlog.txt для більш детальної інформації.</string>
+    <string name="mcn_signal_title">Програму/гру перервано небезпечним сигналом %d, подробиці перевірте в latestlog.txt.</string>
     <string name="mcn_exit_confirm">Ви впевнені, що хочете примусово закрити його?</string>
     <string name="mcn_check_fail_vulkan_support">Візуалізатор Zink (Vulkan) не підтримується на цьому пристрої!</string>
     <!-- MainActivity: Control buttons -->
@@ -80,8 +88,15 @@
     <string name="control_debug">Налагодження</string>
     <string name="control_primary">ЛКМ</string>
     <string name="control_secondary">ПКМ</string>
+    <string name="control_shift">◇</string>
     <string name="control_inventory">Інв</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">F5</string>
+    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Миша</string>
     <string name="control_mouseoff">Миша: Вимкн.</string>
     <string name="control_mouseon">Миша: Увімк.</string>
@@ -112,6 +127,7 @@
     <string name="customctrl_button_opacity">Прозорість кнопки</string>
     <string name="customctrl_addbutton">Додати кнопку</string>
     <string name="customctrl_addbutton_drawer">Додати розгортаєму кнопку</string>
+    <string name="customctrl_addbutton_joystick">Додати джойстик</string>
     <string name="customctrl_addsubbutton">Додати під-кнопку</string>
     <string name="customctrl_selectdefault">Обрати стандартну</string>
     <string name="customctrl_export">Експортувати розкладку</string>
@@ -132,12 +148,15 @@
     <string name="mcl_setting_subtitle_mousespeed">Змінює чутливість віртуальної миші.</string>
     <string name="customctrl_passthru">Курсор миші</string>
     <string name="customctrl_swipeable">Перегортаємий</string>
+    <string name="customctrl_forward_lock">Передній замок</string>
     <string name="customctrl_absolute_tracking">Абсолютне відстеження пальців</string>
     <string name="memory_warning_msg">Поточна кількість вільної оперативної пам\'яті (%d) менша, ніж виділена оперативна пам\'ять (%d), що може призвести до збоїв. Змініть кількість вільної оперативної пам\'яті, якщо гра вилетить.</string>
+    <string name="address_memory_warning_msg">Поточний обсяг вільного адресного простору оперативної пам’яті (%d) менший за виділену оперативну пам’ять (%d), що призведе до збоїв. Змініть розподіл, якщо гра виходить з ладу.</string>
     <string name="mcl_memory_allocation">Виділення пам\'яті</string>
     <string name="mcl_memory_allocation_subtitle">Контролює, скільки пам’яті надається Minecraft.</string>
     <string name="multirt_runtime_corrupt">Java Runtime пошкоджено</string>
     <string name="multirt_runtime_incompatiblearch">Несумісна архітектура: %s</string>
+    <string name="multirt_config_title">Java Runtimes</string>
     <string name="multirt_config_add">Додати нову</string>
     <string name="multirt_title">Менеджер Runtime</string>
     <string name="multirt_subtitle">Керування встановленим Java Runtimes.</string>
@@ -145,6 +164,7 @@
     <string name="multirt_config_setdefault">Встановити за замовчуванням</string>
     <string name="multirt_config_setdefault_already">За замовчуванням</string>
     <string name="multirt_config_removeerror_last">У вас має бути встановлений принаймні один Java Runtime.</string>
+    <string name="multirt_nocompatiblert">Не вдається знайти сумісний Java Runtime. Для цієї версії потрібна Java %d або новіша.</string>
     <string name="multirt_nojava8rt">Не вдалося знайти Java 8. Для того, щоб скористатися цією опцією, вам потрібно встановити Java 8.</string>
     <string name="multirt_delete_runtime">Видалити runtime</string>
     <string name="pvc_gameDirectory">Тека гри</string>
@@ -183,6 +203,7 @@
     <string name="profiles_latest_release">Останній реліз</string>
     <string name="profiles_profile_name">Ім\'я</string>
     <string name="global_delete">Видалити</string>
+    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">Візуалізатор</string>
     <string name="arc_capes_title">Плащі Cosmetica</string>
     <string name="arc_capes_desc">Включає плащі від Cosmetica (раніше Arc). Для більш детальної інформації, будь ласка, відвідайте https://cosmetica.cc. Потребує OptiFine.</string>
@@ -222,6 +243,8 @@
     <string name="mcl_setting_subtitle_buttonallcaps">Вимкніть, якщо бажаєте використовувати малі літери в елементах керування.</string>
     <string name="preference_shader_dump_title">Увімкнути вивантажування шейдерів</string>
     <string name="preference_shader_dump_description">Записувати дані про перетворені шейдери у файл журналу.</string>
+    <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d мс</string>
     <string name="customctrl_editor_exit_title">Вийти?</string>
     <string name="customctrl_editor_exit_msg">Ви дійсно бажаєте вийти?</string>
     <string name="customctrl_editor_exit">Вийти з редактора</string>
@@ -310,5 +333,65 @@
     <string name="exception_failed_to_unpack_jre17">Не вдалося установити JRE 17</string>
     <string name="newdl_starting">Зчитування метаданих гри…</string>
     <string name="newdl_downloading_metadata">Завантаження метаданих гри (%s)</string>
+    <string name="newdl_downloading_game_files">Завантаження гри… (%d/%d, %.2f Мб/с)</string>
+    <string name="newdl_downloading_game_files_size">Завантаження гри… (%.2f/%.2f Мб, %.2f Мб/с)</string>
+    <string name="cropper_title">Виберіть зображення регіону</string>
+    <string name="cropper_lock_vertical">V. lock</string>
+    <string name="cropper_lock_horizontal">H. lock</string>
+    <string name="cropper_reset">Скинути</string>
+    <string name="cropper_select_cancelled">Вибір скасовано</string>
+    <string name="log_view_button_scroll_off">Автопрокручування\nВИМК.</string>
+    <string name="log_view_button_scroll_on">Автопрокручування\nУВІМК.</string>
+    <string name="log_view_button_output_off">Вивід\nВИМК.</string>
+    <string name="log_view_button_output_on">Вивід\nУВІМК.</string>
+    <string name="log_view_label_log_output">Вивід журналу:</string>
+    <string name="execute_jar_failed_to_read_file">Помилка зчитування файлу .jar</string>
+    <string name="execute_jar_incompatible_runtime">Функція виконання .jar не сумісна з Java %d</string>
     <string name="controller_button_select">Обрати</string>
+    <string name="controller_button_trigger_left">Лівий гачок</string>
+    <string name="controller_button_trigger_right">Правий гачок</string>
+    <string name="controller_button_shoulder_left">Ліве плече</string>
+    <string name="controller_button_shoulder_right">Праве плече</string>
+    <string name="controller_direction_forward">Стік угору</string>
+    <string name="controller_direction_backward">Стік вниз</string>
+    <string name="controller_direction_left">Стік вліво</string>
+    <string name="controller_direction_right">Стік вправо</string>
+    <string name="controller_stick_press_l">Лівий великий палець</string>
+    <string name="controller_stick_press_r">Правий великий палець</string>
+    <string name="controller_dpad_up">D-Pad угору</string>
+    <string name="controller_dpad_down">D-Pad вниз</string>
+    <string name="controller_dpad_left">D-Pad вліво</string>
+    <string name="controller_dpad_right">D-Pad вправо</string>
+    <string name="controller_remapper_exit_part1">Утримування</string>
+    <string name="controller_remapper_exit_part2">, щоб вийти</string>
+    <string name="controller_remapper_operating_mode">Поточний режим</string>
+    <string name="customctrl_visibility_title">Видимість</string>
+    <string name="customctrl_visibility_ingame">У грі</string>
+    <string name="customctrl_visibility_in_menus">У меню</string>
+    <string name="controller_remapper_expand_entry">Розгорніть, щоб змінити коди клавіш</string>
+    <string name="preference_remap_controller_title">Змінити прив’язки клавіш контролера</string>
+    <string name="preference_remap_controller_description">Дозволяє змінювати клавіші клавіатури, пов’язані з кожною кнопкою контролера</string>
+    <string name="mcl_button_discord">Discord</string>
+    <string name="ltw_render_distance_warning_msg">Ваш ГП не здатний відтворювати відстань вище 7 без Sodium чи інших подібних модів. Дальність промальовування буде автоматично зменшено, коли ви натиснете «ОК».</string>
+    <string name="mcl_button_open_directory">Відкрити теку гри</string>
+    <string name="local_login_bad_username_title">Невідповідне ім\'я користувача</string>
+    <string name="local_login_bad_username_text">Ім’я користувача має містити від 3 до 16 символів і містити лише латинські літери, цифри 0–9 і підкреслення.</string>
+    <string name="quick_setting_title">Швидкі налаштування</string>
+    <string name="create_bta_profile">Створити профіль «Better than Adventure!»</string>
+    <string name="select_bta_version">Виберіть версію «Better than Adventure!»</string>
+    <string name="bta_installer_available_versions">Підтримуванні версії «Better than Adventure!»</string>
+    <string name="bta_installer_untested_versions">Нетестовані версії «Better than Adventure!»</string>
+    <string name="bta_installer_nightly_versions">Нічні збірки «Better than Adventure!»</string>
+    <string name="newdl_extracting_native_libraries">Екстракція нативних бібліотек (%d/%d)</string>
+    <string name="toast_not_available_demo">Це недоступно в демо-режимі</string>
+    <string name="preference_renderer_mobileglues_settings">Налаштування промальовування MobileGlues </string>
+    <string name="mg_renderer_glsl_cache">Макс. розмір кешу GLSL</string>
+    <string name="mg_renderer_angle">Використовувати ANGLE як драйвер</string>
+    <string name="mg_renderer_multidraw">Режим емуляції Multidraw</string>
+    <string name="mg_renderer_title_gl43exts">Сповіщення експериментів розширення OpenGL 4.3</string>
+    <string name="mg_renderer_summary_gl43exts">Може допомогти зі збоями мода. Вимкніть, якщо не потрібно, це може призвести до збоїв.</string>
+    <string name="mg_renderer_title_computeShaderext">Сповіщення експериментів розширення обчислення шейдерів</string>
+    <string name="mg_renderer_summary_computeShaderext">Може допомогти у вирішенні збоїв у пакеті шейдерів. Вимкніть, якщо не потрібно, це може призвести до збоїв.</string>
+    <string name="mg_renderer_title_errorSetting">Помилка фільтрації</string>
+    <string name="app_short_name">Amethyst</string>
 </resources>

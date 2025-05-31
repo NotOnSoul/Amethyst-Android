@@ -80,15 +80,8 @@
     <string name="control_debug">Налагодження</string>
     <string name="control_primary">ЛКМ</string>
     <string name="control_secondary">ПКМ</string>
-    <string name="control_shift">◇</string>
     <string name="control_inventory">Інв</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">F5</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Миша</string>
     <string name="control_mouseoff">Миша: Вимкн.</string>
     <string name="control_mouseon">Миша: Увімк.</string>
@@ -119,7 +112,6 @@
     <string name="customctrl_button_opacity">Прозорість кнопки</string>
     <string name="customctrl_addbutton">Додати кнопку</string>
     <string name="customctrl_addbutton_drawer">Додати розгортаєму кнопку</string>
-    <string name="customctrl_addbutton_joystick">Додати джойстик</string>
     <string name="customctrl_addsubbutton">Додати під-кнопку</string>
     <string name="customctrl_selectdefault">Обрати стандартну</string>
     <string name="customctrl_export">Експортувати розкладку</string>
@@ -140,14 +132,12 @@
     <string name="mcl_setting_subtitle_mousespeed">Змінює чутливість віртуальної миші.</string>
     <string name="customctrl_passthru">Курсор миші</string>
     <string name="customctrl_swipeable">Перегортаємий</string>
-    <string name="customctrl_forward_lock">Заблокувати йти вперед</string>
     <string name="customctrl_absolute_tracking">Абсолютне відстеження пальців</string>
     <string name="memory_warning_msg">Поточна кількість вільної оперативної пам\'яті (%d) менша, ніж виділена оперативна пам\'ять (%d), що може призвести до збоїв. Змініть кількість вільної оперативної пам\'яті, якщо гра вилетить.</string>
     <string name="mcl_memory_allocation">Виділення пам\'яті</string>
     <string name="mcl_memory_allocation_subtitle">Контролює, скільки пам’яті надається Minecraft.</string>
     <string name="multirt_runtime_corrupt">Java Runtime пошкоджено</string>
     <string name="multirt_runtime_incompatiblearch">Несумісна архітектура: %s</string>
-    <string name="multirt_config_title">Java Runtimes</string>
     <string name="multirt_config_add">Додати нову</string>
     <string name="multirt_title">Менеджер Runtime</string>
     <string name="multirt_subtitle">Керування встановленим Java Runtimes.</string>
@@ -192,9 +182,7 @@
     <string name="profiles_latest_snapshot">Останній снапшот</string>
     <string name="profiles_latest_release">Останній реліз</string>
     <string name="profiles_profile_name">Ім\'я</string>
-    <string name="profiles_profile_version">Версія</string>
     <string name="global_delete">Видалити</string>
-    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">Візуалізатор</string>
     <string name="arc_capes_title">Плащі Cosmetica</string>
     <string name="arc_capes_desc">Включає плащі від Cosmetica (раніше Arc). Для більш детальної інформації, будь ласка, відвідайте https://cosmetica.cc. Потребує OptiFine.</string>
@@ -223,7 +211,7 @@
     <string name="xerr_not_available">Xbox Live недоступний у вашій країні</string>
     <string name="preference_enable_gyro_title">Увімкнути керування гіроскопом</string>
     <string name="preference_enable_gyro_description">Увімкнувши цю функцію, ви зможете повертатися в грі, просто повернувши телефон.</string>
-    <string name="preference_gyro_sensitivity_title">Чутливість керування гіроскопом</string>
+    <string name="preference_gyro_sensitivity_title">Налаштування чутливості гіроскопа</string>
     <string name="preference_gyro_sensitivity_description">Відрегулювати чутливість керування гіроскопом.</string>
     <string name="toast_turn_on_gyro">Спочатку увімкніть керування гіроскопом, щоб скористатися цією функцією!</string>
     <string name="preference_gyro_sample_rate_title">Частота дискретизації гіроскопа</string>
@@ -232,10 +220,8 @@
     <string name="storage_required">PojavLauncher потребує під’єднання до сховища. Будь ласка, під’єднайте його ще раз і перезапустіть додаток.</string>
     <string name="mcl_setting_title_buttonallcaps">Використовувати лише великі літери в назвах кнопок</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Вимкніть, якщо бажаєте використовувати малі літери в елементах керування.</string>
-    <string name="create_profile">Створити профіль</string>
     <string name="preference_shader_dump_title">Увімкнути вивантажування шейдерів</string>
     <string name="preference_shader_dump_description">Записувати дані про перетворені шейдери у файл журналу.</string>
-    <string name="percent_format">%d%%</string>
     <string name="customctrl_editor_exit_title">Вийти?</string>
     <string name="customctrl_editor_exit_msg">Ви дійсно бажаєте вийти?</string>
     <string name="customctrl_editor_exit">Вийти з редактора</string>
@@ -324,11 +310,5 @@
     <string name="exception_failed_to_unpack_jre17">Не вдалося установити JRE 17</string>
     <string name="newdl_starting">Зчитування метаданих гри…</string>
     <string name="newdl_downloading_metadata">Завантаження метаданих гри (%s)</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">Почати</string>
     <string name="controller_button_select">Обрати</string>
-    <string name="customctrl_visibility_title">Видимість</string>
 </resources>

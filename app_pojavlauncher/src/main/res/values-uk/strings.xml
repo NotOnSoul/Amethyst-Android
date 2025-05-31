@@ -30,7 +30,7 @@
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Очищення файлів кешу</string>
     <string name="mcl_launch_downloading">Завантаження %s</string>
-    <string name="mcl_launch_downloading_progress">"Завантаження %s (%.2f Мбайт / %.2f Мбайт)"</string>
+    <string name="mcl_launch_downloading_progress">"Завантаження %s (%.2f МБ / %.2f МБ)"</string>
     <string name="mcl_launch_download_assets">Підготовка до завантаження ресурсів</string>
     <string name="mcl_options">Налаштування</string>
     <string name="mcl_option_customcontrol">Користувацьке керування</string>
@@ -126,7 +126,7 @@
     <string name="customctrl_stroke_color">Колір контуру</string>
     <string name="customctrl_button_opacity">Прозорість кнопки</string>
     <string name="customctrl_addbutton">Додати кнопку</string>
-    <string name="customctrl_addbutton_drawer">Додати кнопку розгорення</string>
+    <string name="customctrl_addbutton_drawer">Додати кнопку розгорнення</string>
     <string name="customctrl_addbutton_joystick">Додати джойстик</string>
     <string name="customctrl_addsubbutton">Додати під-кнопку</string>
     <string name="customctrl_selectdefault">Обрати стандартну</string>
@@ -147,7 +147,7 @@
     <string name="mcl_setting_title_mousespeed">Чутливість миші</string>
     <string name="mcl_setting_subtitle_mousespeed">Змінює чутливість віртуальної миші.</string>
     <string name="customctrl_passthru">Курсор миші</string>
-    <string name="customctrl_swipeable">Перегортаємий</string>
+    <string name="customctrl_swipeable">Можна перегорнути</string>
     <string name="customctrl_forward_lock">Передній замок</string>
     <string name="customctrl_absolute_tracking">Абсолютне відстеження пальців</string>
     <string name="memory_warning_msg">Поточна кількість вільної оперативної пам\'яті (%d) менша, ніж виділена оперативна пам\'ять (%d), що може призвести до збоїв. Змініть кількість вільної оперативної пам\'яті, якщо гра виходить з ладу.</string>
@@ -292,8 +292,8 @@
     <string name="search_modpack_no_result">Модпаки не знайдено</string>
     <string name="search_modpack_error">Не вдалося знайти пакети модів</string>
     <string name="search_modpack_download_error">Не вдалося завантажити метадані пакету модів</string>
-    <string name="modpack_download_downloading_metadata">Завантаження метаданих пакету модів (%.2f Мб / %.2f Мб)</string>
-    <string name="modpack_download_downloading_mods">Завантаження модів (%.2f Мб / %.2f Мб)</string>
+    <string name="modpack_download_downloading_metadata">Завантаження метаданих пакету модів (%.2f МБ / %.2f МБ)</string>
+    <string name="modpack_download_downloading_mods">Завантаження модів (%.2f МБ / %.2f МБ)</string>
     <string name="modpack_download_downloading_mods_fc">Завантаження модів (Файл %d з %d)</string>
     <string name="modpack_download_applying_overrides">Застосування перевизначень (%d/%d)</string>
     <string name="modpack_install_notification_title">Встановлювач пакету модів Pojav</string>
@@ -335,8 +335,8 @@
     <string name="exception_failed_to_unpack_jre17">Не вдалося установити JRE 17</string>
     <string name="newdl_starting">Зчитування метаданих гри…</string>
     <string name="newdl_downloading_metadata">Завантаження метаданих гри (%s)</string>
-    <string name="newdl_downloading_game_files">Завантаження гри… (%d/%d, %.2f Мб/с)</string>
-    <string name="newdl_downloading_game_files_size">Завантаження гри… (%.2f/%.2f Мб, %.2f Мб/с)</string>
+    <string name="newdl_downloading_game_files">Завантаження гри… (%d/%d, %.2f МБ/с)</string>
+    <string name="newdl_downloading_game_files_size">Завантаження гри… (%.2f/%.2f МБ, %.2f МБ/с)</string>
     <string name="cropper_title">Виберіть зображення регіону</string>
     <string name="cropper_lock_vertical">V. lock</string>
     <string name="cropper_lock_horizontal">H. lock</string>

@@ -4,8 +4,6 @@
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
-    <string name="login_online_username_hint">Username</string>
-    <string name="login_online_login_label">Login</string>
     <!-- Hint -->
     <string name="hint_control_mapping">"Sentuh roda gigi diatas tengah untuk membuka menu konteks ⚙️\nSentuh sebuah tombol untuk menyesuaikan: edit, ubah ukuran, atau ubah tombol pintasannya."</string>
     <!-- Warnings -->
@@ -24,7 +22,6 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Membersihkan file cache</string>
@@ -47,58 +44,39 @@
     <string name="mcl_setting_subtitle_mousescale">Ubah ukuran penunjuk virtual.</string>
     <string name="mcl_setting_title_javaargs">Argumen peluncuran JVM</string>
     <string name="mcl_setting_subtitle_javaargs">Hati-hati, ini bisa membuat game crash jika dimodifikasi tanpa sepengetahuan.</string>
-    <string name="mcl_setting_category_renderer">Renderer</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (semua versi, cepat)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (semua versi, menengah)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - hanya untuk 1.17+</string>
     <string name="mcl_setting_veroption_release">Rilis</string>
-    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Alpha-lama</string>
     <string name="mcl_setting_veroption_oldbeta">Beta-lama</string>
     <string name="mcl_setting_java_sandbox">Sandbox eksekusi .jar</string>
     <string name="mcl_setting_java_sandbox_subtitle">Kendalikan ketersedian pengelola keamanan sandbox saat meluncurkan berkas .jar.</string>
     <string name="mcl_version_clone">Klon</string>
     <!-- Global strings -->
-    <string name="global_edit">Edit</string>
     <string name="global_error">Eror</string>
     <string name="global_load">Memuat</string>
     <string name="global_name">Nama</string>
     <string name="global_remove">Hapus</string>
     <string name="global_clone">Klon</string>
-    <string name="global_restart">Restart</string>
     <string name="global_save">Simpan</string>
     <string name="global_unpacking">Membongkar %s</string>
     <string name="global_error_field_empty">Kolom ini tidak boleh kosong</string>
     <string name="global_waiting">Tunggu</string>
     <string name="global_select">Pilih</string>
     <string name="global_retry">Coba lagi</string>
-    <string name="global_default">Default</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Aplikasi/permainan keluar dengan kode %d, cek latestlog.txt untuk detail lebih lanjut.</string>
     <string name="mcn_signal_title">Aplikasi/Game keluar dengan sinyal fatal %d, cek latestlog.txt untuk detail lebih lanjut.</string>
     <string name="mcn_exit_confirm">Apa anda yakin mau tutup secara paksa?</string>
     <string name="mcn_check_fail_vulkan_support">Renderer Zink (Vulkan) tidak didukung di perangkat ini!</string>
     <!-- MainActivity: Control buttons -->
-    <string name="control_chat">Chat</string>
-    <string name="control_debug">Debug</string>
-    <string name="control_primary">Pri</string>
-    <string name="control_secondary">Sec</string>
-    <string name="control_shift">◇</string>
-    <string name="control_inventory">Inv</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">Ke-3</string>
-    <string name="control_listplayers">Tab</string>
-    <string name="control_mouse">Mouse</string>
     <string name="control_mouseoff">Mouse: mati</string>
     <string name="control_mouseon">Mouse: nyala </string>
     <!-- MainActivity: Menu advanced controls -->
     <string name="control_forceclose">Tutup secara paksa</string>
     <string name="control_viewout">Catatan log</string>
-    <string name="control_adebug">Input Debug</string>
     <string name="control_customkey">Kirim keycode kustom</string>
     <!-- ImportControlActivity Strings -->
     <string name="import_control_label">Impor kontrol</string>
@@ -113,7 +91,6 @@
 -->
     <string name="customctrl_toggle">Bisa dialihkan</string>
     <string name="customctrl_size">Ukuran</string>
-    <string name="customctrl_mapping">Mapping</string>
     <string name="customctrl_orientation">Orientasi</string>
     <string name="customctrl_background_color">Warna background</string>
     <string name="customctrl_corner_radius">Radius sudut</string>
@@ -122,7 +99,6 @@
     <string name="customctrl_button_opacity">Opasitas Tombol</string>
     <string name="customctrl_addbutton">Tambah tombol</string>
     <string name="customctrl_addbutton_drawer">Tambahkan tombol drawer</string>
-    <string name="customctrl_addbutton_joystick">Tambah Joystick</string>
     <string name="customctrl_addsubbutton">Tambahkan tombol</string>
     <string name="customctrl_selectdefault">Pilih kontrol default</string>
     <string name="customctrl_export">Ekspor Penataan Kontrol</string>
@@ -141,9 +117,7 @@
     <string name="mcl_disable_swap_hand_subtitle">Nonaktifkan gestur ketuk dua kali pada item hotbar untuk menukarkannya di tangan kedua.</string>
     <string name="mcl_setting_title_mousespeed">Kecepatan Mouse</string>
     <string name="mcl_setting_subtitle_mousespeed">Ubah kecepatan mouse virtual.</string>
-    <string name="customctrl_passthru">Mouse pass-thru</string>
     <string name="customctrl_swipeable">Bisa digesek</string>
-    <string name="customctrl_forward_lock">Kunci ke depan</string>
     <string name="customctrl_absolute_tracking">Pelacakan jari absolut</string>
     <string name="memory_warning_msg">Jumlah RAM kosong saat ini (%d) lebih rendah dari RAM yang dialokasikan (%d), yang dapat menyebabkan crash. Ubah alokasi jika game crash.</string>
     <string name="address_memory_warning_msg">Jumlah RAM kosong saat ini (%d) lebih rendah dari RAM yang dialokasikan (%d), yang dapat menyebabkan crash. Ubah alokasi jika game crash.</string>
@@ -156,8 +130,6 @@
     <string name="multirt_title">Pengelola Runtime</string>
     <string name="multirt_subtitle">Kelola Runtime Java terpasang.</string>
     <string name="multirt_progress_caching">Menyimpan cache...</string>
-    <string name="multirt_config_setdefault">Set default</string>
-    <string name="multirt_config_setdefault_already">Default</string>
     <string name="multirt_config_removeerror_last">Kamu harus punya setidaknya satu Runtime Java yang terpasang.</string>
     <string name="multirt_nocompatiblert">Tidak dapat mencari Java Runtime yang kompatibel. Versi ini membutuhkan Java %d atau lebih baru.</string>
     <string name="multirt_nojava8rt">Tidak dapat menemukan Java 8. Untuk menggunakan opsi ini, kamu perlu menginstal Java 8.</string>
@@ -197,14 +169,11 @@
     <string name="profiles_latest_snapshot">Snapshot terbaru</string>
     <string name="profiles_latest_release">Rilis terbaru</string>
     <string name="profiles_profile_name">Nama</string>
-    <string name="profiles_profile_version">Versi</string>
     <string name="global_delete">Hapus</string>
     <string name="pedit_java_runtime">Runtime Java</string>
-    <string name="pedit_renderer">Renderer</string>
     <string name="arc_capes_title">Capes Cosmetica</string>
     <string name="arc_capes_desc">Mengaktifkan capes dari Cosmetica (sebelumnya Arc). Untuk informasi lebih lanjut silahkan kunjungi https://cosmetica.cc. Membutuhkan OptiFine.</string>
     <string name="notif_channel_name">Umum</string>
-    <string name="lazy_service_default_title">Amethyst Foreground Service</string>
     <string name="mcl_setting_veroption_installed">Terpasang</string>
     <string name="use_global_default">(Gunakan global bawaan)</string>
     <string name="default_control">Kontrol bawaan</string>
@@ -237,11 +206,8 @@
     <string name="storage_required">PojavLauncher membutuhkan penyimpanan eksternal. Mohon untuk dipasang kembali dan merestart aplikasi.</string>
     <string name="mcl_setting_title_buttonallcaps">Hanya gunakan huruf kapital di label tombol</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Matikan ini jika kamu ingin menggunakan huruf kecil di kontrol.</string>
-    <string name="create_profile">Buat profil baru</string>
     <string name="preference_shader_dump_title">Aktifkan shader dumping</string>
     <string name="preference_shader_dump_description">Simpan catatan shader ke sebuah berkas.</string>
-    <string name="percent_format">%d%%</string>
-    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Meninggalkan?</string>
     <string name="customctrl_editor_exit_msg">Anda yakin ingin keluar?</string>
     <string name="customctrl_editor_exit">Tinggalkan editor</string>
@@ -283,7 +249,6 @@
     <string name="preference_vulkan_driver_system_description">Paksa peluncur untuk menggunakan driver Vulkan sistem daripada Turnip di GPU Adreno. Hanya mempengaruhi Zink dan mod-mod yang menggunakan Vulkan.</string>
     <string name="generic_install">Pasang</string>
     <string name="generic_apply">Terapkan</string>
-    <string name="generic_debug">Debug</string>
     <string name="search_modpack_no_result">Tidak dapat menemukan paket modifikasi</string>
     <string name="search_modpack_error">Gagal mencari paket modifikasi</string>
     <string name="search_modpack_download_error">Gagal mengunduh metadata paket modifikasi</string>
@@ -344,11 +309,6 @@
     <string name="log_view_label_log_output">Keluaran log:</string>
     <string name="execute_jar_failed_to_read_file">Gagal membaca dokumen .jar</string>
     <string name="execute_jar_incompatible_runtime">Fitur eksekusi .jar tidak kompatibel dengan Java %d</string>
-    <string name="controller_button_a">A</string>
-    <string name="controller_button_b">B</string>
-    <string name="controller_button_x">X</string>
-    <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">Mulai</string>
     <string name="controller_button_select">Pilih</string>
     <string name="controller_button_trigger_left">Pemicu Kiri</string>
     <string name="controller_button_trigger_right">Pemicu Kanan</string>
@@ -367,13 +327,11 @@
     <string name="controller_remapper_exit_part1">Tahan</string>
     <string name="controller_remapper_exit_part2">untuk keluar</string>
     <string name="controller_remapper_operating_mode">Mode saat ini</string>
-    <string name="customctrl_visibility_title">Visibilitas</string>
     <string name="customctrl_visibility_ingame">Dalam permainan</string>
     <string name="customctrl_visibility_in_menus">Dalam menu</string>
     <string name="controller_remapper_expand_entry">Besarkan untuk mengganti kode kunci</string>
     <string name="preference_remap_controller_title">Ganti pengikatan kunci kontroller</string>
     <string name="preference_remap_controller_description">Memperbolehkan anda untuk memodifikasikan kunci yang terikat ke setiap tombol kontroller</string>
-    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">GPU anda tidak mampu untuk merender diatas 7 jarak render tanpa menginstall Sodium atau modifikasi serupa. Jarak render akan di kurangi secara otomatis setelah anda mengklik \"OK\".</string>
     <string name="mcl_button_open_directory">Buka direktori permainan</string>
     <string name="local_login_bad_username_title">Username tidak cocok</string>

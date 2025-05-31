@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
+    <string name="app_name">Amethyst</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
@@ -13,10 +14,10 @@
     <!-- AlertDialog title -->
     <string name="alerttitle_installmod">选择模组安装器</string>
     <!-- Error messages -->
-    <string name="error_fatal">Amethyst 意外崩溃</string>
+    <string name="error_fatal">Amethyst 意外崩溃了</string>
     <string name="error_no_version">无版本！</string>
-    <string name="error_show_more">显示详情</string>
-    <string name="error_show_less">隐藏细节</string>
+    <string name="error_show_more">显示更多</string>
+    <string name="error_show_less">显示更少</string>
     <!-- Toast messages -->
     <string name="toast_permission_denied">请授予存储读写权限！</string>
     <string name="toast_optifine_success">安装成功</string>
@@ -24,6 +25,7 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
+    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">正在清理缓存</string>
@@ -46,6 +48,8 @@
     <string name="mcl_setting_subtitle_mousescale">修改虚拟鼠标的大小。</string>
     <string name="mcl_setting_title_javaargs">JVM 启动参数</string>
     <string name="mcl_setting_subtitle_javaargs">注意，如果你不清楚你在做什么请勿随意修改，否则可能会导致游戏崩溃！</string>
+    <string name="mcl_setting_title_renderer_settings">额外渲染器设置</string>
+    <string name="mcl_setting_title_renderer_subtitle">渲染器特定设置</string>
     <string name="mcl_setting_category_renderer">渲染器</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES -（全版本可用，速度较快）</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink（Vulkan）-（全版本可用，速度中等）</string>
@@ -57,25 +61,25 @@
     <string name="mcl_setting_veroption_oldbeta">远古 beta 版</string>
     <string name="mcl_setting_java_sandbox">沙盒 .jar 可执行文件</string>
     <string name="mcl_setting_java_sandbox_subtitle">在执行 Jar 文件时，控制沙盒安全管理器的可用性。</string>
-    <string name="mcl_version_clone">复制</string>
+    <string name="mcl_version_clone">克隆</string>
     <!-- Global strings -->
     <string name="global_edit">修改</string>
     <string name="global_error">错误</string>
     <string name="global_load">加载</string>
     <string name="global_name">名称</string>
     <string name="global_remove">移除</string>
-    <string name="global_clone">复制</string>
+    <string name="global_clone">克隆</string>
     <string name="global_restart">重启</string>
     <string name="global_save">保存</string>
     <string name="global_unpacking">正在解压 %s</string>
-    <string name="global_error_field_empty">此处不能为空</string>
-    <string name="global_waiting">请稍等</string>
+    <string name="global_error_field_empty">此字段不能为空</string>
+    <string name="global_waiting">等待</string>
     <string name="global_select">选择</string>
-    <string name="global_retry">请重试</string>
+    <string name="global_retry">重试</string>
     <string name="global_default">默认</string>
-    <string name="global_off">禁用</string>
+    <string name="global_off">关</string>
     <!-- MainActivity: strings -->
-    <string name="mcn_exit_title">应用程序/游戏以代码 %d退出，请查看 latestlog.txt 了解详情；如果你不知道发生了什么，请点击 “分享日志文件” 将日志文件发送给他人分析，而不是在此页面截屏。</string>
+    <string name="mcn_exit_title">应用程序/游戏以代码 %d 退出，请查看 latestlog.txt 了解更多详情。</string>
     <string name="mcn_signal_title">应用程序/游戏以致命信号 %d 中止，请查看 latestlog.txt 以了解更多详情。</string>
     <string name="mcn_exit_confirm">您确定要强制关闭？</string>
     <string name="mcn_check_fail_vulkan_support">此设备不支持 Zink（Vulkan）渲染器！</string>
@@ -84,8 +88,15 @@
     <string name="control_debug">调试</string>
     <string name="control_primary">主</string>
     <string name="control_secondary">副</string>
+    <string name="control_shift">◇</string>
     <string name="control_inventory">背包</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">视角</string>
+    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">鼠标</string>
     <string name="control_mouseoff">鼠标：关</string>
     <string name="control_mouseon">鼠标：开 </string>
@@ -98,9 +109,9 @@
     <string name="import_control_label">导出控制布局文件</string>
     <string name="import_control_invalid_file">文件无效或已损坏</string>
     <string name="import_control_import_button">导入控制布局</string>
-    <string name="import_control_verifying_file">正在校检文件，请稍后重试…</string>
+    <string name="import_control_verifying_file">正在校验文件，请稍后重试…</string>
     <string name="import_control_invalid_name">名称无效或文件已存在</string>
-    <string name="import_control_done">导入完成！</string>
+    <string name="import_control_done">导入完成</string>
     <!--
     <string name="control_more3"></string>
     <string name="control_more4"></string>
@@ -120,9 +131,9 @@
     <string name="customctrl_selectdefault">选择默认控制布局</string>
     <string name="customctrl_export">导出控制布局文件</string>
     <string name="main_share_logs">分享日志文件</string>
-    <string name="main_install_jar_file">执行 Jar 文件</string>
+    <string name="main_install_jar_file">执行 .jar 文件</string>
     <string name="main_play">启动游戏</string>
-    <string name="autoram_info_msg">内存已分配 %d MB！</string>
+    <string name="autoram_info_msg">内存已分配 %d MB</string>
     <string name="mcl_setting_check_libraries">在下载完成后检查依赖库</string>
     <string name="mcl_setting_check_libraries_subtitle">此选项强制启动器检查依赖库文件的哈希值是否正常，防止下载错误。</string>
     <string name="dl_library_sha_fail">依赖 %s 已损坏，此依赖将被重新下载</string>
@@ -141,19 +152,19 @@
     <string name="address_memory_warning_msg">当前可用可寻址内存空间量 (%d) 低于已分配内存量 (%d)，这将导致游戏崩溃。如果游戏崩溃，请调整分配。</string>
     <string name="mcl_memory_allocation">内存分配</string>
     <string name="mcl_memory_allocation_subtitle">控制给应用程序/游戏分配多少内存</string>
-    <string name="multirt_runtime_corrupt">Java 运行环境损坏</string>
+    <string name="multirt_runtime_corrupt">Java 运行时损坏</string>
     <string name="multirt_runtime_incompatiblearch">不兼容的架构：%s</string>
-    <string name="multirt_config_title">Java 运行环境</string>
+    <string name="multirt_config_title">Java 运行时</string>
     <string name="multirt_config_add">新建</string>
-    <string name="multirt_title">运行环境管理器</string>
-    <string name="multirt_subtitle">管理已安装的 Java 运行环境。</string>
-    <string name="multirt_progress_caching">正在缓存……</string>
+    <string name="multirt_title">运行时管理器</string>
+    <string name="multirt_subtitle">管理已安装的 Java 运行时。</string>
+    <string name="multirt_progress_caching">正在缓存…</string>
     <string name="multirt_config_setdefault">设为默认</string>
     <string name="multirt_config_setdefault_already">默认</string>
-    <string name="multirt_config_removeerror_last">您必须至少安装一个 Java 运行环境。</string>
+    <string name="multirt_config_removeerror_last">你必须至少安装一个 Java 运行时。</string>
     <string name="multirt_nocompatiblert">找不到任何兼容的 Java 运行时。此版本需要 Java %d 或更新版本。</string>
     <string name="multirt_nojava8rt">无法找到 Java 8，如要使用此选项，您需要安装 Java 8。</string>
-    <string name="multirt_delete_runtime">删除运行环境</string>
+    <string name="multirt_delete_runtime">删除运行时</string>
     <string name="pvc_gameDirectory">游戏目录</string>
     <string name="pvc_jvmArgs">JVM 参数</string>
     <string name="preference_mouse_start_title">启动游戏时默认打开虚拟鼠标</string>
@@ -163,7 +174,7 @@
     <string name="preference_control_title">自定义控制键</string>
     <string name="preference_control_description">手势、按键与缩放</string>
     <string name="preference_java_title">Java 调整</string>
-    <string name="preference_java_description">Java 运行环境、JVM 参数、内存分配量与沙盒</string>
+    <string name="preference_java_description">Java 运行时、JVM 参数、内存分配量与沙盒</string>
     <string name="preference_misc_title">其他设置</string>
     <string name="preference_misc_description">版本列表和依赖库检查</string>
     <string name="preference_experimental_title">实验性补丁</string>
@@ -190,7 +201,7 @@
     <string name="profiles_latest_release">最新正式版</string>
     <string name="profiles_profile_name">名称</string>
     <string name="global_delete">删除</string>
-    <string name="pedit_java_runtime">Java 运行环境</string>
+    <string name="pedit_java_runtime">Java 运行时</string>
     <string name="pedit_renderer">渲染器</string>
     <string name="arc_capes_title">Cosmetica 披风</string>
     <string name="arc_capes_desc">启用来自 Cosmetica（原 Arc）的披风，需要 OptiFine，欲知详情请访问 https://arcapes.com。</string>
@@ -230,6 +241,7 @@
     <string name="mcl_setting_subtitle_buttonallcaps">如果您想在按键中显示小写字母，请关闭此设置。</string>
     <string name="preference_shader_dump_title">启用着色器输出</string>
     <string name="preference_shader_dump_description">记录切换的着色器到日志文件中。</string>
+    <string name="percent_format">%d%%</string>
     <string name="millisecond_format">%d 毫秒</string>
     <string name="customctrl_editor_exit_title">您确定要离开？</string>
     <string name="customctrl_editor_exit_msg">您确定要退出？</string>
@@ -357,6 +369,7 @@
     <string name="controller_remapper_expand_entry">展开以更改键码</string>
     <string name="preference_remap_controller_title">更改手柄按键绑定</string>
     <string name="preference_remap_controller_description">允许你修改绑定到每个手柄按钮的键盘按键</string>
+    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">如果没有 Sodium 或其他类似模组，你的 GPU 将无法渲染 7 以上的渲染距离。点击“确定”后，渲染距离将自动缩短。</string>
     <string name="mcl_button_open_directory">打开游戏目录</string>
     <string name="local_login_bad_username_title">用户名不合适</string>
@@ -372,10 +385,11 @@
     <string name="preference_renderer_mobileglues_settings">MobileGlues 渲染器设置</string>
     <string name="mg_renderer_glsl_cache">最大 GLSL 缓存大小</string>
     <string name="mg_renderer_angle">使用 ANGLE 作为驱动</string>
-    <string name="mg_renderer_multidraw">MultiDraw 模拟方案</string>
+    <string name="mg_renderer_multidraw">多重绘制模拟模式</string>
     <string name="mg_renderer_title_gl43exts">启用不完整的 OpenGL 4.3 扩展</string>
     <string name="mg_renderer_summary_gl43exts">可能有助于解决模组导致的崩溃。非必要请禁用，可能会导致错误。</string>
     <string name="mg_renderer_title_computeShaderext">启用实验性的 Compute Shader 扩展</string>
     <string name="mg_renderer_summary_computeShaderext">可能有助于解决光影渲染异常。非必要请禁用，可能会导致错误。</string>
-    <string name="mg_renderer_title_errorSetting">OpenGL 报错设置</string>
+    <string name="mg_renderer_title_errorSetting">错误过滤</string>
+    <string name="app_short_name">Amethyst</string>
 </resources>

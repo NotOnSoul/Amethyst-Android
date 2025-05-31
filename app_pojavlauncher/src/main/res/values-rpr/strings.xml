@@ -56,7 +56,6 @@
     <string name="global_unpacking">Распаковка %s</string>
     <string name="global_error_field_empty">Сіе поле не можетъ быть пустымъ</string>
     <string name="global_waiting">Подождите</string>
-    <string name="global_select">Сдѣлать выборъ</string>
     <string name="global_retry">Повторить</string>
     <string name="global_default">По умолчанію</string>
     <!-- MainActivity: strings -->
@@ -67,15 +66,8 @@
     <string name="control_debug">Отладка</string>
     <string name="control_primary">Л.К.М</string>
     <string name="control_secondary">П.К.М</string>
-    <string name="control_shift">◇</string>
     <string name="control_inventory">Инв.</string>
-    <string name="control_up">▲</string>
-    <string name="control_left">◀</string>
-    <string name="control_right">▶</string>
-    <string name="control_down">▼</string>
-    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">F5</string>
-    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Мышь</string>
     <string name="control_mouseoff">Мышь: Выкл.</string>
     <string name="control_mouseon">Мышь: Вкл.</string>
@@ -126,5 +118,4 @@
     <string name="pedit_renderer">Визуализаторъ</string>
     <string name="of_dl_progress">Загрузка %s</string>
     <string name="generic_debug">Отладка</string>
-    <string name="controller_button_select">Сдѣлать выборъ</string>
 </resources>

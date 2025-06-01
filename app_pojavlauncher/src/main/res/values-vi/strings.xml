@@ -51,6 +51,7 @@
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (tất cả phiên bản, Hiệu suất cho: trung bình)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17 trở lên</string>
     <string name="mcl_setting_veroption_release">Bản phát hành</string>
+    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Bản Alpha cũ</string>
     <string name="mcl_setting_veroption_oldbeta">Bản Beta cũ</string>
     <string name="mcl_setting_java_sandbox">Thực thi tệp .jar trong hộp cát</string>
@@ -111,6 +112,7 @@
     <string name="customctrl_button_opacity">Độ trong suốt của phím</string>
     <string name="customctrl_addbutton">Thêm nút</string>
     <string name="customctrl_addbutton_drawer">Thêm bộ phím</string>
+    <string name="customctrl_addbutton_joystick">Thêm núm điều khiển</string>
     <string name="customctrl_addsubbutton">Thêm phím phụ</string>
     <string name="customctrl_selectdefault">Chọn bố cục điều khiển mặc định</string>
     <string name="customctrl_export">Xuất bố cục điều khiển</string>
@@ -131,6 +133,7 @@
     <string name="mcl_setting_subtitle_mousespeed">Thay đổi tốc độ của chuột ảo.</string>
     <string name="customctrl_passthru">Di chuyển chuột</string>
     <string name="customctrl_swipeable">Có thể vuốt</string>
+    <string name="customctrl_forward_lock">Khóa tiến về trước</string>
     <string name="customctrl_absolute_tracking">Theo dõi chuyển động tuyệt đối của ngón tay</string>
     <string name="memory_warning_msg">Số lượng RAM trống hiện tại (%d) thấp hơn số lượng RAM được phân bổ (%d), có thể dẫn đến sự cố. Thay đổi số lượng phân bổ nếu trò chơi bị sập.</string>
     <string name="address_memory_warning_msg">Bộ nhớ trống hiện có (%d) thấp hơn bộ nhớ được phân bổ (%d), điều này có thể gây ra sự cố. Thay đổi lượng bộ nhớ được phân bổ nếu trò chơi bị văng.</string>
@@ -346,6 +349,7 @@ Nếu bạn muốn sử dụng nguồn tải xuống chính thức, nhấn vào 
     <string name="controller_remapper_exit_part1">Giữ</string>
     <string name="controller_remapper_exit_part2">để thoát ra</string>
     <string name="controller_remapper_operating_mode">Chế độ hiện tại</string>
+    <string name="customctrl_visibility_title">Hiển thị</string>
     <string name="customctrl_visibility_ingame">Trong trò chơi</string>
     <string name="customctrl_visibility_in_menus">Trong menu</string>
     <string name="controller_remapper_expand_entry">Mở rộng để thay đổi mã phím</string>

@@ -58,7 +58,7 @@
     <string name="mcl_setting_java_sandbox_subtitle">Điều khiển tính khả dụng của trình quản lý bảo mật hộp cát khi thực thi tệp .jar.</string>
     <string name="mcl_version_clone">Nhân bản</string>
     <!-- Global strings -->
-    <string name="global_edit">Chỉnh sửa</string>
+    <string name="global_edit">Sửa</string>
     <string name="global_error">Lỗi</string>
     <string name="global_load">Tải</string>
     <string name="global_name">Tên</string>
@@ -86,7 +86,7 @@
     <string name="control_mouseoff">Chuột: tắt</string>
     <string name="control_mouseon">Chuột: bật </string>
     <!-- MainActivity: Menu advanced controls -->
-    <string name="control_forceclose">Đóng chương trình</string>
+    <string name="control_forceclose">Buộc thoát chương trình</string>
     <string name="control_viewout">Nhật ký ra </string>
     <string name="control_adebug">Gỡ lỗi đầu vào</string>
     <string name="control_customkey">Gửi phím tùy chọn</string>
@@ -108,12 +108,12 @@
     <string name="customctrl_background_color">Màu nền</string>
     <string name="customctrl_corner_radius">Bán kính góc tròn</string>
     <string name="customctrl_stroke_width">Độ rộng viền phím</string>
-    <string name="customctrl_stroke_color">Màu viền phím</string>
+    <string name="customctrl_stroke_color">Màu viền</string>
     <string name="customctrl_button_opacity">Độ trong suốt của phím</string>
     <string name="customctrl_addbutton">Thêm nút</string>
     <string name="customctrl_addbutton_drawer">Thêm bộ phím</string>
     <string name="customctrl_addbutton_joystick">Thêm núm điều khiển</string>
-    <string name="customctrl_addsubbutton">Thêm phím phụ</string>
+    <string name="customctrl_addsubbutton">Thêm nút phụ</string>
     <string name="customctrl_selectdefault">Chọn bố cục điều khiển mặc định</string>
     <string name="customctrl_export">Xuất bố cục điều khiển</string>
     <string name="main_share_logs">Chia sẻ tệp nhật ký</string>
@@ -152,7 +152,7 @@
     <string name="multirt_nocompatiblert">Không thể tìm thấy Java Runtime tương thích. Phiên bản này yêu cầu Java %d trở lên.</string>
     <string name="multirt_nojava8rt">Không thể tìm thấy Java 8. Để sử dụng tùy chọn này, bạn cần cài đặt Java 8.</string>
     <string name="multirt_delete_runtime">Xóa runtime</string>
-    <string name="pvc_gameDirectory">Đường dẫn thư mục của trò chơi</string>
+    <string name="pvc_gameDirectory">Đường dẫn thư mục trò chơi</string>
     <string name="pvc_jvmArgs">Các chỉ số JVM</string>
     <string name="preference_mouse_start_title">Khởi động với chuột ảo bật</string>
     <string name="preference_mouse_start_description">Chuột ảo xuất hiện khi khởi động khi cài đặt này được mở.</string>
@@ -330,6 +330,10 @@ Nếu bạn muốn sử dụng nguồn tải xuống chính thức, nhấn vào 
     <string name="log_view_label_log_output">Đầu ra nhật ký:</string>
     <string name="execute_jar_failed_to_read_file">Không thể đọc tệp .jar</string>
     <string name="execute_jar_incompatible_runtime">Chức năng thực thi .jar không tương thích với Java %d</string>
+    <string name="controller_button_a">A</string>
+    <string name="controller_button_b">B</string>
+    <string name="controller_button_x">X</string>
+    <string name="controller_button_y">Y</string>
     <string name="controller_button_start">Bắt đầu</string>
     <string name="controller_button_select">Chọn</string>
     <string name="controller_button_trigger_left">Nút nhấn trái</string>

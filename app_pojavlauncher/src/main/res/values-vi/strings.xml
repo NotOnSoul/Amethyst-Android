@@ -257,7 +257,7 @@
     <string name="preference_category_controller_settings">Cài đặt tay cầm</string>
     <string name="preference_wipe_controller_title">Thiết lập lại sơ đồ phím tay cầm</string>
     <string name="preference_wipe_controller_description">Cho phép bạn sửa đổi sơ đồ phím gán với các nút trên tay cầm.</string>
-    <string name="preference_deadzone_scale_title">Kích cỡ vùng chế cần điều khiển</string>
+    <string name="preference_deadzone_scale_title">Kích cỡ vùng chết cần điều khiển</string>
     <string name="preference_deadzone_scale_description">Tăng giá trị nếu gặp tình trạng trôi cần điều khiển.</string>
     <string name="preference_force_big_core_title">Buộc chạy trình kết xuất trên lõi mạnh nhất</string>
     <string name="preference_force_big_core_desc">Buộc chạy luồng kết xuất của Minecraft trên lõi xử lý có xung nhịp tối đa cao nhất.</string>

@@ -44,7 +44,7 @@
     <string name="mcl_setting_subtitle_buttonscale">Tăng độ rộng nếu nút quá nhỏ.</string>
     <string name="mcl_setting_title_mousescale">Độ lớn của chuột</string>
     <string name="mcl_setting_subtitle_mousescale">Thay đổi kích thước của chuột ảo.</string>
-    <string name="mcl_setting_title_javaargs">Các chỉ số chạy JVM</string>
+    <string name="mcl_setting_title_javaargs">Đối số khởi chạy JVM</string>
     <string name="mcl_setting_subtitle_javaargs">Cẩn thận, việc này sẽ làm trò chơi gặp sự cố nếu sửa đổi mà không có nhiều kiến thức.</string>
     <string name="mcl_setting_category_renderer">Trình kết xuất</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (tất cả phiên bản, nhanh)</string>
@@ -52,8 +52,8 @@
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17 trở lên</string>
     <string name="mcl_setting_veroption_release">Bản phát hành</string>
     <string name="mcl_setting_veroption_snapshot">Snapshot</string>
-    <string name="mcl_setting_veroption_oldalpha">Bản Alpha cũ</string>
-    <string name="mcl_setting_veroption_oldbeta">Bản Beta cũ</string>
+    <string name="mcl_setting_veroption_oldalpha">Alpha cũ</string>
+    <string name="mcl_setting_veroption_oldbeta">Beta cũ</string>
     <string name="mcl_setting_java_sandbox">Thực thi tệp .jar trong hộp cát</string>
     <string name="mcl_setting_java_sandbox_subtitle">Điều khiển tính khả dụng của trình quản lý bảo mật hộp cát khi thực thi tệp .jar.</string>
     <string name="mcl_version_clone">Nhân bản</string>
@@ -69,7 +69,7 @@
     <string name="global_unpacking">Đang giải nén %s</string>
     <string name="global_error_field_empty">Trường này không được để trống</string>
     <string name="global_waiting">Vui lòng đợi</string>
-    <string name="global_select">Chọn</string>
+    <string name="global_select">Select</string>
     <string name="global_retry">Thử lại</string>
     <string name="global_default">Mặc định</string>
     <!-- MainActivity: strings -->
@@ -87,7 +87,7 @@
     <string name="control_mouseon">Chuột: bật </string>
     <!-- MainActivity: Menu advanced controls -->
     <string name="control_forceclose">Buộc thoát chương trình</string>
-    <string name="control_viewout">Nhật ký ra </string>
+    <string name="control_viewout">Nhật ký đầu ra</string>
     <string name="control_adebug">Gỡ lỗi đầu vào</string>
     <string name="control_customkey">Gửi phím tùy chọn</string>
     <!-- ImportControlActivity Strings -->
@@ -160,7 +160,7 @@
     <string name="preference_video_description">Độ phân giải, trình kết xuất, hiệu suất</string>
     <string name="preference_control_title">Tuỳ chỉnh bộ điều khiển</string>
     <string name="preference_control_description">Cử chỉ, nút bấm và kích cỡ</string>
-    <string name="preference_java_title">Điều chỉnh Java</string>
+    <string name="preference_java_title">Tỉnh chỉnh Java</string>
     <string name="preference_java_description">Các Java Runtime, chỉ số JVM, lượng RAM phân bổ và hộp cát</string>
     <string name="preference_misc_title">Các cài đặt khác</string>
     <string name="preference_misc_description">Kiểm tra danh sách phiên bản và thư viện</string>
@@ -185,6 +185,7 @@
     <string name="profiles_latest_snapshot">Bản thử nghiệm mới nhất</string>
     <string name="profiles_latest_release">Phiên bản mới nhất</string>
     <string name="profiles_profile_name">Tên</string>
+    <string name="profiles_profile_version">Phiên bản</string>
     <string name="global_delete">Xóa</string>
     <string name="pedit_renderer">Trình kết xuất</string>
     <string name="arc_capes_title">Áo choàng Cosmetica</string>
@@ -223,6 +224,7 @@
     <string name="storage_required">PojavLauncher cần kho dữ liệu bên ngoài để gắn vào. Vui lòng kết nối lại và khởi động lại ứng dụng.</string>
     <string name="mcl_setting_title_buttonallcaps">Chỉ được dùng những chữ cái in hoa trong các nhãn nút</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Tắt đi nếu bạn muốn sử dụng chữ cái thường trong mục điều khiển.</string>
+    <string name="create_profile">Tạo hồ sơ mới</string>
     <string name="preference_shader_dump_title">Kích hoạt đổ bóng</string>
     <string name="preference_shader_dump_description">Ghi các trình đổ bóng đã chuyển đổi vào tệp nhật ký.</string>
     <string name="customctrl_editor_exit_title">Rời đi?</string>
@@ -302,7 +304,7 @@ Nếu bạn muốn sử dụng nguồn tải xuống chính thức, nhấn vào 
     <string name="preference_category_gestures">Những cử chỉ</string>
     <string name="preference_category_buttons">Phím</string>
     <string name="preference_category_experimental_settings">Những cài đặt thử nghiệm</string>
-    <string name="preference_category_java_tweaks">Điều chỉnh Java</string>
+    <string name="preference_category_java_tweaks">Tỉnh chỉnh Java</string>
     <string name="preference_category_main_categories">Danh mục</string>
     <string name="preference_category_miscellaneous">Các cài đặt khác</string>
     <string name="preference_category_video">Cài Đặt Đồ Họa</string>
@@ -334,8 +336,8 @@ Nếu bạn muốn sử dụng nguồn tải xuống chính thức, nhấn vào 
     <string name="controller_button_b">B</string>
     <string name="controller_button_x">X</string>
     <string name="controller_button_y">Y</string>
-    <string name="controller_button_start">Bắt đầu</string>
-    <string name="controller_button_select">Chọn</string>
+    <string name="controller_button_start">Start</string>
+    <string name="controller_button_select">Select</string>
     <string name="controller_button_trigger_left">Nút nhấn trái</string>
     <string name="controller_button_trigger_right">Nút nhấn phải</string>
     <string name="controller_button_shoulder_left">Nút vai trái</string>

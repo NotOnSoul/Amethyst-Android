@@ -8,7 +8,7 @@
     <string name="login_online_username_hint">Tên người dùng</string>
     <string name="login_online_login_label">Đăng nhập</string>
     <!-- Hint -->
-    <string name="hint_control_mapping">"Chạm phím bánh răng ở giữa cạnh trên màn hình để mở menu ⚙\nChạm vào các phím để tùy chỉnh chúng: chỉnh sửa, thay đổi kích thước, xoá, hoặc thay đổi liên kết phím."</string>
+    <string name="hint_control_mapping">"Chạm vào bánh răng ở giữa cạnh trên màn hình để mở menu ⚙\nChạm vào nút để tùy chỉnh: sửa, thay đổi kích cỡ, xoá, hoặc đổi gán phím."</string>
     <!-- Warnings -->
     <string name="warning_remove_account">Tài khoản này sẽ bị xoá!</string>
     <!-- AlertDialog title -->
@@ -16,8 +16,8 @@
     <!-- Error messages -->
     <string name="error_fatal">Amethyst đã bị thoát đột ngột</string>
     <string name="error_no_version">Không có phiên bản nào!</string>
-    <string name="error_show_more">Hiển thị thêm</string>
-    <string name="error_show_less">Hiển thị ít hơn</string>
+    <string name="error_show_more">Hiện thêm</string>
+    <string name="error_show_less">Thu gọn</string>
     <!-- Toast messages -->
     <string name="toast_permission_denied">Yêu cầu quyền đọc/ghi bộ nhớ!</string>
     <string name="toast_optifine_success">Cài đặt thành công</string>
@@ -29,25 +29,25 @@
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Đang làm sạch bộ nhớ đệm</string>
-    <string name="mcl_launch_downloading">Đang tải xuống %s</string>
+    <string name="mcl_launch_downloading">Đang tải %s</string>
     <string name="mcl_launch_downloading_progress">"Đang tải %s (%.2f MB / %.2f MB)"</string>
-    <string name="mcl_launch_download_assets">Chuẩn bị để tải xuống gói tài nguyên</string>
+    <string name="mcl_launch_download_assets">Chuẩn bị tải xuống tài nguyên</string>
     <string name="mcl_options">Tùy chọn</string>
     <string name="mcl_option_customcontrol">Tùy chỉnh điều khiển</string>
     <string name="mcl_setting_title_use_surface_view">Dùng cách kết xuất thay thế</string>
-    <string name="mcl_setting_subtitle_use_surface_view">Có thể cải thiện hiệu năng nếu GPU bị nghẽn cổ chai.</string>
+    <string name="mcl_setting_subtitle_use_surface_view">Có thể giúp cải thiện hiệu năng nếu GPU bị nghẽn cổ chai.</string>
     <string name="mcl_setting_title_ignore_notch">Bỏ qua phần khuyết màn hình</string>
-    <string name="mcl_setting_subtitle_ignore_notch">Bỏ qua phần khuyết màn hình và mở rộng màn hình bên dưới.\nMang đến cho bạn trải nghiệm phong phú hơn.</string>
-    <string name="mcl_setting_title_resolution_scaler">Độ phân giải</string>
-    <string name="mcl_setting_subtitle_resolution_scaler">Cho phép bạn giảm độ phân giải của trò chơi. 100% là độ phân giải tối đa.</string>
-    <string name="mcl_setting_title_longpresstrigger">Kích hoạt độ trễ cao</string>
-    <string name="mcl_setting_subtitle_longpresstrigger">Thay đổi khoảng thời gian chạm giữ để phá khối và ném đồ vật.</string>
-    <string name="mcl_setting_title_buttonscale">Độ rộng nút điều khiển</string>
-    <string name="mcl_setting_subtitle_buttonscale">Tăng độ rộng nếu nút quá nhỏ.</string>
-    <string name="mcl_setting_title_mousescale">Độ lớn của chuột</string>
-    <string name="mcl_setting_subtitle_mousescale">Thay đổi kích thước của chuột ảo.</string>
+    <string name="mcl_setting_subtitle_ignore_notch">Hiển thị nội dung cả dưới phần màn hình bị khuyết.\nGiúp trải nâng cao trải nghiệm chơi.</string>
+    <string name="mcl_setting_title_resolution_scaler">Tỷ lệ độ phân giải</string>
+    <string name="mcl_setting_subtitle_resolution_scaler">Cho phép bạn giảm độ phân giải trò chơi. 100% nghĩa là sử dụng độ phân giải tối đa.</string>
+    <string name="mcl_setting_title_longpresstrigger">Độ trễ nhấn giữ</string>
+    <string name="mcl_setting_subtitle_longpresstrigger">Thay đổi khoảng thời gian nhấn giữ để phá khối và thả vật phẩm.</string>
+    <string name="mcl_setting_title_buttonscale">Quy mô nút điều khiển</string>
+    <string name="mcl_setting_subtitle_buttonscale">Tăng giá trị nếu các nút quá nhỏ.</string>
+    <string name="mcl_setting_title_mousescale">Kích cỡ chuột</string>
+    <string name="mcl_setting_subtitle_mousescale">Thay đổi kích cỡ con trỏ chuột ảo.</string>
     <string name="mcl_setting_title_javaargs">Đối số khởi chạy JVM</string>
-    <string name="mcl_setting_subtitle_javaargs">Cẩn thận, việc này sẽ làm trò chơi gặp sự cố nếu sửa đổi mà không có nhiều kiến thức.</string>
+    <string name="mcl_setting_subtitle_javaargs">Hãy cẩn thận, hành động này có thể khiến trò chơi thoát đột ngột nếu thực hiện không đúng cách.</string>
     <string name="mcl_setting_title_renderer_settings">Cài đặt trình kết xuất bổ sung</string>
     <string name="mcl_setting_title_renderer_subtitle">Cài đặt riêng của trình kết xuất</string>
     <string name="mcl_setting_category_renderer">Trình kết xuất</string>
@@ -60,28 +60,28 @@
     <string name="mcl_setting_veroption_oldalpha">Alpha cũ</string>
     <string name="mcl_setting_veroption_oldbeta">Beta cũ</string>
     <string name="mcl_setting_java_sandbox">Thực thi tệp .jar trong hộp cát</string>
-    <string name="mcl_setting_java_sandbox_subtitle">Điều khiển tính khả dụng của trình quản lý bảo mật hộp cát khi thực thi tệp .jar.</string>
-    <string name="mcl_version_clone">Nhân bản</string>
+    <string name="mcl_setting_java_sandbox_subtitle">Bật hoặc tắt trình quản lý bảo mật môi trường tách biệt khi chạy tệp .jar.</string>
+    <string name="mcl_version_clone">Tạo bản sao</string>
     <!-- Global strings -->
     <string name="global_edit">Sửa</string>
     <string name="global_error">Lỗi</string>
     <string name="global_load">Tải</string>
     <string name="global_name">Tên</string>
-    <string name="global_remove">Loại bỏ</string>
-    <string name="global_clone">Nhân bản</string>
+    <string name="global_remove">Xóa</string>
+    <string name="global_clone">Tạo bản sao</string>
     <string name="global_restart">Khởi động lại</string>
     <string name="global_save">Lưu</string>
     <string name="global_unpacking">Đang giải nén %s</string>
     <string name="global_error_field_empty">Trường này không được để trống</string>
-    <string name="global_waiting">Vui lòng đợi</string>
+    <string name="global_waiting">Vui lòng chờ</string>
     <string name="global_select">Select</string>
     <string name="global_retry">Thử lại</string>
     <string name="global_default">Mặc định</string>
     <string name="global_off">Tắt</string>
     <!-- MainActivity: strings -->
-    <string name="mcn_exit_title">Ứng dụng/Trò chơi đã thoát với mã %d, kiểm tra nhật kí trình khởi chạy (latestlog.txt) để biết thêm chi tiết.</string>
+    <string name="mcn_exit_title">Ứng dụng/Trò chơi đã thoát với mã %d, kiểm tra tệp latestlog.txt để biết thêm chi tiết.</string>
     <string name="mcn_signal_title">Ứng dụng/Trò chơi đã thoát với mã %d, kiểm tra nhật kí trình khởi chạy (latestlog.txt) để biết thêm chi tiết.</string>
-    <string name="mcn_exit_confirm">Bạn có chắc muốn bắt buộc thoát chương trình?</string>
+    <string name="mcn_exit_confirm">Bạn có chắc chắn muốn buộc thoát khỏi trò chơi?</string>
     <string name="mcn_check_fail_vulkan_support">Trình kết xuất Zink (Vulkan) không được hỗ trợ trên thiết bị này!</string>
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Trò chuyện</string>
@@ -117,7 +117,7 @@
     <string name="control_more4"></string>
 -->
     <string name="customctrl_toggle">Chuyển đổi</string>
-    <string name="customctrl_size">Kích thước</string>
+    <string name="customctrl_size">Kích cỡ</string>
     <string name="customctrl_mapping">Sơ đồ phím</string>
     <string name="customctrl_orientation">Hướng</string>
     <string name="customctrl_background_color">Màu nền</string>
@@ -188,6 +188,7 @@
     <string name="preference_force_english_title">Buộc ngôn ngữ Tiếng Anh</string>
     <string name="preference_force_english_description">Cho phép hiển thị các dòng chữ ban đầu, như theo ý của nhà phát triển. Yêu cầu khởi động lại.</string>
     <string name="preference_edit_controls_title">Tùy chỉnh điều khiển</string>
+    <string name="preference_edit_controls_summary">Tinh chỉnh các nút điều khiển phù hợp với bạn.</string>
     <string name="preference_category_gyro_controls">Điều khiển con quay hồi chuyển</string>
     <string name="preference_category_virtual_mouse">Chuột ảo</string>
     <string name="preference_gyro_invert_x_axis">Đảo ngược trục X</string>
@@ -280,7 +281,7 @@
     <string name="fabric_dl_loader_title">Chọn phiên bản</string>
     <string name="of_dl_select_version">Chọn phiên bản OptiFine</string>
     <string name="of_dl_failed_to_scrape">Không thể thu thập dữ liệu để cài đặt OptiFine</string>
-    <string name="of_dl_progress">Đang tải xuống %s</string>
+    <string name="of_dl_progress">Đang tải %s</string>
     <string name="create_profile_optifine">Tạo hồ sơ OptiFine</string>
     <string name="hint_search_modpack">Tìm kiếm modpack</string>
     <string name="preference_vulkan_driver_system_title">Sử dụng trình điều khiển hệ thống cho Vulkan</string>

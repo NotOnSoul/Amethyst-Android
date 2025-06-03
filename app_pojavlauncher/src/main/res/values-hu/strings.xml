@@ -41,7 +41,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_subtitle_use_surface_view">Segítheti növelni a teljesítményt GPU-hoz kötött eseteknél.</string>
     <string name="mcl_setting_title_ignore_notch">Bevágás figyelmen kívül hagyása</string>
     <string name="mcl_setting_subtitle_ignore_notch">Figyelmen kívül hagyja a bevágást, és kiterjeszti a képernyőt alatta.\nJobb élményt nyújt.</string>
-    <string name="mcl_setting_title_resolution_scaler">Felbontás Méretező</string>
+    <string name="mcl_setting_title_resolution_scaler">Felbontás skálája</string>
     <string name="mcl_setting_subtitle_resolution_scaler">Lehetővé teszi a felbontás csökkentését. A 100% teljes felbontás.</string>
     <string name="mcl_setting_title_longpresstrigger">Hosszú megnyomási késleltetés elindítása</string>
     <string name="mcl_setting_subtitle_longpresstrigger">Hosszú lenyomás késleltetésének módosítása blokkok széttörésekor és tárgyak eldobásakor.</string>
@@ -56,7 +56,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_category_renderer">Renderelő</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (összes verzió, gyors)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (összes verzió, közepes)</string>
-    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGl ES) - 1.17+ vagy újabb, gyors</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - 1.17+ vagy újabb, gyors</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17+ vagy újabb</string>
     <string name="mcl_setting_veroption_release">Kiadás</string>
     <string name="mcl_setting_veroption_snapshot">Snapshot</string>
@@ -175,7 +175,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_mouse_start_title">Indítás bekapcsolt virtuális egérrel</string>
     <string name="preference_mouse_start_description">A virtuális egér indításkor megjelenik, ha ez az opció be van kapcsolva.</string>
     <string name="preference_video_title">Videó és renderelő</string>
-    <string name="preference_video_description">Felbontás, renderlő és teljesítmény</string>
+    <string name="preference_video_description">Felbontás, renderelő és teljesítmény</string>
     <string name="preference_control_title">Irányítás testreszabása</string>
     <string name="preference_control_description">Gesztúrák, gombok és méretezés</string>
     <string name="preference_java_title">Java Tweakek</string>
@@ -183,7 +183,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_misc_title">Egyéb beállítások</string>
     <string name="preference_misc_description">Verziólista és könyvtár ellenőrzés</string>
     <string name="preference_experimental_title">Kíserleti kellékek</string>
-    <string name="preference_experimental_description">Megfontoltan használd ezeket, amiben mi nem segítünk</string>
+    <string name="preference_experimental_description">Megfontoltan használd ezeket, mivel mi nem segítünk ebben</string>
     <string name="preference_sustained_performance_title">Korlátozott teljesítménymód engedélyezése</string>
     <string name="preference_sustained_performance_description">Korlátozza a felmelegedést a csúcsteljesítmény korlátozásával.</string>
     <string name="preference_force_vsync_title">VSync kényszerítése</string>
@@ -381,7 +381,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="controller_remapper_expand_entry">Kibontás a kulcskódok módosításához</string>
     <string name="preference_remap_controller_title">Kontroller billentyűk összerendelésének megváltoztatása</string>
     <string name="preference_remap_controller_description">Lehetővé teszi, hogy módosítsd a billentyűket a kontroller gombjaira</string>
-    <string name="mcl_button_discord">Discord szerverünk</string>
+    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">A GPU-d képtelen 7 vagy nagyobb megjelenítési távolságot renderelni Sodium vagy ahoz hasonló modok nélkül. A mehjelenítési távolság automatikusan csókkentve lesz, hogy ha megnyomod az \"OK\" gombot.</string>
     <string name="mcl_button_open_directory">Játékkönyvtár megnyitása</string>
     <string name="local_login_bad_username_title">Nem megfelelő felhasználónév</string>

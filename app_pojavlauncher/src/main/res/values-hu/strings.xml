@@ -8,6 +8,7 @@
     <string name="login_online_username_hint">Felhasználónév</string>
     <string name="login_online_login_label">Bejelentkezés</string>
     <!-- Hint -->
+    <string name="hint_control_mapping">"Nyomdd meg a felső középső fogaskereket a helyi menü megnyitáshoz ⚙\n Koppints egy gombra a testreszabáshoz: szerkesztés, méretezés, eltávolítás vagy állítsd át a a billentyűparancsot."</string>
     <!-- Warnings -->
     <string name="warning_remove_account">Ez a fiók törölve lesz!</string>
     <!-- AlertDialog title -->
@@ -43,6 +44,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_title_resolution_scaler">Felbontás Méretező</string>
     <string name="mcl_setting_subtitle_resolution_scaler">Lehetővé teszi a felbontás csökkentését. A 100% teljes felbontás.</string>
     <string name="mcl_setting_title_longpresstrigger">Hosszú megnyomási késleltetés elindítása</string>
+    <string name="mcl_setting_subtitle_longpresstrigger">Hosszú lenyomás késleltetésének módosítása blokkok széttörésekor és tárgyak eldobásakor.</string>
     <string name="mcl_setting_title_buttonscale">A gombok méretezését szabályozza</string>
     <string name="mcl_setting_subtitle_buttonscale">Felskáláza hogyha a gombok túl kicsik.</string>
     <string name="mcl_setting_title_mousescale">Egér méretezése</string>
@@ -231,6 +233,9 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="xerr_child">A fiókod egy gyermek fiók, és egy felnőtt fiókhoz kell hozzáadni a bejelentkezéshez.</string>
     <string name="minecraft_not_owned">Úgy tűnik, hogy a fiókodnak nincsen Minecraft profilja. Hogyha van Xbox Game Pass előfizetésed, kérlek, jelentkezz be a https://minecraft.net/ oldalon és hozz létre egyet.</string>
     <string name="xerr_not_available">Az Xbox Live nem elérhető a régiódban</string>
+    <string name="preference_enable_gyro_description">Ennek engedélyezésével képes leszel körbenézni a játékban a telefonod forgatásával.</string>
+    <string name="preference_gyro_sensitivity_description">Átállítja a giroszkóp vezérlőinek érzékenységét.</string>
+    <string name="toast_turn_on_gyro">Kapcsold be először a giroszkópos irányítást, hogy használhasd!</string>
     <string name="preference_gyro_sample_rate_title">Giroszkóp mintavételi sebessége</string>
     <string name="preference_gyro_sample_rate_description">Hogyha problémád vannak a teljesítménnyel giroszkópos irányítással, növeld ezt.</string>
     <string name="microsoft_login_retry_later">Túl sok próbálkozás, kérlek, próbáld meg újra később</string>
@@ -266,6 +271,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="fabric_dl_loader_version">%s betöltő verziója</string>
     <string name="fabric_dl_game_version">Minecraft verzió</string>
     <string name="fabric_dl_install">Telepítés</string>
+    <string name="fabric_dl_cant_read_meta">A %s betöltő metaadatának beolvasása sikertelen. Kérlek, próbáld meg újra.</string>
     <string name="modloader_dl_install_fabric">Fabric profil létrehozása</string>
     <string name="modloader_dl_install_quilt">Quilt profil létrehozása</string>
     <string name="modloader_dl_install_forge">Forge profil létrehozása</string>
@@ -323,6 +329,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="notification_permission_dialog_text">Az \"Ametiszt\" engedélyre van szüksége az értesítések küldéséhez, hogy megakadályozza a játék/modpack letöltésének leállását, amikor kilépsz az alkalmazásból. Ezen engedély nélkül az Android leállíthatja a letöltéseket, ha az \"Ametiszt\"-et háttérmódba helyezed.</string>
     <string name="notification_permission_toast">Bármikor megváltoztathatod a beállításokat később is</string>
     <string name="preference_ask_for_notification_title">Értesítések engedélyezése</string>
+    <string name="preference_ask_for_notification_description">Kattints az értesítési engedély újbóli igényléséhez, ami szükséges a játék/modpack háttérben működéséhez.</string>
     <string name="preference_vsync_in_zink_title">VSync engedélyezése Zink-kel</string>
     <string name="preference_vsync_in_zink_description">Lehetővé teszi a launcher számára, hogy belső rendszer API-kat használjon a V-Sync engedélyezéséhez a Zinkhez. Kapcsold ki ezt, ha a launcher hirtelen összeomlik a Zink használatakor egy rendszerfrissítés után.</string>
     <string name="exception_failed_to_unpack_jre17">JRE 17 telepítése sikertelen</string>

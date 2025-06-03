@@ -174,7 +174,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="pvc_jvmArgs">JVM argumentumok</string>
     <string name="preference_mouse_start_title">Indítás bekapcsolt virtuális egérrel</string>
     <string name="preference_mouse_start_description">A virtuális egér indításkor megjelenik, ha ez az opció be van kapcsolva.</string>
-    <string name="preference_video_title">Videó és renderlő</string>
+    <string name="preference_video_title">Videó és renderelő</string>
     <string name="preference_video_description">Felbontás, renderlő és teljesítmény</string>
     <string name="preference_control_title">Irányítás testreszabása</string>
     <string name="preference_control_description">Gesztúrák, gombok és méretezés</string>
@@ -203,7 +203,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_back_title">Vissza az előző kijelzőre</string>
     <string name="unnamed">Névtelen</string>
     <string name="profiles_latest_snapshot">Legújabb Snapshot</string>
-    <string name="profiles_latest_release">Legutóbbi kiadás</string>
+    <string name="profiles_latest_release">Legújabb kiadás</string>
     <string name="profiles_profile_name">Név</string>
     <string name="profiles_profile_version">Verzió</string>
     <string name="global_delete">Törlés</string>
@@ -215,7 +215,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="lazy_service_default_title">Ametiszt \"Foreground\" szolgáltatás</string>
     <string name="mcl_setting_veroption_installed">Telepítve</string>
     <string name="use_global_default">(Globális beállítások használata)</string>
-    <string name="default_control">Alapértelmezett kezelószerv</string>
+    <string name="default_control">Alapértelmezett kezelőszerv</string>
     <string name="progresslayout_tasks_in_progress">%d feladat folyamatban van</string>
     <string name="notification_terminate">Terminálás</string>
     <string name="notification_game_runs">A játék jelenleg fut!</string>
@@ -381,7 +381,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="controller_remapper_expand_entry">Kibontás a kulcskódok módosításához</string>
     <string name="preference_remap_controller_title">Kontroller billentyűk összerendelésének megváltoztatása</string>
     <string name="preference_remap_controller_description">Lehetővé teszi, hogy módosítsd a billentyűket a kontroller gombjaira</string>
-    <string name="mcl_button_discord">Discord</string>
+    <string name="mcl_button_discord">Discord szerverünk</string>
     <string name="ltw_render_distance_warning_msg">A GPU-d képtelen 7 vagy nagyobb megjelenítési távolságot renderelni Sodium vagy ahoz hasonló modok nélkül. A mehjelenítési távolság automatikusan csókkentve lesz, hogy ha megnyomod az \"OK\" gombot.</string>
     <string name="mcl_button_open_directory">Játékkönyvtár megnyitása</string>
     <string name="local_login_bad_username_title">Nem megfelelő felhasználónév</string>

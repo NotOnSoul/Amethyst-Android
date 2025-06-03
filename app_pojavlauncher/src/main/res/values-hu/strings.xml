@@ -234,6 +234,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="xerr_child">A fiókod egy gyermek fiók, és egy felnőtt fiókhoz kell hozzáadni a bejelentkezéshez.</string>
     <string name="minecraft_not_owned">Úgy tűnik, hogy a fiókodnak nincsen Minecraft profilja. Hogyha van Xbox Game Pass előfizetésed, kérlek, jelentkezz be a https://minecraft.net/ oldalon és hozz létre egyet.</string>
     <string name="xerr_not_available">Az Xbox Live nem elérhető a régiódban</string>
+    <string name="preference_enable_gyro_title">Giroszkópos irányítás engedélyezése</string>
     <string name="preference_enable_gyro_description">Ennek engedélyezésével képes leszel körbenézni a játékban a telefonod forgatásával.</string>
     <string name="preference_gyro_sensitivity_title">Giroszkóp érzékenysége</string>
     <string name="preference_gyro_sensitivity_description">Átállítja a giroszkóp vezérlőinek érzékenységét.</string>

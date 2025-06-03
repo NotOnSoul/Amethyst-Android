@@ -259,7 +259,7 @@
     <string name="preference_wipe_controller_description">Cho phép bạn sửa đổi sơ đồ phím gán với các nút trên tay cầm.</string>
     <string name="preference_deadzone_scale_title">Kích cỡ vùng chết cần điều khiển</string>
     <string name="preference_deadzone_scale_description">Tăng giá trị nếu gặp tình trạng trôi cần điều khiển.</string>
-    <string name="preference_force_big_core_title">Buộc chạy trình kết xuất trên lõi mạnh nhất</string>
+    <string name="preference_force_big_core_title">Buộc chạy trình kết xuất trên lõi nhanh nhất</string>
     <string name="preference_force_big_core_desc">Buộc chạy luồng kết xuất của Minecraft trên lõi xử lý có xung nhịp tối đa cao nhất.</string>
     <string name="version_select_hint">Chọn phiên bản</string>
     <string name="forge_dl_progress">Đang tải trình cài đặt cho %s</string>
@@ -285,7 +285,7 @@
     <string name="create_profile_optifine">Tạo hồ sơ OptiFine</string>
     <string name="hint_search_modpack">Tìm kiếm modpack</string>
     <string name="preference_vulkan_driver_system_title">Dùng trình điều khiển Vulkan của hệ thống</string>
-    <string name="preference_vulkan_driver_system_description">Buộc trình khởi chạy sử dụng trình điều khiển Vulkan của hệ thống thay vì Turnip trên GPU Adreno. Chỉ ảnh hưởng trình kết xuất Zink và các bản mod có sử dụng Vulkan.</string>
+    <string name="preference_vulkan_driver_system_description">Buộc trình khởi chạy sử dụng trình điều khiển Vulkan của hệ thống thay vì Turnip trên GPU Adreno. Chỉ ảnh hưởng đến trình kết xuất Zink và các bản mod có sử dụng Vulkan.</string>
     <string name="generic_install">Cài đặt</string>
     <string name="generic_apply">Áp dụng</string>
     <string name="generic_debug">Debug</string>
@@ -313,7 +313,7 @@
     <string name="dl_turn_off_manifest_checks">Tắt kiểm tra danh sách phiên bản</string>
     <string name="dl_switch_to_official_site">Chuyển sang nguồn chính thức</string>
     <string name="preference_download_source_title">Nguồn tải trò chơi</string>
-    <string name="preference_download_source_description">Chọn nguồn bản sao để tải xuống thay thế cho nguồn chính thức</string>
+    <string name="preference_download_source_description">Chọn nguồn bản sao để tải xuống thay cho nguồn chính thức</string>
     <string name="preference_verify_manifest_title">Kiểm tra danh sách phiên bản</string>
     <string name="preference_verify_manifest_description">Khi bật, trình khởi chạy sẽ kiểm tra danh sách phiên bản trò chơi cùng các thư viện.</string>
     <string name="notif_download_finished">Trò chơi đã sẵn sàng khởi chạy</string>

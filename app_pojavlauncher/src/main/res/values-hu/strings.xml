@@ -5,6 +5,7 @@
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
+    <string name="login_online_username_hint">Felhasználónév</string>
     <string name="login_online_login_label">Bejelentkezés</string>
     <!-- Hint -->
     <!-- Warnings -->
@@ -34,6 +35,7 @@ Azonosító (Kulcs): mcl_indítás_letöltés_folyamatban
 mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_launch_download_assets">Felkészülés az erőforrások letöltésére</string>
     <string name="mcl_options">Opciók</string>
+    <string name="mcl_option_customcontrol">Egyedi kezelőszervek</string>
     <string name="mcl_setting_title_use_surface_view">Alternatív felületi renderelés használata</string>
     <string name="mcl_setting_subtitle_use_surface_view">Segítheti növelni a teljesítményt GPU-hoz kötött eseteknél.</string>
     <string name="mcl_setting_title_ignore_notch">Bevágás figyelmen kívül hagyása</string>
@@ -45,16 +47,29 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_title_mousescale">Egér méretezése</string>
     <string name="mcl_setting_subtitle_mousescale">Megváltoztatja a virtuális egér méretét.</string>
     <string name="mcl_setting_subtitle_javaargs">Légy óvatos, kifagyasztja a játékot ha módosítod tudomány nélkül.</string>
+    <string name="mcl_setting_title_renderer_settings">További renderelő beállítások</string>
+    <string name="mcl_setting_title_renderer_subtitle">Renderelő-specifikus beállítások</string>
+    <string name="mcl_setting_category_renderer">Renderelő</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (összes verzió, gyors)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (összes verzió, közepes)</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGl ES) - 1.17+ vagy újabb, gyors</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17+ vagy újabb</string>
     <string name="mcl_setting_veroption_release">Kiadás</string>
+    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
+    <string name="mcl_setting_veroption_oldalpha">Régi-alpha</string>
+    <string name="mcl_setting_veroption_oldbeta">Régi-béta</string>
     <string name="mcl_setting_java_sandbox">Szabad .Jar végrehajtás</string>
     <string name="mcl_setting_java_sandbox_subtitle">Irányítja az elérhetőségét a szabad biztonság kezelőnek, mikőzben végrehajtasz egy .jar fájlt.</string>
     <string name="mcl_version_clone">Másolás</string>
     <!-- Global strings -->
+    <string name="global_edit">Szerkesztés</string>
     <string name="global_error">Hiba</string>
+    <string name="global_load">Betöltés</string>
+    <string name="global_name">Név</string>
+    <string name="global_remove">Eltávolítás</string>
     <string name="global_clone">Másolás</string>
     <string name="global_restart">Újraindítás</string>
+    <string name="global_save">Mentés</string>
     <string name="global_unpacking">Kicsomagolás %s</string>
     <string name="global_error_field_empty">Ezt a mezőt kötelező kitölteni</string>
     <string name="global_waiting">Kérem várjon</string>
@@ -63,6 +78,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="global_off">Ki</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Application/Game kilépett %d kóddal, nézd meg a latestlog.txt több részletért.</string>
+    <string name="mcn_signal_title">Az alkalmazás kilépett %d kóddal, nézd meg a latestlog.txt több részletért.</string>
     <string name="mcn_exit_confirm">Biztosan ki akarsz lépni?</string>
     <string name="mcn_check_fail_vulkan_support">Zink (Vulkan) renderelő nem támoatott ezen az eszközön!</string>
     <!-- MainActivity: Control buttons -->
@@ -83,6 +99,8 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="control_mouseoff">Egér: ki</string>
     <string name="control_mouseon">Egér: be </string>
     <!-- MainActivity: Menu advanced controls -->
+    <string name="control_forceclose">Kényszerített bezárás</string>
+    <string name="control_viewout">Naplókimenet</string>
     <string name="control_adebug">Bemenet Hibakeresés</string>
     <string name="control_customkey">Saját kód küldése</string>
     <!-- ImportControlActivity Strings -->
@@ -96,20 +114,38 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="control_more3"></string>
     <string name="control_more4"></string>
 -->
+    <string name="customctrl_toggle">Átkapcsolható</string>
+    <string name="customctrl_size">Méret</string>
+    <string name="customctrl_mapping">Leképezés</string>
+    <string name="customctrl_orientation">Tájolás</string>
+    <string name="customctrl_background_color">Háttér színe</string>
     <string name="customctrl_corner_radius">Sarkok átmérője</string>
     <string name="customctrl_stroke_width">Körvonal szélessége</string>
+    <string name="customctrl_stroke_color">Körvonal színe</string>
     <string name="customctrl_button_opacity">Gomb átlátszósága</string>
+    <string name="customctrl_addbutton">Gomb hozzáadása</string>
+    <string name="customctrl_addbutton_drawer">Gomb hozzáadása</string>
+    <string name="customctrl_addbutton_joystick">Joystick hozzáadása</string>
+    <string name="customctrl_addsubbutton">Algomb hozzáadása</string>
     <string name="customctrl_selectdefault">Alap irányítási térkép kiválasztása</string>
     <string name="customctrl_export">Irányítási térkép exportálása</string>
     <string name="main_share_logs">Napló fál megosztása</string>
     <string name="main_install_jar_file">.Jar végrehajtása</string>
+    <string name="main_play">Indítás</string>
     <string name="autoram_info_msg">Memória beállítva %d MB-ra</string>
     <string name="mcl_setting_check_libraries">Könyvtárak ellenőrzése letöltés után</string>
     <string name="mcl_setting_check_libraries_subtitle">Ez az opció arra kényszeríti az indítót, hogy ellenőrizze a könyvtár hash-t, ha elérhető. Meggátolja a hibás letöltéseket.</string>
     <string name="dl_library_sha_fail">Könyvtár %s sérült és újra le lesz töltve</string>
+    <string name="dl_library_sha_unknown">A(z) %s könyvtár nem ellenőrizhető; valószínűleg minden rendben</string>
+    <string name="dl_library_sha_pass">A(z) %s rendben van és használható</string>
+    <string name="mcl_disable_gestures">Gesztusok letiltása</string>
+    <string name="mcl_disable_gestures_subtitle">Letiltja a gesztusokat, mint pl.: tartsd hosszan a blokkok törésekor, vagy érintsd a blokkok lehelyezéséhez.</string>
+    <string name="mcl_disable_swap_hand">\"Kezek váltása dupla érintéssel\" letiltása</string>
     <string name="mcl_setting_title_mousespeed">Egér sebessége</string>
     <string name="mcl_setting_subtitle_mousespeed">Megváltoztatja a virtuális egér méretét.</string>
     <string name="customctrl_passthru">Egér áthaladása</string>
+    <string name="customctrl_swipeable">Csúsztatható</string>
+    <string name="customctrl_forward_lock">Előre zár</string>
     <string name="customctrl_absolute_tracking">Abszolút ujj-lekövetés</string>
     <string name="memory_warning_msg">A jelenlegi szabad memória (%d) kevesebb a kiosztottnál (%d), ami kifagyásokhoz vezethet. Változtass a kiosztáson ha ez történik.</string>
     <string name="address_memory_warning_msg">A jelenlegi szabad memória (%d) kevesebb a kiosztottnál (%d), ami kifagyásokhoz vezethet. Változtass a kiosztáson ha ez történik.</string>
@@ -128,12 +164,15 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="multirt_nocompatiblert">Egyetlen Java Runtime nem található, ami kompatibilis. Ez a verzió Java %d-et/ot vagy újabbat igényel.</string>
     <string name="multirt_nojava8rt">Nem található a Java 8. Hogy ezt az opciót használhasd, először telepítened kell a Java 8 at.</string>
     <string name="multirt_delete_runtime">Futási idő törlése</string>
+    <string name="pvc_gameDirectory">Játékkönyvtár</string>
     <string name="pvc_jvmArgs">JVM argumentumok</string>
     <string name="preference_mouse_start_title">Indítás bekapcsolt virtuális egérrel</string>
     <string name="preference_mouse_start_description">A virtuális egér indításkor megjelenik, ha ez az opció be van kapcsolva.</string>
     <string name="preference_video_title">Videó és renderlő</string>
     <string name="preference_video_description">Felbontás, renderlő és teljesítmény</string>
+    <string name="preference_control_title">Irányítás testreszabása</string>
     <string name="preference_control_description">Gesztúrák, gombok és méretezés</string>
+    <string name="preference_java_title">Java Tweakek</string>
     <string name="preference_java_description">Java Runtime-ok, JVM argumentumok, memóriamennyiség és sandbox</string>
     <string name="preference_misc_title">Egyéb beállítások</string>
     <string name="preference_misc_description">Verziólista és könyvtár ellenőrzés</string>
@@ -148,11 +187,94 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_edit_controls_title">Egyedi kezelőszervek szerkesztése</string>
     <string name="preference_edit_controls_summary">Állítsd át a kezelőszerv sémát az ízlésed szerint.</string>
     <string name="preference_category_gyro_controls">Giroszkópos irányítás</string>
+    <string name="preference_category_virtual_mouse">Virtuális egér</string>
     <string name="preference_gyro_invert_x_axis">X tengely invertálása</string>
     <string name="preference_gyro_invert_y_axis">Y tengely invertálása</string>
     <string name="preference_gyro_invert_x_axis_description">Invertálja a horizontális tengelyt.</string>
+    <string name="preference_gyro_invert_y_axis_description">Invertálja a horizontális tengelyt.</string>
+    <string name="preference_gyro_smoothing_title">Giroszkópos simítás engedélyezése</string>
+    <string name="preference_back_title">Vissza az előző kijelzőre</string>
+    <string name="unnamed">Névtelen</string>
+    <string name="profiles_latest_snapshot">Legújabb Snapshot</string>
+    <string name="profiles_latest_release">Legutóbbi kiadás</string>
+    <string name="profiles_profile_name">Név</string>
+    <string name="profiles_profile_version">Verzió</string>
+    <string name="global_delete">Törlés</string>
+    <string name="pedit_java_runtime">Java Runtime</string>
+    <string name="pedit_renderer">Renderelő</string>
+    <string name="arc_capes_title">Cosmetica köpenyek</string>
+    <string name="notif_channel_name">Általános</string>
+    <string name="lazy_service_default_title">Ametiszt \"Foreground\" szolgáltatás</string>
+    <string name="mcl_setting_veroption_installed">Telepítve</string>
+    <string name="use_global_default">(Globális beállítások használata)</string>
+    <string name="default_control">Alapértelmezett kezelószerv</string>
+    <string name="progresslayout_tasks_in_progress">%d feladat folyamatban van</string>
+    <string name="notification_terminate">Terminálás</string>
+    <string name="notification_game_runs">A játék jelenleg fut!</string>
+    <string name="folder_dialog_create">Létrehozás</string>
+    <string name="folder_dialog_insert_name">Mappa nevének megadása</string>
+    <string name="folder_fragment_create">Mappa létrehozása</string>
+    <string name="folder_fragment_select">Mappa kiválasztása</string>
+    <string name="main_login_done">Sikeres bejelentkezés!</string>
+    <string name="main_add_account">Fiók hozzáadása</string>
+    <string name="tasks_ongoing">A feladatok folyamatban vannak, kérlek várj!</string>
+    <string name="no_saved_accounts">Nincs elmentett fiókok</string>
+    <string name="mc_download_failed">A Minecraft letöltése sikertelen! Ennek az oka az lehet, hogy rossz a hálózat, helytelenül behelyezett fájlok, a Minecraft letöltése helyi fiókkal, stb.</string>
+    <string name="xerr_unknown">Ismeretlen Xbox Live API hiba: %d</string>
+    <string name="xerr_no_account">Úgy tűnik, hogy nincsen Xbox Live fiókod. Kérlek, jelentkezz be a https://minecraft.net/ oldalán, majd próbáld újra.</string>
+    <string name="xerr_adult_verification">Egy felnőtt segítsége lesz szükséged a fiókod megerősítéséhez.</string>
+    <string name="xerr_child">A fiókod egy gyermek fiók, és egy felnőtt fiókhoz kell hozzáadni a bejelentkezéshez.</string>
+    <string name="minecraft_not_owned">Úgy tűnik, hogy a fiókodnak nincsen Minecraft profilja. Hogyha van Xbox Game Pass előfizetésed, kérlek, jelentkezz be a https://minecraft.net/ oldalon és hozz létre egyet.</string>
+    <string name="xerr_not_available">Az Xbox Live nem elérhető a régiódban</string>
+    <string name="preference_gyro_sample_rate_title">Giroszkóp mintavételi sebessége</string>
+    <string name="preference_gyro_sample_rate_description">Hogyha problémád vannak a teljesítménnyel giroszkópos irányítással, növeld ezt.</string>
+    <string name="microsoft_login_retry_later">Túl sok próbálkozás, kérlek, próbáld meg újra később</string>
+    <string name="storage_required">Az \"Ametiszt\" egy külső tárhelyhez kell hozzácsatolni. Kérlek, csatlakoztassd újra, majd indítsd újra az applikációt.</string>
+    <string name="mcl_setting_title_buttonallcaps">Csakis nagybetűt használj a gombok mintájához</string>
+    <string name="mcl_setting_subtitle_buttonallcaps">Tiltsd ezt le, hogyha nem akarsz kisbetűket használni a kezelőszerveidben.</string>
+    <string name="create_profile">Új profil létrehozása</string>
+    <string name="preference_shader_dump_title">Shader dumping engedélyezése</string>
+    <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d ms</string>
+    <string name="customctrl_editor_exit_title">Biztosan kilépsz?</string>
+    <string name="customctrl_editor_exit_msg">Biztosan ki akarsz lépni?</string>
+    <string name="customctrl_editor_exit">Kilépés a szerkesztőből</string>
+    <string name="global_save_and_exit">Mentés és kilépés</string>
+    <string name="global_yes">Igen</string>
+    <string name="global_no">Nem</string>
+    <string name="preference_controller_map_wiped">A kontroller konfigurációja törölve lett.</string>
+    <string name="preference_category_controller_settings">Kontroller beállítások</string>
+    <string name="preference_wipe_controller_title">Kontroller mapping visszaállítása</string>
+    <string name="preference_deadzone_scale_title">Joystick holtzóna skálája</string>
+    <string name="preference_deadzone_scale_description">Növeld meg, hogyha a joystick driftel.</string>
+    <string name="preference_force_big_core_title">Kényszerítí a renderelőt, hogy a nagy magon fusson</string>
+    <string name="version_select_hint">Válassz egy verziót</string>
+    <string name="forge_dl_progress">%s telepítőjének letöltése</string>
+    <string name="forge_dl_searching">Forge verzió számának keresése</string>
+    <string name="modloader_dl_failed_to_load_list">Verziók listájának betöltése sikertelen!</string>
+    <string name="forge_dl_no_installer">Bocsi, de ennek a Forge verziónak nincsen telepítője, ami még nem támogatott.</string>
+    <string name="forge_dl_select_version">Forge verzió kiválasztása</string>
+    <string name="fabric_dl_progress">%s betöltő metaadatának letöltése</string>
+    <string name="fabric_dl_loader_version">%s betöltő verziója</string>
+    <string name="fabric_dl_game_version">Minecraft verzió</string>
+    <string name="fabric_dl_install">Telepítés</string>
+    <string name="modloader_dl_install_fabric">Fabric profil létrehozása</string>
+    <string name="modloader_dl_install_quilt">Quilt profil létrehozása</string>
+    <string name="modloader_dl_install_forge">Forge profil létrehozása</string>
+    <string name="create_profile_vanilla">Vanilla profil létrehozása</string>
+    <string name="create_profile_vanilla_like_versions">Vanilla-alapú verziók</string>
+    <string name="create_profile_modded_versions">Modolt verziók</string>
+    <string name="fabric_dl_loader_title">Verziók kiválasztása</string>
+    <string name="of_dl_select_version">OptiFine verzió kiválasztása</string>
+    <string name="of_dl_failed_to_scrape">Az OptiFine telepítő adatának gyűjtése sikertelen</string>
     <string name="of_dl_progress">Letöltés%s</string>
+    <string name="create_profile_optifine">OptiFine profil létrehozása</string>
+    <string name="hint_search_modpack">Modpack-ok keresése</string>
+    <string name="preference_vulkan_driver_system_title">Gyári Vulkan driver használata</string>
+    <string name="generic_install">Telepítés</string>
     <string name="generic_debug">Hibakeresés</string>
+    <string name="preference_category_java_tweaks">Java Tweakek</string>
     <string name="preference_category_miscellaneous">Egyéb beállítások</string>
+    <string name="customctrl_visibility_title">Láthatóság</string>
     <string name="app_short_name">Ametiszt</string>
 </resources>

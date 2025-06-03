@@ -108,6 +108,7 @@
     <string name="customctrl_button_opacity">Düğme saydamlığı</string>
     <string name="customctrl_addbutton">Düğme ekle</string>
     <string name="customctrl_addbutton_drawer">Düğme saklama menüsü ekle</string>
+    <string name="customctrl_addbutton_joystick">Joystick ekle</string>
     <string name="customctrl_addsubbutton">Yan-düğme ekle</string>
     <string name="customctrl_selectdefault">Varsayılan kontrolleri seç</string>
     <string name="customctrl_export">Kontrolleri dışa aktar</string>
@@ -308,4 +309,5 @@
     <string name="newdl_starting">Oyun meta verileri okunuyor…</string>
     <string name="newdl_downloading_metadata">Oyun meta verileri indiriliyor (%s)</string>
     <string name="controller_button_select">Seç</string>
+    <string name="customctrl_visibility_title">Görünürlülük</string>
 </resources>

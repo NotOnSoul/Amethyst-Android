@@ -49,6 +49,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_subtitle_buttonscale">Felskáláza hogyha a gombok túl kicsik.</string>
     <string name="mcl_setting_title_mousescale">Egér méretezése</string>
     <string name="mcl_setting_subtitle_mousescale">Megváltoztatja a virtuális egér méretét.</string>
+    <string name="mcl_setting_title_javaargs">JVM Launch argumentumok</string>
     <string name="mcl_setting_subtitle_javaargs">Légy óvatos, kifagyasztja a játékot ha módosítod tudomány nélkül.</string>
     <string name="mcl_setting_title_renderer_settings">További renderelő beállítások</string>
     <string name="mcl_setting_title_renderer_subtitle">Renderelő-specifikus beállítások</string>
@@ -61,7 +62,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Régi-alpha</string>
     <string name="mcl_setting_veroption_oldbeta">Régi-béta</string>
-    <string name="mcl_setting_java_sandbox">Szabad .Jar végrehajtás</string>
+    <string name="mcl_setting_java_sandbox">Szabad .jar futtatása</string>
     <string name="mcl_setting_java_sandbox_subtitle">Irányítja az elérhetőségét a szabad biztonság kezelőnek, mikőzben végrehajtasz egy .jar fájlt.</string>
     <string name="mcl_version_clone">Másolás</string>
     <!-- Global strings -->
@@ -133,8 +134,8 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="customctrl_addsubbutton">Algomb hozzáadása</string>
     <string name="customctrl_selectdefault">Alap irányítási térkép kiválasztása</string>
     <string name="customctrl_export">Irányítási térkép exportálása</string>
-    <string name="main_share_logs">Napló fál megosztása</string>
-    <string name="main_install_jar_file">.Jar végrehajtása</string>
+    <string name="main_share_logs">Naplófájl megosztása</string>
+    <string name="main_install_jar_file">.jar futtatása</string>
     <string name="main_play">Indítás</string>
     <string name="autoram_info_msg">Memória beállítva %d MB-ra</string>
     <string name="mcl_setting_check_libraries">Könyvtárak ellenőrzése letöltés után</string>
@@ -234,6 +235,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="minecraft_not_owned">Úgy tűnik, hogy a fiókodnak nincsen Minecraft profilja. Hogyha van Xbox Game Pass előfizetésed, kérlek, jelentkezz be a https://minecraft.net/ oldalon és hozz létre egyet.</string>
     <string name="xerr_not_available">Az Xbox Live nem elérhető a régiódban</string>
     <string name="preference_enable_gyro_description">Ennek engedélyezésével képes leszel körbenézni a játékban a telefonod forgatásával.</string>
+    <string name="preference_gyro_sensitivity_title">Giroszkóp érzékenysége</string>
     <string name="preference_gyro_sensitivity_description">Átállítja a giroszkóp vezérlőinek érzékenységét.</string>
     <string name="toast_turn_on_gyro">Kapcsold be először a giroszkópos irányítást, hogy használhasd!</string>
     <string name="preference_gyro_sample_rate_title">Giroszkóp mintavételi sebessége</string>

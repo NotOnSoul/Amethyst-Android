@@ -24,7 +24,7 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
-    <string name="mcl_tab_wiki">Wikipédia</string>
+    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">A gyorsítótárazott fájlok törlése</string>
@@ -239,6 +239,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Tiltsd ezt le, hogyha nem akarsz kisbetűket használni a kezelőszerveidben.</string>
     <string name="create_profile">Új profil létrehozása</string>
     <string name="preference_shader_dump_title">Shader dumping engedélyezése</string>
+    <string name="preference_shader_dump_description">A naplókat átkonvertálta a shadereket a naplófájlba.</string>
     <string name="percent_format">%d%%</string>
     <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Biztosan kilépsz?</string>
@@ -250,9 +251,11 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_controller_map_wiped">A kontroller konfigurációja törölve lett.</string>
     <string name="preference_category_controller_settings">Kontroller beállítások</string>
     <string name="preference_wipe_controller_title">Kontroller mapping visszaállítása</string>
+    <string name="preference_wipe_controller_description">Lehetővé teszi a vezérlőgombok átállítását.</string>
     <string name="preference_deadzone_scale_title">Joystick holtzóna skálája</string>
     <string name="preference_deadzone_scale_description">Növeld meg, hogyha a joystick driftel.</string>
     <string name="preference_force_big_core_title">Kényszerítí a renderelőt, hogy a nagy magon fusson</string>
+    <string name="preference_force_big_core_desc">Kényszeríti a Minecraft renderelési szálat, hogy a legmagasabb maximális frekvenciával rendelkező magon fusson.</string>
     <string name="version_select_hint">Válassz egy verziót</string>
     <string name="forge_dl_progress">%s telepítőjének letöltése</string>
     <string name="forge_dl_searching">Forge verzió számának keresése</string>
@@ -276,21 +279,39 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="create_profile_optifine">OptiFine profil létrehozása</string>
     <string name="hint_search_modpack">Modpack-ok keresése</string>
     <string name="preference_vulkan_driver_system_title">Gyári Vulkan driver használata</string>
+    <string name="preference_vulkan_driver_system_description">Kényszeríti a launchert, hogy a Vulkan divert használja a Turnip helyett az Adreno GPU-kon. Csak a Zink-re és a Vulkant használó modokra vonatkozik.</string>
     <string name="generic_install">Telepítés</string>
     <string name="generic_apply">Alkalmaz</string>
     <string name="generic_debug">Hibakeresés</string>
     <string name="search_modpack_no_result">Modpackok nem találhatóak</string>
     <string name="search_modpack_error">Modpackok megtalálása sikertelen</string>
+    <string name="search_modpack_download_error">Modpack metaadatának letöltése sikertelen</string>
+    <string name="modpack_download_downloading_metadata">Modpack metaadatának letöltése (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods">Modok letöltése (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods_fc">Modok letöltése (%d a %d-ból/ből)</string>
+    <string name="modpack_download_applying_overrides">Felülbírások alkalmazása (%d/%d)</string>
     <string name="modpack_install_notification_title">\"Ametiszt\" Modpack telepítő</string>
     <string name="modpack_install_notification_success">Koppints ide a modpackok telepítésének befejezéséhez</string>
+    <string name="modpack_install_notification_data_not_available">Mod betöltő információinak letöltése sikertelen</string>
+    <string name="modpack_install_modloader_download_failed">Mod betöltő fájljainak letöltése sikertelen</string>
+    <string name="modpack_install_download_failed">Modpack fájljainak letöltése sikertelen</string>
     <string name="modpack_install_button">Modpack profil létrehozása</string>
     <string name="notif_error_occured">Egy hiba történt</string>
+    <string name="notif_error_occured_desc">Kattints a részletekért</string>
+    <string name="fabric_dl_only_stable">Csakis stabil verziókat mutasson</string>
+    <string name="dl_tampered_manifest_title">Figyelmeztetés a fájl ellenőrzésére</string>
+    <string name="dl_tampered_manifest"><![CDATA[A játék verzió manifestje a tükrön nem egyezik a hivatalos Mojang verzió manifestjével, ami azt jelentheti, hogy meghamisítotthattak.<br/>
+        <b>Ez NEM biztonságos. A személyes adataid veszélyben lehetnek, hogyha folytatod..</b><br/>
+        Hogyha mégis szeretnéd használni a tükröt, akkor nyomdd meg a \"Manifest ellenőrzésének kikapcsolása\" opciót, majd kezdd el újra a letöltést.<br/>
+        Hogyha a hivatalos oldalról szeretnéd letölteni a forrásokat, akkor nyomdd meg a \"Átváltás a hivatalos oldalra\" opciót, majd kezdd el újra a letöltést.<br/>]]></string>
+    <string name="dl_turn_off_manifest_checks">Manifest ellenőrzések kikapcsolása</string>
     <string name="dl_switch_to_official_site">Átváltás a hivatalos oldalra</string>
     <string name="preference_download_source_title">Játék letöltésének forrása</string>
+    <string name="preference_download_source_description">Letöltési tükör kiválasztása a hivatalos tükör használata helyett</string>
     <string name="preference_verify_manifest_title">Játékverzió manifestjének ellenőrzése</string>
     <string name="preference_verify_manifest_description">Hogyha engedélyezve van, a launcher ellenőrzi a játék verziójának manifestjét a könyvtárakkal együtt.</string>
+    <string name="notif_download_finished">A játék készen áll az indításhoz</string>
+    <string name="notif_download_finished_desc">Kattints ide az indításhoz!</string>
     <string name="preference_category_gestures">Gesztusok</string>
     <string name="preference_category_buttons">Gombok</string>
     <string name="preference_category_experimental_settings">Kíserleti baromságok</string>
@@ -299,6 +320,17 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_category_miscellaneous">Egyéb beállítások</string>
     <string name="preference_category_video">Videóbeállítások</string>
     <string name="notification_permission_dialog_title">Engedélykérés</string>
+    <string name="notification_permission_dialog_text">Az \"Ametiszt\" engedélyre van szüksége az értesítések küldéséhez, hogy megakadályozza a játék/modpack letöltésének leállását, amikor kilépsz az alkalmazásból. Ezen engedély nélkül az Android leállíthatja a letöltéseket, ha az \"Ametiszt\"-et háttérmódba helyezed.</string>
+    <string name="notification_permission_toast">Bármikor megváltoztathatod a beállításokat később is</string>
+    <string name="preference_ask_for_notification_title">Értesítések engedélyezése</string>
+    <string name="preference_vsync_in_zink_title">VSync engedélyezése Zink-kel</string>
+    <string name="preference_vsync_in_zink_description">Lehetővé teszi a launcher számára, hogy belső rendszer API-kat használjon a V-Sync engedélyezéséhez a Zinkhez. Kapcsold ki ezt, ha a launcher hirtelen összeomlik a Zink használatakor egy rendszerfrissítés után.</string>
+    <string name="exception_failed_to_unpack_jre17">JRE 17 telepítése sikertelen</string>
+    <string name="newdl_starting">Játék metaadatának beolvasása…</string>
+    <string name="newdl_downloading_metadata">Játék metaadatának letöltése (%s)</string>
+    <string name="newdl_downloading_game_files">Játék letöltése… (%d/%d, %.2f MB/mp)</string>
+    <string name="newdl_downloading_game_files_size">Játék letöltése… (%.2f/%.2f MB, %.2f MB/mp)</string>
+    <string name="cropper_title">Kép régiójának kiválasztása</string>
     <string name="cropper_lock_vertical">V. zár</string>
     <string name="cropper_lock_horizontal">H. zár</string>
     <string name="cropper_reset">Visszaállítás</string>
@@ -308,12 +340,23 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="log_view_button_output_off">Kimenet\nKI</string>
     <string name="log_view_button_output_on">Kimenet\nBE</string>
     <string name="log_view_label_log_output">Napló kimenet:</string>
+    <string name="execute_jar_failed_to_read_file">A .jar beolvasása sikertelen</string>
+    <string name="execute_jar_incompatible_runtime">A \".jar futtatása\" nem kompatibilis a Java %d-val/vel</string>
     <string name="controller_button_a">A</string>
     <string name="controller_button_b">B</string>
     <string name="controller_button_x">X</string>
     <string name="controller_button_y">Y</string>
     <string name="controller_button_start">Start</string>
     <string name="controller_button_select">Kiválasztás</string>
+    <string name="controller_button_trigger_left">Bal ravasz</string>
+    <string name="controller_button_trigger_right">Jobb ravasz</string>
+    <string name="controller_button_shoulder_left">Bal váll</string>
+    <string name="controller_button_shoulder_right">Jobb váll</string>
+    <string name="controller_direction_forward">Kar fel</string>
+    <string name="controller_direction_backward">Kar le</string>
+    <string name="controller_direction_left">Kar bal</string>
+    <string name="controller_direction_right">Kar jobb</string>
+    <string name="controller_stick_press_l">Bal botkormány (kattintás)</string>
     <string name="controller_stick_press_r">Jobb botkormány (kattintás)</string>
     <string name="controller_dpad_up">D-Pad Fel</string>
     <string name="controller_dpad_down">D-Pad Le</string>
@@ -327,9 +370,12 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="customctrl_visibility_in_menus">Menükben</string>
     <string name="controller_remapper_expand_entry">Kibontás a kulcskódok módosításához</string>
     <string name="preference_remap_controller_title">Kontroller billentyűk összerendelésének megváltoztatása</string>
+    <string name="preference_remap_controller_description">Lehetővé teszi, hogy módosítsd a billentyűket a kontroller gombjaira</string>
     <string name="mcl_button_discord">Discord</string>
+    <string name="ltw_render_distance_warning_msg">A GPU-d képtelen 7 vagy nagyobb megjelenítési távolságot renderelni Sodium vagy ahoz hasonló modok nélkül. A mehjelenítési távolság automatikusan csókkentve lesz, hogy ha megnyomod az \"OK\" gombot.</string>
     <string name="mcl_button_open_directory">Játékkönyvtár megnyitása</string>
     <string name="local_login_bad_username_title">Nem megfelelő felhasználónév</string>
+    <string name="local_login_bad_username_text">A felhasználónév 3—16 karakter hossúnak kell hogy legyen. Csakis latin betűk, számok 0—tól 9—ig és alsóvonalak tartalmazhatnak.</string>
     <string name="quick_setting_title">Gyorsbeállítások</string>
     <string name="create_bta_profile">\"Better than Adventure!\" profil létrehozása</string>
     <string name="select_bta_version">\"Better than Adventure!\" verzió kiválasztása</string>
@@ -345,6 +391,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mg_renderer_title_gl43exts">Kísérleti OpenGL 4.3-bővítmények reklámozása</string>
     <string name="mg_renderer_summary_gl43exts">Ez segíthet a modok összeomlásai ellen. Kikapcsolható, ha nem szükséges.</string>
     <string name="mg_renderer_title_computeShaderext">Kísérleti Compute Shader bővítmény reklámozása</string>
+    <string name="mg_renderer_summary_computeShaderext">Ez segíthet a shaderpackok összeomlásain ellen. Kikapcsolható, ha nem szükséges.</string>
     <string name="mg_renderer_title_errorSetting">Szűrési hiba</string>
     <string name="app_short_name">Ametiszt</string>
 </resources>

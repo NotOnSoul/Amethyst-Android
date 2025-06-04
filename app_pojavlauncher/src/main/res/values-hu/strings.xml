@@ -114,7 +114,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="import_control_import_button">Irányítás importálása</string>
     <string name="import_control_verifying_file">A fájl igazolás alatt áll, próbáld újra késöbb…</string>
     <string name="import_control_invalid_name">Helytelen név vagy fájl már létezik</string>
-    <string name="import_control_done">Importáció kész</string>
+    <string name="import_control_done">Importálás kész</string>
     <!--
     <string name="control_more3"></string>
     <string name="control_more4"></string>

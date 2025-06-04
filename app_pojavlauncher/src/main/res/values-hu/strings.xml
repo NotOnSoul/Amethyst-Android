@@ -286,14 +286,14 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="of_dl_failed_to_scrape">Az OptiFine telepítő adatának gyűjtése sikertelen</string>
     <string name="of_dl_progress">Letöltés%s</string>
     <string name="create_profile_optifine">OptiFine profil létrehozása</string>
-    <string name="hint_search_modpack">Modpack-ok keresése</string>
+    <string name="hint_search_modpack">Modpackok keresése</string>
     <string name="preference_vulkan_driver_system_title">Gyári Vulkan driver használata</string>
     <string name="preference_vulkan_driver_system_description">Kényszeríti a launchert, hogy a Vulkan divert használja a Turnip helyett az Adreno GPU-kon. Csak a Zink-re és a Vulkant használó modokra vonatkozik.</string>
     <string name="generic_install">Telepítés</string>
     <string name="generic_apply">Alkalmaz</string>
     <string name="generic_debug">Hibakeresés</string>
     <string name="search_modpack_no_result">Modpackok nem találhatóak</string>
-    <string name="search_modpack_error">Modpackok megtalálása sikertelen</string>
+    <string name="search_modpack_error">Modpackok keresése sikertelen</string>
     <string name="search_modpack_download_error">Modpack metaadatának letöltése sikertelen</string>
     <string name="modpack_download_downloading_metadata">Modpack metaadatának letöltése (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods">Modok letöltése (%.2f MB / %.2f MB)</string>

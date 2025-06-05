@@ -168,7 +168,7 @@
     <string name="multirt_nojava8rt">Java 8 bulunamadı. Bu seçeneği kullanabilmeniz için Java 8 kurmanız gerekiyor.</string>
     <string name="multirt_delete_runtime">Runtime\'ı sil</string>
     <string name="pvc_gameDirectory">Oyun dizini</string>
-    <string name="pvc_jvmArgs">JVM değişkenleri</string>
+    <string name="pvc_jvmArgs">JVM argümanları</string>
     <string name="preference_mouse_start_title">Sanal imleç açık olarak başla</string>
     <string name="preference_mouse_start_description">Bu seçenek açık olduğunda, başlangıçta Sanal Fare görünür olacak.</string>
     <string name="preference_video_title">Video ve görüntü işleyici</string>
@@ -176,7 +176,7 @@
     <string name="preference_control_title">Kontrol özelleştirmesi</string>
     <string name="preference_control_description">Hareketler, butonlar ve ölçeklendirme</string>
     <string name="preference_java_title">Java Ayarlamaları</string>
-    <string name="preference_java_description">Java Runtime\'ları, JVM Değişkenleri, RAM miktarı ve sandbox</string>
+    <string name="preference_java_description">Java Runtime\'ları, JVM Argümanları, Bellek miktarı ve sandbox</string>
     <string name="preference_misc_title">Çeşitli ayarlar</string>
     <string name="preference_misc_description">Sürüm listesi ve kütüphane kontrolü</string>
     <string name="preference_experimental_title">Deneysel Ayarlar</string>
@@ -295,27 +295,27 @@
     <string name="modpack_download_downloading_metadata">Mod paketi meta verileri indirliyor (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods">Modlar indiriliyor (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods_fc">Modlar indiriliyor (%d dosyadan %d tanesi)</string>
-    <string name="modpack_download_applying_overrides">Geçersiz kılmalar uygulanıyor (%d/%d)</string>
+    <string name="modpack_download_applying_overrides">Overrides uygulanıyor (%d/%d)</string>
     <string name="modpack_install_notification_title">Pojav Mod Paketi Yükleyicisi</string>
     <string name="modpack_install_notification_success">Modpack kurulumunu tamamlamak için buraya tıklayın</string>
     <string name="modpack_install_notification_data_not_available">Mod yükleyici bilgileri indirilemedi</string>
     <string name="modpack_install_modloader_download_failed">Mod yükleyici dosyaları indirilemedi</string>
     <string name="modpack_install_download_failed">Modpack dosyaları indirilemedi</string>
     <string name="modpack_install_button">Modpack profili oluştur</string>
-    <string name="notif_error_occured">bir hata oluştu</string>
+    <string name="notif_error_occured">Bir hata oluştu</string>
     <string name="notif_error_occured_desc">Daha fazla ayrıntı görmek için tıklayın</string>
     <string name="fabric_dl_only_stable">Sadece kararlı sürümleri göster</string>
     <string name="dl_tampered_manifest_title">Dosya doğrulama hatası</string>
     <string name="dl_tampered_manifest"><![CDATA[Aynadaki oyun sürümü bildirimi resmi Mojang sürüm bildirimi ile eşleşmiyor, bu da üzerinde oynanmış olabileceği anlamına geliyor.<br/>
         <b>Bu güvenli değil. Devam ederseniz kişisel bilgileriniz risk altında olabilir.</b><br/>
-        Aynayı kullanmaya devam etmek istiyorsanız, \"Bildirim kontrollerini kapat\" düğmesine basın ve indirmeyi yeniden başlatın.<br/>
+        Mirror'ı kullanmaya devam etmek istiyorsanız, \"Manifest kontrollerini kapat\" düğmesine basın ve indirmeyi yeniden başlatın.<br/>
         Resmi indirme kaynağını kullanmak istiyorsanız, \"Resmi siteye geç\" düğmesine basın ve indirmeyi yeniden başlatın.<br/>]]></string>
-    <string name="dl_turn_off_manifest_checks">Bildirim kontrollerini kapatın</string>
+    <string name="dl_turn_off_manifest_checks">Manifest kontrollerini kapatın</string>
     <string name="dl_switch_to_official_site">Resmi siteye geçiş yapın</string>
     <string name="preference_download_source_title">Oyun indirme kaynağı</string>
-    <string name="preference_download_source_description">Resmi indirme sunucusunu kullanmak yerine bir indirme yansıtıcısı seçin</string>
-    <string name="preference_verify_manifest_title">Oyun sürüm bildirimini doğrulayın</string>
-    <string name="preference_verify_manifest_description">Etkinleştirildiğinde, başlatıcı kütüphanelerle birlikte oyun sürümü bildirimini kontrol edecektir.</string>
+    <string name="preference_download_source_description">Resmi indirme sunucusunu kullanmak yerine bir indirme mirror\'u seçin</string>
+    <string name="preference_verify_manifest_title">Oyun sürüm manfiest\'ini doğrulayın</string>
+    <string name="preference_verify_manifest_description">Etkinleştirildiğinde, başlatıcı kütüphanelerle birlikte oyun sürümü manifest\'ini kontrol edecektir.</string>
     <string name="notif_download_finished">Oyun başlatılmaya hazır</string>
     <string name="notif_download_finished_desc">Başlatmak için buraya tıklayın!</string>
     <string name="preference_category_gestures">Hareketler</string>
@@ -372,7 +372,7 @@
     <string name="controller_remapper_exit_part1">Basılı tut</string>
     <string name="controller_remapper_exit_part2">çıkmak için</string>
     <string name="controller_remapper_operating_mode">Geçerli mod</string>
-    <string name="customctrl_visibility_title">Görünürlülük</string>
+    <string name="customctrl_visibility_title">Görünürlük</string>
     <string name="customctrl_visibility_ingame">Oyun İçi</string>
     <string name="customctrl_visibility_in_menus">Menülerde</string>
     <string name="controller_remapper_expand_entry">Tuș kodlarını değiștirmek için genişlet</string>
@@ -394,5 +394,11 @@
     <string name="preference_renderer_mobileglues_settings">MobileGlues Ișleyici Seçenekleri</string>
     <string name="mg_renderer_glsl_cache">Maks GLSL önbellek boyutu</string>
     <string name="mg_renderer_angle">Sürücü olarak ANGLE\'ı kullan</string>
+    <string name="mg_renderer_multidraw">Multidraw emulasyon modu</string>
+    <string name="mg_renderer_title_gl43exts">Deneysel OpenGL 4.3 uzantılarını destekliyormuş gibi göster</string>
+    <string name="mg_renderer_summary_gl43exts">Mod çökmelerine yardımcı olabilir. Ihtiyaç yoksa devre dışı bırakın, çökmelere sebep olabilir.</string>
+    <string name="mg_renderer_title_computeShaderext">Deneysel Compute Shader uzantısını destekliyormuş gibi göster</string>
+    <string name="mg_renderer_summary_computeShaderext">Shader paketi bozulmalarına yardımcı olabilir. Ihtiyaç yoksa devre dışı bırakın, çökmelere sebep olabilir.</string>
+    <string name="mg_renderer_title_errorSetting">Hata filtreleme</string>
     <string name="app_short_name">Amethyst</string>
 </resources>

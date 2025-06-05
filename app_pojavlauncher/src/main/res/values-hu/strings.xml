@@ -148,7 +148,7 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mcl_disable_swap_hand">\"Kezek váltása dupla érintéssel\" letiltása</string>
     <string name="mcl_disable_swap_hand_subtitle">Letiltja a hotbar elem dupla koppintását a második kézben való cseréhez.</string>
     <string name="mcl_setting_title_mousespeed">Egér sebessége</string>
-    <string name="mcl_setting_subtitle_mousespeed">Megváltoztatja a virtuális egér méretét.</string>
+    <string name="mcl_setting_subtitle_mousespeed">Megváltoztatja a virtuális egér sebességét.</string>
     <string name="customctrl_passthru">Egér áthaladása</string>
     <string name="customctrl_swipeable">Csúsztatható</string>
     <string name="customctrl_forward_lock">Előre zár</string>

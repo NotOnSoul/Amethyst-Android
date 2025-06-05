@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
+    <string name="app_name">Amethyst</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
     <string name="login_online_username_hint">Kullanıcı Adı</string>
     <string name="login_online_login_label">Giriş yap</string>
     <!-- Hint -->
+    <string name="hint_control_mapping">"\"Bağlam menüsünü açmak için orta üstteki dişli simgesine dokunun ⚙\nBir düğmeye dokunarak özelleştirin: düzenle, boyutlandır, kaldır veya tuş atamalarını değiştir."</string>
     <!-- Warnings -->
     <string name="warning_remove_account">Bu hesap kaldırılacak!</string>
     <!-- AlertDialog title -->
@@ -23,6 +25,7 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
+    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Önbellek dosyaları temizleniyor</string>
@@ -45,9 +48,13 @@
     <string name="mcl_setting_subtitle_mousescale">Sanal farenin boyutunu ayarlayın.</string>
     <string name="mcl_setting_title_javaargs">JVM Başlatıcı değişkenleri</string>
     <string name="mcl_setting_subtitle_javaargs">Dikkatli olun, eğer bilgisizce değiştirilirse oyunun çökmesine sebep olabilir.</string>
+    <string name="mcl_setting_title_renderer_settings">Ek işleyici ayarları</string>
+    <string name="mcl_setting_title_renderer_subtitle">İşleyiciye özgü ayarlar</string>
     <string name="mcl_setting_category_renderer">İşleyici</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (bütün sürümler, hızlı)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (tüm sürümler için, orta)</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - (sadece 1.17+, hızlı)</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - sadece 1.17+</string>
     <string name="mcl_setting_veroption_release">Sürümler</string>
     <string name="mcl_setting_veroption_snapshot">Test sürümleri</string>
     <string name="mcl_setting_veroption_oldalpha">Eski-alfa</string>
@@ -70,14 +77,26 @@
     <string name="global_select">Seç</string>
     <string name="global_retry">Tekrar deneyin</string>
     <string name="global_default">Varsayılan</string>
+    <string name="global_off">Kapalı</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Uygulama/Oyundan %d koduyla çıkıldı, daha fazla bilgi için latestlog.txt\'ye bakın.</string>
+    <string name="mcn_signal_title">Uygulama/Oyun, ciddi bir sinyal (%d) nedeniyle sonlandırıldı. Daha fazla bilgi için latestlog.txt dosyasını kontrol edin.</string>
     <string name="mcn_exit_confirm">Zorla kapatmak istediğinize emin misiniz?</string>
     <string name="mcn_check_fail_vulkan_support">Zink (Vulkan) işleyicisi bu cihazda desteklenmiyor!</string>
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Sohbet</string>
     <string name="control_debug">Hata Ayıklama</string>
+    <string name="control_primary">Pri</string>
+    <string name="control_secondary">Sec</string>
+    <string name="control_shift">◇</string>
     <string name="control_inventory">Env</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
+    <string name="control_thirdperson">3rd</string>
+    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">İmleç</string>
     <string name="control_mouseoff">İmleç: kapalı</string>
     <string name="control_mouseon">İmleç: açık </string>
@@ -132,6 +151,7 @@
     <string name="customctrl_forward_lock">İleri kilidi</string>
     <string name="customctrl_absolute_tracking">Mutlak parmak takibi</string>
     <string name="memory_warning_msg">Şuanki boş bellek (%d) verilecek bellekten (%d) daha az, bu durum çökmelere sebep olabilir. Eğer oyun çökerse verilen belleği değiştirin.</string>
+    <string name="address_memory_warning_msg">Mevcut kullanılabilir adreslenebilir bellek miktarı (%d), ayrılan bellek (%d) miktarından daha az ve bu çökme sorunlarına yol açabilir. Oyun çökerse bellek tahsisini değiştirin.</string>
     <string name="mcl_memory_allocation">Bellek ayırma</string>
     <string name="mcl_memory_allocation_subtitle">Minecraft\'a ne kadar bellek verileceğini kontrol eder.</string>
     <string name="multirt_runtime_corrupt">Bozuk Java Runtime</string>
@@ -144,6 +164,7 @@
     <string name="multirt_config_setdefault">Varsayılan olarak ayarla</string>
     <string name="multirt_config_setdefault_already">Varsayılan</string>
     <string name="multirt_config_removeerror_last">En az bir Java Runtime\'ın kurulu olması gerekmektedir.</string>
+    <string name="multirt_nocompatiblert">Uyumlu bir Java Runtime bulunamadı. Bu sürüm Java %d veya daha yenisini gerektirir.</string>
     <string name="multirt_nojava8rt">Java 8 bulunamadı. Bu seçeneği kullanabilmeniz için Java 8 kurmanız gerekiyor.</string>
     <string name="multirt_delete_runtime">Runtime\'ı sil</string>
     <string name="pvc_gameDirectory">Oyun dizini</string>
@@ -182,6 +203,7 @@
     <string name="profiles_latest_release">En son sürüm</string>
     <string name="profiles_profile_name">İsim</string>
     <string name="global_delete">Sil</string>
+    <string name="pedit_java_runtime">Java Runtime</string>
     <string name="pedit_renderer">İşleyici</string>
     <string name="arc_capes_title">Cosmetica Pelerinleri</string>
     <string name="arc_capes_desc">Cosmetica\'nın (eskiden Arc olarak biliniyordu) Pelerinlerini etkinleştirir. Daha fazla bilgi için lütfen https://cosmetica.cc\'u ziyaret edin. OptiFine gerektirir.</string>
@@ -221,6 +243,8 @@
     <string name="mcl_setting_subtitle_buttonallcaps">Kontrollerinizde küçük harfler kullanmak istiyorsanız bunu devre dışı bırakın.</string>
     <string name="preference_shader_dump_title">Gölgelendirici bilgi göstergesini etkinleştir</string>
     <string name="preference_shader_dump_description">Dönüştürülen shader\'ları günlük dosyasına (log\'a) kaydedin.</string>
+    <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Çıkılsın mı?</string>
     <string name="customctrl_editor_exit_msg">Çıkmak istediğinizden emin misiniz?</string>
     <string name="customctrl_editor_exit">Düzenleyici\'den çık</string>
@@ -309,6 +333,9 @@
     <string name="exception_failed_to_unpack_jre17">JRE 17 yüklenemedi</string>
     <string name="newdl_starting">Oyun meta verileri okunuyor…</string>
     <string name="newdl_downloading_metadata">Oyun meta verileri indiriliyor (%s)</string>
+    <string name="newdl_downloading_game_files">Oyun indiriliyor… (%d/%d, %.2f MB/s)</string>
+    <string name="newdl_downloading_game_files_size">Oyun indiriliyor… (%.2f/%.2f MB, %.2f MB/s)</string>
     <string name="controller_button_select">Seç</string>
     <string name="customctrl_visibility_title">Görünürlülük</string>
+    <string name="app_short_name">Amethyst</string>
 </resources>

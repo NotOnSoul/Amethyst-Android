@@ -129,6 +129,7 @@
     <string name="mcl_setting_subtitle_mousespeed">Sanal farenin hızını ayarlar.</string>
     <string name="customctrl_passthru">İmleç geçişi</string>
     <string name="customctrl_swipeable">Kaydırılabilir</string>
+    <string name="customctrl_forward_lock">İleri kilidi</string>
     <string name="customctrl_absolute_tracking">Mutlak parmak takibi</string>
     <string name="memory_warning_msg">Şuanki boş bellek (%d) verilecek bellekten (%d) daha az, bu durum çökmelere sebep olabilir. Eğer oyun çökerse verilen belleği değiştirin.</string>
     <string name="mcl_memory_allocation">Bellek ayırma</string>

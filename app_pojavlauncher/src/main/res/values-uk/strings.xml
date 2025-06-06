@@ -50,10 +50,10 @@
     <string name="mcl_setting_subtitle_javaargs">Будьте обережні, це може призвести до збоїв у грі, якщо це замінити без знань.</string>
     <string name="mcl_setting_title_renderer_settings">Додаткові параметри промальовування</string>
     <string name="mcl_setting_title_renderer_subtitle">Спеціальні параметри промальовування</string>
-    <string name="mcl_setting_category_renderer">Візуалізатор</string>
-    <string name="mcl_setting_renderer_gles2_4">Holy GL4ES — (усі версії, швидкий)</string>
-    <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) — (усі версії, посередній)</string>
-    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) — (лише 1.17+, швидкий)</string>
+    <string name="mcl_setting_category_renderer">Промальовування</string>
+    <string name="mcl_setting_renderer_gles2_4">Holy GL4ES — усі версії, швидкий</string>
+    <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) — усі версії, посередній</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) — лише 1.17+, швидкий</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) — лише 1.17+</string>
     <string name="mcl_setting_veroption_release">Випуски</string>
     <string name="mcl_setting_veroption_snapshot">Знімки</string>
@@ -79,7 +79,7 @@
     <string name="global_default">Усталено</string>
     <string name="global_off">ВИМК.</string>
     <!-- MainActivity: strings -->
-    <string name="mcn_exit_title">Програма/гра завершилася з кодом %d, глянь в latestlog.txt для більш детальної інформації.</string>
+    <string name="mcn_exit_title">Програма/гра завершилася з кодом %d, див. latestlog.txt для більш детальної інформації.</string>
     <string name="mcn_signal_title">Програму/гру перервано небезпечним сигналом %d, подробиці перевірте в latestlog.txt.</string>
     <string name="mcn_exit_confirm">Ви впевнені, що хочете примусово закрити його?</string>
     <string name="mcn_check_fail_vulkan_support">Промальовування Zink (Vulkan) не підтримується на цьому пристрої!</string>
@@ -120,7 +120,7 @@
     <string name="customctrl_size">Розмір</string>
     <string name="customctrl_mapping">Кнопки</string>
     <string name="customctrl_orientation">Орієнтація</string>
-    <string name="customctrl_background_color">Колір фону</string>
+    <string name="customctrl_background_color">Колір тла</string>
     <string name="customctrl_corner_radius">Радіус округлення</string>
     <string name="customctrl_stroke_width">Товщина контуру</string>
     <string name="customctrl_stroke_color">Колір контуру</string>
@@ -205,7 +205,7 @@
     <string name="profiles_profile_version">Версія</string>
     <string name="global_delete">Видалити</string>
     <string name="pedit_java_runtime">Java Runtime</string>
-    <string name="pedit_renderer">Візуалізатор</string>
+    <string name="pedit_renderer">Промальовування</string>
     <string name="arc_capes_title">Плащі Cosmetica</string>
     <string name="arc_capes_desc">Включає плащі від Cosmetica (раніше Arc). Для більш детальної інформації, будь ласка, відвідайте https://cosmetica.cc. Потребує OptiFine.</string>
     <string name="notif_channel_name">Загальне</string>
@@ -272,9 +272,9 @@
     <string name="fabric_dl_game_version">Версія Minecraft</string>
     <string name="fabric_dl_install">Установити</string>
     <string name="fabric_dl_cant_read_meta">Не вдалося зчитати метадані завантажувача %s. Будь ласка, повторіть спробу пізніше.</string>
-    <string name="modloader_dl_install_fabric">Створити профіль з Fabric</string>
-    <string name="modloader_dl_install_quilt">Створити профіль з Quilt</string>
-    <string name="modloader_dl_install_forge">Створити профіль з Forge</string>
+    <string name="modloader_dl_install_fabric">Створити профіль Fabric</string>
+    <string name="modloader_dl_install_quilt">Створити профіль Quilt</string>
+    <string name="modloader_dl_install_forge">Створити профіль Forge</string>
     <string name="create_profile_vanilla">Створити усталений профіль</string>
     <string name="create_profile_vanilla_like_versions">Усталена версія</string>
     <string name="create_profile_modded_versions">Модифіковані версії</string>
@@ -282,14 +282,14 @@
     <string name="of_dl_select_version">Вибір версії OptiFine</string>
     <string name="of_dl_failed_to_scrape">Не вдалося зібрати дані для встановлення OptiFine</string>
     <string name="of_dl_progress">Завантаження %s</string>
-    <string name="create_profile_optifine">Створити профіль з OptiFine</string>
+    <string name="create_profile_optifine">Створити профіль OptiFine</string>
     <string name="hint_search_modpack">Пошук пакетів модів</string>
     <string name="preference_vulkan_driver_system_title">Використовувати систему драйверів Vulkan</string>
     <string name="preference_vulkan_driver_system_description">Примусово запускати драйвер Vulkan замість Turnip на ГП Adreno. Впливає лише на Zink і моди, які використовують Vulkan.</string>
     <string name="generic_install">Установити</string>
     <string name="generic_apply">Застосувати</string>
     <string name="generic_debug">Налагодження</string>
-    <string name="search_modpack_no_result">Модпаки не знайдено</string>
+    <string name="search_modpack_no_result">Пакети модів не знайдено</string>
     <string name="search_modpack_error">Не вдалося знайти пакети модів</string>
     <string name="search_modpack_download_error">Не вдалося завантажити метадані пакету модів</string>
     <string name="modpack_download_downloading_metadata">Завантаження метаданих пакету модів (%.2f МБ / %.2f МБ)</string>
@@ -309,7 +309,7 @@
     <string name="dl_tampered_manifest"><![CDATA[Версія маніфесту гри у дзеркалі не збігається з офіціальною версією від Mojang, можливо, воно підроблене.<br/>
         <b>Це небезпечно. Якщо Ви продовжите, Ваші персональні дані можуть бути під загрозою.</b><br/>
         Якщо Ви все ще хочете використати дзеркальне посилання, натисніть «Вимкнути перевірки маніфесту», і знову почніть завантаження.<br/>
-        Якщо хочете використати офіціальне джерело, натисніть«Перейти на офіційний сайт», і знову почніть завантаження.<br/>]]></string>
+        Якщо хочете використати офіціальне джерело, натисніть «Перейти на офіційний сайт», і знову почніть завантаження.<br/>]]></string>
     <string name="dl_turn_off_manifest_checks">Вимкнути перевірки маніфесту</string>
     <string name="dl_switch_to_official_site">Перейти на офіційний сайт</string>
     <string name="preference_download_source_title">Джерело завантаження гри</string>
@@ -326,10 +326,10 @@
     <string name="preference_category_miscellaneous">Інші параметри</string>
     <string name="preference_category_video">Налаштування відео</string>
     <string name="notification_permission_dialog_title">Запит на дозвіл</string>
-    <string name="notification_permission_dialog_text">PojavLauncher потребує дозволу на надсилання сповіщень, щоб запобігти припиненню завантаження гри/модпаку, коли ви виходите з додатка. Без цього дозволу Android може припинити завантаження, коли ви переведете PojavLauncher у фоновий режим.</string>
+    <string name="notification_permission_dialog_text">PojavLauncher потребує дозволу на надсилання сповіщень, щоб запобігти припиненню завантаження гри/пакету модів, коли ви виходите з додатка. Без цього дозволу Android може припинити завантаження, коли ви переведете PojavLauncher у тловий режим.</string>
     <string name="notification_permission_toast">Ви завжди можете змінити пізніше, перейшовши до налаштувань</string>
     <string name="preference_ask_for_notification_title">Дозволити сповіщення</string>
-    <string name="preference_ask_for_notification_description">Натисніть, щоб повторно запитати дозвіл на сповіщення, необхідний для коректної роботи фонових завантажень гри/модпаку.</string>
+    <string name="preference_ask_for_notification_description">Натисніть, щоб повторно запитати дозвіл на сповіщення, необхідний для коректної роботи тлових завантажень гри/пакету модів.</string>
     <string name="preference_vsync_in_zink_title">Вертикальна синхронізація із Zink</string>
     <string name="preference_vsync_in_zink_description">Дозволяє лаунчеру використовувати внутрішні системні API для увімкнення вертикальної синхронізації для Zink. Вимкніть, якщо після оновлення системи лаунчер вилітає разом із Zink.</string>
     <string name="exception_failed_to_unpack_jre17">Не вдалося установити JRE 17</string>

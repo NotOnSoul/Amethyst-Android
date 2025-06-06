@@ -128,7 +128,7 @@
     <string name="customctrl_addbutton">Додати кнопку</string>
     <string name="customctrl_addbutton_drawer">Додати кнопку розгорнення</string>
     <string name="customctrl_addbutton_joystick">Додати джойстик</string>
-    <string name="customctrl_addsubbutton">Додати під-кнопку</string>
+    <string name="customctrl_addsubbutton">Додати підкнопку</string>
     <string name="customctrl_selectdefault">Обрати стандартну</string>
     <string name="customctrl_export">Експортувати розкладку</string>
     <string name="main_share_logs">Поділитися журналом</string>
@@ -171,8 +171,8 @@
     <string name="pvc_jvmArgs">Аргументи JVM</string>
     <string name="preference_mouse_start_title">Запуск разом з віртуальною мишею</string>
     <string name="preference_mouse_start_description">Віртуальна миша з’являється під час запуску, якщо цей параметр увімкнено.</string>
-    <string name="preference_video_title">Відео та візуалізатор</string>
-    <string name="preference_video_description">Роздільність, візуалізатор і продуктивність</string>
+    <string name="preference_video_title">Відео та промальовування</string>
+    <string name="preference_video_description">Роздільність, промальовування і продуктивність</string>
     <string name="preference_control_title">Налаштування керування</string>
     <string name="preference_control_description">Жести, кнопки та масштабування</string>
     <string name="preference_java_title">Оптимізація Java</string>
@@ -259,7 +259,7 @@
     <string name="preference_wipe_controller_description">Дозволяє змінити розташування кнопок контролера.</string>
     <string name="preference_deadzone_scale_title">Шкала мертвої зони джойстика</string>
     <string name="preference_deadzone_scale_description">Збільште її, якщо джойстик зміщується.</string>
-    <string name="preference_force_big_core_title">Змусити візуалізатор працювати на великому ядрі</string>
+    <string name="preference_force_big_core_title">Змусити промальовування працювати на великому ядрі</string>
     <string name="preference_force_big_core_desc">Змушує потік промальовування Minecraft працювати на ядрі з найвищою максимальною частотою.</string>
     <string name="version_select_hint">Оберіть версію</string>
     <string name="forge_dl_progress">Завантаження встановлювача для %s</string>
@@ -315,7 +315,7 @@
     <string name="preference_download_source_title">Джерело завантаження гри</string>
     <string name="preference_download_source_description">Оберіть дзеркало завантаження замість офіційного сервера завантаження</string>
     <string name="preference_verify_manifest_title">Перевірити маніфест версії гри</string>
-    <string name="preference_verify_manifest_description">Коли увімкнено, лаунчер перевірятиме маніфест гри разом з бібліотеками.</string>
+    <string name="preference_verify_manifest_description">Коли увімкнено, запускач перевірятиме маніфест гри разом з бібліотеками.</string>
     <string name="notif_download_finished">Гра готова до запуску</string>
     <string name="notif_download_finished_desc">Натисніть, щоб розпочати!</string>
     <string name="preference_category_gestures">Жести</string>
@@ -331,7 +331,7 @@
     <string name="preference_ask_for_notification_title">Дозволити сповіщення</string>
     <string name="preference_ask_for_notification_description">Натисніть, щоб повторно запитати дозвіл на сповіщення, необхідний для коректної роботи тлових завантажень гри/пакету модів.</string>
     <string name="preference_vsync_in_zink_title">Вертикальна синхронізація із Zink</string>
-    <string name="preference_vsync_in_zink_description">Дозволяє лаунчеру використовувати внутрішні системні API для увімкнення вертикальної синхронізації для Zink. Вимкніть, якщо після оновлення системи лаунчер вилітає разом із Zink.</string>
+    <string name="preference_vsync_in_zink_description">Дозволяє запускачу використовувати внутрішні системні API для увімкнення вертикальної синхронізації для Zink. Вимкніть, якщо після оновлення системи запускач вилітає разом із Zink.</string>
     <string name="exception_failed_to_unpack_jre17">Не вдалося установити JRE 17</string>
     <string name="newdl_starting">Зчитування метаданих гри…</string>
     <string name="newdl_downloading_metadata">Завантаження метаданих гри (%s)</string>

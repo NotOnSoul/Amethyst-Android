@@ -196,6 +196,7 @@
     <string name="profiles_latest_snapshot">Najnowsza wersja deweloperska</string>
     <string name="profiles_latest_release">Najnowsze wydanie</string>
     <string name="profiles_profile_name">Nazwa</string>
+    <string name="profiles_profile_version">Wersja</string>
     <string name="global_delete">Usuń</string>
     <string name="pedit_java_runtime">Środowisko wykonawcze Javy</string>
     <string name="pedit_renderer">Silnik renderujący</string>
@@ -235,6 +236,7 @@
     <string name="storage_required">PojavLauncher wymaga podłączonej pamięci zewnętrznej. Podłącz ją ponownie i zrestartuj aplikację.</string>
     <string name="mcl_setting_title_buttonallcaps">Używaj tylko dużych liter w etykietach przycisków</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Wyłącz tę opcję, jeśli chcesz używać małych liter w sterowaniu dotykowym.</string>
+    <string name="create_profile">Utwórz nowy profil</string>
     <string name="preference_shader_dump_title">Włącz dumping shaderów</string>
     <string name="preference_shader_dump_description">Rejestrowanie przekonwertowanych shaderów w pliku dziennika.</string>
     <string name="customctrl_editor_exit_title">Wychodzisz?</string>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
+    <string name="app_name">Ametyst</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
@@ -47,9 +48,12 @@
     <string name="mcl_setting_subtitle_mousescale">Zmień rozmiar wirtualnej myszy.</string>
     <string name="mcl_setting_title_javaargs">Argumenty uruchomienia JVM</string>
     <string name="mcl_setting_subtitle_javaargs">Zachowaj ostrożność, ponieważ wprowadzenie zmian bez odpowiedniej wiedzy może doprowadzić do awarii.</string>
+    <string name="mcl_setting_title_renderer_settings">Dodatkowe ustawienia silnika renderującego</string>
+    <string name="mcl_setting_title_renderer_subtitle">Ustawienia specyficzne dla silnika renderującego</string>
     <string name="mcl_setting_category_renderer">Silnik renderujący</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (wszystkie wersje, szybki)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (wszystkie wersje, średni)</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGl ES) - (tylko 1.17+, szybki)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - tylko 1.17+</string>
     <string name="mcl_setting_veroption_release">Oficjalne wydanie</string>
     <string name="mcl_setting_veroption_snapshot">Wersja deweloperska</string>
@@ -73,6 +77,7 @@
     <string name="global_select">Wybierz</string>
     <string name="global_retry">Ponów próbę</string>
     <string name="global_default">Domyślny</string>
+    <string name="global_off">Wyłączone</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Aplikacja/gra zakończyła się błędem o kodzie %d, sprawdź latestlog.txt, aby uzyskać więcej informacji.</string>
     <string name="mcn_signal_title">Aplikacja/gra zakończyła się błędem o kodzie %d, sprawdź plik latestlog.txt, aby uzyskać więcej informacji.</string>
@@ -357,4 +362,18 @@
     <string name="local_login_bad_username_title">Nieodpowiednia nazwa użytkownika</string>
     <string name="local_login_bad_username_text">Nazwa użytkownika musi posiadać od 3 do 16 znaków, i musi zawierać tylko latyńskie litery, numery od 0 do 9 oraz podkreślenia.</string>
     <string name="quick_setting_title">Szybkie ustawienia</string>
+    <string name="create_bta_profile">Utwórz profil \"Better than Adventure\"</string>
+    <string name="select_bta_version">Wybierz wersje \"Better than Adventure!\"</string>
+    <string name="bta_installer_available_versions">Wspierane wersje BTA</string>
+    <string name="bta_installer_untested_versions">Nie testowane wersje BTA</string>
+    <string name="bta_installer_nightly_versions">Wersje nightly BTA</string>
+    <string name="newdl_extracting_native_libraries">Wyodrębnianie natywnych bibliotek (%d/%d)</string>
+    <string name="toast_not_available_demo">To nie jest dostępne w trybie demonstracyjnym</string>
+    <string name="preference_renderer_mobileglues_settings">Ustawienia silnika renderującego MobileGlues</string>
+    <string name="mg_renderer_glsl_cache">Maksymalna ilość cache GLSL</string>
+    <string name="mg_renderer_angle">Używaj sterownika ANGLE</string>
+    <string name="mg_renderer_multidraw">Tryb emulacji multidraw</string>
+    <string name="mg_renderer_summary_gl43exts">Może pomagać z crashami związanymi z modami. Wyłącz, jeśli nie jest potrzebne, może powodować crashe.</string>
+    <string name="mg_renderer_summary_computeShaderext">Może pomagać z glitchami związanymi z paczkami shaderów. Wyłącz, jeśli nie jest potrzebne, może powodować crashe.</string>
+    <string name="app_short_name">Ametyst</string>
 </resources>

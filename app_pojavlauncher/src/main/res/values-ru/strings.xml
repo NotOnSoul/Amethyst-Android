@@ -115,6 +115,7 @@
     <string name="customctrl_button_opacity">Видимость кнопки</string>
     <string name="customctrl_addbutton">Добавить кнопку</string>
     <string name="customctrl_addbutton_drawer">Добавить группу кнопок</string>
+    <string name="customctrl_addbutton_joystick">Добавить джойстик</string>
     <string name="customctrl_addsubbutton">Добавить под-кнопку</string>
     <string name="customctrl_selectdefault">Выбрать основную</string>
     <string name="customctrl_export">Поделиться раскладкой</string>
@@ -135,6 +136,7 @@
     <string name="mcl_setting_subtitle_mousespeed">Изменить скорость указателя виртуальный мыши.</string>
     <string name="customctrl_passthru">Пропускать касание в игру</string>
     <string name="customctrl_swipeable">Пролистываемый</string>
+    <string name="customctrl_forward_lock">Блокировка движения вперёд</string>
     <string name="customctrl_absolute_tracking">Динамический центр</string>
     <string name="memory_warning_msg">Текущий объем свободной оперативной памяти (%d) меньше, чем выделенная (%d), что может привести к сбоям. Измените количество выделенной памяти при сбое игры.</string>
     <string name="address_memory_warning_msg">Текущий объём линейно адресуемой оперативной памяти (%d) меньше, чем выделенная (%d), что может привести к сбою. В случае сбоя игры измените количество выделенной памяти.</string>
@@ -350,6 +352,7 @@
     <string name="controller_remapper_exit_part1">Удерживайте</string>
     <string name="controller_remapper_exit_part2">, чтобы выйти</string>
     <string name="controller_remapper_operating_mode">Текущий режим</string>
+    <string name="customctrl_visibility_title">Видимость</string>
     <string name="customctrl_visibility_ingame">В игре</string>
     <string name="customctrl_visibility_in_menus">В меню</string>
     <string name="controller_remapper_expand_entry">Нажмите для изменения кодов клавиш</string>

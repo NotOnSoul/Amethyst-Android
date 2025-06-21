@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
+    <string name="app_name">Ametistas</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
@@ -240,4 +241,5 @@
     <string name="newdl_starting">Skaitoma žaidimo metadata…</string>
     <string name="newdl_downloading_metadata">Siunčiama žaidimo metadata (%s)</string>
     <string name="controller_button_select">Pasirinkti</string>
+    <string name="app_short_name">Ametistas</string>
 </resources>

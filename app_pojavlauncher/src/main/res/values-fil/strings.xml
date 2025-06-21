@@ -13,7 +13,7 @@
     <!-- Error messages -->
     <string name="error_fatal">Ang Amethyst ay hindi inaasahang nag-crash</string>
     <string name="error_no_version">Walang bersyon!</string>
-    <string name="error_show_more">Magpakita ng higit pa</string>
+    <string name="error_show_more">Tignan ang error</string>
     <string name="error_show_less">Magpakita ng kaunti</string>
     <!-- Toast messages -->
     <string name="toast_permission_denied">Kinakailangan ang basahin / sumulat sa pahintulot sa pag-iimbak!</string>
@@ -33,6 +33,9 @@
     <string name="mcl_setting_title_use_surface_view">Gumamit ng alternatibong surface rendering</string>
     <string name="mcl_setting_subtitle_use_surface_view">Maaaring makatulong sa performance sa GPU bound scenario.</string>
     <string name="mcl_setting_title_ignore_notch">Huwag pansinin ang notch</string>
+    <string name="mcl_setting_subtitle_ignore_notch">Tinatangal ang itim na linya sa ilalim ng kamera.\nMasmaganda ito tignan.</string>
+    <string name="mcl_setting_title_resolution_scaler">Pang-bago ng Resolusyon</string>
+    <string name="mcl_setting_subtitle_resolution_scaler">Ibahin ang iyon resolusyon, 100% ay kaparehas ng iyong screen.</string>
     <string name="mcl_setting_title_buttonscale">Pagkontrol sa pag-scale ng mga pindutan</string>
     <string name="mcl_setting_title_mousescale">Pag-scale ng mouse</string>
     <string name="mcl_setting_subtitle_javaargs">Mag-ingat, maaari itong mag-crash ng laro kung babaguhin nang walang kaalaman.</string>
@@ -55,6 +58,7 @@
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Lumabas ang application/Laro na may code na %d, tingnan ang latestlog.txt para sa higit pang mga detalye.</string>
     <string name="mcn_exit_confirm">Sigurado ka bang gusto mong pilitin na isara?</string>
+    <string name="mcn_check_fail_vulkan_support">Hindi ipwepwedeng gamitin ang Zink (Vulkan) sa inyong kagamitan.</string>
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Mag-usap</string>
     <string name="control_mouseoff">Mouse: naka-off</string>

@@ -401,4 +401,9 @@
     <string name="mg_renderer_summary_computeShaderext">可能有助于解决光影渲染异常。非必要请禁用，可能会导致错误。</string>
     <string name="mg_renderer_title_errorSetting">错误过滤</string>
     <string name="app_short_name">Amethyst</string>
+    <string name="demo_versions_supported">模拟账户仅支持原版 1.3.1 及以上版本</string>
+    <string name="demo_unsupported">不支持演示配置文件</string>
+    <string name="change_account">请更换账户来使用此功能</string>
+    <string name="no_minecraft_account_found">未找到 Minecraft 账户</string>
+    <string name="feature_requires_java_account">此功能需要拥有 Minecraft Java 版的 Microsoft 账户。</string>
 </resources>

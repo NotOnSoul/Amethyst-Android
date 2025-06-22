@@ -47,6 +47,7 @@
     <string name="mcl_setting_subtitle_javaargs">Hati-hati, ini bisa membuat game crash jika dimodifikasi tanpa sepengetahuan.</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (semua versi, cepat)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (semua versi, menengah)</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - (1.17+ saja, cepat)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - hanya untuk 1.17+</string>
     <string name="mcl_setting_veroption_release">Rilis</string>
     <string name="mcl_setting_veroption_oldalpha">Alpha-lama</string>
@@ -338,5 +339,11 @@
     <string name="local_login_bad_username_title">Username tidak cocok</string>
     <string name="local_login_bad_username_text">Panjang username harus diantara 3–16 karakter, dan harus hanya berisi huruf latin, nomor 0–9 dan mengaris bawahi.</string>
     <string name="quick_setting_title">Pengaturan cepat</string>
+    <string name="toast_not_available_demo">Fitur ini tidak tersedia dalam mode demo</string>
+    <string name="preference_renderer_mobileglues_settings">Setelan Renderer Untuk MobileGlues</string>
+    <string name="mg_renderer_angle">Gunakan ANGLE sebagai driver</string>
     <string name="app_short_name">Amethyst</string>
+    <string name="demo_unsupported">Profil Demo tidak di dukung</string>
+    <string name="change_account">Ganti akun terlebih dahulu untuk menggunakan fitur ini</string>
+    <string name="no_minecraft_account_found">Tidak Ada Akun Minecraft Java Yang Ditemukan</string>
 </resources>

@@ -182,6 +182,8 @@
     <string name="xerr_not_available">Xbox Live nėra jūsų šalyje</string>
     <string name="preference_enable_gyro_description">Įjungus leis pasisukti žaidime pasukant telefoną.</string>
     <string name="microsoft_login_retry_later">Per daug užklausų, pabandykite dar kartą vėliau.</string>
+    <string name="mcl_setting_subtitle_buttonallcaps">Išjunk tai, jei nori naudoti mažąsias raides.</string>
+    <string name="preference_shader_dump_title">Įjunk shader išmetimą.</string>
     <string name="customctrl_editor_exit_title">Išeinate?</string>
     <string name="customctrl_editor_exit_msg">Ar tikrai norite išeiti?</string>
     <string name="customctrl_editor_exit">Išeiti iš editoriaus</string>

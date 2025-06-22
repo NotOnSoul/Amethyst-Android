@@ -24,6 +24,7 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
+    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Membersihkan file cache</string>
@@ -64,24 +65,41 @@
     <string name="global_name">Nama</string>
     <string name="global_remove">Hapus</string>
     <string name="global_clone">Klon</string>
+    <string name="global_restart">Muat ulang</string>
     <string name="global_save">Simpan</string>
     <string name="global_unpacking">Membongkar %s</string>
     <string name="global_error_field_empty">Kolom ini tidak boleh kosong</string>
     <string name="global_waiting">Tunggu</string>
     <string name="global_select">Pilih</string>
     <string name="global_retry">Coba lagi</string>
+    <string name="global_default">Default</string>
+    <string name="global_off">Off</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Aplikasi/permainan keluar dengan kode %d, cek latestlog.txt untuk detail lebih lanjut.</string>
     <string name="mcn_signal_title">Aplikasi/Game keluar dengan sinyal fatal %d, cek latestlog.txt untuk detail lebih lanjut.</string>
     <string name="mcn_exit_confirm">Apa anda yakin mau tutup secara paksa?</string>
     <string name="mcn_check_fail_vulkan_support">Renderer Zink (Vulkan) tidak didukung di perangkat ini!</string>
     <!-- MainActivity: Control buttons -->
+    <string name="control_chat">Chat</string>
+    <string name="control_debug">Debug</string>
+    <string name="control_primary">Pri</string>
+    <string name="control_secondary">Sec</string>
+    <string name="control_shift">◇</string>
+    <string name="control_inventory">Inv</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">Ke-3</string>
+    <string name="control_listplayers">Tab</string>
+    <string name="control_mouse">Mouse</string>
     <string name="control_mouseoff">Mouse: mati</string>
     <string name="control_mouseon">Mouse: nyala </string>
     <!-- MainActivity: Menu advanced controls -->
     <string name="control_forceclose">Tutup secara paksa</string>
     <string name="control_viewout">Catatan log</string>
+    <string name="control_adebug">Input Debug</string>
     <string name="control_customkey">Kirim keycode kustom</string>
     <!-- ImportControlActivity Strings -->
     <string name="import_control_label">Impor kontrol</string>
@@ -122,6 +140,7 @@
     <string name="mcl_disable_swap_hand_subtitle">Nonaktifkan gestur ketuk dua kali pada item hotbar untuk menukarkannya di tangan kedua.</string>
     <string name="mcl_setting_title_mousespeed">Kecepatan Mouse</string>
     <string name="mcl_setting_subtitle_mousespeed">Ubah kecepatan mouse virtual.</string>
+    <string name="customctrl_passthru">Mouse pass-thru</string>
     <string name="customctrl_swipeable">Bisa digesek</string>
     <string name="customctrl_absolute_tracking">Pelacakan jari absolut</string>
     <string name="memory_warning_msg">Jumlah RAM kosong saat ini (%d) lebih rendah dari RAM yang dialokasikan (%d), yang dapat menyebabkan crash. Ubah alokasi jika game crash.</string>
@@ -135,6 +154,8 @@
     <string name="multirt_title">Pengelola Runtime</string>
     <string name="multirt_subtitle">Kelola Runtime Java terpasang.</string>
     <string name="multirt_progress_caching">Menyimpan cache...</string>
+    <string name="multirt_config_setdefault">Tetapkan sebagai default</string>
+    <string name="multirt_config_setdefault_already">Default</string>
     <string name="multirt_config_removeerror_last">Kamu harus punya setidaknya satu Runtime Java yang terpasang.</string>
     <string name="multirt_nocompatiblert">Tidak dapat mencari Java Runtime yang kompatibel. Versi ini membutuhkan Java %d atau lebih baru.</string>
     <string name="multirt_nojava8rt">Tidak dapat menemukan Java 8. Untuk menggunakan opsi ini, kamu perlu menginstal Java 8.</string>
@@ -179,6 +200,7 @@
     <string name="arc_capes_title">Capes Cosmetica</string>
     <string name="arc_capes_desc">Mengaktifkan capes dari Cosmetica (sebelumnya Arc). Untuk informasi lebih lanjut silahkan kunjungi https://cosmetica.cc. Membutuhkan OptiFine.</string>
     <string name="notif_channel_name">Umum</string>
+    <string name="lazy_service_default_title">Layanan Amethyst di Latar Depan</string>
     <string name="mcl_setting_veroption_installed">Terpasang</string>
     <string name="use_global_default">(Gunakan global bawaan)</string>
     <string name="default_control">Kontrol bawaan</string>
@@ -214,6 +236,8 @@
     <string name="create_profile">Buat profil baru</string>
     <string name="preference_shader_dump_title">Aktifkan shader dumping</string>
     <string name="preference_shader_dump_description">Simpan catatan shader ke sebuah berkas.</string>
+    <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Meninggalkan?</string>
     <string name="customctrl_editor_exit_msg">Anda yakin ingin keluar?</string>
     <string name="customctrl_editor_exit">Tinggalkan editor</string>
@@ -255,6 +279,7 @@
     <string name="preference_vulkan_driver_system_description">Paksa peluncur untuk menggunakan driver Vulkan sistem daripada Turnip di GPU Adreno. Hanya mempengaruhi Zink dan mod-mod yang menggunakan Vulkan.</string>
     <string name="generic_install">Pasang</string>
     <string name="generic_apply">Terapkan</string>
+    <string name="generic_debug">Debug</string>
     <string name="search_modpack_no_result">Tidak dapat menemukan paket modifikasi</string>
     <string name="search_modpack_error">Gagal mencari paket modifikasi</string>
     <string name="search_modpack_download_error">Gagal mengunduh metadata paket modifikasi</string>
@@ -338,12 +363,18 @@
     <string name="controller_remapper_expand_entry">Besarkan untuk mengganti kode kunci</string>
     <string name="preference_remap_controller_title">Ganti pengikatan kunci kontroller</string>
     <string name="preference_remap_controller_description">Memperbolehkan anda untuk memodifikasikan kunci yang terikat ke setiap tombol kontroller</string>
+    <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">GPU anda tidak mampu untuk merender diatas 7 jarak render tanpa menginstall Sodium atau modifikasi serupa. Jarak render akan di kurangi secara otomatis setelah anda mengklik \"OK\".</string>
     <string name="mcl_button_open_directory">Buka direktori permainan</string>
     <string name="local_login_bad_username_title">Username tidak cocok</string>
     <string name="local_login_bad_username_text">Panjang username harus diantara 3–16 karakter, dan harus hanya berisi huruf latin, nomor 0–9 dan mengaris bawahi.</string>
     <string name="quick_setting_title">Pengaturan cepat</string>
+    <string name="create_bta_profile">Buat profil \"Better than Adventure!\"</string>
     <string name="select_bta_version">Pilih versi \"Better than Adventure!\"</string>
+    <string name="bta_installer_available_versions">Versi BTA yang di dukung</string>
+    <string name="bta_installer_untested_versions">Versi BTA yang belum di uji</string>
+    <string name="bta_installer_nightly_versions">Versi BTA Nightly</string>
+    <string name="newdl_extracting_native_libraries">Mengekstrak pustaka native (%d/%d)</string>
     <string name="toast_not_available_demo">Fitur ini tidak tersedia dalam mode demo</string>
     <string name="preference_renderer_mobileglues_settings">Setelan Renderer Untuk MobileGlues</string>
     <string name="mg_renderer_glsl_cache">Ukuran Maksimum Cache GLSL</string>
@@ -353,6 +384,7 @@
     <string name="mg_renderer_summary_gl43exts">Dapat membantu menghindari crash karena mod. Matikan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
     <string name="mg_renderer_title_computeShaderext">Gunakan Ekstensi Compute Shader Eksperimental</string>
     <string name="mg_renderer_summary_computeShaderext">Mungkin membantu mengatasi glitch pada shaderpack. Nonaktifkan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
+    <string name="mg_renderer_title_errorSetting">Error Filtering</string>
     <string name="app_short_name">Amethyst</string>
     <string name="demo_versions_supported">Hanya Minecraft Vanilla versi 1.3.1 ke atas yang didukung untuk akun demo</string>
     <string name="demo_unsupported">Profil Demo tidak di dukung</string>

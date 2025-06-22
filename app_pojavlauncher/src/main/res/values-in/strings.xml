@@ -5,6 +5,7 @@
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
+    <string name="login_online_login_label">Masuk</string>
     <!-- Hint -->
     <string name="hint_control_mapping">"Sentuh roda gigi diatas tengah untuk membuka menu konteks ⚙️\nSentuh sebuah tombol untuk menyesuaikan: edit, ubah ukuran, atau ubah tombol pintasannya."</string>
     <!-- Warnings -->
@@ -13,7 +14,7 @@
     <string name="alerttitle_installmod">Pilih sebuah instaler mod</string>
     <!-- Error messages -->
     <string name="error_fatal">Amethyst tiba-tiba crash tanpa diduga</string>
-    <string name="error_no_version">Versi tidak ada!</string>
+    <string name="error_no_version">Tidak ada versi yang terdeteksi!</string>
     <string name="error_show_more">Selengkapnya</string>
     <string name="error_show_less">Tampilkan Sedikit</string>
     <!-- Toast messages -->
@@ -45,6 +46,8 @@
     <string name="mcl_setting_subtitle_mousescale">Ubah ukuran penunjuk virtual.</string>
     <string name="mcl_setting_title_javaargs">Argumen peluncuran JVM</string>
     <string name="mcl_setting_subtitle_javaargs">Hati-hati, ini bisa membuat game crash jika dimodifikasi tanpa sepengetahuan.</string>
+    <string name="mcl_setting_title_renderer_settings">Pengaturan Tambahan Renderer</string>
+    <string name="mcl_setting_title_renderer_subtitle">Pengaturan Khusus untuk Renderer</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (semua versi, cepat)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (semua versi, menengah)</string>
     <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - (1.17+ saja, cepat)</string>
@@ -208,6 +211,7 @@
     <string name="storage_required">PojavLauncher membutuhkan penyimpanan eksternal. Mohon untuk dipasang kembali dan merestart aplikasi.</string>
     <string name="mcl_setting_title_buttonallcaps">Hanya gunakan huruf kapital di label tombol</string>
     <string name="mcl_setting_subtitle_buttonallcaps">Matikan ini jika kamu ingin menggunakan huruf kecil di kontrol.</string>
+    <string name="create_profile">Buat profil baru</string>
     <string name="preference_shader_dump_title">Aktifkan shader dumping</string>
     <string name="preference_shader_dump_description">Simpan catatan shader ke sebuah berkas.</string>
     <string name="customctrl_editor_exit_title">Meninggalkan?</string>
@@ -339,11 +343,20 @@
     <string name="local_login_bad_username_title">Username tidak cocok</string>
     <string name="local_login_bad_username_text">Panjang username harus diantara 3–16 karakter, dan harus hanya berisi huruf latin, nomor 0–9 dan mengaris bawahi.</string>
     <string name="quick_setting_title">Pengaturan cepat</string>
+    <string name="select_bta_version">Pilih versi \"Better than Adventure!\"</string>
     <string name="toast_not_available_demo">Fitur ini tidak tersedia dalam mode demo</string>
     <string name="preference_renderer_mobileglues_settings">Setelan Renderer Untuk MobileGlues</string>
+    <string name="mg_renderer_glsl_cache">Ukuran Maksimum Cache GLSL</string>
     <string name="mg_renderer_angle">Gunakan ANGLE sebagai driver</string>
+    <string name="mg_renderer_multidraw">Mode Emulasi Multidraw</string>
+    <string name="mg_renderer_title_gl43exts">Gunakan Ekstensi Eksperimental OpenGL 4.3</string>
+    <string name="mg_renderer_summary_gl43exts">Dapat membantu menghindari crash karena mod. Matikan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
+    <string name="mg_renderer_title_computeShaderext">Gunakan Ekstensi Compute Shader Eksperimental</string>
+    <string name="mg_renderer_summary_computeShaderext">Mungkin membantu mengatasi glitch pada shaderpack. Nonaktifkan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
     <string name="app_short_name">Amethyst</string>
+    <string name="demo_versions_supported">Hanya Minecraft Vanilla versi 1.3.1 ke atas yang didukung untuk akun demo</string>
     <string name="demo_unsupported">Profil Demo tidak di dukung</string>
     <string name="change_account">Ganti akun terlebih dahulu untuk menggunakan fitur ini</string>
     <string name="no_minecraft_account_found">Tidak Ada Akun Minecraft Java Yang Ditemukan</string>
+    <string name="feature_requires_java_account">Fitur ini hanya tersedia untuk akun Microsoft yang telah membeli Minecraft Java Edition.</string>
 </resources>

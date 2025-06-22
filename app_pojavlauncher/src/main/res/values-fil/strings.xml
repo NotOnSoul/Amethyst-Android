@@ -40,6 +40,7 @@
     <string name="mcl_setting_title_mousescale">Pag-scale ng mouse</string>
     <string name="mcl_setting_subtitle_javaargs">Mag-ingat, maaari itong mag-crash ng laro kung babaguhin nang walang kaalaman.</string>
     <string name="mcl_setting_renderer_gles2_4">Holy Gl4ES - (lahat ng bersyon, mabilis)</string>
+    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Lumang-alpha</string>
     <string name="mcl_setting_veroption_oldbeta">Lumang-beta</string>
     <string name="mcl_version_clone">I-Clone</string>
@@ -88,6 +89,7 @@
     <string name="customctrl_button_opacity">Opacity ng Pindutan</string>
     <string name="customctrl_addbutton">Magdagdag ng pindutan</string>
     <string name="customctrl_addbutton_drawer">Magdagdag ng button drawer</string>
+    <string name="customctrl_addbutton_joystick">Lumagay ng joystick</string>
     <string name="customctrl_addsubbutton">Lagyan ng sub-button</string>
     <string name="main_share_logs">I-pasa ang log file</string>
     <string name="main_play">Maglaro</string>
@@ -101,6 +103,7 @@
     <string name="mcl_disable_swap_hand">Alisin ang pagdalawang pindot para palitan ang kamay</string>
     <string name="mcl_setting_title_mousespeed">Bilis ng Mouse</string>
     <string name="customctrl_swipeable">Pwede ma swipe</string>
+    <string name="customctrl_forward_lock">Pa-diretsong lock</string>
     <string name="memory_warning_msg">Ang kasalukuyang dami ng libreng RAM (%d) ay mas mababa kaysa sa inilalaan na RAM (%d), na maaaring humantong sa mga pag-crash. Baguhin ang paglalaan kung ang laro ay nag-crash.</string>
     <string name="mcl_memory_allocation">Paglalaan ng memorya</string>
     <string name="multirt_runtime_corrupt">Sirang Java Runtime</string>
@@ -136,4 +139,5 @@
     <string name="preference_category_java_tweaks">Mga tweaks sa Java</string>
     <string name="preference_category_miscellaneous">Karagdagang setting</string>
     <string name="controller_button_select">Iselekta</string>
+    <string name="customctrl_visibility_title">Pagkakakita</string>
 </resources>

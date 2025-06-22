@@ -358,6 +358,7 @@
     <string name="controller_remapper_exit_part1">Tahan</string>
     <string name="controller_remapper_exit_part2">untuk keluar</string>
     <string name="controller_remapper_operating_mode">Mode saat ini</string>
+    <string name="customctrl_visibility_title">Visibilitas</string>
     <string name="customctrl_visibility_ingame">Dalam permainan</string>
     <string name="customctrl_visibility_in_menus">Dalam menu</string>
     <string name="controller_remapper_expand_entry">Besarkan untuk mengganti kode kunci</string>

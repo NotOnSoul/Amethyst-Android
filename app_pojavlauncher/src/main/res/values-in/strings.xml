@@ -71,7 +71,7 @@
     <string name="global_clone">Klon</string>
     <string name="global_restart">Muat ulang</string>
     <string name="global_save">Simpan</string>
-    <string name="global_unpacking">Membongkar %s</string>
+    <string name="global_unpacking">Mengekstrak %s</string>
     <string name="global_error_field_empty">Kolom ini tidak boleh kosong</string>
     <string name="global_waiting">Tunggu</string>
     <string name="global_select">Select</string>
@@ -138,7 +138,7 @@
     <string name="mcl_setting_check_libraries">Periksa library setelah mendownload</string>
     <string name="mcl_setting_check_libraries_subtitle">Opsi ini memaksa peluncur untuk memeriksa hash library jika tersedia. Mencegah unduhan yang rusak.</string>
     <string name="dl_library_sha_fail">Library %s rusak dan akan di-unduh ulang</string>
-    <string name="dl_library_sha_unknown">Librry %s tidak dapat diperiksa, harus dianggap bagus</string>
+    <string name="dl_library_sha_unknown">Library %s tidak dapat diperiksa, harus dianggap bagus</string>
     <string name="dl_library_sha_pass">Library %s baik-baik saja dan dapat digunakan</string>
     <string name="mcl_disable_gestures">Matikan gestures</string>
     <string name="mcl_disable_gestures_subtitle">Mematikan gestures, seperti tahan lama untuk menghancurkan block, dan pencet untuk menempatkan block.</string>
@@ -179,7 +179,7 @@
     <string name="preference_java_description">Runtime Java, Argumen JVM, Jumlah RAM dan sandbox</string>
     <string name="preference_misc_title">Pengaturan lain-lain</string>
     <string name="preference_misc_description">Daftar versi dan pemeriksaan lib</string>
-    <string name="preference_experimental_title">Barang Eksperimental</string>
+    <string name="preference_experimental_title">Fitur Eksperimental</string>
     <string name="preference_experimental_description">Gunakan hal-hal di sana dengan pertimbangan, tidak ada dukungan</string>
     <string name="preference_sustained_performance_title">Aktifkan mode kinerja berkelanjutan</string>
     <string name="preference_sustained_performance_description">Batasi thermal throttling dengan cara membatasi performa maksimal.</string>
@@ -297,13 +297,13 @@
     <string name="modpack_download_downloading_mods_fc">Mengunduh mod-mod (Berkas %d dari %d)</string>
     <string name="modpack_download_applying_overrides">Menerapkan pergantian-pergantian paksa (%d/%d)</string>
     <string name="modpack_install_notification_title">Pemasang Modpack Pojav</string>
-    <string name="modpack_install_notification_success">Pencet ini untuk menyelesaikan pemasangan modpack</string>
+    <string name="modpack_install_notification_success">Klik di sini untuk menyelesaikan pemasangan modpack</string>
     <string name="modpack_install_notification_data_not_available">Gagal mengunduh informasi loader mod</string>
     <string name="modpack_install_modloader_download_failed">Gagal mengunduh berkas-berkas loader mod</string>
     <string name="modpack_install_download_failed">Gagal mengunduh berkas-berkas modpack</string>
     <string name="modpack_install_button">Buat profil modpack</string>
     <string name="notif_error_occured">Terjadi sebuah kesalahan</string>
-    <string name="notif_error_occured_desc">Pencet untuk melihat detail lebih lanjut</string>
+    <string name="notif_error_occured_desc">Klik untuk melihat detail lebih lanjut</string>
     <string name="fabric_dl_only_stable">Hanya tunjukkan versi-versi stabil</string>
     <string name="dl_tampered_manifest_title">Peringatan verifikasi berkas</string>
     <string name="dl_tampered_manifest"><![CDATA[Manifes versi permainan di mirror tidak sama dengan yang resmi dari Mojang, yang kemungkinan berarti manifesnya telah dimodifikasi oleh pihak lain.<br/>
@@ -381,8 +381,8 @@
     <string name="mcl_button_discord">Discord</string>
     <string name="ltw_render_distance_warning_msg">GPU anda tidak mampu untuk merender diatas 7 jarak render tanpa menginstall Sodium atau modifikasi serupa. Jarak render akan di kurangi secara otomatis setelah anda mengklik \"OK\".</string>
     <string name="mcl_button_open_directory">Buka direktori permainan</string>
-    <string name="local_login_bad_username_title">Username tidak cocok</string>
-    <string name="local_login_bad_username_text">Panjang username harus diantara 3–16 karakter, dan harus hanya berisi huruf latin, nomor 0–9 dan mengaris bawahi.</string>
+    <string name="local_login_bad_username_title">Nama pengguna tidak cocok</string>
+    <string name="local_login_bad_username_text">Nama pengguna harus 3–16 karakter, hanya boleh pakai huruf, angka, dan garis bawah.</string>
     <string name="quick_setting_title">Pengaturan cepat</string>
     <string name="create_bta_profile">Buat profil \"Better than Adventure!\"</string>
     <string name="select_bta_version">Pilih versi \"Better than Adventure!\"</string>

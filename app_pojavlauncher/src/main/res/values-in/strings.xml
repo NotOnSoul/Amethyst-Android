@@ -5,6 +5,7 @@
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
+    <string name="login_online_username_hint">Nama pengguna</string>
     <string name="login_online_login_label">Masuk</string>
     <!-- Hint -->
     <string name="hint_control_mapping">"Sentuh roda gigi diatas tengah untuk membuka menu konteks ⚙️\nSentuh sebuah tombol untuk menyesuaikan: edit, ubah ukuran, atau ubah tombol pintasannya."</string>
@@ -49,6 +50,7 @@
     <string name="mcl_setting_subtitle_javaargs">Hati-hati, ini bisa membuat game crash jika dimodifikasi tanpa sepengetahuan.</string>
     <string name="mcl_setting_title_renderer_settings">Pengaturan Tambahan Renderer</string>
     <string name="mcl_setting_title_renderer_subtitle">Pengaturan Khusus untuk Renderer</string>
+    <string name="mcl_setting_category_renderer">Renderer</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (semua versi, cepat)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (semua versi, menengah)</string>
     <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - (1.17+ saja, cepat)</string>
@@ -61,6 +63,7 @@
     <string name="mcl_setting_java_sandbox_subtitle">Kendalikan ketersedian pengelola keamanan sandbox saat meluncurkan berkas .jar.</string>
     <string name="mcl_version_clone">Klon</string>
     <!-- Global strings -->
+    <string name="global_edit">Ubah</string>
     <string name="global_error">Eror</string>
     <string name="global_load">Memuat</string>
     <string name="global_name">Nama</string>
@@ -115,6 +118,7 @@
 -->
     <string name="customctrl_toggle">Bisa dialihkan</string>
     <string name="customctrl_size">Ukuran</string>
+    <string name="customctrl_mapping">Pemetaan</string>
     <string name="customctrl_orientation">Orientasi</string>
     <string name="customctrl_background_color">Warna background</string>
     <string name="customctrl_corner_radius">Radius sudut</string>
@@ -144,6 +148,7 @@
     <string name="mcl_setting_subtitle_mousespeed">Ubah kecepatan mouse virtual.</string>
     <string name="customctrl_passthru">Mouse pass-thru</string>
     <string name="customctrl_swipeable">Bisa digesek</string>
+    <string name="customctrl_forward_lock">Kunci ke depan</string>
     <string name="customctrl_absolute_tracking">Pelacakan jari absolut</string>
     <string name="memory_warning_msg">Jumlah RAM kosong saat ini (%d) lebih rendah dari RAM yang dialokasikan (%d), yang dapat menyebabkan crash. Ubah alokasi jika game crash.</string>
     <string name="address_memory_warning_msg">Jumlah RAM kosong saat ini (%d) lebih rendah dari RAM yang dialokasikan (%d), yang dapat menyebabkan crash. Ubah alokasi jika game crash.</string>
@@ -200,10 +205,11 @@
     <string name="profiles_profile_version">Versi</string>
     <string name="global_delete">Hapus</string>
     <string name="pedit_java_runtime">Runtime Java</string>
+    <string name="pedit_renderer">Renderer</string>
     <string name="arc_capes_title">Capes Cosmetica</string>
     <string name="arc_capes_desc">Mengaktifkan capes dari Cosmetica (sebelumnya Arc). Untuk informasi lebih lanjut silahkan kunjungi https://cosmetica.cc. Membutuhkan OptiFine.</string>
     <string name="notif_channel_name">Umum</string>
-    <string name="lazy_service_default_title">Layanan Amethyst di Latar Depan</string>
+    <string name="lazy_service_default_title">Amethyst Sedang Berjalan Di Latar Depan</string>
     <string name="mcl_setting_veroption_installed">Terpasang</string>
     <string name="use_global_default">(Gunakan global bawaan)</string>
     <string name="default_control">Kontrol bawaan</string>

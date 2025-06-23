@@ -71,7 +71,7 @@
     <string name="global_unpacking">Membongkar %s</string>
     <string name="global_error_field_empty">Kolom ini tidak boleh kosong</string>
     <string name="global_waiting">Tunggu</string>
-    <string name="global_select">Pilih</string>
+    <string name="global_select">Select</string>
     <string name="global_retry">Coba lagi</string>
     <string name="global_default">Default</string>
     <string name="global_off">Off</string>
@@ -343,8 +343,12 @@
     <string name="log_view_label_log_output">Keluaran log:</string>
     <string name="execute_jar_failed_to_read_file">Gagal membaca dokumen .jar</string>
     <string name="execute_jar_incompatible_runtime">Fitur eksekusi .jar tidak kompatibel dengan Java %d</string>
+    <string name="controller_button_a">A</string>
+    <string name="controller_button_b">B</string>
+    <string name="controller_button_x">X</string>
+    <string name="controller_button_y">Y</string>
     <string name="controller_button_start">Start</string>
-    <string name="controller_button_select">Pilih</string>
+    <string name="controller_button_select">Select</string>
     <string name="controller_button_trigger_left">Pemicu Kiri</string>
     <string name="controller_button_trigger_right">Pemicu Kanan</string>
     <string name="controller_button_shoulder_left">Bahu Kiri</string>

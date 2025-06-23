@@ -54,6 +54,7 @@
     <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - (1.17+ saja, cepat)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - hanya untuk 1.17+</string>
     <string name="mcl_setting_veroption_release">Rilis</string>
+    <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Alpha-lama</string>
     <string name="mcl_setting_veroption_oldbeta">Beta-lama</string>
     <string name="mcl_setting_java_sandbox">Sandbox eksekusi .jar</string>
@@ -122,6 +123,7 @@
     <string name="customctrl_button_opacity">Opasitas Tombol</string>
     <string name="customctrl_addbutton">Tambah tombol</string>
     <string name="customctrl_addbutton_drawer">Tambahkan tombol drawer</string>
+    <string name="customctrl_addbutton_joystick">Tambahkan joystick</string>
     <string name="customctrl_addsubbutton">Tambahkan tombol</string>
     <string name="customctrl_selectdefault">Pilih kontrol default</string>
     <string name="customctrl_export">Ekspor Penataan Kontrol</string>
@@ -195,6 +197,7 @@
     <string name="profiles_latest_snapshot">Snapshot terbaru</string>
     <string name="profiles_latest_release">Rilis terbaru</string>
     <string name="profiles_profile_name">Nama</string>
+    <string name="profiles_profile_version">Versi</string>
     <string name="global_delete">Hapus</string>
     <string name="pedit_java_runtime">Runtime Java</string>
     <string name="arc_capes_title">Capes Cosmetica</string>
@@ -340,6 +343,7 @@
     <string name="log_view_label_log_output">Keluaran log:</string>
     <string name="execute_jar_failed_to_read_file">Gagal membaca dokumen .jar</string>
     <string name="execute_jar_incompatible_runtime">Fitur eksekusi .jar tidak kompatibel dengan Java %d</string>
+    <string name="controller_button_start">Start</string>
     <string name="controller_button_select">Pilih</string>
     <string name="controller_button_trigger_left">Pemicu Kiri</string>
     <string name="controller_button_trigger_right">Pemicu Kanan</string>

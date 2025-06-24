@@ -401,4 +401,9 @@
     <string name="mg_renderer_summary_computeShaderext">Может помочь при сбоях набора шейдеров. Отключите, если не требуется, может привести к сбоям.</string>
     <string name="mg_renderer_title_errorSetting">Ошибка фильтрации</string>
     <string name="app_short_name">Amethyst</string>
+    <string name="demo_versions_supported">Только ванильные версии от 1.3.1 поддерживается для демонстрационных учётных записей</string>
+    <string name="demo_unsupported">Демо-профиль не поддерживается</string>
+    <string name="change_account">Пожалуйста, измените учётную запись для использования этой функции</string>
+    <string name="no_minecraft_account_found">Не найдено учётной записи Minecraft</string>
+    <string name="feature_requires_java_account">Для этой функции требуется учётная запись Microsoft, владеющая копией Minecraft Java Edition.</string>
 </resources>

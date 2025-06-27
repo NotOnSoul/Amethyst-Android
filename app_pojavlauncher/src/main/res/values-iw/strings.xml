@@ -42,7 +42,7 @@
     <string name="mcl_setting_title_buttonscale">קנה המידה של כפתורי השליטה</string>
     <string name="mcl_setting_subtitle_buttonscale">מגדיל את הכפתורים אם הם קטנים מדי.</string>
     <string name="mcl_setting_title_mousescale">קנה המידה של העכבר</string>
-    <string name="mcl_setting_subtitle_mousescale">שנה את גודל העכבר הווירטואלי.</string>
+    <string name="mcl_setting_subtitle_mousescale">שנה את גודל העכבר הוירטואלי.</string>
     <string name="mcl_setting_title_javaargs">פרמטרים להפעלת JVM</string>
     <string name="mcl_setting_subtitle_javaargs">זהירות! שינוי ערכים אלה ללא ידע מתאים עלול לגרום למשחק לקרוס.</string>
     <string name="mcl_setting_category_renderer">רינדור</string>
@@ -52,7 +52,7 @@
     <string name="mcl_setting_veroption_snapshot">סנאפשוט</string>
     <string name="mcl_setting_veroption_oldalpha">אלפא: גרסה ישנה</string>
     <string name="mcl_setting_veroption_oldbeta">בטא: גרסה ישנה</string>
-    <string name="mcl_setting_java_sandbox">הפעלת .jar בארגז חול</string>
+    <string name="mcl_setting_java_sandbox">הפעלת .jar ב sandbox</string>
     <string name="mcl_setting_java_sandbox_subtitle">\"שלוט בנגישות של מנהל האבטחה sandbox בעת הפעלת קובץ .jar.\".</string>
     <string name="mcl_version_clone">שכפול</string>
     <!-- Global strings -->
@@ -123,7 +123,7 @@
     <string name="mcl_disable_swap_hand">השבת לחיצה כפולה להעברת ידיים</string>
     <string name="mcl_disable_swap_hand_subtitle">השבת לחיצה כפולה על פריט בסרגל הקיצורים להחליפו ביד השנייה.</string>
     <string name="mcl_setting_title_mousespeed">מהירות העכבר</string>
-    <string name="mcl_setting_subtitle_mousespeed">\"משנה את מהירות העכבר המדומה</string>
+    <string name="mcl_setting_subtitle_mousespeed">\"משנה את מהירות העכבר הוירטואלי</string>
     <string name="customctrl_passthru">עכבר עובר דרך</string>
     <string name="customctrl_swipeable">ניתן להחלקה</string>
     <string name="memory_warning_msg">הכמות הנוכחית של RAM פנוי (%d) נמוכה מכמות ה-RAM שהוקצתה (%d), מה שעלול לגרום למשחק לקרוס. הנך מתבקש לשנות את ההקצאה במידה והמשחק קורס.</string>
@@ -144,13 +144,13 @@
     <string name="pvc_gameDirectory">תיקיית המשחק</string>
     <string name="pvc_jvmArgs">פרמטרים של JVM</string>
     <string name="preference_mouse_start_title">התחל עם עכבר וירטואלי מופעל</string>
-    <string name="preference_mouse_start_description">העכבר המדומה מופיע בעת ההפעלה כאשר אפשרות זו מופעלת</string>
+    <string name="preference_mouse_start_description">העכבר הוירטואלי מופיע בעת ההפעלה כאשר אפשרות זו מופעלת</string>
     <string name="preference_video_title">וידאו ועיבוד</string>
     <string name="preference_video_description">רזולוציה רנדר וביצועים</string>
     <string name="preference_control_title">התאמה אישית של פקדים</string>
     <string name="preference_control_description">מחוות, לחצנים וקנה מידה</string>
     <string name="preference_java_title">התאמות ל- Java</string>
-    <string name="preference_java_description">ג\'אווה רנטיים, JVM ארגומנטס כמות ראם וארגז חול</string>
+    <string name="preference_java_description">ג\'אווה רנטיים, JVM ארגומנטס כמות ראם ו sandbox</string>
     <string name="preference_misc_title">הגדרות שונות</string>
     <string name="preference_misc_description">רשימת גרסאות ובדיקת ספריות</string>
     <string name="preference_experimental_title">דברים ניסיוניים</string>

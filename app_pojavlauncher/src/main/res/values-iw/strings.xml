@@ -195,7 +195,7 @@
     <string name="xerr_child">חשבון שלך הוא חשבון ילדים וצריך להיכנס למשפחה על מנת להיכנס.</string>
     <string name="minecraft_not_owned">נראה שאין לחשבון הזה פרופיל Minecraft. אם יש לך Xbox Game Pass, אנא התחבר ל- https://minecraft.net/ והגדר אותו.</string>
     <string name="xerr_not_available">Xbox Live אינו זמין במדינה שלך</string>
-    <string name="preference_enable_gyro_description">הפעלת זה יאפשר לך להסתובב במשחק על ידי סיבוב הטלפון.</string>
+    <string name="preference_enable_gyro_description">הפעלה של זה תאפשר לך להסתובב במשחק על ידי סיבוב הטלפון.</string>
     <string name="preference_gyro_sensitivity_description">כוון את הרגישות של בקרי חיישן כיוון.</string>
     <string name="toast_turn_on_gyro">הפעלו קודם את בקרי חיישן הכיוון בכדי להשתמש בזה!</string>
     <string name="preference_gyro_sample_rate_title">קצב דגימת חיישן הכיוון</string>

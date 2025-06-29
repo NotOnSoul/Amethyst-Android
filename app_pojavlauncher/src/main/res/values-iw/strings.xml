@@ -7,6 +7,7 @@
     <!-- Login strings -->
     <string name="login_online_login_label">התחבר</string>
     <!-- Hint -->
+    <string name="hint_control_mapping">"גע בגלגל השיניים העליון במרכז כדי לפתוח את תפריט ההקשר ⚙\nהקש על כפתור כדי להתאים אישית: לערוך, לשנות גודל, להסיר או לשנות את קביעות המקשים שלו."</string>
     <!-- Warnings -->
     <string name="warning_remove_account">החשבון יוסר!</string>
     <!-- AlertDialog title -->
@@ -46,9 +47,13 @@
     <string name="mcl_setting_subtitle_mousescale">שנה את גודל העכבר הוירטואלי.</string>
     <string name="mcl_setting_title_javaargs">פרמטרים להפעלת JVM</string>
     <string name="mcl_setting_subtitle_javaargs">זהירות! שינוי ערכים אלה ללא ידע מתאים עלול לגרום למשחק לקרוס.</string>
+    <string name="mcl_setting_title_renderer_settings">הגדרות רינדור נוספות</string>
+    <string name="mcl_setting_title_renderer_subtitle">הגדרות ספציפיות לרינדור</string>
     <string name="mcl_setting_category_renderer">רינדור</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (כל הגרסאות, מהיר)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (כל הגרסאות, בינוני)</string>
+    <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - (גרסה 1.17+ בלבד, מהיר)</string>
+    <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - גרסה 1.17+ בלבד</string>
     <string name="mcl_setting_veroption_release">הפצה</string>
     <string name="mcl_setting_veroption_snapshot">סנאפשוט</string>
     <string name="mcl_setting_veroption_oldalpha">אלפא: גרסה ישנה</string>
@@ -70,13 +75,20 @@
     <string name="global_waiting">המתן</string>
     <string name="global_retry">ניסיון חוזר</string>
     <string name="global_default">ברירת מחדל</string>
+    <string name="global_off">כבוי</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">היישומון / המשחק קרס, עם קוד שגיאה %d, בדוק את latestlog.txt למידע נוסף.</string>
+    <string name="mcn_signal_title">היישומון/המשחק הופסק על ידי אות קריטי %d, בדוק את latestlog.txt למידע נוסף.</string>
     <string name="mcn_exit_confirm">האם אתה בטוח שאתה רוצה לכפות כיבוי?</string>
     <string name="mcn_check_fail_vulkan_support">Zink (Vulkan) אינו נתמך במכשיר הזה!</string>
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">צ\'אט</string>
     <string name="control_debug">נפה באגים</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
     <string name="control_mouse">עכבר</string>
     <string name="control_mouseoff">עכבר: מושבת</string>
     <string name="control_mouseon">עכבר: פעיל </string>
@@ -230,7 +242,13 @@
     <string name="fabric_dl_progress">מוריד מטא נתונים של מטעין %s</string>
     <string name="fabric_dl_loader_version">גרסת מטעין %s</string>
     <string name="fabric_dl_game_version">גרסת מינקראפט</string>
+    <string name="fabric_dl_install">התקן</string>
+    <string name="modloader_dl_install_fabric">צור פרופיל Fabic</string>
+    <string name="modloader_dl_install_quilt">צור פרופיל  Quilt</string>
+    <string name="modloader_dl_install_forge">צור פרופיל Forge</string>
+    <string name="create_profile_vanilla">צור פרופיל vanilla</string>
     <string name="of_dl_progress">מוריד %s</string>
+    <string name="generic_install">התקן</string>
     <string name="generic_debug">נפה באגים</string>
     <string name="preference_category_java_tweaks">התאמות ל- Java</string>
     <string name="preference_category_miscellaneous">הגדרות שונות</string>

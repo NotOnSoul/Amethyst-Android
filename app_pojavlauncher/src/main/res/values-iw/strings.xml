@@ -84,6 +84,7 @@
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">צ\'אט</string>
     <string name="control_debug">נפה באגים</string>
+    <string name="control_primary"></string>
     <string name="control_up">▲</string>
     <string name="control_left">◀</string>
     <string name="control_right">▶</string>
@@ -122,7 +123,7 @@
     <string name="customctrl_addsubbutton">הוסף תת-כפתור</string>
     <string name="customctrl_selectdefault">בחר מפה בקרים ברירת מחדל</string>
     <string name="customctrl_export">יצא מפת בקר</string>
-    <string name="main_share_logs">שתף קובץ יומן</string>
+    <string name="main_share_logs">שתף קובץ log</string>
     <string name="main_install_jar_file">הפעל קובץ .jar</string>
     <string name="main_play">הפעל</string>
     <string name="autoram_info_msg">זיכרון הוגדר ל %d MB</string>
@@ -222,7 +223,7 @@
     <string name="mcl_setting_title_buttonallcaps">השתמש באותיות גדולות בלבד בתוויות הכפתורים.</string>
     <string name="mcl_setting_subtitle_buttonallcaps">השבת אפשרות זו אם ברצונך להשתמש באותיות קטנות בבקרים שלך.</string>
     <string name="preference_shader_dump_title">אפשר השלכת הצללה</string>
-    <string name="preference_shader_dump_description">רישום הצללות שהומרו לקובץ היומן.</string>
+    <string name="preference_shader_dump_description">רישום הצללות שהומרו לקובץ ה log.</string>
     <string name="percent_format">%d%%</string>
     <string name="customctrl_editor_exit_title">עזיבה?</string>
     <string name="customctrl_editor_exit_msg">האם אתה בטוח שברצונך לצאת?</string>
@@ -269,7 +270,16 @@
     <string name="modpack_download_downloading_metadata">הורדת metadata של modpack (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods">מוריד מודים (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods_fc">מוריד מודים (קובץ %d מתוך %d)</string>
+    <string name="notif_error_occured">אירעה שגיאה</string>
+    <string name="dl_tampered_manifest_title">אזהרת אימות קובץ</string>
+    <string name="dl_tampered_manifest"><![CDATA[Manifest של גרסת המשחק בשרת המראה לא תואם ל-Manifest הרשמי של Mojang, מה שעשוי להעיד על שינוי.<br/>
+<b>זה לא בטוח. המידע האישי שלך עלול להיות בסיכון אם תמשיך.</b><br/>
+אם אתה עדיין רוצה להשתמש בשרת המראה, לחץ על "כיבוי בדיקות Manifest" והתחל את ההורדה מחדש.<br/>
+אם אתה רוצה להשתמש במקור ההורדה הרשמי, לחץ על "מעבר לאתר הרשמי" והתחל את ההורדה מחדש.<br/>]]></string>
+    <string name="dl_turn_off_manifest_checks">כבה את בדיקות manifest</string>
+    <string name="dl_switch_to_official_site">מעבר לאתר הרשמי</string>
     <string name="preference_download_source_title">מקור הורדת משחק</string>
+    <string name="preference_download_source_description">בחר שרת מראה להורדה במקום להשתמש בשרת ההורדה הרשמי</string>
     <string name="preference_verify_manifest_title">אימות manifest גרסת המשחק</string>
     <string name="preference_verify_manifest_description">כאשר הוא מופעל, המשגר יבדוק את manifest גרסת המשחק יחד עם הספריות.</string>
     <string name="notif_download_finished">המשחק מוכן להרצה</string>
@@ -280,11 +290,14 @@
     <string name="preference_category_main_categories">קטגוריות</string>
     <string name="preference_category_miscellaneous">הגדרות שונות</string>
     <string name="preference_category_video">הגדרות וידאו</string>
+    <string name="notification_permission_dialog_title">בקשת הרשאה</string>
     <string name="notification_permission_dialog_text">PojavLauncher דורש הרשאה לפרסום התראות כדי למנוע הפסקת הורדות של משחקים/מודים כשאתה עוזב את האפליקציה. ללא הרשאה זו, אנדרואיד עשויה לכבות את ההורדות שלך כשאתה מעביר את PojavLauncher למצב רקע.</string>
+    <string name="notification_permission_toast">תמיד ניתן לשנות את דעתך מאוחר יותר על ידי כניסה להגדרות</string>
     <string name="preference_ask_for_notification_title">אפשר התראות</string>
     <string name="preference_ask_for_notification_description">לחץ כדי לבקש מחדש את הרשאת ההתראה, הנדרשת כדי שהורדות ברקע של המשחק/modpack יפעלו כראוי.</string>
     <string name="preference_vsync_in_zink_title">אפשר VSync עם Zink</string>
     <string name="preference_vsync_in_zink_description">מאפשר למפעיל להשתמש בממשקי API פנימיים של המערכת כדי להפעיל את V-Sync עבור Zink. כבה אפשרות זו אם המפעיל שלך קורס פתאום עם Zink לאחר עדכון מערכת.</string>
+    <string name="exception_failed_to_unpack_jre17">נכשלה ההתקנה של JRE 17</string>
     <string name="newdl_starting">קורא metadata של משחק…</string>
     <string name="newdl_downloading_metadata">מוריד metadata של משחק</string>
     <string name="newdl_downloading_game_files">מוריד את המשחק… (%d/%d, %.2f MB/s)</string>

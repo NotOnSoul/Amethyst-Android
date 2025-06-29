@@ -269,6 +269,9 @@
     <string name="modpack_download_downloading_metadata">הורדת metadata של modpack (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods">מוריד מודים (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods_fc">מוריד מודים (קובץ %d מתוך %d)</string>
+    <string name="preference_download_source_title">מקור הורדת משחק</string>
+    <string name="preference_verify_manifest_title">אימות manifest גרסת המשחק</string>
+    <string name="preference_verify_manifest_description">כאשר הוא מופעל, המשגר יבדוק את manifest גרסת המשחק יחד עם הספריות.</string>
     <string name="notif_download_finished">המשחק מוכן להרצה</string>
     <string name="notif_download_finished_desc">לחצו כאן כדי להתחיל!</string>
     <string name="preference_category_gestures">מחוות</string>
@@ -283,6 +286,7 @@
     <string name="preference_vsync_in_zink_title">אפשר VSync עם Zink</string>
     <string name="preference_vsync_in_zink_description">מאפשר למפעיל להשתמש בממשקי API פנימיים של המערכת כדי להפעיל את V-Sync עבור Zink. כבה אפשרות זו אם המפעיל שלך קורס פתאום עם Zink לאחר עדכון מערכת.</string>
     <string name="newdl_starting">קורא metadata של משחק…</string>
+    <string name="newdl_downloading_metadata">מוריד metadata של משחק</string>
     <string name="newdl_downloading_game_files">מוריד את המשחק… (%d/%d, %.2f MB/s)</string>
     <string name="newdl_downloading_game_files_size">מוריד את המשחק… (%.2f/%.2f MB, %.2f MB/s)</string>
     <string name="cropper_reset">אפס</string>

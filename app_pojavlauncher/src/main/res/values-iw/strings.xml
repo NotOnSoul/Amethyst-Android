@@ -249,10 +249,13 @@
     <string name="fabric_dl_loader_version">גרסת מטעין %s</string>
     <string name="fabric_dl_game_version">גרסת מינקראפט</string>
     <string name="fabric_dl_install">התקן</string>
+    <string name="fabric_dl_cant_read_meta">קריאה של Metadata של ה-%s loader נכשלה. אנא נסה שוב מאוחר יותר.</string>
     <string name="modloader_dl_install_fabric">צור פרופיל Fabic</string>
     <string name="modloader_dl_install_quilt">צור פרופיל  Quilt</string>
     <string name="modloader_dl_install_forge">צור פרופיל Forge</string>
     <string name="create_profile_vanilla">צור פרופיל vanilla</string>
+    <string name="create_profile_vanilla_like_versions">גרסאות כמו Vanilla</string>
+    <string name="create_profile_modded_versions">גרסה מותאמת למודים</string>
     <string name="fabric_dl_loader_title">בחר גרסאות</string>
     <string name="of_dl_select_version">בחר גרסת Optifine</string>
     <string name="of_dl_failed_to_scrape">איסוף נתונים עבור התקנת OptiFine נכשל</string>
@@ -270,7 +273,16 @@
     <string name="modpack_download_downloading_metadata">הורדת metadata של modpack (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods">מוריד מודים (%.2f MB / %.2f MB)</string>
     <string name="modpack_download_downloading_mods_fc">מוריד מודים (קובץ %d מתוך %d)</string>
+    <string name="modpack_download_applying_overrides">החלת עקיפות (%d/%d)</string>
+    <string name="modpack_install_notification_title">מתקין modpack של pojav</string>
+    <string name="modpack_install_notification_success">לחץ כאן כדי לסיים את התקנת ה modpack</string>
+    <string name="modpack_install_notification_data_not_available">נכשל בהורדת מידע על mod loader</string>
+    <string name="modpack_install_modloader_download_failed">נכשל בהורדת קבצי mod</string>
+    <string name="modpack_install_download_failed">נכשל בהורדת קבצי המוד-חבילות</string>
+    <string name="modpack_install_button">צור פרופיל modpack</string>
     <string name="notif_error_occured">אירעה שגיאה</string>
+    <string name="notif_error_occured_desc">לחץ כדי לראות פרטים נוספים</string>
+    <string name="fabric_dl_only_stable">הצג רק גרסאות יציבות</string>
     <string name="dl_tampered_manifest_title">אזהרת אימות קובץ</string>
     <string name="dl_tampered_manifest"><![CDATA[Manifest של גרסת המשחק בשרת המראה לא תואם ל-Manifest הרשמי של Mojang, מה שעשוי להעיד על שינוי.<br/>
 <b>זה לא בטוח. המידע האישי שלך עלול להיות בסיכון אם תמשיך.</b><br/>

@@ -59,7 +59,7 @@
     <string name="mcl_setting_veroption_snapshot">Snapshot</string>
     <string name="mcl_setting_veroption_oldalpha">Alpha cũ</string>
     <string name="mcl_setting_veroption_oldbeta">Beta cũ</string>
-    <string name="mcl_setting_java_sandbox">Thực thi tệp .jar trong hộp cát</string>
+    <string name="mcl_setting_java_sandbox">Chạy tệp .jar trong môi trường tách biệt</string>
     <string name="mcl_setting_java_sandbox_subtitle">Bật hoặc tắt trình quản lý bảo mật môi trường tách biệt khi chạy tệp .jar.</string>
     <string name="mcl_version_clone">Tạo bản sao</string>
     <!-- Global strings -->
@@ -401,4 +401,9 @@
     <string name="mg_renderer_summary_computeShaderext">Có thể giúp giảm hiện tượng lỗi trên các gói shader. Tính năng cũng có thể gây thoát đột ngột, hãy tắt nếu không cần thiết.</string>
     <string name="mg_renderer_title_errorSetting">Lọc lỗi</string>
     <string name="app_short_name">Amethyst</string>
+    <string name="demo_versions_supported">Tài khoản chơi thử chỉ hỗ trợ chạy phiên bản từ 1.3.1 trở lên</string>
+    <string name="demo_unsupported">Không hỗ trợ chế độ chơi thử</string>
+    <string name="change_account">Vui lòng thay đổi tài khoản để sử dụng chức năng này</string>
+    <string name="no_minecraft_account_found">Không tìm thấy tài khoản Minecraft nào</string>
+    <string name="feature_requires_java_account">Tính năng này yêu cầu sử dụng tài khoản Microsoft đã mua Minecraft Java.</string>
 </resources>

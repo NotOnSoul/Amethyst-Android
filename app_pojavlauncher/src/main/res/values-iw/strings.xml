@@ -161,8 +161,8 @@
     <string name="pvc_jvmArgs">פרמטרים של JVM</string>
     <string name="preference_mouse_start_title">התחל עם עכבר וירטואלי מופעל</string>
     <string name="preference_mouse_start_description">העכבר הוירטואלי מופיע בעת ההפעלה כאשר אפשרות זו מופעלת</string>
-    <string name="preference_video_title">וידאו ועיבוד</string>
-    <string name="preference_video_description">רזולוציה רנדר וביצועים</string>
+    <string name="preference_video_title">וידאו ורינדור</string>
+    <string name="preference_video_description">רזולוציה רינדור וביצועים</string>
     <string name="preference_control_title">התאמה אישית של פקדים</string>
     <string name="preference_control_description">מחוות, לחצנים וקנה מידה</string>
     <string name="preference_java_title">התאמות ל- Java</string>
@@ -237,7 +237,7 @@
     <string name="preference_wipe_controller_description">מאפשר לך למפות מחדש את כפתורי הבקר.</string>
     <string name="preference_deadzone_scale_title">סולם אזור מת של ג\'ויסטיק</string>
     <string name="preference_deadzone_scale_description">הגדל את הערך אם הג\'ויסטיק נסחף.</string>
-    <string name="preference_force_big_core_title">כפה על מנוע הרינדור לפעול על הליבה הגדולה.</string>
+    <string name="preference_force_big_core_title">כפה על מנוע הרינדור לפעול על הליבה הגדולה</string>
     <string name="preference_force_big_core_desc">מאלץ על תהליכון הרינדור של Minecraft לפעול על הליבה עם תדר הפעולה המרבי הגבוה ביותר.</string>
     <string name="version_select_hint">בחר גרסה</string>
     <string name="forge_dl_progress">מוריד מתקין עבור %s</string>
@@ -327,6 +327,12 @@
     <string name="customctrl_visibility_in_menus">בתפריט</string>
     <string name="preference_remap_controller_description">מאפשר לך לשנות את מקשי המקלדת הקשורים לכל כפתור בקר</string>
     <string name="mcl_button_open_directory">פתח תייקית משחק</string>
+    <string name="local_login_bad_username_title">שם משתמש לא מתאים</string>
+    <string name="quick_setting_title">הגדרות מהירות</string>
+    <string name="preference_renderer_mobileglues_settings">הגדרות רינדור MobileGlues</string>
+    <string name="mg_renderer_angle">השתמש ב-ANGLE כדריבר</string>
+    <string name="mg_renderer_summary_gl43exts">עשוי לעזור עם תקלות ב-shaderpack. השבת אם אין צורך בכך, עלול לגרום לקריסות.</string>
+    <string name="mg_renderer_summary_computeShaderext">עשוי לעזור עם תקלות ב-shaderpack. השבת אם אין צורך בכך, עלול לגרום לקריסות.</string>
     <string name="app_short_name">Amethyst</string>
     <string name="feature_requires_java_account">תכונה זו דורשת חשבון Microsoft שבבעלותו Minecraft Java Edition.</string>
 </resources>

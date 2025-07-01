@@ -83,7 +83,7 @@
     <string name="mcn_check_fail_vulkan_support">Zink (Vulkan) אינו נתמך במכשיר הזה!</string>
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">צ\'אט</string>
-    <string name="control_debug">נפה באגים</string>
+    <string name="control_debug">F3</string>
     <string name="control_primary">Pri</string>
     <string name="control_secondary">Sec</string>
     <string name="control_shift">◇</string>
@@ -271,7 +271,7 @@
     <string name="preference_vulkan_driver_system_description">אלץ את המשגר להשתמש בדרייבר Vulkan של המערכת במקום Turnip במעבדי גרפיקה של Adreno. משפיע רק על Zink ועל מודים המשתמשים ב-Vulkan.</string>
     <string name="generic_install">התקן</string>
     <string name="generic_apply">החל</string>
-    <string name="generic_debug">נפה באגים</string>
+    <string name="generic_debug">F3</string>
     <string name="search_modpack_no_result">לא נמצאו modpacks</string>
     <string name="search_modpack_error">נכשל במציאת modpacks</string>
     <string name="search_modpack_download_error">מכל בהורדת modpack metadata</string>

@@ -107,7 +107,7 @@
     <string name="import_control_label">ייבוא פקדים</string>
     <string name="import_control_invalid_file">קובץ שגוי או פגום</string>
     <string name="import_control_import_button">ייבוא פקדים</string>
-    <string name="import_control_verifying_file">הקובץ נמצא באימות, אנא המתן ונסה שוב…</string>
+    <string name="import_control_verifying_file">הקובץ נמצא באימות, בבקשה המתנ/י ונסה או נסי שוב…</string>
     <string name="import_control_invalid_name">שם שגוי או שהקובץ כבר קיים</string>
     <string name="import_control_done">ייבוא בוצע</string>
     <!--
@@ -209,14 +209,14 @@
     <string name="folder_fragment_create">צור תיקייה</string>
     <string name="folder_fragment_select">בחר תיקייה</string>
     <string name="main_login_done">התחברות הושלמה.</string>
-    <string name="tasks_ongoing">משימות בתהליך, אנא המתן.</string>
+    <string name="tasks_ongoing">משימות בתהליך, בבקשה המתנ/י.</string>
     <string name="no_saved_accounts">לא נשמר חשבון</string>
     <string name="mc_download_failed">כשל בהורדת Minecraft! זה עלול להיות כתוצאה מקשר רשת לקוי, קבצים שלא הונחו נכון, וכו\'.</string>
     <string name="xerr_unknown">שגיאה לא ידועה בממשק ה API של Xbox Live: %d</string>
-    <string name="xerr_no_account">נראה שאין לך חשבון Xbox Live. אנא התחבר פעם אחת ב- https://minecraft.net/ ונסה שוב.</string>
+    <string name="xerr_no_account">נראה שאין לך חשבון Xbox Live. בבקשה תתחבר/י פעם אחת ב- https://minecraft.net/ ונסה שוב.</string>
     <string name="xerr_adult_verification">אדם בוגר צריך לאמת את חשבונך.</string>
     <string name="xerr_child">חשבון שלך הוא חשבון ילדים וצריך להיכנס למשפחה על מנת להיכנס.</string>
-    <string name="minecraft_not_owned">נראה שאין לחשבון הזה פרופיל Minecraft. אם יש לך Xbox Game Pass, אנא התחבר ל- https://minecraft.net/ והגדר אותו.</string>
+    <string name="minecraft_not_owned">נראה שאין לחשבון הזה פרופיל Minecraft. אם יש לך Xbox Game Pass, בבקשה תתחבר/י ל- https://minecraft.net/ והגדר אותו.</string>
     <string name="xerr_not_available">Xbox Live אינו זמין במדינה שלך</string>
     <string name="preference_enable_gyro_description">הפעלה של זה תאפשר לך להסתובב במשחק על ידי סיבוב הטלפון.</string>
     <string name="preference_gyro_sensitivity_description">כוון את הרגישות של בקרי חיישן כיוון.</string>
@@ -224,7 +224,7 @@
     <string name="preference_gyro_sample_rate_title">קצב דגימת חיישן הכיוון</string>
     <string name="preference_gyro_sample_rate_description">אם אתם חווים בעיות ביצועים עם בקרי חיישן הכיוון, הגדילו ערך זה.</string>
     <string name="microsoft_login_retry_later">יותר מדי בקשות, נסו שוב מאוחר יותר.</string>
-    <string name="storage_required">PojavLauncher דורש אחסון חיצוני מחובר. אנא חבר אותו מחדש והפעל מחדש את האפליקציה.</string>
+    <string name="storage_required">PojavLauncher דורש אחסון חיצוני מחובר. בבקשה תחבר/י אותו ואז הפעל/י מחדש את האפליקציה.</string>
     <string name="mcl_setting_title_buttonallcaps">השתמש באותיות גדולות בלבד בתוויות הכפתורים.</string>
     <string name="mcl_setting_subtitle_buttonallcaps">השבת אפשרות זו אם ברצונך להשתמש באותיות קטנות בבקרים שלך.</string>
     <string name="preference_shader_dump_title">אפשר השלכת הצללה</string>
@@ -254,7 +254,7 @@
     <string name="fabric_dl_loader_version">גרסת מטעין %s</string>
     <string name="fabric_dl_game_version">גרסת מינקראפט</string>
     <string name="fabric_dl_install">התקן</string>
-    <string name="fabric_dl_cant_read_meta">קריאה של Metadata של ה-%s loader נכשלה. אנא נסה שוב מאוחר יותר.</string>
+    <string name="fabric_dl_cant_read_meta">קריאה של Metadata של ה-%s loader נכשלה. בבקשה תנסה או תנסי שוב מאוחר יותר.</string>
     <string name="modloader_dl_install_fabric">צור פרופיל Fabic</string>
     <string name="modloader_dl_install_quilt">צור פרופיל  Quilt</string>
     <string name="modloader_dl_install_forge">צור פרופיל Forge</string>
@@ -340,7 +340,12 @@
     <string name="mg_renderer_summary_gl43exts">עשוי לעזור עם תקלות ב-shaderpack. השבת אם אין צורך בכך, עלול לגרום לקריסות.</string>
     <string name="mg_renderer_summary_computeShaderext">עשוי לעזור עם תקלות ב-shaderpack. השבת אם אין צורך בכך, עלול לגרום לקריסות.</string>
     <string name="app_short_name">Amethyst</string>
-    <string name="change_account">אנא שנה חשבונות כדי להשתמש באפשרות זו</string>
+    <string name="change_account">בבקשה תשנה או תשני חשבונות כדי להשתמש באפשרות זו</string>
     <string name="no_minecraft_account_found">לא נמצא חשבון מיינקראפט</string>
     <string name="feature_requires_java_account">תכונה זו דורשת חשבון Microsoft שבבעלותו Minecraft Java Edition.</string>
+    <string name="login_again">התחבר שוב בבקשה</string>
+    <string name="account_corrupted">החשבון שנבחר פגום</string>
+    <string name="modloader_dl_install_neoforge">צור פרופיל Neoforge</string>
+    <string name="neoforge_dl_select_version">בחר גרסת NeoForge</string>
+    <string name="neoforge_dl_no_installer">מצטערים, לגרסה הזו של NeoForge אין מתקין, ולכן היא עדיין אינה נתמכת.</string>
 </resources>

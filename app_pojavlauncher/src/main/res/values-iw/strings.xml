@@ -328,6 +328,9 @@
     <string name="log_view_label_log_output">לוג פלט:</string>
     <string name="execute_jar_failed_to_read_file">נכשלה קריאת קובץ ה-.jar</string>
     <string name="execute_jar_incompatible_runtime">הפעלת .jar אינה תואמת ל-Java %d</string>
+    <string name="controller_remapper_exit_part1">החזק</string>
+    <string name="controller_remapper_exit_part2">כדי לצאת</string>
+    <string name="controller_remapper_operating_mode">מצב נוכחי</string>
     <string name="customctrl_visibility_ingame">במשחק</string>
     <string name="customctrl_visibility_in_menus">בתפריט</string>
     <string name="preference_remap_controller_description">מאפשר לך לשנות את מקשי המקלדת הקשורים לכל כפתור בקר</string>

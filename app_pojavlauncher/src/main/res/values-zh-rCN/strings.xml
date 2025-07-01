@@ -406,4 +406,10 @@
     <string name="change_account">请更换账户来使用此功能</string>
     <string name="no_minecraft_account_found">未找到 Minecraft 账户</string>
     <string name="feature_requires_java_account">此功能需要拥有 Minecraft Java 版的 Microsoft 账户。</string>
+    <string name="delete_account_and_login">删除账户并登录</string>
+    <string name="login_again">请重新登录</string>
+    <string name="account_corrupted">所选账户已损坏</string>
+    <string name="modloader_dl_install_neoforge">创建 Neoforge 配置</string>
+    <string name="neoforge_dl_select_version">选择 NeoForge 版本</string>
+    <string name="neoforge_dl_no_installer">抱歉，此版本的 NeoForge 没有安装程序，尚不支持。</string>
 </resources>

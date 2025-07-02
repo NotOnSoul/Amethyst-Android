@@ -406,4 +406,10 @@
     <string name="change_account">Пожалуйста, измените учётную запись для использования этой функции</string>
     <string name="no_minecraft_account_found">Не найдено учётной записи Minecraft</string>
     <string name="feature_requires_java_account">Для этой функции требуется учётная запись Microsoft, владеющая копией Minecraft Java Edition.</string>
+    <string name="delete_account_and_login">Удалить учётную запись и войти</string>
+    <string name="login_again">Пожалуйста, войдите снова</string>
+    <string name="account_corrupted">Выбранная учётная запись повреждена</string>
+    <string name="modloader_dl_install_neoforge">Создать профиль Neoforge</string>
+    <string name="neoforge_dl_select_version">Выберите версию NeoForge</string>
+    <string name="neoforge_dl_no_installer">К сожалению, у этой версии NeoForge отсутствует поддерживаемый установщик.</string>
 </resources>

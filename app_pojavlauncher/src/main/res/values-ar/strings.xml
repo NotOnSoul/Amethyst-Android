@@ -293,7 +293,7 @@
     <string name="notif_download_finished_desc">اضغط هنا للبدأ!</string>
     <string name="preference_category_gestures">الإيماءات</string>
     <string name="preference_category_buttons">الأزرار</string>
-    <string name="preference_category_experimental_settings">أشياء تجريبية</string>
+    <string name="preference_category_experimental_settings">أشياء تجريبية.</string>
     <string name="preference_category_java_tweaks">تعديلات جافا</string>
     <string name="preference_category_main_categories">الفئات</string>
     <string name="preference_category_miscellaneous">أعدادات متنوعة</string>

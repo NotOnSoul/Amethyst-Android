@@ -223,10 +223,10 @@
     <string name="minecraft_not_owned">נראה שאין לחשבון הזה פרופיל Minecraft. אם יש לך Xbox Game Pass, בבקשה תתחבר/י ל- https://minecraft.net/ והגדר אותו.</string>
     <string name="xerr_not_available">Xbox Live אינו זמין במדינה שלך</string>
     <string name="preference_enable_gyro_description">הפעלה של זה תאפשר לך להסתובב במשחק על ידי סיבוב הטלפון.</string>
-    <string name="preference_gyro_sensitivity_description">כוון את הרגישות של בקרי חיישן כיוון.</string>
-    <string name="toast_turn_on_gyro">הפעלו קודם את בקרי חיישן הכיוון בכדי להשתמש בזה!</string>
-    <string name="preference_gyro_sample_rate_title">קצב דגימת חיישן הכיוון</string>
-    <string name="preference_gyro_sample_rate_description">אם אתם חווים בעיות ביצועים עם בקרי חיישן הכיוון, הגדילו ערך זה.</string>
+    <string name="preference_gyro_sensitivity_description">התאמ/י את רגישות בקרי הג\'יירוסקופ.</string>
+    <string name="toast_turn_on_gyro">הפעל/י בקרי ג\'יירוסקופ תחילה כדי להשתמש בזה!</string>
+    <string name="preference_gyro_sample_rate_title">קצב דגימת ג\'יירוסקופ</string>
+    <string name="preference_gyro_sample_rate_description">אם את/ה נתקל/ת בבעיות ביצועים עם בקרי הג\'יירוסקופ, הגדל/י ערך זה.</string>
     <string name="microsoft_login_retry_later">יותר מדי בקשות, נסו שוב מאוחר יותר.</string>
     <string name="storage_required">PojavLauncher דורש אחסון חיצוני מחובר. בבקשה תחבר/י אותו ואז הפעל/י מחדש את האפליקציה.</string>
     <string name="mcl_setting_title_buttonallcaps">השתמש באותיות גדולות בלבד בתוויות הכפתורים.</string>
@@ -234,6 +234,7 @@
     <string name="preference_shader_dump_title">אפשר השלכת הצללה</string>
     <string name="preference_shader_dump_description">רישום הצללות שהומרו לקובץ ה log.</string>
     <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d מ\"ש</string>
     <string name="customctrl_editor_exit_title">עזיבה?</string>
     <string name="customctrl_editor_exit_msg">האם אתה בטוח שברצונך לצאת?</string>
     <string name="customctrl_editor_exit">עזוב את העורך.</string>

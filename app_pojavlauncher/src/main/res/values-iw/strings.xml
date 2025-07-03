@@ -325,6 +325,8 @@
     <string name="newdl_downloading_metadata">מוריד metadata של משחק</string>
     <string name="newdl_downloading_game_files">מוריד את המשחק… (%d/%d, %.2f MB/s)</string>
     <string name="newdl_downloading_game_files_size">מוריד את המשחק… (%.2f/%.2f MB, %.2f MB/s)</string>
+    <string name="cropper_lock_vertical">נעילה אנכית</string>
+    <string name="cropper_lock_horizontal">נעילה אופקית</string>
     <string name="cropper_reset">אפס</string>
     <string name="cropper_select_cancelled">הבחירה בוטלה</string>
     <string name="log_view_button_scroll_off">גלילה אוטומטית\nכבויה</string>
@@ -334,6 +336,14 @@
     <string name="log_view_label_log_output">לוג פלט:</string>
     <string name="execute_jar_failed_to_read_file">נכשלה קריאת קובץ ה-.jar</string>
     <string name="execute_jar_incompatible_runtime">הפעלת .jar אינה תואמת ל-Java %d</string>
+    <string name="controller_direction_forward">סטיק מעלה</string>
+    <string name="controller_direction_backward">סטיק מטה</string>
+    <string name="controller_direction_left">סטיק ימינה</string>
+    <string name="controller_direction_right">סטיק שמאלה</string>
+    <string name="controller_dpad_up">D-Pad מעלה</string>
+    <string name="controller_dpad_down">D-Pad מטה</string>
+    <string name="controller_dpad_left">D-Pad ימינה</string>
+    <string name="controller_dpad_right">D-Pad שמאלה</string>
     <string name="controller_remapper_exit_part1">החזק</string>
     <string name="controller_remapper_exit_part2">כדי לצאת</string>
     <string name="controller_remapper_operating_mode">מצב נוכחי</string>

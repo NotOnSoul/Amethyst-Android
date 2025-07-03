@@ -186,7 +186,10 @@
     <string name="preference_edit_controls_title">עריכת בקרים מותאמות אישית</string>
     <string name="preference_edit_controls_summary">כוונ/י את סכמת השליטה כך שתתאים לצרכיך.</string>
     <string name="preference_category_gyro_controls">בקריי גירוסקופ</string>
+    <string name="preference_gyro_invert_x_axis">הפוך/י כיוון אופקי</string>
+    <string name="preference_gyro_invert_y_axis">הפוך/י כיוון אנכי</string>
     <string name="preference_gyro_invert_x_axis_description">r</string>
+    <string name="preference_gyro_invert_y_axis_description">הפוך/י כיוון אנכי.</string>
     <string name="preference_gyro_smoothing_title">אפשר החלקת ג\'ירוסקופ</string>
     <string name="preference_gyro_smoothing_description">הפחת רעידות תמורת עיכוב.</string>
     <string name="preference_back_title">חזרה אל המסך האחרון</string>

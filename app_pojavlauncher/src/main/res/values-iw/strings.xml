@@ -145,6 +145,7 @@
     <string name="mcl_setting_subtitle_mousespeed">\"משנה את מהירות העכבר הוירטואלי</string>
     <string name="customctrl_passthru">עכבר עובר דרך</string>
     <string name="customctrl_swipeable">ניתן להחלקה</string>
+    <string name="customctrl_absolute_tracking">מעקב אצבעות מוחלט</string>
     <string name="memory_warning_msg">הכמות הנוכחית של RAM פנוי (%d) נמוכה מכמות ה-RAM שהוקצתה (%d), מה שעלול לגרום למשחק לקרוס. הנך מתבקש לשנות את ההקצאה במידה והמשחק קורס.</string>
     <string name="address_memory_warning_msg">כמות שטח ה-RAM הפנוי הנוכחית (%d) נמוכה משטח ה-RAM המוקצה (%d), מה שיגרום לקריסות. יש לשנות את ההקצאה אם המשחק קורס.</string>
     <string name="mcl_memory_allocation">הקצאת זיכרון</string>
@@ -333,8 +334,11 @@
     <string name="controller_remapper_operating_mode">מצב נוכחי</string>
     <string name="customctrl_visibility_ingame">במשחק</string>
     <string name="customctrl_visibility_in_menus">בתפריט</string>
+    <string name="controller_remapper_expand_entry">הרחב כדי לשנות keycodes</string>
+    <string name="preference_remap_controller_title">שינוי כריכות מקשים של בקר</string>
     <string name="preference_remap_controller_description">מאפשר לך לשנות את מקשי המקלדת הקשורים לכל כפתור בקר</string>
     <string name="mcl_button_discord">דיסקורד</string>
+    <string name="ltw_render_distance_warning_msg">המעבד הגרפי שלך לא מסוגל לבצע רינדור של מעל מרחק רינדור 7 ללא Sodium או מודדים דומים אחרים. מרחק הרינדור יקטן אוטומטית כשתלחץ על \"אישור\".</string>
     <string name="mcl_button_open_directory">פתח תייקית משחק</string>
     <string name="local_login_bad_username_title">שם משתמש לא מתאים</string>
     <string name="local_login_bad_username_text">שם המשתמש חייב להכיל בין 3 ל־16 תווים, ויכול לכלול רק אותיות לטיניות, ספרות 0–9 וקו תחתון.</string>
@@ -353,6 +357,7 @@
     <string name="change_account">בבקשה תשנה או תשני חשבונות כדי להשתמש באפשרות זו</string>
     <string name="no_minecraft_account_found">לא נמצא חשבון מיינקראפט</string>
     <string name="feature_requires_java_account">תכונה זו דורשת חשבון Microsoft שבבעלותו Minecraft Java Edition.</string>
+    <string name="delete_account_and_login">מחק חשבון והיכנס</string>
     <string name="login_again">התחבר שוב בבקשה</string>
     <string name="account_corrupted">החשבון שנבחר פגום</string>
     <string name="modloader_dl_install_neoforge">צור פרופיל Neoforge</string>

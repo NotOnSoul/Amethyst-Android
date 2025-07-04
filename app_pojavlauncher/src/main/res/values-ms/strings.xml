@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
+    <string name="app_name">Amethyst</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
@@ -120,4 +121,5 @@
     <string name="of_dl_progress">Memuat turun %s</string>
     <string name="generic_debug">Nyahpepijat</string>
     <string name="preference_category_miscellaneous">Tetapan lain-lain</string>
+    <string name="app_short_name">Amethyst</string>
 </resources>

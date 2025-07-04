@@ -401,4 +401,15 @@
     <string name="mg_renderer_summary_computeShaderext">Shader paketi bozulmalarına yardımcı olabilir. Ihtiyaç yoksa devre dışı bırakın, çökmelere sebep olabilir.</string>
     <string name="mg_renderer_title_errorSetting">Hata filtreleme</string>
     <string name="app_short_name">Amethyst</string>
+    <string name="demo_versions_supported">Sadece Vanilla 1.3.1 ve üzeri sürümler deneme hesaplarında desteklenmektedir</string>
+    <string name="demo_unsupported">Deneme Profili desteklenmemektedir</string>
+    <string name="change_account">Lütfen hesapları değiştirmek için bu fonksiyonu kullanınız</string>
+    <string name="no_minecraft_account_found">Minecraft hesabı bulunamadı</string>
+    <string name="feature_requires_java_account">Bu özellik Minecraft Java Versiyonu\'na (Premium\'a) sahip bir Microsoft Hesabı Gerektirmektedir.</string>
+    <string name="delete_account_and_login">Hesabı sil ve giriş yap</string>
+    <string name="login_again">Lütfen Tekrar Giriş yapınız</string>
+    <string name="account_corrupted">Seçilen Hesap hasarlı/Kullanılmaz durumda</string>
+    <string name="modloader_dl_install_neoforge">Neoforge profili yarat</string>
+    <string name="neoforge_dl_select_version">Lütfen NeoForge Sürümü seçiniz</string>
+    <string name="neoforge_dl_no_installer">Özür dileriz, ama NeoForge\'un bu sürümü indiriciye sahip değil veya gözükmüyor, bu yüzden şu durumda destek dışıdır.</string>
 </resources>

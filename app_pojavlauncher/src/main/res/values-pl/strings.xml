@@ -265,7 +265,7 @@
     <string name="fabric_dl_install">Instaluj</string>
     <string name="fabric_dl_cant_read_meta">Nie udało się odczytać metadanych %s. Spróbuj ponownie później.</string>
     <string name="modloader_dl_install_fabric">Stwórz profil Fabric</string>
-    <string name="modloader_dl_install_quilt">Utwórz profil Quilt</string>
+    <string name="modloader_dl_install_quilt">Stwórz profil Quilt</string>
     <string name="modloader_dl_install_forge">Stwórz profil Forge</string>
     <string name="create_profile_vanilla">Stwórz profil vanilla</string>
     <string name="create_profile_vanilla_like_versions">Wersje podobne do vanilli</string>
@@ -393,4 +393,14 @@
     <string name="mg_renderer_summary_computeShaderext">Może pomagać z glitchami związanymi z paczkami shaderów. Wyłącz, jeśli nie jest potrzebne, może powodować crashe.</string>
     <string name="mg_renderer_title_errorSetting">Filtrowanie błędów</string>
     <string name="app_short_name">Ametyst</string>
+    <string name="demo_versions_supported">Tylko Vanilla 1.3.1 i nowsze wspierają konta demo</string>
+    <string name="demo_unsupported">Profil demo nie jest wspierany</string>
+    <string name="change_account">Proszę zmienić konto, aby użyć tej funkcji</string>
+    <string name="no_minecraft_account_found">Nie znaleziono konta Minecraft</string>
+    <string name="feature_requires_java_account">Ta funkcja wymaga konta Microsoft, które posiada Minecraft Java Edition.</string>
+    <string name="login_again">Proszę zalogować się ponownie</string>
+    <string name="account_corrupted">Wybrane konto jest uszkodzone</string>
+    <string name="modloader_dl_install_neoforge">Stwórz profil NeoForge</string>
+    <string name="neoforge_dl_select_version">Wybierz wersję NeoForge</string>
+    <string name="neoforge_dl_no_installer">Przepraszamy, ale ta wersja NeoForge nie posiada instalatora, co nie jest jeszcze obsługiwane.</string>
 </resources>

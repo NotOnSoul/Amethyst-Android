@@ -406,4 +406,10 @@
     <string name="change_account">Ganti akun terlebih dahulu untuk menggunakan fitur ini</string>
     <string name="no_minecraft_account_found">Tidak Ada Akun Minecraft Java Yang Ditemukan</string>
     <string name="feature_requires_java_account">Fitur ini hanya tersedia untuk akun Microsoft yang telah membeli Minecraft Java Edition.</string>
+    <string name="delete_account_and_login">Hapus akun dan masuk lagi</string>
+    <string name="login_again">Silakan masuk kembali</string>
+    <string name="account_corrupted">Akun yang dipilih rusak atau tidak valid</string>
+    <string name="modloader_dl_install_neoforge">Buat profil NeoForge</string>
+    <string name="neoforge_dl_select_version">Pilih versi NeoForge</string>
+    <string name="neoforge_dl_no_installer">Maaf, versi NeoForge ini belum punya installer, jadi belum didukung untuk saat ini.</string>
 </resources>

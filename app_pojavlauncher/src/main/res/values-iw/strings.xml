@@ -5,6 +5,7 @@
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
+    <string name="login_online_username_hint">שם משתמש</string>
     <string name="login_online_login_label">התחבר</string>
     <!-- Hint -->
     <string name="hint_control_mapping">"גע בגלגל השיניים העליון במרכז כדי לפתוח את תפריט ההקשר ⚙\nהקש על כפתור כדי להתאים אישית: לערוך, לשנות גודל, להסיר או לשנות את קביעות המקשים שלו."</string>
@@ -203,6 +204,7 @@
     <string name="arc_capes_desc">מאפשר שכמיות מאת Cosmetica (לשעבר Arc). לקבלת מידע נוסף, בקרו ב- https://cosmetica.cc. דורש OptiFine.</string>
     <string name="notif_channel_name">כללי</string>
     <string name="lazy_service_default_title">שירות הרקע של Amethyst</string>
+    <string name="mcl_setting_veroption_installed">מותקן</string>
     <string name="use_global_default">(השתמש בהגדרות ברירת המחדל הגלובליות)</string>
     <string name="default_control">מפת בקר ברירת מחדל</string>
     <string name="progresslayout_tasks_in_progress">משימות בתהליך%d</string>
@@ -213,6 +215,7 @@
     <string name="folder_fragment_create">צור תיקייה</string>
     <string name="folder_fragment_select">בחר תיקייה</string>
     <string name="main_login_done">התחברות הושלמה.</string>
+    <string name="main_add_account">הוספ/י חשבון</string>
     <string name="tasks_ongoing">משימות בתהליך, בבקשה המתנ/י.</string>
     <string name="no_saved_accounts">לא נשמר חשבון</string>
     <string name="mc_download_failed">כשל בהורדת Minecraft! זה עלול להיות כתוצאה מקשר רשת לקוי, קבצים שלא הונחו נכון, וכו\'.</string>
@@ -339,10 +342,14 @@
     <string name="execute_jar_incompatible_runtime">הפעלת .jar אינה תואמת ל-Java %d</string>
     <string name="controller_button_trigger_left">טריגר ימני</string>
     <string name="controller_button_trigger_right">טריגר שמאלי</string>
+    <string name="controller_button_shoulder_left">Shoulder ימני</string>
+    <string name="controller_button_shoulder_right">Shoulder שמאלי</string>
     <string name="controller_direction_forward">סטיק מעלה</string>
     <string name="controller_direction_backward">סטיק מטה</string>
     <string name="controller_direction_left">סטיק ימינה</string>
     <string name="controller_direction_right">סטיק שמאלה</string>
+    <string name="controller_stick_press_l">Thumbstick השמאלי (קליק)</string>
+    <string name="controller_stick_press_r">Thumbstick ימני (קליק)</string>
     <string name="controller_dpad_up">D-Pad מעלה</string>
     <string name="controller_dpad_down">D-Pad מטה</string>
     <string name="controller_dpad_left">D-Pad ימינה</string>
@@ -361,6 +368,11 @@
     <string name="local_login_bad_username_title">שם משתמש לא מתאים</string>
     <string name="local_login_bad_username_text">שם המשתמש חייב להכיל בין 3 ל־16 תווים, ויכול לכלול רק אותיות לטיניות, ספרות 0–9 וקו תחתון.</string>
     <string name="quick_setting_title">הגדרות מהירות</string>
+    <string name="create_bta_profile">Create \"Better than Adventure!\" profile</string>
+    <string name="select_bta_version">Select \"Better than Adventure!\" version</string>
+    <string name="bta_installer_available_versions">Supported BTA versions</string>
+    <string name="bta_installer_untested_versions">Untested BTA versions</string>
+    <string name="bta_installer_nightly_versions">Nightly BTA versions</string>
     <string name="newdl_extracting_native_libraries">חילוץ ספריות מקוריות (%d/%d)</string>
     <string name="toast_not_available_demo">זה לא זמין במצב demo</string>
     <string name="preference_renderer_mobileglues_settings">הגדרות רינדור MobileGlues</string>

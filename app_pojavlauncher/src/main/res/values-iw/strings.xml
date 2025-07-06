@@ -325,6 +325,7 @@
     <string name="newdl_downloading_metadata">מוריד metadata של משחק</string>
     <string name="newdl_downloading_game_files">מוריד את המשחק… (%d/%d, %.2f MB/s)</string>
     <string name="newdl_downloading_game_files_size">מוריד את המשחק… (%.2f/%.2f MB, %.2f MB/s)</string>
+    <string name="cropper_title">בחירת אזור תמונה</string>
     <string name="cropper_lock_vertical">נעילה אנכית</string>
     <string name="cropper_lock_horizontal">נעילה אופקית</string>
     <string name="cropper_reset">אפס</string>
@@ -336,6 +337,8 @@
     <string name="log_view_label_log_output">לוג פלט:</string>
     <string name="execute_jar_failed_to_read_file">נכשלה קריאת קובץ ה-.jar</string>
     <string name="execute_jar_incompatible_runtime">הפעלת .jar אינה תואמת ל-Java %d</string>
+    <string name="controller_button_trigger_left">טריגר ימני</string>
+    <string name="controller_button_trigger_right">טריגר שמאלי</string>
     <string name="controller_direction_forward">סטיק מעלה</string>
     <string name="controller_direction_backward">סטיק מטה</string>
     <string name="controller_direction_left">סטיק ימינה</string>
@@ -358,9 +361,12 @@
     <string name="local_login_bad_username_title">שם משתמש לא מתאים</string>
     <string name="local_login_bad_username_text">שם המשתמש חייב להכיל בין 3 ל־16 תווים, ויכול לכלול רק אותיות לטיניות, ספרות 0–9 וקו תחתון.</string>
     <string name="quick_setting_title">הגדרות מהירות</string>
+    <string name="newdl_extracting_native_libraries">חילוץ ספריות מקוריות (%d/%d)</string>
     <string name="toast_not_available_demo">זה לא זמין במצב demo</string>
     <string name="preference_renderer_mobileglues_settings">הגדרות רינדור MobileGlues</string>
+    <string name="mg_renderer_glsl_cache">גודל מטמון GLSL מקסימלי</string>
     <string name="mg_renderer_angle">השתמש ב-ANGLE כדריבר</string>
+    <string name="mg_renderer_multidraw">מצב אמולציה multidraw</string>
     <string name="mg_renderer_title_gl43exts">פרסום הרחבות ניסיוניות של OpenGL 4.3</string>
     <string name="mg_renderer_summary_gl43exts">עשוי לעזור עם תקלות ב-shaderpack. השבת אם אין צורך בכך, עלול לגרום לקריסות.</string>
     <string name="mg_renderer_title_computeShaderext">פרסם את הרחבת Shader החישוב הניסיונית</string>

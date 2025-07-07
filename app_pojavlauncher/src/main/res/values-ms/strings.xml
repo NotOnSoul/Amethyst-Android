@@ -13,7 +13,7 @@
     <!-- AlertDialog title -->
     <string name="alerttitle_installmod">Pilih sebuah pemasang mod</string>
     <!-- Error messages -->
-    <string name="error_fatal">Amethyst terhenti tanpa diduga</string>
+    <string name="error_fatal">Amethyst telah ranap tanpa diduga</string>
     <string name="error_no_version">Tiada versi!</string>
     <string name="error_show_more">Tunjuk lebih banyak</string>
     <string name="error_show_less">Tunjuk lebih sedikit</string>
@@ -32,12 +32,12 @@
     <string name="mcl_launch_downloading_progress">"Memuat turun %s (%.2f MB / %.2f MB)"</string>
     <string name="mcl_launch_download_assets">Bersedia untuk memuat turun sumber</string>
     <string name="mcl_options">Pilihan</string>
-    <string name="mcl_option_customcontrol">Kawalan custom</string>
+    <string name="mcl_option_customcontrol">Kawalan tersuai</string>
     <string name="mcl_setting_title_use_surface_view">Gunakan pemaparan permukaan ganti</string>
     <string name="mcl_setting_subtitle_use_surface_view">Boleh membantu prestasi dalam senario terikat GPU.</string>
     <string name="mcl_setting_title_ignore_notch">Abaikan takik</string>
     <string name="mcl_setting_subtitle_ignore_notch">Abaikan takuk dan panjangkan skrin di bawahnya.\nMemberi anda pengalaman yang lebih mengasyikkan.</string>
-    <string name="mcl_setting_title_resolution_scaler">Pengskala Resolusi</string>
+    <string name="mcl_setting_title_resolution_scaler">Penskala Resolusi</string>
     <string name="mcl_setting_subtitle_resolution_scaler">Membolehkan anda menurunkan resolusi permainan. 100% adalah resolusi penuh.</string>
     <string name="mcl_setting_title_longpresstrigger">Kelewatan pencetus tekan lama</string>
     <string name="mcl_setting_subtitle_longpresstrigger">Tukar kelewatan pencetus tekan lama untuk menghancurkan blok dan menjatuhkan item.</string>
@@ -45,14 +45,15 @@
     <string name="mcl_setting_subtitle_buttonscale">Tingkatkan skala mereka jika butang terlalu kecil.</string>
     <string name="mcl_setting_title_mousescale">Skala tetikus</string>
     <string name="mcl_setting_subtitle_mousescale">Mengubah saiz tetikus maya.</string>
-    <string name="mcl_setting_subtitle_javaargs">Berhati-hati, ini mungkin menyebabkan permainan menjadi ranap jika diubah tanpa pengetahuan.</string>
+    <string name="mcl_setting_title_javaargs">Argumen Pelancaran JVM</string>
+    <string name="mcl_setting_subtitle_javaargs">Berhati-hati, ini mungkin menyebabkan permainan ranap jika diubah tanpa pengetahuan.</string>
     <string name="mcl_setting_title_renderer_settings">Tetapan Pemapar Tambahan</string>
     <string name="mcl_setting_title_renderer_subtitle">Tetapan khusus pemapar</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (semua versi, pantas)</string>
     <string name="mcl_setting_renderer_vulkan_zink">Zink (Vulkan) - (semua versi, sederhana)</string>
     <string name="mcl_setting_renderer_mobileglues">MobileGlues (OpenGL ES) - (1.17+ sahaja, pantas)</string>
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 1.17+ sahaja</string>
-    <string name="mcl_setting_veroption_release">Rilis</string>
+    <string name="mcl_setting_veroption_release">Terbitan</string>
     <string name="mcl_setting_veroption_snapshot">Petikan</string>
     <string name="mcl_setting_veroption_oldalpha">Alfa-lama</string>
     <string name="mcl_setting_veroption_oldbeta">Beta-lama</string>
@@ -62,7 +63,7 @@
     <!-- Global strings -->
     <string name="global_edit">Sunting</string>
     <string name="global_error">Ralat</string>
-    <string name="global_load">Memuat</string>
+    <string name="global_load">Muat</string>
     <string name="global_name">Nama</string>
     <string name="global_remove">Hapus</string>
     <string name="global_clone">Klon</string>
@@ -75,12 +76,12 @@
     <string name="global_default">Lalai</string>
     <string name="global_off">Tutup</string>
     <!-- MainActivity: strings -->
-    <string name="mcn_exit_title">Aplikasi/Permainan keluar dengan kod %d, semak latestlog.txt untuk butiran lebih lanjut.</string>
+    <string name="mcn_exit_title">Aplikasi/Permainan keluar dengan kod %d, semak latestlog.txt untuk butiran lanjut.</string>
     <string name="mcn_signal_title">Aplikasi/Permainan dibatalkan oleh isyarat maut %d, semak latestlog.txt untuk mendapatkan butiran lanjut.</string>
     <string name="mcn_exit_confirm">Adakah anda mahu paksa tutup aplikasi?</string>
     <string name="mcn_check_fail_vulkan_support">Pemapar Zink (Vulkan) tidak disokong pada peranti ini!</string>
     <!-- MainActivity: Control buttons -->
-    <string name="control_chat">Sembang</string>
+    <string name="control_chat">Perbualan</string>
     <string name="control_debug">Nyahpepijat</string>
     <string name="control_primary">Utama</string>
     <string name="control_secondary">Kedua</string>
@@ -99,7 +100,7 @@
     <!-- MainActivity: Menu advanced controls -->
     <string name="control_forceclose">Paksa tutup</string>
     <string name="control_adebug">Nyahpepijat Input</string>
-    <string name="control_customkey">Hantar kod kunci custom</string>
+    <string name="control_customkey">Hantar kod kunci tersuai</string>
     <!-- ImportControlActivity Strings -->
     <string name="import_control_label">Import Kawalan</string>
     <string name="import_control_invalid_file">Fail tidak sah atau rosak</string>
@@ -111,11 +112,13 @@
     <string name="control_more3"></string>
     <string name="control_more4"></string>
 -->
-    <string name="customctrl_toggle">Boleh Ditukar</string>
+    <string name="customctrl_toggle">Boleh ditogol</string>
     <string name="customctrl_size">Saiz</string>
     <string name="customctrl_mapping">Pemetaan</string>
     <string name="customctrl_orientation">Orientasi</string>
     <string name="customctrl_background_color">Warna Latar Belakang</string>
+    <string name="customctrl_corner_radius">Radius sudut</string>
+    <string name="customctrl_stroke_width">Lebar garisan</string>
     <string name="customctrl_button_opacity">Kelegapan Butang</string>
     <string name="customctrl_addbutton">Tambah butang</string>
     <string name="customctrl_addbutton_drawer">Tambah butang drawer</string>
@@ -125,11 +128,11 @@
     <string name="main_install_jar_file">Laksanakan sebuah .jar</string>
     <string name="main_play">Main</string>
     <string name="autoram_info_msg">Ingatan ditetapkan kepada %d MB</string>
-    <string name="mcl_setting_check_libraries">Periksa library selepas muat turun</string>
+    <string name="mcl_setting_check_libraries">Periksa pustaka selepas muat turun</string>
     <string name="mcl_setting_check_libraries_subtitle">Pilihan ini memaksa pelancar menyemak hash pustaka jika ia tersedia. Dapat menghalang muat turun yang rosak.</string>
-    <string name="dl_library_sha_fail">Library %s ini rosak dan akan dimuat turun semula</string>
-    <string name="dl_library_sha_unknown">Library %s tidak boleh diperiksa, harus menganggap bahawa ianya baik</string>
-    <string name="dl_library_sha_pass">Library %s adalah baik dan boleh digunakan</string>
+    <string name="dl_library_sha_fail">Pustaka %s ini rosak dan akan dimuat turun semula</string>
+    <string name="dl_library_sha_unknown">Pustaka %s tidak boleh diperiksa, harus menganggap bahawa ianya baik</string>
+    <string name="dl_library_sha_pass">Pustaka %s adalah baik dan boleh digunakan</string>
     <string name="mcl_disable_gestures">Nyahdayakan gerak isyarat</string>
     <string name="mcl_disable_gestures_subtitle">Menyahdayakan gerak isyarat, seperti menahan untuk menhancurkan blok, dan tekan untuk meletakkan blok.</string>
     <string name="mcl_disable_swap_hand">Naydaya ketik dua kali untuk bertukar tangan</string>
@@ -161,6 +164,7 @@
     <string name="preference_mouse_start_description">Tetikus maya akan muncul pada permulaan permainan apabila pilihan ini dihidupkan.</string>
     <string name="preference_video_title">Video dan pemapar</string>
     <string name="preference_video_description">Resolusi, pemapar dan prestasi</string>
+    <string name="preference_control_title">Penyesuaian kawalan</string>
     <string name="preference_control_description">Gerakan isyarat, butang dan penskalaan</string>
     <string name="preference_java_description">Masa Jalan Java, Argumen JVM, bilangan RAM dan kotak pasir</string>
     <string name="preference_misc_title">Tetapan lain-lain</string>
@@ -176,19 +180,21 @@
     <string name="preference_edit_controls_title">Sunting kawalan tersuai</string>
     <string name="preference_edit_controls_summary">Ubah skema kawalan agar sesuai dengan keperluan anda.</string>
     <string name="preference_category_gyro_controls">Kawalan giroskop</string>
+    <string name="preference_gyro_invert_x_axis">Songsang paksi X</string>
+    <string name="preference_gyro_invert_y_axis">Songsang paksi Y</string>
     <string name="preference_gyro_invert_x_axis_description">Songsangkan paksi mengufuk.</string>
     <string name="preference_gyro_invert_y_axis_description">Songsangkan paksi mencancang.</string>
     <string name="preference_gyro_smoothing_title">Dayakan pelicinan giroskop</string>
     <string name="preference_gyro_smoothing_description">Mengurangkan jitter sebagai ganti kependaman.</string>
     <string name="preference_back_title">Kembali ke skrin terakhir</string>
     <string name="unnamed">Tidak dinamakan</string>
-    <string name="profiles_latest_snapshot">Petikan Terkini</string>
+    <string name="profiles_latest_snapshot">Petikan terkini</string>
     <string name="profiles_latest_release">Terbitan terkini</string>
     <string name="profiles_profile_name">Nama</string>
     <string name="global_delete">Hapus</string>
     <string name="pedit_java_runtime">Masa Jalan Java</string>
     <string name="arc_capes_title">Mantel Cosmetica</string>
-    <string name="arc_capes_desc">Mendayakan jubah daripada Cosmetica (sebelum ini Arc). Untuk maklumat lanjut sila layari https://cosmetica.cc. Memerlukan OptiFine.</string>
+    <string name="arc_capes_desc">Mendayakan mantel daripada Cosmetica (sebelum ini Arc). Untuk maklumat lanjut sila layari https://cosmetica.cc. Memerlukan OptiFine.</string>
     <string name="notif_channel_name">Umum</string>
     <string name="lazy_service_default_title">Perkhidmatan Latar Depan Amethyst</string>
     <string name="use_global_default">(Gunakan lalai global)</string>
@@ -198,6 +204,8 @@
     <string name="notification_game_runs">Permainan sedang berjalan!</string>
     <string name="folder_dialog_create">Cipta</string>
     <string name="folder_dialog_insert_name">Masukkan nama folder</string>
+    <string name="folder_fragment_create">Cipta folder</string>
+    <string name="folder_fragment_select">Pilih folder</string>
     <string name="main_login_done">Log masuk selesai</string>
     <string name="tasks_ongoing">Tugas sedang dijalankan, sila tunggu</string>
     <string name="no_saved_accounts">Tiada akaun yang disimpan</string>
@@ -208,7 +216,9 @@
     <string name="xerr_child">Akaun anda ialah akaun kanak-kanak, dan perlu ditambahkan ke dalam Keluarga untuk log masuk.</string>
     <string name="minecraft_not_owned">Nampaknya akaun ini tidak mempunyai profil Minecraft. Jika anda mempunyai Xbox Game Pass, sila log masuk ke https://minecraft.net/ dan sediakannya.</string>
     <string name="xerr_not_available">Xbox Live tidak tersedia di negara anda</string>
+    <string name="preference_enable_gyro_title">Dayakan kawalan giroskop</string>
     <string name="preference_enable_gyro_description">Mendayakan ini membolehkan anda berputar dalam permainan dengan memusing telefon anda.</string>
+    <string name="preference_gyro_sensitivity_title">Sensitiviti kawalan giroskop</string>
     <string name="preference_gyro_sensitivity_description">Laraskan sensitiviti kawalan giroskop.</string>
     <string name="toast_turn_on_gyro">Dayakan kawalan giroskop dahulu untuk menggunakan ini!</string>
     <string name="preference_gyro_sample_rate_title">Kadar pensampelan giroskop</string>
@@ -292,6 +302,7 @@
     <string name="preference_verify_manifest_description">Apabila didayakan, pelancar akan menyemak manifes versi permainan bersama-sama dengan pustakanya.</string>
     <string name="notif_download_finished">Permainan sudah bersedia untuk dilancarkan</string>
     <string name="notif_download_finished_desc">Klik di sini untuk memulakannya!</string>
+    <string name="preference_category_gestures">Gerakan isyarat</string>
     <string name="preference_category_buttons">Butang</string>
     <string name="preference_category_experimental_settings">Ciri Uji Kaji</string>
     <string name="preference_category_main_categories">Kategori</string>
@@ -310,6 +321,8 @@
     <string name="newdl_downloading_game_files">Memuat turun permainan… (%d/%d, %.2f MB/s)</string>
     <string name="newdl_downloading_game_files_size">Memuat turun permainan… (%.2f/%.2f MB, %.2f MB/s)</string>
     <string name="cropper_title">Pilih kawasan imej</string>
+    <string name="cropper_lock_vertical">Kunci Mencancang</string>
+    <string name="cropper_lock_horizontal">Kunci Mengufuk</string>
     <string name="cropper_reset">Tetap Semula</string>
     <string name="cropper_select_cancelled">Pemilihan dibatalkan</string>
     <string name="log_view_button_scroll_off">Tatal Automatik\nTUTUP</string>

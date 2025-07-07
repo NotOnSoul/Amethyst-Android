@@ -23,6 +23,7 @@
     <string name="toast_3">Exit</string>
     -->
     <!-- MCLauncherActivity: Tabs -->
+    <string name="mcl_tab_wiki">Wiki</string>
     <!-- MCLauncherActivity: Account status -->
     <!-- MCLauncherActivity: Strings -->
     <string name="mcl_launch_cleancache">Membersihkan fail cache</string>
@@ -55,13 +56,26 @@
     <string name="global_unpacking">Menyahpek %s</string>
     <string name="global_error_field_empty">Medan ini tidak boleh dibiarkan kosong</string>
     <string name="global_waiting">Tunggu</string>
+    <string name="global_retry">Cuba Semula</string>
     <string name="global_default">Lalai</string>
+    <string name="global_off">Tutup</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">Aplikasi/Permainan keluar dengan kod %d, semak latestlog.txt untuk butiran lebih lanjut.</string>
     <string name="mcn_exit_confirm">Adakah anda mahu paksa tutup aplikasi?</string>
     <!-- MainActivity: Control buttons -->
     <string name="control_chat">Sembang</string>
     <string name="control_debug">Nyahpepijat</string>
+    <string name="control_primary">Utama</string>
+    <string name="control_secondary">Kedua</string>
+    <string name="control_shift">◇</string>
+    <string name="control_inventory">Inv</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
+    <string name="control_thirdperson">Ketiga</string>
+    <string name="control_listplayers">Tab</string>
     <string name="control_mouse">Tetikus</string>
     <string name="control_mouseoff">Tetikus: tutup</string>
     <string name="control_mouseon">Tetikus: buka </string>
@@ -98,13 +112,19 @@
     <string name="mcl_setting_title_mousespeed">Kecepatan Tetikus</string>
     <string name="memory_warning_msg">Bilangan RAM yang ada (%d) lebih rendah daripada RAM yang diperuntuk (%d), yang mungkin akan menyebabkan ranap. Tukar peruntukan jikalau permainan ranap.</string>
     <string name="mcl_memory_allocation">Peruntukan memori</string>
-    <string name="multirt_runtime_corrupt">Java Runtime Rosak</string>
+    <string name="multirt_runtime_corrupt">Masa Jalan Java Rosak</string>
     <string name="multirt_runtime_incompatiblearch">Seni bina tidak serasi: %s</string>
+    <string name="multirt_config_title">Masa Jalan Java</string>
+    <string name="multirt_config_add">Tambah baharu</string>
+    <string name="multirt_subtitle">Urus Masa Jalan Java yang dipasang.</string>
+    <string name="multirt_progress_caching">Sedang membuat cache...</string>
     <string name="multirt_config_setdefault">Tetapkan lalai</string>
     <string name="multirt_config_setdefault_already">Lalai</string>
+    <string name="multirt_config_removeerror_last">Anda mesti mempunyai sekurang-kurangnya satu Masa Jalan Java dipasang.</string>
     <string name="multirt_nojava8rt">Tidak menemui Java 8. Untuk menggunakan pilihan ini, anda perlu memasang Java 8.</string>
     <string name="pvc_gameDirectory">Direktori permainan</string>
     <string name="pvc_jvmArgs">Argumen JVM</string>
+    <string name="preference_java_description">Masa Jalan Java, Argumen JVM, bilangan RAM dan kotak pasir</string>
     <string name="preference_misc_title">Tetapan lain-lain</string>
     <string name="preference_experimental_title">Benda Uji Kaji</string>
     <string name="preference_back_title">Kembali ke skrin terakhir</string>
@@ -113,13 +133,47 @@
     <string name="profiles_latest_release">Terbitan terkini</string>
     <string name="profiles_profile_name">Nama</string>
     <string name="global_delete">Hapus</string>
+    <string name="pedit_java_runtime">Masa Jalan Java</string>
     <string name="arc_capes_title">Mantel Cosmetica</string>
     <string name="arc_capes_desc">Mendayakan jubah daripada Cosmetica (sebelum ini Arc). Untuk maklumat lanjut sila layari https://cosmetica.cc. Memerlukan OptiFine.</string>
     <string name="notif_channel_name">Umum</string>
     <string name="progresslayout_tasks_in_progress">%d tugas sedang dijalankan</string>
     <string name="notification_terminate">Tamatkan</string>
+    <string name="folder_dialog_create">Cipta</string>
+    <string name="main_login_done">Log masuk selesai</string>
+    <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d ms</string>
+    <string name="customctrl_editor_exit_title">Ingin keluar?</string>
+    <string name="customctrl_editor_exit">Keluar dari penyunting</string>
+    <string name="global_yes">Ya</string>
+    <string name="global_no">Tidak</string>
+    <string name="fabric_dl_install">Pasang</string>
     <string name="of_dl_progress">Memuat turun %s</string>
+    <string name="generic_install">Pasang</string>
+    <string name="generic_apply">Terapkan</string>
     <string name="generic_debug">Nyahpepijat</string>
+    <string name="preference_category_buttons">Butang</string>
+    <string name="preference_category_main_categories">Kategori</string>
     <string name="preference_category_miscellaneous">Tetapan lain-lain</string>
+    <string name="cropper_reset">Tetap Semula</string>
+    <string name="log_view_button_output_off">Output\nTUTUP</string>
+    <string name="log_view_button_output_on">Output\nBUKA</string>
+    <string name="log_view_label_log_output">Output log:</string>
+    <string name="execute_jar_incompatible_runtime">Ciri pelaksanaan .jar adalah tidak serasi dengan Java %d</string>
+    <string name="controller_button_trigger_left">Picu Kiri</string>
+    <string name="controller_direction_forward">Batang ke Atas</string>
+    <string name="controller_direction_backward">Batang ke Bawah</string>
+    <string name="controller_direction_left">Batang ke Kiri</string>
+    <string name="controller_direction_right">Batang ke Kanan</string>
+    <string name="controller_dpad_up">D-Pad Atas</string>
+    <string name="controller_dpad_down">D-Pad Bawah</string>
+    <string name="controller_dpad_left">D-Pad Kiri</string>
+    <string name="controller_dpad_right">D-Pad Kanan</string>
+    <string name="controller_remapper_exit_part1">Tahan</string>
+    <string name="controller_remapper_exit_part2">untuk keluar</string>
+    <string name="controller_remapper_operating_mode">Mod semasa</string>
+    <string name="customctrl_visibility_ingame">Dalam permainan</string>
+    <string name="customctrl_visibility_in_menus">Dalam menu</string>
+    <string name="mcl_button_discord">Discord</string>
     <string name="app_short_name">Amethyst</string>
 </resources>

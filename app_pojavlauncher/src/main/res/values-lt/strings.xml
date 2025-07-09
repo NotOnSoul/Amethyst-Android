@@ -243,5 +243,6 @@
     <string name="newdl_starting">Skaitoma žaidimo metadata…</string>
     <string name="newdl_downloading_metadata">Siunčiama žaidimo metadata (%s)</string>
     <string name="controller_button_select">Pasirinkti</string>
+    <string name="customctrl_visibility_title">Matomumas</string>
     <string name="app_short_name">Ametistas</string>
 </resources>

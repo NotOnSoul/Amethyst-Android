@@ -406,4 +406,7 @@
     <string name="change_account">Vui lòng thay đổi tài khoản để sử dụng chức năng này</string>
     <string name="no_minecraft_account_found">Không tìm thấy tài khoản Minecraft nào</string>
     <string name="feature_requires_java_account">Tính năng này yêu cầu sử dụng tài khoản Microsoft đã mua Minecraft Java.</string>
+    <string name="delete_account_and_login">Xoá tài khoản và đăng nhập</string>
+    <string name="login_again">Xin đăng nhập lại</string>
+    <string name="account_corrupted">Tài khoản được chọn đã bị hỏng</string>
 </resources>

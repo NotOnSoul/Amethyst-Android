@@ -88,7 +88,13 @@
     <string name="control_debug">Debug</string>
     <string name="control_primary">LPM</string>
     <string name="control_secondary">PPM</string>
+    <string name="control_shift">◇</string>
     <string name="control_inventory">Ekw</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">Widok</string>
     <string name="control_listplayers">Gracze</string>
     <string name="control_mouse">Mysz</string>
@@ -239,6 +245,8 @@
     <string name="create_profile">Utwórz nowy profil</string>
     <string name="preference_shader_dump_title">Włącz dumping shaderów</string>
     <string name="preference_shader_dump_description">Rejestrowanie przekonwertowanych shaderów w pliku dziennika.</string>
+    <string name="percent_format">%d%%</string>
+    <string name="millisecond_format">%d ms</string>
     <string name="customctrl_editor_exit_title">Wychodzisz?</string>
     <string name="customctrl_editor_exit_msg">Czy na pewno chcesz wyjść?</string>
     <string name="customctrl_editor_exit">Opuść edytor</string>
@@ -398,6 +406,7 @@
     <string name="change_account">Proszę zmienić konto, aby użyć tej funkcji</string>
     <string name="no_minecraft_account_found">Nie znaleziono konta Minecraft</string>
     <string name="feature_requires_java_account">Ta funkcja wymaga konta Microsoft, które posiada Minecraft Java Edition.</string>
+    <string name="delete_account_and_login">Usuń konto i zaloguj się</string>
     <string name="login_again">Proszę zalogować się ponownie</string>
     <string name="account_corrupted">Wybrane konto jest uszkodzone</string>
     <string name="modloader_dl_install_neoforge">Stwórz profil NeoForge</string>

@@ -43,7 +43,7 @@
     <string name="mcl_setting_title_longpresstrigger">触发长按时长</string>
     <string name="mcl_setting_subtitle_longpresstrigger">更改长按（摧毁方块、丢弃物品）的触发时长。</string>
     <string name="mcl_setting_title_buttonscale">键位按键缩放</string>
-    <string name="mcl_setting_subtitle_buttonscale">如果键位按键过小，可将此项设置调大</string>
+    <string name="mcl_setting_subtitle_buttonscale">如果键位按键过小，可将此项设置调大。</string>
     <string name="mcl_setting_title_mousescale">鼠标缩放</string>
     <string name="mcl_setting_subtitle_mousescale">更改虚拟鼠标的大小。</string>
     <string name="mcl_setting_title_javaargs">JVM 启动参数</string>

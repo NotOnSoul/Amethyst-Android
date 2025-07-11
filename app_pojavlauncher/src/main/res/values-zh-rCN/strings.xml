@@ -14,10 +14,10 @@
     <!-- AlertDialog title -->
     <string name="alerttitle_installmod">选择模组安装器</string>
     <!-- Error messages -->
-    <string name="error_fatal">Amethyst 意外崩溃了</string>
-    <string name="error_no_version">无版本！</string>
-    <string name="error_show_more">显示更多</string>
-    <string name="error_show_less">显示更少</string>
+    <string name="error_fatal">Amethyst 意外崩溃了！</string>
+    <string name="error_no_version">无可用的版本！</string>
+    <string name="error_show_more">显示详情</string>
+    <string name="error_show_less">收起</string>
     <!-- Toast messages -->
     <string name="toast_permission_denied">请授予存储读写权限！</string>
     <string name="toast_optifine_success">安装成功</string>
@@ -37,18 +37,18 @@
     <string name="mcl_setting_title_use_surface_view">启用备用表层渲染</string>
     <string name="mcl_setting_subtitle_use_surface_view">此项设置可能有助于提升受 GPU 机能限制的性能。</string>
     <string name="mcl_setting_title_ignore_notch">忽略刘海屏</string>
-    <string name="mcl_setting_subtitle_ignore_notch">忽略刘海屏并将屏幕内容扩展至其下方，\n给您以更完整的沉浸感。</string>
+    <string name="mcl_setting_subtitle_ignore_notch">忽略刘海屏并将画面内容扩展至其下方，\n给您以更完整的沉浸感。</string>
     <string name="mcl_setting_title_resolution_scaler">分辨率缩放</string>
     <string name="mcl_setting_subtitle_resolution_scaler">允许降低游戏画面分辨率，原生分辨率为 100%。</string>
     <string name="mcl_setting_title_longpresstrigger">触发长按时长</string>
     <string name="mcl_setting_subtitle_longpresstrigger">更改长按（摧毁方块、丢弃物品）的触发时长。</string>
-    <string name="mcl_setting_title_buttonscale">控制按键缩放</string>
-    <string name="mcl_setting_subtitle_buttonscale">如果按键太小，可以将此设置调大</string>
+    <string name="mcl_setting_title_buttonscale">键位按键缩放</string>
+    <string name="mcl_setting_subtitle_buttonscale">如果键位按键过小，可将此项设置调大</string>
     <string name="mcl_setting_title_mousescale">鼠标缩放</string>
-    <string name="mcl_setting_subtitle_mousescale">修改虚拟鼠标的大小。</string>
+    <string name="mcl_setting_subtitle_mousescale">更改虚拟鼠标的大小。</string>
     <string name="mcl_setting_title_javaargs">JVM 启动参数</string>
     <string name="mcl_setting_subtitle_javaargs">注意，如果你不清楚你在做什么请勿随意修改，否则可能会导致游戏崩溃！</string>
-    <string name="mcl_setting_title_renderer_settings">额外渲染器设置</string>
+    <string name="mcl_setting_title_renderer_settings">渲染器附加设置</string>
     <string name="mcl_setting_title_renderer_subtitle">渲染器特定设置</string>
     <string name="mcl_setting_category_renderer">渲染器</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES -（全版本可用，速度较快）</string>
@@ -61,19 +61,19 @@
     <string name="mcl_setting_veroption_oldbeta">早期 Beta 版</string>
     <string name="mcl_setting_java_sandbox">沙盒 .jar 可执行文件</string>
     <string name="mcl_setting_java_sandbox_subtitle">在执行 Jar 文件时，控制沙盒安全管理器的可用性。</string>
-    <string name="mcl_version_clone">克隆</string>
+    <string name="mcl_version_clone">复制</string>
     <!-- Global strings -->
     <string name="global_edit">编辑</string>
     <string name="global_error">错误</string>
     <string name="global_load">加载</string>
     <string name="global_name">名称</string>
     <string name="global_remove">移除</string>
-    <string name="global_clone">克隆</string>
+    <string name="global_clone">复制</string>
     <string name="global_restart">重启</string>
     <string name="global_save">保存</string>
     <string name="global_unpacking">正在解压 %s</string>
-    <string name="global_error_field_empty">此字段不能为空</string>
-    <string name="global_waiting">等待</string>
+    <string name="global_error_field_empty">此处不能为空</string>
+    <string name="global_waiting">请稍等</string>
     <string name="global_select">选择</string>
     <string name="global_retry">重试</string>
     <string name="global_default">默认</string>

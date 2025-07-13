@@ -282,7 +282,7 @@
     <string name="create_profile_modded_versions">模组加载器版本</string>
     <string name="fabric_dl_loader_title">选择版本</string>
     <string name="of_dl_select_version">选择 OptiFine 版本</string>
-    <string name="of_dl_failed_to_scrape">无法收集 OptiFine 安装数据！</string>
+    <string name="of_dl_failed_to_scrape">无法收集 OptiFine 安装程序数据！</string>
     <string name="of_dl_progress">正在下载 %s</string>
     <string name="create_profile_optifine">创建 OptiFine 配置</string>
     <string name="hint_search_modpack">搜索整合包</string>
@@ -292,7 +292,7 @@
     <string name="generic_apply">应用设置</string>
     <string name="generic_debug">调试</string>
     <string name="search_modpack_no_result">未找到整合包</string>
-    <string name="search_modpack_error">寻找整合包失败</string>
+    <string name="search_modpack_error">整合包搜索失败</string>
     <string name="search_modpack_download_error">整合包元数据下载失败</string>
     <string name="modpack_download_downloading_metadata">正在下载整合包元数据（%.2fMB / %.2fMB）</string>
     <string name="modpack_download_downloading_mods">正在下载模组（%.2fMB / %.2fMB）</string>
@@ -309,7 +309,7 @@
     <string name="fabric_dl_only_stable">仅显示稳定版本</string>
     <string name="dl_tampered_manifest_title">文件校验警告</string>
     <string name="dl_tampered_manifest"><![CDATA[来自镜像下载源的游戏版本清单与 Mojang 官方版本清单不符，这意味着它可能已经被篡改。<br/>
-        <b>此行为并不安全，如果您继续，则您的个人信息可能有安全风险。</b><br/>
+        <b>这并不安全，如果您继续，则您的个人信息可能有安全风险。</b><br/>
         如您仍想使用镜像下载源，请点击 \"关闭版本清单检查\" 并重新开始下载。<br/>
         如您想要使用官方下载源，请点击 \"切换到官方下载源\" 并重新开始下载。<br/>]]></string>
     <string name="dl_turn_off_manifest_checks">关闭版本清单检查</string>
@@ -331,8 +331,8 @@
     <string name="notification_permission_dialog_text">PojavLauncher 需要获得通知权限，以防止在您离开应用时停止游戏或模组包的下载。没有这个权限，Android 可能会在您将 PojavLauncher 置于后台模式时关闭您的下载。</string>
     <string name="notification_permission_toast">您可以随时进入设置来更改您的意愿</string>
     <string name="preference_ask_for_notification_title">允许通知</string>
-    <string name="preference_ask_for_notification_description">请点击重新请求通知权限，以确保游戏或整合包的后台下载正常工作。</string>
-    <string name="preference_vsync_in_zink_title">允许在使用 Zink 时启用垂直同步</string>
+    <string name="preference_ask_for_notification_description">点击以重新请求通知权限，以确保游戏或整合包的后台下载正常工作。</string>
+    <string name="preference_vsync_in_zink_title">允许为 Zink 启用垂直同步</string>
     <string name="preference_vsync_in_zink_description">允许启动器使用内部系统 API 为 Zink 启用垂直同步，如果系统更新后，您在使用 Zink 时崩溃，请关闭此项设置。</string>
     <string name="exception_failed_to_unpack_jre17">JRE 17 安装失败！</string>
     <string name="newdl_starting">正在读取游戏元数据…</string>

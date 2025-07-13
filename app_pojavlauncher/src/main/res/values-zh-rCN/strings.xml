@@ -57,8 +57,8 @@
     <string name="mcl_setting_renderer_ltw">LTW (OpenGL ES 3) - 仅限 1.17+</string>
     <string name="mcl_setting_veroption_release">正式版</string>
     <string name="mcl_setting_veroption_snapshot">快照</string>
-    <string name="mcl_setting_veroption_oldalpha">早期 Alpha 版</string>
-    <string name="mcl_setting_veroption_oldbeta">早期 Beta 版</string>
+    <string name="mcl_setting_veroption_oldalpha">远古 alpha 版</string>
+    <string name="mcl_setting_veroption_oldbeta">远古 beta 版</string>
     <string name="mcl_setting_java_sandbox">沙盒 .jar 可执行文件</string>
     <string name="mcl_setting_java_sandbox_subtitle">在执行 Jar 文件时，控制沙盒安全管理器的可用性。</string>
     <string name="mcl_version_clone">复制</string>
@@ -79,8 +79,8 @@
     <string name="global_default">默认</string>
     <string name="global_off">关</string>
     <!-- MainActivity: strings -->
-    <string name="mcn_exit_title">应用程序/游戏以代码 %d 退出，请查看 latestlog.txt 了解更多详情。</string>
-    <string name="mcn_signal_title">应用程序/游戏以致命信号 %d 中止，请查看 latestlog.txt 以了解更多详情。</string>
+    <string name="mcn_exit_title">应用程序/游戏以代码 %d 退出，请查看日志文件 latestlog.txt 以了解详情。</string>
+    <string name="mcn_signal_title">应用程序/游戏以致命信号 %d 中止，请查看日志文件 latestlog.txt 以了解详情。</string>
     <string name="mcn_exit_confirm">您确定要强制关闭？</string>
     <string name="mcn_check_fail_vulkan_support">此设备不支持 Zink（Vulkan）渲染器！</string>
     <!-- MainActivity: Control buttons -->
@@ -132,8 +132,8 @@
     <string name="customctrl_selectdefault">选择默认控制布局</string>
     <string name="customctrl_export">导出控制布局文件</string>
     <string name="main_share_logs">分享日志文件</string>
-    <string name="main_install_jar_file">执行 .jar 文件</string>
-    <string name="main_play">开始游戏</string>
+    <string name="main_install_jar_file">执行 Jar 文件</string>
+    <string name="main_play">启动游戏</string>
     <string name="autoram_info_msg">内存已分配 %d MB</string>
     <string name="mcl_setting_check_libraries">在下载完成后检查依赖库</string>
     <string name="mcl_setting_check_libraries_subtitle">此选项强制启动器检查依赖库文件的哈希值是否正常，防止下载错误。</string>

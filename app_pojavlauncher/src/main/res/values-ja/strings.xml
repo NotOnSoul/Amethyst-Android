@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <!-- App name part -->
+    <string name="app_name">Amethyst</string>
     <!-- Action bar part -->
     <!-- Languages list part -->
     <!-- Login strings -->
@@ -34,11 +35,19 @@
     <string name="mcl_option_customcontrol">カスタムコントロール</string>
     <string name="mcl_setting_title_use_surface_view">別のサーフェスレンダリングを使用する</string>
     <string name="mcl_setting_title_ignore_notch">ノッチを無視する</string>
+    <string name="mcl_setting_subtitle_ignore_notch">ノッチを無視して画面をフルサイズで表示します\n没入感が増えます</string>
     <string name="mcl_setting_title_resolution_scaler">解像度のスケール</string>
+    <string name="mcl_setting_subtitle_resolution_scaler">ゲームの解像度を下げることができます。規定値は100%です。</string>
+    <string name="mcl_setting_title_longpresstrigger">長押し時間</string>
+    <string name="mcl_setting_subtitle_longpresstrigger">ブロックを破壊、ドロップするのに必要な長押し時間を変更します</string>
     <string name="mcl_setting_title_buttonscale">制御ボタンの拡大縮小</string>
+    <string name="mcl_setting_subtitle_buttonscale">ボタンが小さすぎる場合は拡大します</string>
     <string name="mcl_setting_title_mousescale">カーソルのサイズ</string>
+    <string name="mcl_setting_subtitle_mousescale">仮想マウスのサイズを変更</string>
     <string name="mcl_setting_title_javaargs">JVM 起動引数</string>
     <string name="mcl_setting_subtitle_javaargs">注意してください, 知識がない場合、ゲームがクラッシュすることがあります。</string>
+    <string name="mcl_setting_title_renderer_settings">レンダラーの追加設定</string>
+    <string name="mcl_setting_title_renderer_subtitle">レンダラー固有の設定</string>
     <string name="mcl_setting_category_renderer">レンダラー</string>
     <string name="mcl_setting_renderer_gles2_4">Holy GL4ES - (全バージョン対応、動作が軽い)</string>
     <string name="mcl_setting_veroption_release">正式</string>
@@ -61,8 +70,10 @@
     <string name="global_select">選択...</string>
     <string name="global_retry">再試行</string>
     <string name="global_default">デフォルト</string>
+    <string name="global_off">オフ</string>
     <!-- MainActivity: strings -->
     <string name="mcn_exit_title">アプリケーション/ゲームはコード %dで終了しました。詳細についてはlatestlog.txtをご確認ください</string>
+    <string name="mcn_signal_title">アプリケーション/ゲームはコード %dで終了しました。詳細についてはlatestlog.txtをご確認ください。</string>
     <string name="mcn_exit_confirm">強制終了しますか？</string>
     <string name="mcn_check_fail_vulkan_support">Zink (Vulkan) レンダラーは、このデバイスでサポートされていません!</string>
     <!-- MainActivity: Control buttons -->
@@ -70,7 +81,13 @@
     <string name="control_debug">デバッグ</string>
     <string name="control_primary">左</string>
     <string name="control_secondary">右</string>
+    <string name="control_shift">◇</string>
     <string name="control_inventory">持ち物</string>
+    <string name="control_up">▲</string>
+    <string name="control_left">◀</string>
+    <string name="control_right">▶</string>
+    <string name="control_down">▼</string>
+    <string name="control_jump">⬛</string>
     <string name="control_thirdperson">三人称</string>
     <string name="control_listplayers">プレイヤー</string>
     <string name="control_mouse">カーソル</string>
@@ -120,6 +137,7 @@
     <string name="customctrl_swipeable">スワイプする</string>
     <string name="memory_warning_msg">現在の空きメモリ量(%d)は割り当てられたRAM(%d)よりも低く、クラッシュする可能性があります. ゲームがクラッシュした場合は割り当てを変更します。</string>
     <string name="mcl_memory_allocation">メモリ割り当て</string>
+    <string name="mcl_memory_allocation_subtitle">Minecraftで使用されるメモリ容量を設定します</string>
     <string name="multirt_runtime_corrupt">Javaのランタイムが破損しています</string>
     <string name="multirt_runtime_incompatiblearch">互換性のないアーキテクチャ: %s</string>
     <string name="multirt_config_title">Javaランタイム</string>
@@ -129,6 +147,8 @@
     <string name="multirt_progress_caching">キャッシュ中...</string>
     <string name="multirt_config_setdefault">デフォルトに設定</string>
     <string name="multirt_config_setdefault_already">デフォルト</string>
+    <string name="multirt_config_removeerror_last">最低でも1つJavaランタイムをインストールする必要があります。</string>
+    <string name="multirt_nocompatiblert">互換性のある Java ランタイムが見つかりません。このバージョンを実行するには Java %d 以降が必要です。</string>
     <string name="multirt_nojava8rt">Java 8が見つかりません。このオプションを使用するには、Java 8をインストールする必要があります。</string>
     <string name="multirt_delete_runtime">ランタイムを削除</string>
     <string name="pvc_gameDirectory">ゲームのディレクトリ</string>
@@ -188,9 +208,15 @@
     <string name="xerr_not_available">お住まいの国ではXbox Liveをご利用になれません。</string>
     <string name="preference_enable_gyro_title">ジャイロコントロールをオンにする</string>
     <string name="preference_gyro_sensitivity_title">ジャイロコントロールの感度</string>
+    <string name="preference_gyro_sensitivity_description">ジャイロコントロールの感度を調整</string>
+    <string name="toast_turn_on_gyro">この機能を使用するにはジャイロコントロールを有効にする必要があります</string>
     <string name="preference_gyro_sample_rate_title">ジャイロコントロールサンプリングの速度</string>
+    <string name="preference_gyro_sample_rate_description">ジャイロコントロールでパフォーマンス上の問題がある場合はこの値を増やしてください。</string>
     <string name="microsoft_login_retry_later">リクエストが多すぎるため、後でもう一度お試しください。</string>
+    <string name="storage_required">PojavLauncherを使用するには外部ストレージが必要です。外部ストレージを接続してアプリを起動しなおしてください。</string>
     <string name="preference_shader_dump_title">シェーダーダンプをオンにする</string>
+    <string name="preference_shader_dump_description">変換されたシェーダーをログファイルに記録します。</string>
+    <string name="percent_format">%d%%</string>
     <string name="customctrl_editor_exit_title">終了しますか？</string>
     <string name="customctrl_editor_exit_msg">本当に終了しますか？</string>
     <string name="customctrl_editor_exit">編集を中止する</string>
@@ -216,6 +242,9 @@
     <string name="generic_install">インストール</string>
     <string name="generic_apply">適用</string>
     <string name="generic_debug">デバッグ</string>
+    <string name="modpack_install_notification_success">ここをクリックしてMODのインストールを完了</string>
+    <string name="modpack_install_notification_data_not_available">MODローダー情報のダウンロードに失敗しました</string>
+    <string name="modpack_install_modloader_download_failed">MODローダーのダウンロードに失敗しました</string>
     <string name="notif_error_occured">エラーが発生しました</string>
     <string name="notif_error_occured_desc">タップして詳細を表示</string>
     <string name="fabric_dl_only_stable">安定したバージョンのみ表示</string>
@@ -223,4 +252,5 @@
     <string name="preference_category_java_tweaks">Java の調整</string>
     <string name="preference_category_miscellaneous">その他の設定</string>
     <string name="controller_button_select">選択...</string>
+    <string name="app_short_name">Amethyst</string>
 </resources>

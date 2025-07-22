@@ -65,6 +65,7 @@
     <string name="global_edit">Bearbeiten</string>
     <string name="global_error">Fehler</string>
     <string name="global_load">Laden</string>
+    <string name="global_name">Namen</string>
     <string name="global_remove">Entfernen</string>
     <string name="global_clone">Duplizieren</string>
     <string name="global_restart">Neustart</string>
@@ -125,6 +126,7 @@
     <string name="customctrl_button_opacity">Deckkraft der Schaltflächen</string>
     <string name="customctrl_addbutton">Taste hinzufügen</string>
     <string name="customctrl_addbutton_drawer">Schaltflächengruppe hinzufügen</string>
+    <string name="customctrl_addbutton_joystick">Joystick hinzufügen</string>
     <string name="customctrl_addsubbutton">Sub-Schaltfläche hinzufügen</string>
     <string name="customctrl_selectdefault">Standard-Steuerung auswählen</string>
     <string name="customctrl_export">Steuerung exportieren</string>
@@ -197,6 +199,7 @@
     <string name="unnamed">Unbenannt</string>
     <string name="profiles_latest_snapshot">Neuste Entwicklungsversion</string>
     <string name="profiles_latest_release">Neuste Vollversion</string>
+    <string name="profiles_profile_name">Namen</string>
     <string name="global_delete">Löschen</string>
     <string name="pedit_java_runtime">Java-Laufzeitumgebungen</string>
     <string name="arc_capes_title">Cosmetica-Umhänge</string>
@@ -359,6 +362,7 @@ Um die offizielle Download-Quelle zu verwenden, drücke \"Auf offizielle Seite u
     <string name="controller_remapper_exit_part1">Halte</string>
     <string name="controller_remapper_exit_part2">gedrückt zum Beenden</string>
     <string name="controller_remapper_operating_mode">Aktueller Modus</string>
+    <string name="customctrl_visibility_title">Sichtbarkeit</string>
     <string name="customctrl_visibility_ingame">Ingame</string>
     <string name="customctrl_visibility_in_menus">In den Menüs</string>
     <string name="controller_remapper_expand_entry">Zeige mehr an, um die Keycodes zu ändern</string>

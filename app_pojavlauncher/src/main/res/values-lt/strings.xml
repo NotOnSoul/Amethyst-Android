@@ -142,7 +142,6 @@
     <string name="preference_control_description">Gestai, mygtukai ir didinimas</string>
     <string name="preference_java_title">Java redagavimas</string>
     <string name="preference_misc_title">Kiti nustatymai</string>
-    <string name="preference_experimental_title">Eksperimentiniai dalykai</string>
     <string name="preference_sustained_performance_title">Įjungti nuolatinio našumo režimą</string>
     <string name="preference_force_vsync_title">Priverstinai įjungti VSync</string>
     <string name="preference_force_english_title">Perjungti I Anglų kalbą</string>
@@ -244,5 +243,6 @@
     <string name="newdl_downloading_metadata">Siunčiama žaidimo metadata (%s)</string>
     <string name="controller_button_select">Pasirinkti</string>
     <string name="customctrl_visibility_title">Matomumas</string>
+    <string name="preference_experimental_title">Eksperimentiniai dalykai</string>
     <string name="app_short_name">Ametistas</string>
 </resources>

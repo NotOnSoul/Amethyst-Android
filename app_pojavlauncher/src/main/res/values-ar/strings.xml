@@ -160,7 +160,6 @@
     <string name="preference_java_description">Java Runtimes, Jvm Arguments, حجم الذاكرة العشوائية و Sandbox</string>
     <string name="preference_misc_title">أعدادات متنوعة</string>
     <string name="preference_misc_description">قائمة الإصدار، والتحقق من المكاتب</string>
-    <string name="preference_experimental_title">أشياء تجريبية</string>
     <string name="preference_experimental_description">استخدم هذه الخِيارات بحذر، لن يتم مساعدتك</string>
     <string name="preference_sustained_performance_title">تمكين وضع الأداء المستقر</string>
     <string name="preference_sustained_performance_description">الحد من الاختناق الحراري عن طريق حد الأداء الأقصى.</string>
@@ -350,4 +349,5 @@
     <string name="local_login_bad_username_title">اسم المستخدم غير مناسب</string>
     <string name="local_login_bad_username_text">يجب أن يكون اسم المستخدم بين 3–16 حرفاً، ويجب أن يحتوي فقط على أحرف لاتينية وأرقام 0-9 وتسطيرات سفلية.</string>
     <string name="quick_setting_title">قائمة الإعدادات السريعة</string>
+    <string name="preference_experimental_title">أشياء تجريبية</string>
 </resources>

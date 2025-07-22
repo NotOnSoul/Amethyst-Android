@@ -414,4 +414,9 @@
     <string name="modloader_dl_install_neoforge">创建 Neoforge 配置</string>
     <string name="neoforge_dl_select_version">选择 NeoForge 版本</string>
     <string name="neoforge_dl_no_installer">抱歉，此版本的 NeoForge 没有安装程序，尚不支持。</string>
+    <string name="preference_category_touchcontroller_settings">触屏控制器设置</string>
+    <string name="preference_force_enable_touchcontroller_title">强制启用触屏控制器</string>
+    <string name="preference_force_enable_touchcontroller_description">强制启用触屏控制器集成，即使未找到 Mod 文件。</string>
+    <string name="preference_touchcontroller_vibrate_length_title">触屏控制器振动时长</string>
+    <string name="preference_touchcontroller_vibrate_length_description">设置使用触屏控制器时的振动时长。</string>
 </resources>

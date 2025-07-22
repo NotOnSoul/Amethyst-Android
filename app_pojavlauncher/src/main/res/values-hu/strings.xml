@@ -182,7 +182,6 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="preference_java_description">Java Runtime-ok, JVM argumentumok, memóriamennyiség és sandbox</string>
     <string name="preference_misc_title">Egyéb beállítások</string>
     <string name="preference_misc_description">Verziólista és könyvtár ellenőrzés</string>
-    <string name="preference_experimental_title">Kíserleti kellékek</string>
     <string name="preference_experimental_description">Megfontoltan használd ezeket, mivel mi nem segítünk ebben</string>
     <string name="preference_sustained_performance_title">Korlátozott teljesítménymód engedélyezése</string>
     <string name="preference_sustained_performance_description">Korlátozza a felmelegedést a csúcsteljesítmény korlátozásával.</string>
@@ -398,10 +397,11 @@ mcl_indítás_letöltés_folyamatban"</string>
     <string name="mg_renderer_glsl_cache">Maximum GLSL cache méret</string>
     <string name="mg_renderer_angle">ANGLE használata driverként</string>
     <string name="mg_renderer_multidraw">Multidraw emulációs mód</string>
+    <string name="mg_renderer_title_errorSetting">Szűrési hiba</string>
+    <string name="preference_experimental_title">Kíserleti kellékek</string>
     <string name="mg_renderer_title_gl43exts">Kísérleti OpenGL 4.3-bővítmények reklámozása</string>
     <string name="mg_renderer_summary_gl43exts">Ez segíthet a modok összeomlásai ellen. Kikapcsolható, ha nem szükséges.</string>
     <string name="mg_renderer_title_computeShaderext">Kísérleti Compute Shader bővítmény reklámozása</string>
     <string name="mg_renderer_summary_computeShaderext">Ez segíthet a shaderpackok összeomlásain ellen. Kikapcsolható, ha nem szükséges.</string>
-    <string name="mg_renderer_title_errorSetting">Szűrési hiba</string>
     <string name="app_short_name">Ametiszt</string>
 </resources>

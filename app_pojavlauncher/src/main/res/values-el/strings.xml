@@ -154,7 +154,6 @@
     <string name="preference_java_description">Java εκδόσεις, JVM Arguments, ποσότητα RAM και sandbox</string>
     <string name="preference_misc_title">Διάφορες ρυθμίσεις</string>
     <string name="preference_misc_description">Λίστα εκδόσεων και έλεγχος βιβλιοθηκών</string>
-    <string name="preference_experimental_title">Πειραματικές αντικείμενα</string>
     <string name="preference_experimental_description">Χρησιμοποιήστε τα πράγματα εκεί με προσοχή, χωρίς υποστήριξη</string>
     <string name="preference_sustained_performance_title">Ενεργοποίηση λειτουργίας συνεχούς απόδοσης</string>
     <string name="preference_sustained_performance_description">Περιορισμός της θερμικής επιτάχυνσης με περιορισμό των επιδόσεων.</string>
@@ -299,4 +298,5 @@
     <string name="exception_failed_to_unpack_jre17">Αποτυχία εγκατάστασης JRE 17</string>
     <string name="newdl_starting">Ανάγνωση μεταδεδομένων παιχνιδιού…</string>
     <string name="newdl_downloading_metadata">Λήψη μεταδεδομένων παιχνιδιού (%s)</string>
+    <string name="preference_experimental_title">Πειραματικές αντικείμενα</string>
 </resources>

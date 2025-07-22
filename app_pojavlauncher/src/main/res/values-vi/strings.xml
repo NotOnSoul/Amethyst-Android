@@ -179,7 +179,6 @@
     <string name="preference_java_description">Các Runtime Java, đối số JVM, phân bổ RAM và môi trường chạy tách biệt</string>
     <string name="preference_misc_title">Cài đặt khác</string>
     <string name="preference_misc_description">Kiểm tra danh sách phiên bản và thư viện</string>
-    <string name="preference_experimental_title">Tính năng thử nghiệm</string>
     <string name="preference_experimental_description">Cân nhắc trước khi sử dụng các tính năng này, không cung cấp hỗ trợ</string>
     <string name="preference_sustained_performance_title">Bật chế độ duy trì hiệu suất</string>
     <string name="preference_sustained_performance_description">Ngăn tình trạng giảm hiệu suất vì quá nhiệt bằng cách giới hạn hiệu suất tối đa.</string>
@@ -395,11 +394,12 @@
     <string name="mg_renderer_glsl_cache">Kích cỡ bộ đệm GLSL tối đa</string>
     <string name="mg_renderer_angle">Dùng ANGLE làm trình điều khiển</string>
     <string name="mg_renderer_multidraw">Chế độ giả lập Multidraw</string>
+    <string name="mg_renderer_title_errorSetting">Lọc lỗi</string>
+    <string name="preference_experimental_title">Tính năng thử nghiệm</string>
     <string name="mg_renderer_title_gl43exts">Truyền phần mở rộng OpenGL 4.3 thử nghiệm</string>
     <string name="mg_renderer_summary_gl43exts">Có thể giúp giảm tình trạng lỗi mod. Tính năng cũng có thể gây thoát đột ngột, hãy tắt nếu không cần thiết.</string>
     <string name="mg_renderer_title_computeShaderext">Truyền phần mở rộng tính toán shader thử nghiệm</string>
     <string name="mg_renderer_summary_computeShaderext">Có thể giúp giảm hiện tượng lỗi trên các gói shader. Tính năng cũng có thể gây thoát đột ngột, hãy tắt nếu không cần thiết.</string>
-    <string name="mg_renderer_title_errorSetting">Lọc lỗi</string>
     <string name="app_short_name">Amethyst</string>
     <string name="demo_versions_supported">Tài khoản chơi thử chỉ hỗ trợ chạy phiên bản từ 1.3.1 trở lên</string>
     <string name="demo_unsupported">Không hỗ trợ chế độ chơi thử</string>

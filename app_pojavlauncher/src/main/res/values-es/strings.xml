@@ -160,7 +160,6 @@
     <string name="preference_java_description">Versiones de Java, Argumentos JVM, Cantidad de RAM y sandbox</string>
     <string name="preference_misc_title">Ajustes varios</string>
     <string name="preference_misc_description">Lista de versiones, y comprobación de librerías</string>
-    <string name="preference_experimental_title">Cosas Experimentales</string>
     <string name="preference_experimental_description">Usa las cosas de aquí con consideración, no habrá soporte</string>
     <string name="preference_sustained_performance_title">Activar el modo de rendimiento sostenido</string>
     <string name="preference_sustained_performance_description">Limita la regulación térmica limitando el rendimiento máximo.</string>
@@ -338,4 +337,5 @@
     <string name="local_login_bad_username_title">Nombre de usuario inadecuado</string>
     <string name="local_login_bad_username_text">El nombre de usuario debe de ser entre 3 a 16 caracteres, y solo contener letras latinas, números de 0 a 9 y guiones bajos.</string>
     <string name="quick_setting_title">Configuraciones rápidas</string>
+    <string name="preference_experimental_title">Cosas Experimentales</string>
 </resources>

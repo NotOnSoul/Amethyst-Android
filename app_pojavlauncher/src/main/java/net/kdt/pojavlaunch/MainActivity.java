@@ -357,7 +357,10 @@ public class MainActivity extends BaseActivity implements ControlButtonMenuListe
 
     private void runCraft(String versionId, JMinecraftVersionList.Version version) throws Throwable {
         if(Tools.LOCAL_RENDERER == null) {
-            Tools.LOCAL_RENDERER = LauncherPreferences.PREF_RENDERER;
+            Integer iSelectedMcVer = Tools.mcVersiontoInt(Tools.getSelectedVanillaMcVer());
+            if (iSelectedMcVer >= 1021005) {
+                Tools.LOCAL_RENDERER = "opengles_mobileglues";
+            } else Tools.LOCAL_RENDERER = "opengles2";
         }
         if(!Tools.checkRendererCompatible(this, Tools.LOCAL_RENDERER)) {
             Tools.RenderersList renderersList = Tools.getCompatibleRenderers(this);

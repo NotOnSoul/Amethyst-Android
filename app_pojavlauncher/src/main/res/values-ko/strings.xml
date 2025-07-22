@@ -157,7 +157,6 @@
     <string name="preference_java_description">Java 런타임, JVM 매개변수, RAM 크기와 샌드박스</string>
     <string name="preference_misc_title">기타 설정</string>
     <string name="preference_misc_description">버전 목록과 라이브러리 확인</string>
-    <string name="preference_experimental_title">실험적 기능</string>
     <string name="preference_experimental_description">여러 실험적 기능을 사용합니다. (권장하지 않습니다.)</string>
     <string name="preference_sustained_performance_title">성능 유지 모드를 활성화합니다</string>
     <string name="preference_sustained_performance_description">최고 성능을 제한하여 과열을 방지합니다.</string>
@@ -311,4 +310,5 @@
     <string name="newdl_starting">게임 메타데이터를 읽고 있습니다…</string>
     <string name="newdl_downloading_metadata">게임 메타데이터를 다운로드하고 있습니다 (%s)</string>
     <string name="controller_button_select">선택</string>
+    <string name="preference_experimental_title">실험적 기능</string>
 </resources>

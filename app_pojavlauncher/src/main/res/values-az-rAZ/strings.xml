@@ -127,7 +127,6 @@
     <string name="preference_java_description">Java Runtimes, JVM Arqumentləri, RAM miqdarı və sandbox</string>
     <string name="preference_misc_title">Müxtəlif parametrlər</string>
     <string name="preference_misc_description">Versiya siyahısı və kitabxanaların yoxlanılması</string>
-    <string name="preference_experimental_title">Eksperimental əşyalar</string>
     <string name="preference_experimental_description">Oradakı şeyləri nəzərə alaraq istifadə edin, dəstək yoxdur</string>
     <string name="preference_sustained_performance_title">Davamlı performans rejimini aktivləşdirin</string>
     <string name="preference_sustained_performance_description">Pik performansı məhdudlaşdırmaqla termal qızmanı məhdudlaşdırın.</string>
@@ -267,4 +266,5 @@
     <string name="exception_failed_to_unpack_jre17">JRE 17 quraşdırmaq alınmadı</string>
     <string name="newdl_starting">Oyun metadatası oxunur…</string>
     <string name="newdl_downloading_metadata">Oyun metadatası endirilir (%s)</string>
+    <string name="preference_experimental_title">Eksperimental əşyalar</string>
 </resources>

@@ -136,7 +136,6 @@
     <string name="preference_java_description">Java Runtimes, JVM Argumenten, RAM hoeveelheid en sandbox</string>
     <string name="preference_misc_title">Overige instellingen</string>
     <string name="preference_misc_description">Versielijst en bibliotheken controleren</string>
-    <string name="preference_experimental_title">Experimentele dingen</string>
     <string name="preference_experimental_description">Gebruik dingen daar met aandacht, er is geen support voor beschikbaar</string>
     <string name="preference_sustained_performance_title">geblancerende prestatiemodus inschakelen</string>
     <string name="preference_sustained_performance_description">Limiteer thermische beperking door het beperken van piekprestaties.</string>
@@ -229,4 +228,5 @@
     <string name="exception_failed_to_unpack_jre17">Installatie van JRE 17 mislukt</string>
     <string name="newdl_starting">Metadata van het spel lezen…</string>
     <string name="newdl_downloading_metadata">Spelmetagegevens downloaden (%s)</string>
+    <string name="preference_experimental_title">Experimentele dingen</string>
 </resources>

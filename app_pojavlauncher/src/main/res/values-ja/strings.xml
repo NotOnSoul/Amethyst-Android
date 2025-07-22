@@ -161,7 +161,6 @@
     <string name="preference_java_title">Java の調整</string>
     <string name="preference_java_description">Javaのバージョン、JVMの引数、RAM、サンドボックス</string>
     <string name="preference_misc_title">その他の設定</string>
-    <string name="preference_experimental_title">実験的なもの</string>
     <string name="preference_sustained_performance_title">持続的なパフォーマンスモードを有効にする</string>
     <string name="preference_force_vsync_title">強制的に垂直同期をオンにする</string>
     <string name="preference_force_english_title">強制的に言語を英語にする</string>
@@ -277,5 +276,6 @@
     <string name="newdl_starting">ゲーム構成を読み込んでいます…</string>
     <string name="newdl_downloading_metadata">ゲーム構成データをダウンロードしています %s%%完了</string>
     <string name="controller_button_select">選択...</string>
+    <string name="preference_experimental_title">実験的なもの</string>
     <string name="app_short_name">Amethyst</string>
 </resources>

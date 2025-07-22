@@ -179,7 +179,6 @@
     <string name="preference_java_description">Środowisko wykonawcze Javy, Argumenty JVM, ilość pamięci RAM i piaskownica</string>
     <string name="preference_misc_title">Pozostałe ustawienia</string>
     <string name="preference_misc_description">Lista wersji oraz sprawdzanie bibliotek</string>
-    <string name="preference_experimental_title">Eksperymentalne</string>
     <string name="preference_experimental_description">Nie pomożemy Ci, jeśli coś zepsujesz używając tych opcji</string>
     <string name="preference_sustained_performance_title">Włącz tryb zrównoważonej wydajności</string>
     <string name="preference_sustained_performance_description">Zmniejsz nagrzewanie urządzenia, ograniczając górny próg wydajności.</string>
@@ -395,11 +394,12 @@
     <string name="mg_renderer_glsl_cache">Maksymalna ilość cache GLSL</string>
     <string name="mg_renderer_angle">Używaj sterownika ANGLE</string>
     <string name="mg_renderer_multidraw">Tryb emulacji Multidraw</string>
+    <string name="mg_renderer_title_errorSetting">Filtrowanie błędów</string>
+    <string name="preference_experimental_title">Eksperymentalne</string>
     <string name="mg_renderer_title_gl43exts">Udawaj eksperymentalne rozszerzenia OpenGL 4.3</string>
     <string name="mg_renderer_summary_gl43exts">Może pomagać z crashami związanymi z modami. Wyłącz, jeśli nie jest potrzebne, może powodować crashe.</string>
     <string name="mg_renderer_title_computeShaderext">Udawaj eksperymentalne rozszerzenia Compute Shaderów</string>
     <string name="mg_renderer_summary_computeShaderext">Może pomagać z glitchami związanymi z paczkami shaderów. Wyłącz, jeśli nie jest potrzebne, może powodować crashe.</string>
-    <string name="mg_renderer_title_errorSetting">Filtrowanie błędów</string>
     <string name="app_short_name">Ametyst</string>
     <string name="demo_versions_supported">Tylko Vanilla 1.3.1 i nowsze wspierają konta demo</string>
     <string name="demo_unsupported">Profil demo nie jest wspierany</string>

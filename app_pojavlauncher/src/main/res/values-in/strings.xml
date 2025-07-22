@@ -179,7 +179,6 @@
     <string name="preference_java_description">Runtime Java, Argumen JVM, Jumlah RAM dan sandbox</string>
     <string name="preference_misc_title">Pengaturan lain-lain</string>
     <string name="preference_misc_description">Daftar versi dan pemeriksaan lib</string>
-    <string name="preference_experimental_title">Fitur Eksperimental</string>
     <string name="preference_experimental_description">Gunakan hal-hal di sana dengan pertimbangan, tidak ada dukungan</string>
     <string name="preference_sustained_performance_title">Aktifkan mode kinerja berkelanjutan</string>
     <string name="preference_sustained_performance_description">Batasi thermal throttling dengan cara membatasi performa maksimal.</string>
@@ -395,11 +394,12 @@
     <string name="mg_renderer_glsl_cache">Ukuran Maksimum Cache GLSL</string>
     <string name="mg_renderer_angle">Gunakan ANGLE sebagai driver</string>
     <string name="mg_renderer_multidraw">Mode Emulasi Multidraw</string>
+    <string name="mg_renderer_title_errorSetting">Error Filtering</string>
+    <string name="preference_experimental_title">Fitur Eksperimental</string>
     <string name="mg_renderer_title_gl43exts">Gunakan Ekstensi Eksperimental OpenGL 4.3</string>
     <string name="mg_renderer_summary_gl43exts">Dapat membantu menghindari crash karena mod. Matikan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
     <string name="mg_renderer_title_computeShaderext">Gunakan Ekstensi Compute Shader Eksperimental</string>
     <string name="mg_renderer_summary_computeShaderext">Mungkin membantu mengatasi glitch pada shaderpack. Nonaktifkan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
-    <string name="mg_renderer_title_errorSetting">Error Filtering</string>
     <string name="app_short_name">Amethyst</string>
     <string name="demo_versions_supported">Hanya Minecraft Vanilla versi 1.3.1 ke atas yang didukung untuk akun demo</string>
     <string name="demo_unsupported">Profil Demo tidak di dukung</string>

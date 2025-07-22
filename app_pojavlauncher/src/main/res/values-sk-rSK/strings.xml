@@ -150,7 +150,6 @@
     <string name="preference_java_description">Inštalácie Javy, JVM Argumenty, Pamäť a sandbox</string>
     <string name="preference_misc_title">Iné nastavenia</string>
     <string name="preference_misc_description">Zoznam verzií a kontrola knižníc</string>
-    <string name="preference_experimental_title">Experimentálne nastavenia</string>
     <string name="preference_experimental_description">Používajte tieto veci s uvážením, nepodporujeme</string>
     <string name="preference_sustained_performance_title">Zapnúť režim trvalého výkonu</string>
     <string name="preference_sustained_performance_description">Umožňuje pokles teploty zariadenia limitovaním výkonu.</string>
@@ -294,4 +293,5 @@
     <string name="exception_failed_to_unpack_jre17">Nepodarilo sa nainštalovať Javu 17</string>
     <string name="newdl_starting">Čítanie metadát hry…</string>
     <string name="newdl_downloading_metadata">Sťahovanie metadát hry (%s)</string>
+    <string name="preference_experimental_title">Experimentálne nastavenia</string>
 </resources>

@@ -179,7 +179,6 @@
     <string name="preference_java_description">Java Runtime\'ları, JVM Argümanları, Bellek miktarı ve sandbox</string>
     <string name="preference_misc_title">Çeşitli ayarlar</string>
     <string name="preference_misc_description">Sürüm listesi ve kütüphane kontrolü</string>
-    <string name="preference_experimental_title">Deneysel Ayarlar</string>
     <string name="preference_experimental_description">Buradaki ayarları düşünerek kullanın, destek yoktur</string>
     <string name="preference_sustained_performance_title">Kısıtlı performans modunu aç</string>
     <string name="preference_sustained_performance_description">Üst performansı kısıtlayarak ısınmayı limitle.</string>
@@ -395,11 +394,12 @@
     <string name="mg_renderer_glsl_cache">Maks GLSL önbellek boyutu</string>
     <string name="mg_renderer_angle">Sürücü olarak ANGLE\'ı kullan</string>
     <string name="mg_renderer_multidraw">Multidraw emulasyon modu</string>
+    <string name="mg_renderer_title_errorSetting">Hata filtreleme</string>
+    <string name="preference_experimental_title">Deneysel Ayarlar</string>
     <string name="mg_renderer_title_gl43exts">Deneysel OpenGL 4.3 uzantılarını destekliyormuş gibi göster</string>
     <string name="mg_renderer_summary_gl43exts">Mod çökmelerine yardımcı olabilir. Ihtiyaç yoksa devre dışı bırakın, çökmelere sebep olabilir.</string>
     <string name="mg_renderer_title_computeShaderext">Deneysel Compute Shader uzantısını destekliyormuş gibi göster</string>
     <string name="mg_renderer_summary_computeShaderext">Shader paketi bozulmalarına yardımcı olabilir. Ihtiyaç yoksa devre dışı bırakın, çökmelere sebep olabilir.</string>
-    <string name="mg_renderer_title_errorSetting">Hata filtreleme</string>
     <string name="app_short_name">Amethyst</string>
     <string name="demo_versions_supported">Sadece Vanilla 1.3.1 ve üzeri sürümler deneme hesaplarında desteklenmektedir</string>
     <string name="demo_unsupported">Deneme Profili desteklenmemektedir</string>

@@ -108,7 +108,6 @@
     <string name="preference_control_title">Идарә элементлары</string>
     <string name="preference_java_title">Java төзәтмәләре</string>
     <string name="preference_misc_title">Башка көйләүләр</string>
-    <string name="preference_experimental_title">Эксперименталь нәрсәләр</string>
     <string name="preference_category_virtual_mouse">Виртуаль тычкан</string>
     <string name="preference_back_title">Артка</string>
     <string name="unnamed">Исемсез</string>
@@ -144,5 +143,6 @@
     <string name="preference_category_java_tweaks">Java төзәтмәләре</string>
     <string name="preference_category_miscellaneous">Башка көйләүләр</string>
     <string name="controller_button_select">Сайлау</string>
+    <string name="preference_experimental_title">Эксперименталь нәрсәләр</string>
     <string name="no_minecraft_account_found">Minecraft аккаунт юк</string>
 </resources>

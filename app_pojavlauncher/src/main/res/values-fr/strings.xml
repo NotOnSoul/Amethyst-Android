@@ -157,7 +157,6 @@
     <string name="preference_java_description">Versions de Java, Arguments JVM, Quantité de RAM et Sandbox</string>
     <string name="preference_misc_title">Paramètres divers</string>
     <string name="preference_misc_description">Liste des versions, et vérifications des librairies</string>
-    <string name="preference_experimental_title">Trucs Expérimentaux</string>
     <string name="preference_experimental_description">Utilisez ces options avec prudence, aucun support ne sera fourni</string>
     <string name="preference_sustained_performance_title">Activer le mode de performances soutenues</string>
     <string name="preference_sustained_performance_description">Limiter la baisse de performance thermique (chauffe) en limitant les performances maximales.</string>
@@ -342,4 +341,5 @@
     <string name="customctrl_visibility_ingame">En jeu</string>
     <string name="customctrl_visibility_in_menus">Dans les menus</string>
     <string name="controller_remapper_expand_entry">Développer pour changer les codes de touches</string>
+    <string name="preference_experimental_title">Trucs Expérimentaux</string>
 </resources>

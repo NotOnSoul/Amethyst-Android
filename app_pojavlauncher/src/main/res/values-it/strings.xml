@@ -152,7 +152,6 @@
     <string name="preference_java_description">Java Runtime, argomenti JVM, quantità RAM e sandbox</string>
     <string name="preference_misc_title">Impostazioni varie</string>
     <string name="preference_misc_description">Lista versioni e controllo librerie</string>
-    <string name="preference_experimental_title">Funzioni sperimentali</string>
     <string name="preference_experimental_description">Usa queste funzioni a tuo rischio, nessun supporto</string>
     <string name="preference_sustained_performance_title">Attiva modalità performance sostenute</string>
     <string name="preference_sustained_performance_description">Limita il thermal throttling limitando le performance massime.</string>
@@ -315,4 +314,5 @@ se vuoi scaricare dalla sorgente ufficiale premi \"Passa al sito ufficiale"\ e r
     <string name="local_login_bad_username_title">Nome utente non adatto</string>
     <string name="local_login_bad_username_text">Il nome utente deve avere una lunghezza compresa tra 3 e 16 caratteri e deve contenere solo lettere latine, numeri 0-9 e trattini bassi.</string>
     <string name="quick_setting_title">Impostazioni rapide</string>
+    <string name="preference_experimental_title">Funzioni sperimentali</string>
 </resources>

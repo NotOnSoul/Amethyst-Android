@@ -395,11 +395,18 @@
     <string name="mg_renderer_angle">Gunakan ANGLE sebagai driver</string>
     <string name="mg_renderer_multidraw">Mode Emulasi Multidraw</string>
     <string name="mg_renderer_title_errorSetting">Error Filtering</string>
+    <string name="mg_renderer_title_timerQueryExt">Nonaktifkan Penggunaan GPU di menu F3</string>
+    <string name="mg_renderer_summary_timerQueryExt">Memperbaiki crash acak saat F3 dibuka di beberapa perangkat Mali</string>
+    <string name="preference_ANGLE_only">Opsi khusus untuk ANGLE</string>
+    <string name="mg_renderer_title_angleDepthClearFixMode">Memperbaiki tangan dan item yang dipegang agar tidak menembus blok</string>
+    <string name="mg_renderer_summary_angleDepthClearFixMode">Hanya memengaruhi ANGLE, bisa memengaruhi performa.</string>
     <string name="preference_experimental_title">Fitur Eksperimental</string>
     <string name="mg_renderer_title_gl43exts">Gunakan Ekstensi Eksperimental OpenGL 4.3</string>
     <string name="mg_renderer_summary_gl43exts">Dapat membantu menghindari crash karena mod. Matikan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
     <string name="mg_renderer_title_computeShaderext">Gunakan Ekstensi Compute Shader Eksperimental</string>
     <string name="mg_renderer_summary_computeShaderext">Mungkin membantu mengatasi glitch pada shaderpack. Nonaktifkan jika tidak diperlukan, karena bisa menyebabkan crash.</string>
+    <string name="mg_renderer_title_multidrawCompute">Gunakan Emulasi Multidraw Compute</string>
+    <string name="mg_renderer_summary_multidrawCompute">Menggunakan compute shaders untuk emulasi multidraw</string>
     <string name="app_short_name">Amethyst</string>
     <string name="demo_versions_supported">Hanya Minecraft Vanilla versi 1.3.1 ke atas yang didukung untuk akun demo</string>
     <string name="demo_unsupported">Profil Demo tidak di dukung</string>
@@ -412,4 +419,9 @@
     <string name="modloader_dl_install_neoforge">Buat profil NeoForge</string>
     <string name="neoforge_dl_select_version">Pilih versi NeoForge</string>
     <string name="neoforge_dl_no_installer">Maaf, versi NeoForge ini belum punya installer, jadi belum didukung untuk saat ini.</string>
+    <string name="preference_category_touchcontroller_settings">Pengaturan Kontrol Sentuh</string>
+    <string name="preference_force_enable_touchcontroller_title">Selalu aktifkan kontrol sentuh</string>
+    <string name="preference_force_enable_touchcontroller_description">Selalu aktifkan integrasi kontrol sentuh, meskipun file mod tidak ditemukan.</string>
+    <string name="preference_touchcontroller_vibrate_length_title">Durasi getaran kontrol sentuh</string>
+    <string name="preference_touchcontroller_vibrate_length_description">Atur durasi getaran saat menggunakan kontrol sentuh.</string>
 </resources>

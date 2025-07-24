@@ -395,6 +395,8 @@
     <string name="mg_renderer_angle">Использовать ANGLE в качестве драйвера</string>
     <string name="mg_renderer_multidraw">Режим эмуляции мультирисовки</string>
     <string name="mg_renderer_title_errorSetting">Ошибка фильтрации</string>
+    <string name="mg_renderer_summary_timerQueryExt">Починить случайные вылеты когда F3 открыто на некоторых Mali устройствах</string>
+    <string name="mg_renderer_summary_angleDepthClearFixMode">Влияет только на ANGLE, может повлиять на производительность.</string>
     <string name="preference_experimental_title">Экспериментальные</string>
     <string name="mg_renderer_title_gl43exts">Извещать экспериментальные расширения OpenGL 4.3</string>
     <string name="mg_renderer_summary_gl43exts">Может помочь при сбоях мода. Отключите, если не требуется, может привести к сбоям.</string>

@@ -1,13 +1,18 @@
 package net.kdt.pojavlaunch.customcontrols.mouse;
 
+import static net.kdt.pojavlaunch.prefs.LauncherPreferences.PREF_MOUSE_GRAB_FORCE;
+
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.view.InputDevice;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+import net.kdt.pojavlaunch.GrabListener;
 import net.kdt.pojavlaunch.MinecraftGLSurface;
 import net.kdt.pojavlaunch.Tools;
 import net.kdt.pojavlaunch.prefs.LauncherPreferences;
@@ -15,7 +20,7 @@ import net.kdt.pojavlaunch.prefs.LauncherPreferences;
 import org.lwjgl.glfw.CallbackBridge;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
-public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChangeListener, View.OnCapturedPointerListener {
+public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChangeListener, View.OnCapturedPointerListener, GrabListener, SharedPreferences.OnSharedPreferenceChangeListener {
     private static final float TOUCHPAD_SCROLL_THRESHOLD = 1;
     private final AbstractTouchpad mTouchpad;
     private final View mHostView;
@@ -32,14 +37,44 @@ public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChan
         this.mHostView = hostView;
         hostView.setOnCapturedPointerListener(this);
         hostView.getViewTreeObserver().addOnWindowFocusChangeListener(this);
+        if (!PREF_MOUSE_GRAB_FORCE)
+            CallbackBridge.addGrabListener(this);
     }
 
     private void enableTouchpadIfNecessary() {
-        if(!mTouchpad.getDisplayState()) mTouchpad.enable(true);
+        if(!mTouchpad.getDisplayState() && !Tools.isPointerDeviceConnected()) mTouchpad.enable(true);
+    }
+
+    // Needed so it releases the cursor when inside game menu
+    @Override
+    public void onGrabState(boolean isGrabbing) {
+        updateCursorState(isGrabbing);
+    }
+    // It's only here so the side-dialog changes it live
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, @Nullable String key) {
+        updateCursorState(CallbackBridge.isGrabbing());
+    }
+    private void updateCursorState(boolean isGrabbing) {
+        if (!isGrabbing // Only capture if not in menu and user said so
+                && !PREF_MOUSE_GRAB_FORCE) {
+            mHostView.releasePointerCapture(); // Release the capture since user said so
+        }
+        // Capture the pointer when not inside a menu
+        // So user doesn't have to click to get rid of cursor
+        handleAutomaticCapture();
     }
 
     public void handleAutomaticCapture() {
-        if(!mHostView.hasWindowFocus()) {
+        if (!CallbackBridge.isGrabbing() // Only capture if not in menu and user said so
+        && !PREF_MOUSE_GRAB_FORCE) {
+            return;
+        }
+        if (mHostView.hasPointerCapture()) {
+            enableTouchpadIfNecessary();
+            return;
+        }
+        if (!mHostView.hasWindowFocus()) {
             mHostView.requestFocus();
         } else {
             mHostView.requestPointerCapture();
@@ -128,7 +163,11 @@ public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChan
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
-        if(hasFocus && Tools.isAndroid8OrHigher()) mHostView.requestPointerCapture();
+        if (!CallbackBridge.isGrabbing() // Only capture if not in menu and user said so
+        && !PREF_MOUSE_GRAB_FORCE) {
+            return;
+        }
+        if (hasFocus && Tools.isAndroid8OrHigher()) mHostView.requestPointerCapture();
     }
 
     public void detach() {

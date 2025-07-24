@@ -469,4 +469,6 @@
     <string name="preference_force_enable_touchcontroller_description">Force enable TouchController integration, even if mod file is not found.</string>
     <string name="preference_touchcontroller_vibrate_length_title">TouchController vibrate length</string>
     <string name="preference_touchcontroller_vibrate_length_description">Set the length of the vibration when using TouchController.</string>
+    <string name="mcl_setting_title_grab_mouse">Use virtual cursor</string>
+    <string name="mcl_setting_subtitle_grab_mouse">Ensures the cursor stays inside the game. Prevents mouse from clicking touch control layout.</string>
 </resources>

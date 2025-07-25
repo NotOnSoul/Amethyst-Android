@@ -1,6 +1,7 @@
 package net.kdt.pojavlaunch;
 
 import static net.kdt.pojavlaunch.MainActivity.touchCharInput;
+import static net.kdt.pojavlaunch.prefs.LauncherPreferences.PREF_MOUSE_GRAB_FORCE;
 import static net.kdt.pojavlaunch.utils.MCOptionUtils.getMcScale;
 import static org.lwjgl.glfw.CallbackBridge.sendMouseButton;
 import static org.lwjgl.glfw.CallbackBridge.windowHeight;
@@ -193,6 +194,13 @@ public class MinecraftGLSurface extends View implements GrabListener, DirectGame
             if(toolType == MotionEvent.TOOL_TYPE_MOUSE) {
                 if(Tools.isAndroid8OrHigher() &&
                         mPointerCapture != null) {
+                    // Can't handleAutomaticCapture if mouse isn't captured
+                    if (!CallbackBridge.isGrabbing() // Only capture if not in menu and user said so
+                            && !PREF_MOUSE_GRAB_FORCE) {
+                        // This returns true but we really can't consume this.
+                        // Else we don't receive ACTION_MOVE
+                        return !dispatchGenericMotionEvent(e);
+                    }
                     mPointerCapture.handleAutomaticCapture();
                     return true;
                 }
@@ -241,9 +249,9 @@ public class MinecraftGLSurface extends View implements GrabListener, DirectGame
 
         // Make sure we grabbed the mouse if necessary
         updateGrabState(CallbackBridge.isGrabbing());
-
         switch(event.getActionMasked()) {
             case MotionEvent.ACTION_HOVER_MOVE:
+            case MotionEvent.ACTION_MOVE:
                 CallbackBridge.mouseX = (event.getX(mouseCursorIndex) * LauncherPreferences.PREF_SCALE_FACTOR);
                 CallbackBridge.mouseY = (event.getY(mouseCursorIndex) * LauncherPreferences.PREF_SCALE_FACTOR);
                 CallbackBridge.sendCursorPos(CallbackBridge.mouseX, CallbackBridge.mouseY);

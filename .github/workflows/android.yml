@@ -141,14 +141,14 @@ jobs:
       - name: Export artifact names and URLs
         id: artifact-names
         run: |
-          echo "debug_apk_filename=app-debug.apk" >> $GITHUB_OUTPUT
-          echo "debug_apk_url=https://github.com/${{ github.repository }}/suites/${{ github.run_id }}/artifacts/app-debug" >> $GITHUB_OUTPUT
+          echo "debug_apk_filename=app-debug.zip" >> $GITHUB_OUTPUT
+          echo "debug_apk_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?artifactName=app-debug" >> $GITHUB_OUTPUT
           
-          echo "noruntime_apk_filename=app-debug-noruntime.apk" >> $GITHUB_OUTPUT
-          echo "noruntime_apk_url=https://github.com/${{ github.repository }}/suites/${{ github.run_id }}/artifacts/app-debug-noruntime" >> $GITHUB_OUTPUT
+          echo "noruntime_apk_filename=app-debug-noruntime.zip" >> $GITHUB_OUTPUT
+          echo "noruntime_apk_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?artifactName=app-debug-noruntime" >> $GITHUB_OUTPUT
           
-          echo "release_aab_filename=app-gplay.aab" >> $GITHUB_OUTPUT
-          echo "release_aab_url=https://github.com/${{ github.repository }}/suites/${{ github.run_id }}/artifacts/app-release-aab" >> $GITHUB_OUTPUT
+          echo "release_aab_filename=app-release-aab.zip" >> $GITHUB_OUTPUT
+          echo "release_aab_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?artifactName=app-release-aab" >> $GITHUB_OUTPUT
 
   comment-pr:
     name: Comment on PR

@@ -99,6 +99,7 @@ public abstract class QuickSettingSideDialog extends com.kdt.SideDialogView {
         mGyroXSwitch.setChecked(mOriginalGyroXEnabled);
         mGyroYSwitch.setChecked(mOriginalGyroYEnabled);
         mGestureSwitch.setChecked(mOriginalGestureDisabled);
+        mMouseGrabSwitch.setChecked(mOriginalMouseGrab);
 
         mGyroSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             PREF_ENABLE_GYRO = isChecked;
@@ -126,6 +127,7 @@ public abstract class QuickSettingSideDialog extends com.kdt.SideDialogView {
         });
 
         mMouseGrabSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            PREF_MOUSE_GRAB_FORCE = isChecked;
             mEditor.putBoolean("always_grab_mouse", isChecked);
         });
 

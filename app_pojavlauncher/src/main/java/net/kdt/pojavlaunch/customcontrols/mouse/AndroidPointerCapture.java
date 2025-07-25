@@ -1,9 +1,11 @@
 package net.kdt.pojavlaunch.customcontrols.mouse;
 
+import static net.kdt.pojavlaunch.prefs.LauncherPreferences.DEFAULT_PREF;
 import static net.kdt.pojavlaunch.prefs.LauncherPreferences.PREF_MOUSE_GRAB_FORCE;
 
 import android.content.SharedPreferences;
 import android.os.Build;
+import android.util.Log;
 import android.view.InputDevice;
 import android.view.MotionEvent;
 import android.view.View;
@@ -37,12 +39,13 @@ public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChan
         this.mHostView = hostView;
         hostView.setOnCapturedPointerListener(this);
         hostView.getViewTreeObserver().addOnWindowFocusChangeListener(this);
+        DEFAULT_PREF.registerOnSharedPreferenceChangeListener(this);
         if (!PREF_MOUSE_GRAB_FORCE)
             CallbackBridge.addGrabListener(this);
     }
 
     private void enableTouchpadIfNecessary() {
-        if(!mTouchpad.getDisplayState() && !Tools.isPointerDeviceConnected()) mTouchpad.enable(true);
+        if(!mTouchpad.getDisplayState() && PREF_MOUSE_GRAB_FORCE) mTouchpad.enable(true);
     }
 
     // Needed so it releases the cursor when inside game menu
@@ -57,7 +60,7 @@ public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChan
     }
     private void updateCursorState(boolean isGrabbing) {
         if (!isGrabbing // Only capture if not in menu and user said so
-                && !PREF_MOUSE_GRAB_FORCE) {
+            && !PREF_MOUSE_GRAB_FORCE) {
             mHostView.releasePointerCapture(); // Release the capture since user said so
         }
         // Capture the pointer when not inside a menu
@@ -68,6 +71,7 @@ public class AndroidPointerCapture implements ViewTreeObserver.OnWindowFocusChan
     public void handleAutomaticCapture() {
         if (!CallbackBridge.isGrabbing() // Only capture if not in menu and user said so
         && !PREF_MOUSE_GRAB_FORCE) {
+            mTouchpad.disable();
             return;
         }
         if (mHostView.hasPointerCapture()) {

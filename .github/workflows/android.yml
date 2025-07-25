@@ -18,11 +18,11 @@ jobs:
       CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
     outputs:
       debug_apk_filename: ${{ steps.artifact-names.outputs.debug_apk_filename }}
-      debug_apk_url: ${{ steps.artifact-names.outputs.debug_apk_url }}
+      debug_apk_url: ${{ steps.artifact-urls.outputs.debug_apk_url }}
       release_aab_filename: ${{ steps.artifact-names.outputs.release_aab_filename }}
-      release_aab_url: ${{ steps.artifact-names.outputs.release_aab_url }}
+      release_aab_url: ${{ steps.artifact-urls.outputs.release_aab_url }}
       noruntime_apk_filename: ${{ steps.artifact-names.outputs.noruntime_apk_filename }}
-      noruntime_apk_url: ${{ steps.artifact-names.outputs.noruntime_apk_url }}
+      noruntime_apk_url: ${{ steps.artifact-urls.outputs.noruntime_apk_url }}
 
     steps:
       - name: Checkout
@@ -75,7 +75,6 @@ jobs:
           ./scripts/languagelist_updater.sh
 
           mkdir out
-          # Build JRE JAR files (security manager, etc...)
           gradle :jre_lwjgl3glfw:build --no-daemon
 
       - name: Set up JDK 17
@@ -92,7 +91,6 @@ jobs:
 
       - name: Build Debug .apk
         run: |
-          # Build the launcher
           gradle :app_pojavlauncher:assembleDebug
           mv app_pojavlauncher/build/outputs/apk/debug/app_pojavlauncher-debug.apk out/app-debug.apk
 
@@ -138,17 +136,35 @@ jobs:
           name: app-debug-noruntime
           path: out/app-debug-noruntime.*
 
-      - name: Export artifact names and URLs
+      - name: Export artifact filenames
         id: artifact-names
         run: |
-          echo "debug_apk_filename=app-debug.zip" >> $GITHUB_OUTPUT
-          echo "debug_apk_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?artifactName=app-debug" >> $GITHUB_OUTPUT
-          
-          echo "noruntime_apk_filename=app-debug-noruntime.zip" >> $GITHUB_OUTPUT
-          echo "noruntime_apk_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?artifactName=app-debug-noruntime" >> $GITHUB_OUTPUT
-          
-          echo "release_aab_filename=app-release-aab.zip" >> $GITHUB_OUTPUT
-          echo "release_aab_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?artifactName=app-release-aab" >> $GITHUB_OUTPUT
+          echo "debug_apk_filename=app-debug.apk" >> $GITHUB_OUTPUT
+          echo "noruntime_apk_filename=app-debug-noruntime.apk" >> $GITHUB_OUTPUT
+          echo "release_aab_filename=app-gplay.aab" >> $GITHUB_OUTPUT
+
+      - name: Get artifact URLs
+        id: artifact-urls
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: context.runId
+            });
+
+            function findArtifact(name) {
+              return artifacts.data.artifacts.find(a => a.name === name);
+            }
+
+            const debug = findArtifact("app-debug");
+            const noruntime = findArtifact("app-debug-noruntime");
+            const release = findArtifact("app-release-aab");
+
+            core.setOutput("debug_apk_url", debug?.archive_download_url || "");
+            core.setOutput("noruntime_apk_url", noruntime?.archive_download_url || "");
+            core.setOutput("release_aab_url", release?.archive_download_url || "");
 
   comment-pr:
     name: Comment on PR
